@@ -1565,7 +1565,7 @@ const bundle = () => {
                                     image: 'ui/play-btn.png',
                                     hoverImage: 'ui/play-btn-h.png',
                                     onClick: 'game.currentScene.playButtonClick',
-                                    sndClick: 'play',
+                                    sndClick: 'play seobanda',
                                     sndOver: 'over',
                                   },
                                   ':': [
@@ -8187,7 +8187,7 @@ const bundle = () => {
             slotPhrasesPrefix: 'phrases.',
             jpgQuality: 95,
             pngQuality: [0.95, 1],
-            title: 'plinko',
+            title: 'plinko seobanda',
             id: 'plinko-xy.softswiss.com',
             icon: 'img/ui/logo.png',
             assetsDelimiter: '\t',
@@ -12216,136 +12216,136 @@ const bundle = () => {
             .e(51)
             .then(i.bind(i, 7051))
             .then((t) => (Xi = t.default));
-        // class Hi {
-        //   constructor(t) {
-        //     this.setCasinoOptions(t);
-        //   }
-        //   // setCasinoOptions(t) {
-        //   //   (Gi = {}),
-        //   //     // (this.currentGameId = t.identifier),
-        //   //     (this.apiUrl = t.api),
-        //   //     (this.rulesUrl = t.rules_url),
-        //   //     (this.lobbyUrl = t.lobby_launch_url),
-        //   //     (this.headers = {
-        //   //       'Content-Type': Ui,
-        //   //     }),
-        //   //     (this.headers[t.csrfTokenHeaderName] = t.csrfTokenHeaderValue),
-        //   //     Xi && Xi.initialize();
-        //   // }
-        //   requestRules() {
-        //     return fetch(this.rulesUrl, {
-        //       headers: {
-        //         Accept: Ui,
-        //       },
-        //     }).then(ji);
-        //   }
-        //   requestURL(t, e, i) {
-        //     var r,
-        //       n,
-        //       s = {
-        //         method: e ? 'POST' : 'GET',
-        //         headers: this.headers,
-        //       };
-        //     if (e && (null === (r = Xi) || void 0 === r || !r.isPlaybackActive)) {
-        //       if (((s.body = JSON.stringify(e)), Gi[s.body])) {
-        //         var a = Promise.resolve(Gi[s.body]);
-        //         return (Gi[s.body] = null), a;
-        //       }
-        //       Gi[s.body] = null;
-        //     }
-        //     if (null !== (n = Xi) && void 0 !== n && n.isPlaybackActive) {
-        //       var o,
-        //         l = null === (o = Xi) || void 0 === o ? void 0 : o.getItem(e);
-        //       return Promise.resolve(l);
-        //     }
-        //     return new Promise((r, n) => {
-        //       Vi(
-        //         t,
-        //         s,
-        //         (a) => (
-        //           this.additionalResponseProcessing(a, t, e, i),
-        //           ji(a)
-        //             .then(async (e) => {
-        //               var r;
-        //               !i &&
-        //                 Xi &&
-        //                 (await (null === (r = Xi) || void 0 === r
-        //                   ? void 0
-        //                   : r.addItem(s, e, t, {
-        //                       method: 'POST',
-        //                       headers: this.headers,
-        //                       body: '{"command": "init"}',
-        //                     })));
-        //               return e;
-        //             })
-        //             .then(r)
-        //             .catch(n)
-        //         ),
-        //         n,
-        //       );
-        //     });
-        //   }
-        //   request(t, e) {
-        //     return this.requestURL(this.apiUrl, t, e);
-        //   }
-        //   prepareRequest(t) {
-        //     var e = JSON.stringify(t);
-        //     Gi.hasOwnProperty(e) ||
-        //       (this.request(t).then((t) => {
-        //         Gi.hasOwnProperty(e) || (Gi[e] = t);
-        //       }),
-        //       delete Gi[e]);
-        //   }
-        //   additionalResponseProcessing(t, e, i, r) {
-        //     this.verifyDigest(t, e), r || this.addSentryBreadcrumb(t, e, i);
-        //   }
-        //   async addSentryBreadcrumb(t, e, i) {
-        //     try {
-        //       if (!Fi.U || !Li) return;
-        //       var r = await t.clone().json();
-        //       r.options && (r.options = '{...}'),
-        //         Bi.n_({
-        //           type: 'info',
-        //           category: 'api.response',
-        //           data: {
-        //             url: e,
-        //             request: JSON.stringify(i),
-        //             response: JSON.stringify(r),
-        //           },
-        //           level: ki.z.Info,
-        //         });
-        //     } catch (n) {
-        //       return;
-        //     }
-        //   }
-        //   async verifyDigest(t, e) {
-        //     if (t.headers.has('digest'))
-        //       try {
-        //         var i = t.headers.get('digest'),
-        //           [r, n] = i.split('='),
-        //           s = atob(n),
-        //           a = await t.clone().text();
-        //         s !== (await this.generateDigest(r, a)) &&
-        //           Fi.U &&
-        //           Bi.$e((i) => {
-        //             i.setExtra('request-url', e),
-        //               i.setExtra('x-request-id', t.headers.get('x-request-id')),
-        //               i.setExtra('responseText', a.substring(0, 199e3)),
-        //               Bi.Tb(new Error('Response checksum mismatch'));
-        //           });
-        //       } catch (pi) {
-        //         return;
-        //       }
-        //   }
-        //   async generateDigest(t, e) {
-        //     var i = new TextEncoder().encode(e),
-        //       r = await crypto.subtle.digest(t, i),
-        //       n = Array.from(new Uint8Array(r))
-        //         .map((t) => t.toString(16).padStart(2, '0'))
-        //         .join('');
-        //     return n;
-        //   }
-        // }
+        class Hi {
+          constructor(t) {
+            this.setCasinoOptions(t);
+          }
+          setCasinoOptions(t) {
+            (Gi = {}),
+              (this.currentGameId = t.identifier),
+              (this.apiUrl = t.api),
+              (this.rulesUrl = t.rules_url),
+              (this.lobbyUrl = t.lobby_launch_url),
+              (this.headers = {
+                'Content-Type': Ui,
+              }),
+              (this.headers[t.csrfTokenHeaderName] = t.csrfTokenHeaderValue),
+              Xi && Xi.initialize();
+          }
+          requestRules() {
+            return fetch(this.rulesUrl, {
+              headers: {
+                Accept: Ui,
+              },
+            }).then(ji);
+          }
+          requestURL(t, e, i) {
+            var r,
+              n,
+              s = {
+                method: e ? 'POST' : 'GET',
+                headers: this.headers,
+              };
+            if (e && (null === (r = Xi) || void 0 === r || !r.isPlaybackActive)) {
+              if (((s.body = JSON.stringify(e)), Gi[s.body])) {
+                var a = Promise.resolve(Gi[s.body]);
+                return (Gi[s.body] = null), a;
+              }
+              Gi[s.body] = null;
+            }
+            if (null !== (n = Xi) && void 0 !== n && n.isPlaybackActive) {
+              var o,
+                l = null === (o = Xi) || void 0 === o ? void 0 : o.getItem(e);
+              return Promise.resolve(l);
+            }
+            return new Promise((r, n) => {
+              Vi(
+                t,
+                s,
+                (a) => (
+                  this.additionalResponseProcessing(a, t, e, i),
+                  ji(a)
+                    .then(async (e) => {
+                      var r;
+                      !i &&
+                        Xi &&
+                        (await (null === (r = Xi) || void 0 === r
+                          ? void 0
+                          : r.addItem(s, e, t, {
+                              method: 'POST',
+                              headers: this.headers,
+                              body: '{"command": "init"}',
+                            })));
+                      return e;
+                    })
+                    .then(r)
+                    .catch(n)
+                ),
+                n,
+              );
+            });
+          }
+          request(t, e) {
+            return this.requestURL(this.apiUrl, t, e);
+          }
+          prepareRequest(t) {
+            var e = JSON.stringify(t);
+            Gi.hasOwnProperty(e) ||
+              (this.request(t).then((t) => {
+                Gi.hasOwnProperty(e) || (Gi[e] = t);
+              }),
+              delete Gi[e]);
+          }
+          additionalResponseProcessing(t, e, i, r) {
+            this.verifyDigest(t, e), r || this.addSentryBreadcrumb(t, e, i);
+          }
+          async addSentryBreadcrumb(t, e, i) {
+            try {
+              if (!Fi.U || !Li) return;
+              var r = await t.clone().json();
+              r.options && (r.options = '{...}'),
+                Bi.n_({
+                  type: 'info',
+                  category: 'api.response',
+                  data: {
+                    url: e,
+                    request: JSON.stringify(i),
+                    response: JSON.stringify(r),
+                  },
+                  level: ki.z.Info,
+                });
+            } catch (n) {
+              return;
+            }
+          }
+          async verifyDigest(t, e) {
+            if (t.headers.has('digest'))
+              try {
+                var i = t.headers.get('digest'),
+                  [r, n] = i.split('='),
+                  s = atob(n),
+                  a = await t.clone().text();
+                s !== (await this.generateDigest(r, a)) &&
+                  Fi.U &&
+                  Bi.$e((i) => {
+                    i.setExtra('request-url', e),
+                      i.setExtra('x-request-id', t.headers.get('x-request-id')),
+                      i.setExtra('responseText', a.substring(0, 199e3)),
+                      Bi.Tb(new Error('Response checksum mismatch'));
+                  });
+              } catch (pi) {
+                return;
+              }
+          }
+          async generateDigest(t, e) {
+            var i = new TextEncoder().encode(e),
+              r = await crypto.subtle.digest(t, i),
+              n = Array.from(new Uint8Array(r))
+                .map((t) => t.toString(16).padStart(2, '0'))
+                .join('');
+            return n;
+          }
+        }
         var ji = (t) => t.json(),
           Wi = !1,
           Zi = [];
@@ -12576,36 +12576,36 @@ const bundle = () => {
             command: 'init',
           },
           dr = new URLSearchParams(window.location.search).get('lang');
-        // function fr() {
-        //   (n.Z.casinoOptions = window.__OPTIONS__),
-        //     dr &&
-        //       ((n.Z.casinoOptions.rules_url = n.Z.casinoOptions.rules_url.replace(
-        //         '/' + n.Z.casinoOptions.locale + '/',
-        //         '/' + dr + '/',
-        //       )),
-        //       (n.Z.casinoOptions.locale = dr)),
-        //     // (n.Z.casinoOptions.ui.logo_visible = 'hidden' !== n.Z.casinoOptions.ui.logo),
-        //     (n.Z.casinoOptions.ui.isTinyAutospinsDialog =
-        //       'tiny' === n.Z.casinoOptions.ui.autospins_dialog),
-        //     (n.Z.casinoOptions.ui.isAutospinAvailable =
-        //       'disable' !== n.Z.casinoOptions.ui.autospins_dialog),
-        //     hr.utils.isMobile.any && (n.Z.casinoOptions.ui.home_button = !0),
-        //     n.Z.casinoOptions.actions.return || (n.Z.casinoOptions.ui.home_button = !1),
-        //     (n.Z.casinoOptions.history_url =
-        //       n.Z.casinoOptions.actions.history && n.Z.casinoOptions.actions.history.link);
-        // }
-        // fr(), 
+        function fr() {
+          (n.Z.casinoOptions = window.__OPTIONS__),
+            dr &&
+              ((n.Z.casinoOptions.rules_url = n.Z.casinoOptions.rules_url.replace(
+                '/' + n.Z.casinoOptions.locale + '/',
+                '/' + dr + '/',
+              )),
+              (n.Z.casinoOptions.locale = dr)),
+            (n.Z.casinoOptions.ui.logo_visible = 'hidden' !== n.Z.casinoOptions.ui.logo),
+            (n.Z.casinoOptions.ui.isTinyAutospinsDialog =
+              'tiny' === n.Z.casinoOptions.ui.autospins_dialog),
+            (n.Z.casinoOptions.ui.isAutospinAvailable =
+              'disable' !== n.Z.casinoOptions.ui.autospins_dialog),
+            hr.utils.isMobile.any && (n.Z.casinoOptions.ui.home_button = !0),
+            n.Z.casinoOptions.actions.return || (n.Z.casinoOptions.ui.home_button = !1),
+            (n.Z.casinoOptions.history_url =
+              n.Z.casinoOptions.actions.history && n.Z.casinoOptions.actions.history.link);
+        }
+        fr(),
         lr.initialize();
         var gr,
           _r,
           mr,
-          // vr = new Hi(n.Z.casinoOptions);
-        // function Ar() {
-        //   _r = Date.now();
-        // }
-        var yr = 5e3;
+          vr = new Hi(n.Z.casinoOptions);
+          function Ar() {
+            _r = Date.now();
+          }
+         var yr = 5e3;
         function br() {
-          if (n.Z.casinoOptions.replay) return !1;
+          if (n.Z.casinoOptions?.replay) return !1;
           if (mr) Ar();
           else if (Date.now() > _r + yr - 500) return !0;
         }
@@ -12815,7 +12815,7 @@ const bundle = () => {
             return ve.Z.initGame(), this.request(pr, t);
           }
           onApiReady() {
-            ur.projectDesc.disableInitDataPreparing || vr.prepareRequest(pr);
+            ur.projectDesc.disableInitDataPreparing || vr?.prepareRequest(pr);
           }
           showRules() {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
@@ -15080,6 +15080,7 @@ const bundle = () => {
             window.addEventListener('load', () => {
               x.Z.beforeGameInit();
               var s = t.casinoOptions;
+              console.log(s);
               n();
               var a = s.resources_path + '/',
                 o = T.projectDesc,
@@ -15095,12 +15096,13 @@ const bundle = () => {
                 'https://translations.bgaming-network.com/Plinko'),
                 e.setCurrentLanguage(s.locale),
                 b.Z.initMoneyFormatter(s.locale),
-                console.log(o.title + ' v' + o.version),
+                // console.log(o.title + ' v' + o.version),
                 p.Z.track(f.Z.START_LOADING, null, y),
                 i(a),
                 r.then(() => {
                   t.init(void 0, o.id + s.cache_player_id, a);
                 });
+                 console.log(a);
             });
           }
         }
@@ -19184,27 +19186,27 @@ const bundle = () => {
                 );
           }
           initReplayData() {
-            // (this.replayData = (0, s.I8)(window.__OPTIONS__.replay || null)),
-              this.replayData &&
-                this.replayData.some((t) => {
-                  if (t && t.outcome && t.outcome.bet) {
-                    var e = t.outcome.bet,
-                      i = this.replayData[0].options;
-                    return (
-                      i.currency ||
-                        (i.currency = {
-                          code: 'FUN',
-                          symbol: 'FUN',
-                          subunits: 100,
-                          exponent: 2,
-                        }),
-                      (i.default_bet = e),
-                      i.available_bets.indexOf(e) < 0 &&
-                        (i.available_bets.push(e), i.available_bets.sort((t, e) => t - e)),
-                      !0
-                    );
-                  }
-                });
+            (this.replayData = (0, s.I8)(window.__OPTIONS__.replay || null)),
+            this.replayData &&
+              this.replayData.some((t) => {
+                if (t && t.outcome && t.outcome.bet) {
+                  var e = t.outcome.bet,
+                    i = this.replayData[0].options;
+                  return (
+                    i.currency ||
+                      (i.currency = {
+                        code: 'FUN',
+                        symbol: 'FUN',
+                        subunits: 100,
+                        exponent: 2,
+                      }),
+                    (i.default_bet = e),
+                    i.available_bets.indexOf(e) < 0 &&
+                      (i.available_bets.push(e), i.available_bets.sort((t, e) => t - e)),
+                    !0
+                  );
+                }
+              });
           }
         }
         function l(t) {
@@ -19231,7 +19233,7 @@ const bundle = () => {
         (window.Sentry = r),
           l &&
             (n.S1({
-              // environment: window.__OPTIONS__.environment,
+              environment: window.__OPTIONS__.environment,
               dsn: 'https://825bff62c73b49919d014b83b408de0b@sentry.bgaming-system.com/12',
               release: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)',
               ignoreErrors: [

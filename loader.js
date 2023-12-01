@@ -3,14 +3,14 @@ const loader = () => {
   var e = {
       405: () => {
         var e;
-        try {
-          e = window.localStorage;
-        } catch (n) {
-          console.log('LocalStorage is unavailable!');
-        }
-      var i = window.SKIN_DIRS || {};
-          // o = window.__OPTIONS__.rules_url,
-          // t = o.slice(o.indexOf(`/${window.__OPTIONS__.locale}/`) + 1);
+        // try {
+        //   e = window.localStorage;
+        // } catch (n) {
+        //   console.log('LocalStorage is unavailable!');
+        // }
+        var i = window.SKIN_DIRS || {};
+        (o = window.__OPTIONS__.rules_url),
+          (t = o.slice(o.indexOf(`/${window.__OPTIONS__.locale}/`) + 1));
         function r(i) {
           var o = (i.ui.skin || 'basic').toLocaleLowerCase(),
             t = window.location.search.match(new RegExp('[?&]skin=([^&]*)(&?)', 'i')),
@@ -24,15 +24,16 @@ const loader = () => {
           );
         }
         // (window.__OPTIONS__.rules_url = 'https://rules.bgaming-network.com/' + t),
-          (window.initializeCasinoOptions = (e) => {
-            var o = r(e),
-              { root: t, res: n = 'v0.0.27_v14.6.4' } = i[o] || i.basic || {};
-            (e.ui.applied_skin = t),
-              (e.resources_root_path = e.resources_path + (t ? `/${t}` : '')),
-              (e.resources_path += `/${n}`),
-              (e.game_bundle_source = e.resources_path + '/bundle.js'),
-              (window.__OPTIONS__ = e);
-          });
+        window.initializeCasinoOptions = (e) => {
+          console.log(e);
+          var o = r(e),
+            { root: t, res: n = 'v0.0.27_v14.6.4' } = i[o] || i.basic || {};
+          (e.ui.applied_skin = t),
+            (e.resources_root_path = e.resources_path + (t ? `/${t}` : '')),
+            (e.resources_path += `/${n}`),
+            (e.game_bundle_source = e.resources_path + '/bundle.js'),
+            (window.__OPTIONS__ = e);
+        };
       },
     },
     i = {};
@@ -76,7 +77,7 @@ const loader = () => {
       'use strict';
       o(405);
       var e = window.__OPTIONS__;
-      // e.identifier, window.initializeCasinoOptions(e);
+      e.identifier, window.initializeCasinoOptions(e);
     })();
 };
 
