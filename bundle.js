@@ -15080,17 +15080,17 @@ const bundle = () => {
             window.addEventListener('load', () => {
               x.Z.beforeGameInit();
               var s = t.casinoOptions;
-              console.log(s);
               n();
               var a = s.resources_path + '/',
                 o = T.projectDesc,
                 l = o.imagesToRemove || [],
                 h = o.mobileUIPath || 'ui/mobile-slot/',
                 u = o.desktopUIPath || 'ui/desktop-slot/';
-              l.push(t.isMobile.any ? u : h);
-              var c = function (t) {
+                l.push(t.isMobile.any ? u : h);
+                var c = function (t) {
                 l.some((e) => t.startsWith(e)) && delete T.images[t];
               };
+              console.log(l);
               for (var d in T.images) c(d);
               (T.projectDesc.localeResourcesPath =
                 'https://translations.bgaming-network.com/Plinko'),
@@ -33912,7 +33912,7 @@ const bundle = () => {
                 'color: #ff2424; background: #fff; padding:5px 0;',
                 'color: #ff2424; background: #fff; padding:5px 0;',
               ];
-              (e = globalThis.console).log.apply(e, i);
+              // (e = globalThis.console).log.apply(e, i);
             } else
               globalThis.console &&
                 globalThis.console.log('PixiJS ' + d + ' - ' + t + ' - http://www.pixijs.com/');
@@ -38567,7 +38567,7 @@ const bundle = () => {
           if (!f[t])
             switch (((f[t] = !0), t)) {
               case 'console':
-                v();
+                // v();
                 break;
               case 'dom':
                 O();
@@ -38626,22 +38626,22 @@ const bundle = () => {
               }
             }
         }
-        function v() {
-          'console' in p &&
-            l.RU.forEach(function (t) {
-              t in p.console &&
-                (0, h.hl)(p.console, t, function (e) {
-                  return function () {
-                    for (var i = [], r = 0; r < arguments.length; r++) i[r] = arguments[r];
-                    m('console', {
-                      args: i,
-                      level: t,
-                    }),
-                      e && e.apply(p.console, i);
-                  };
-                });
-            });
-        }
+        // function v() {
+        //   'console' in p &&
+        //     l.RU.forEach(function (t) {
+        //       t in p.console &&
+        //         (0, h.hl)(p.console, t, function (e) {
+        //           return function () {
+        //             for (var i = [], r = 0; r < arguments.length; r++) i[r] = arguments[r];
+        //             m('console', {
+        //               args: i,
+        //               level: t,
+        //             }),
+        //               e && e.apply(p.console, i);
+        //           };
+        //         });
+        //     });
+        // }
         function A() {
           (0, c.t$)() &&
             (0, h.hl)(p, 'fetch', function (t) {
