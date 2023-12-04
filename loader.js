@@ -33,6 +33,7 @@ const loader = () => {
             (e.resources_path += `/${n}`),
             (e.game_bundle_source = e.resources_path + '/bundle.js'),
             (window.__OPTIONS__ = e);
+          console.log(e);
         };
       },
     },
