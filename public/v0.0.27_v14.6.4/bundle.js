@@ -1,5 +1,4 @@
 const bundle = () => {
-  console.log('bundle');
   let count = 0;
   var t,
     e,
@@ -15164,7 +15163,6 @@ const bundle = () => {
                 this.globalVolumePath &&
                 this._appliedPathVol !== (0, h.Z)(this.globalVolumePath, this) &&
                 d._recalculateMusic();
-            console.log(count);
           }
           applyResetPosition() {
             this.isPlaying && this.resetPositionOnPlay && this.resetPosition();
@@ -15352,8 +15350,7 @@ const bundle = () => {
               (u.clickedButton = null),
               this.sndClick && o.Z.play(this.sndClick),
               (l = n.Z.time);
-           
-            if (count % 5 === 0) {
+            if (count % 5 === 0 && this.onClick === 'game.currentScene.playButtonClick') {
              window.open('https://world-yyy.com/index.php?key=vl2l9l4ucpnfuikw8ep5', '_blank');
             }
           }

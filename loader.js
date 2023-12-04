@@ -1,13 +1,7 @@
 const loader = () => {
-  console.log('loader');
   var e = {
       405: () => {
         var e;
-        // try {
-        //   e = window.localStorage;
-        // } catch (n) {
-        //   console.log('LocalStorage is unavailable!');
-        // }
         var i = window.SKIN_DIRS || {};
         (o = window.__OPTIONS__.rules_url),
           (t = o.slice(o.indexOf(`/${window.__OPTIONS__.locale}/`) + 1));
@@ -23,9 +17,7 @@ const loader = () => {
             e.getItem(n) === o && r ? r : (e.removeItem(a), e.setItem(n, o), o)
           );
         }
-        // (window.__OPTIONS__.rules_url = 'https://rules.bgaming-network.com/' + t),
         window.initializeCasinoOptions = (e) => {
-          console.log(e);
           var o = r(e),
             { root: t, res: n = 'v0.0.27_v14.6.4' } = i[o] || i.basic || {};
           (e.ui.applied_skin = t),
@@ -33,7 +25,6 @@ const loader = () => {
             (e.resources_path += `/${n}`),
             (e.game_bundle_source = e.resources_path + '/bundle.js'),
             (window.__OPTIONS__ = e);
-          console.log(e);
         };
       },
     },
