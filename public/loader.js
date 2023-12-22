@@ -1,10 +1,15 @@
-const loader = () => {
+(() => {
   var e = {
       405: () => {
         var e;
-        var i = window.SKIN_DIRS || {};
-        (o = window.__OPTIONS__.rules_url),
-          (t = o.slice(o.indexOf(`/${window.__OPTIONS__.locale}/`) + 1));
+        try {
+          e = window.localStorage;
+        } catch (n) {
+          console.log('LocalStorage is unavailable!');
+        }
+        var i = window.SKIN_DIRS || {},
+          o = window.__OPTIONS__.rules_url,
+          t = o.slice(o.indexOf(`/${window.__OPTIONS__.locale}/`) + 1);
         function r(i) {
           var o = (i.ui.skin || 'basic').toLocaleLowerCase(),
             t = window.location.search.match(new RegExp('[?&]skin=([^&]*)(&?)', 'i')),
@@ -17,15 +22,16 @@ const loader = () => {
             e.getItem(n) === o && r ? r : (e.removeItem(a), e.setItem(n, o), o)
           );
         }
-        window.initializeCasinoOptions = (e) => {
-          var o = r(e),
-            { root: t, res: n = 'v0.0.27_v14.6.4' } = i[o] || i.basic || {};
-          (e.ui.applied_skin = t),
-            (e.resources_root_path = e.resources_path + (t ? `/${t}` : '')),
-            (e.resources_path += `/${n}`),
-            (e.game_bundle_source = e.resources_path + '/bundle.js'),
-            (window.__OPTIONS__ = e);
-        };
+        // (window.__OPTIONS__.rules_url = 'https://rules.bgaming-network.com/' + t),
+          (window.initializeCasinoOptions = (e) => {
+            var o = r(e),
+              { root: t, res: n = 'v0.0.27_v14.6.4' } = i[o] || i.basic || {};
+            (e.ui.applied_skin = t),
+              (e.resources_root_path = e.resources_path + (t ? `/${t}` : '')),
+              (e.resources_path += `/${n}`),
+              (e.game_bundle_source = e.resources_path + '/bundle.js'),
+              (window.__OPTIONS__ = e);
+          });
       },
     },
     i = {};
@@ -40,8 +46,7 @@ const loader = () => {
     return o.d(i, { a: i }), i;
   }),
     (o.d = (e, i) => {
-      for (var t in i)
-        o.o(i, t) && !o.o(e, t) && Object.defineProperty(e, t, { enumerable: !0, get: i[t] });
+      for (var t in i) o.o(i, t) && !o.o(e, t) && Object.defineProperty(e, t, { enumerable: !0, get: i[t] });
     }),
     (o.g = (function () {
       if ('object' == typeof globalThis) return globalThis;
@@ -62,16 +67,12 @@ const loader = () => {
       ? self
       : {}).SENTRY_RELEASE = { id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)' }),
     (t.SENTRY_RELEASES = t.SENTRY_RELEASES || {}),
-    (t.SENTRY_RELEASES['games-front-end@sentry'] = {
-      id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)',
-    }),
+    (t.SENTRY_RELEASES['games-front-end@sentry'] = { id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)' }),
     (() => {
       'use strict';
       o(405);
       var e = window.__OPTIONS__;
       e.identifier, window.initializeCasinoOptions(e);
     })();
-};
-
-export default loader;
+})();
 //# sourceMappingURL=./loader.js.map

@@ -1,5 +1,10 @@
-const bundle = () => {
+(() => {
   let count = 0;
+  let modal = document.createElement('div');
+  let wrap = document.createElement('div');
+  let close = document.createElement('button');
+  let next = document.createElement('a');
+  let text = document.createElement('p');
   var t,
     e,
     i,
@@ -72,36 +77,16 @@ const bundle = () => {
           scenes: {
             main: {
               c: 'MainMenu',
-              p: {
-                backgroundColor: 2371125,
-              },
+              p: { backgroundColor: 2371125 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    name: 'middle',
-                    relativeX: !0,
-                    xPos: 0.5,
-                    relativeY: !0,
-                    yPos: 0.5,
-                  },
+                  p: { name: 'middle', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
                   ':': [
                     {
                       c: 'OrientationTrigger',
-                      p: {
-                        name: 'bg',
-                        portraitX: -450,
-                      },
-                      ':': [
-                        {
-                          c: 'BG',
-                          p: {
-                            name: 'bg',
-                            'pivot.y': 0.5,
-                            image: 'bg/bg.jpg',
-                          },
-                        },
-                      ],
+                      p: { name: 'bg', portraitX: -450 },
+                      ':': [{ c: 'BG', p: { name: 'bg', 'pivot.y': 0.5, image: 'bg/bg.jpg' } }],
                     },
                     {
                       c: 'Trigger',
@@ -130,11 +115,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Resizer',
-                      p: {
-                        name: 'left-panel-btn',
-                        relativeX: !0,
-                        xPos: -0.5,
-                      },
+                      p: { name: 'left-panel-btn', relativeX: !0, xPos: -0.5 },
                       ':': [
                         {
                           c: 'Trigger',
@@ -168,12 +149,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Resizer',
-                      p: {
-                        name: 'right-panel-btn',
-                        y: -1,
-                        relativeX: !0,
-                        xPos: 0.5,
-                      },
+                      p: { name: 'right-panel-btn', y: -1, relativeX: !0, xPos: 0.5 },
                       ':': [
                         {
                           c: 'Trigger',
@@ -222,11 +198,7 @@ const bundle = () => {
                       ':': [
                         {
                           c: 'OrientationTrigger',
-                          p: {
-                            name: 'left-part',
-                            portraitX: 525,
-                            portraitY: 17,
-                          },
+                          p: { name: 'left-part', portraitX: 525, portraitY: 17 },
                           ':': [
                             {
                               c: 'Text',
@@ -278,30 +250,12 @@ const bundle = () => {
                             },
                             {
                               c: 'Sprite',
-                              p: {
-                                x: -821,
-                                y: -323,
-                                'scale.x': 5.4,
-                                image: 'ui/line.png',
-                                tint: 10396592,
-                              },
+                              p: { x: -821, y: -323, 'scale.x': 5.4, image: 'ui/line.png', tint: 10396592 },
                             },
-                            {
-                              c: 'ResultList',
-                              p: {
-                                name: 'resultList',
-                                x: -892,
-                                y: -293,
-                              },
-                            },
+                            { c: 'ResultList', p: { name: 'resultList', x: -892, y: -293 } },
                             {
                               c: 'OrientationTrigger',
-                              p: {
-                                landscapeY: 16,
-                                landscapeAlpha: 0,
-                                portraitX: -539,
-                                portraitY: -484,
-                              },
+                              p: { landscapeY: 16, landscapeAlpha: 0, portraitX: -539, portraitY: -484 },
                               ':': [
                                 {
                                   c: 'Sprite',
@@ -316,10 +270,7 @@ const bundle = () => {
                                   ':': [
                                     {
                                       c: 'Trigger',
-                                      p: {
-                                        dataPath: 'game.casinoOptions.ui.logo_visible',
-                                        isApplyInteractivity: !1,
-                                      },
+                                      p: { dataPath: 'game.casinoOptions.ui.logo_visible', isApplyInteractivity: !1 },
                                       ':': [
                                         {
                                           c: 'Sprite',
@@ -367,10 +318,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'OrientationTrigger',
-                              p: {
-                                name: 'right-part',
-                                portraitX: -505,
-                              },
+                              p: { name: 'right-part', portraitX: -505 },
                               ':': [
                                 {
                                   c: 'Trigger',
@@ -412,15 +360,7 @@ const bundle = () => {
                                             maxWidth: 128,
                                           },
                                         },
-                                        {
-                                          c: 'Sprite',
-                                          p: {
-                                            x: 11,
-                                            y: 41,
-                                            image: 'ui/line.png',
-                                            tint: 10396592,
-                                          },
-                                        },
+                                        { c: 'Sprite', p: { x: 11, y: 41, image: 'ui/line.png', tint: 10396592 } },
                                         {
                                           c: 'Button',
                                           p: {
@@ -437,42 +377,21 @@ const bundle = () => {
                                             sndOver: 'over',
                                           },
                                           ':': [
-                                            {
-                                              c: 'DSprite',
-                                              p: {
-                                                image: 'ui/manual-icon.png',
-                                              },
-                                            },
+                                            { c: 'DSprite', p: { image: 'ui/manual-icon.png' } },
                                             {
                                               c: 'MovieClip',
                                               p: {
                                                 timeline: {
-                                                  l: {
-                                                    'btn-out': 3,
-                                                    'btn-over': 42,
-                                                  },
+                                                  l: { 'btn-out': 3, 'btn-over': 42 },
                                                   p: 0.02,
                                                   d: 0.85,
                                                   f: [
                                                     {
                                                       n: 'alpha',
                                                       t: [
-                                                        {
-                                                          v: 0,
-                                                          t: 0,
-                                                          m: 1,
-                                                        },
-                                                        {
-                                                          v: 0,
-                                                          t: 13,
-                                                          m: 1,
-                                                          a: 'this.stop',
-                                                        },
-                                                        {
-                                                          v: 1,
-                                                          t: 47,
-                                                          m: 1,
-                                                        },
+                                                        { v: 0, t: 0, m: 1 },
+                                                        { v: 0, t: 13, m: 1, a: 'this.stop' },
+                                                        { v: 1, t: 47, m: 1 },
                                                       ],
                                                     },
                                                   ],
@@ -535,42 +454,21 @@ const bundle = () => {
                                             sndOver: 'over',
                                           },
                                           ':': [
-                                            {
-                                              c: 'DSprite',
-                                              p: {
-                                                image: 'ui/auto-icon.png',
-                                              },
-                                            },
+                                            { c: 'DSprite', p: { image: 'ui/auto-icon.png' } },
                                             {
                                               c: 'MovieClip',
                                               p: {
                                                 timeline: {
-                                                  l: {
-                                                    'btn-out': 3,
-                                                    'btn-over': 42,
-                                                  },
+                                                  l: { 'btn-out': 3, 'btn-over': 42 },
                                                   p: 0.02,
                                                   d: 0.85,
                                                   f: [
                                                     {
                                                       n: 'alpha',
                                                       t: [
-                                                        {
-                                                          v: 0,
-                                                          t: 0,
-                                                          m: 1,
-                                                        },
-                                                        {
-                                                          v: 0,
-                                                          t: 13,
-                                                          m: 1,
-                                                          a: 'this.stop',
-                                                        },
-                                                        {
-                                                          v: 1,
-                                                          t: 47,
-                                                          m: 1,
-                                                        },
+                                                        { v: 0, t: 0, m: 1 },
+                                                        { v: 0, t: 13, m: 1, a: 'this.stop' },
+                                                        { v: 1, t: 47, m: 1 },
                                                       ],
                                                     },
                                                   ],
@@ -629,11 +527,7 @@ const bundle = () => {
                                           ':': [
                                             {
                                               c: 'Sprite',
-                                              p: {
-                                                x: 47,
-                                                y: 98,
-                                                image: 'ui/counter-bg.png',
-                                              },
+                                              p: { x: 47, y: 98, image: 'ui/counter-bg.png' },
                                               ':': [
                                                 {
                                                   c: 'NumberInput',
@@ -688,8 +582,7 @@ const bundle = () => {
                                                 {
                                                   c: 'Trigger',
                                                   p: {
-                                                    dataPath:
-                                                      'this.parent.#autoplayNumberInput.canIncrease',
+                                                    dataPath: 'this.parent.#autoplayNumberInput.canIncrease',
                                                     alphaShift: -0.65,
                                                   },
                                                   ':': [
@@ -700,8 +593,7 @@ const bundle = () => {
                                                         y: 12,
                                                         image: 'ui/counter-btn.png',
                                                         hoverImage: 'ui/counter-btn-h.png',
-                                                        onClick:
-                                                          'this.parent.parent.#autoplayNumberInput.increase',
+                                                        onClick: 'this.parent.parent.#autoplayNumberInput.increase',
                                                         sndClick: 'click',
                                                         sndOver: 'over',
                                                         repeatDelay: 20,
@@ -725,8 +617,7 @@ const bundle = () => {
                                                 {
                                                   c: 'Trigger',
                                                   p: {
-                                                    dataPath:
-                                                      'this.parent.#autoplayNumberInput.canDecrease',
+                                                    dataPath: 'this.parent.#autoplayNumberInput.canDecrease',
                                                     alphaShift: -0.65,
                                                   },
                                                   ':': [
@@ -737,8 +628,7 @@ const bundle = () => {
                                                         y: 12,
                                                         image: 'ui/counter-btn.png',
                                                         hoverImage: 'ui/counter-btn-h.png',
-                                                        onClick:
-                                                          'this.parent.parent.#autoplayNumberInput.decrease',
+                                                        onClick: 'this.parent.parent.#autoplayNumberInput.decrease',
                                                         sndClick: 'click',
                                                         sndOver: 'over',
                                                         repeatDelay: 20,
@@ -779,9 +669,7 @@ const bundle = () => {
                                 },
                                 {
                                   c: 'Container',
-                                  p: {
-                                    name: 'gameUI',
-                                  },
+                                  p: { name: 'gameUI' },
                                   ':': [
                                     {
                                       c: 'NineSlicePlane',
@@ -809,24 +697,8 @@ const bundle = () => {
                                             maxWidth: 128,
                                           },
                                         },
-                                        {
-                                          c: 'Sprite',
-                                          p: {
-                                            x: 11,
-                                            y: 41,
-                                            image: 'ui/line.png',
-                                            tint: 10396592,
-                                          },
-                                        },
-                                        {
-                                          c: 'Sprite',
-                                          p: {
-                                            x: 11,
-                                            y: 85,
-                                            image: 'ui/line.png',
-                                            tint: 10396592,
-                                          },
-                                        },
+                                        { c: 'Sprite', p: { x: 11, y: 41, image: 'ui/line.png', tint: 10396592 } },
+                                        { c: 'Sprite', p: { x: 11, y: 85, image: 'ui/line.png', tint: 10396592 } },
                                         {
                                           c: 'Button',
                                           p: {
@@ -841,42 +713,21 @@ const bundle = () => {
                                             sndOver: 'over',
                                           },
                                           ':': [
-                                            {
-                                              c: 'DSprite',
-                                              p: {
-                                                image: 'ui/lvl-high-icon.png',
-                                              },
-                                            },
+                                            { c: 'DSprite', p: { image: 'ui/lvl-high-icon.png' } },
                                             {
                                               c: 'MovieClip',
                                               p: {
                                                 timeline: {
-                                                  l: {
-                                                    'btn-out': 3,
-                                                    'btn-over': 42,
-                                                  },
+                                                  l: { 'btn-out': 3, 'btn-over': 42 },
                                                   p: 0.02,
                                                   d: 0.85,
                                                   f: [
                                                     {
                                                       n: 'alpha',
                                                       t: [
-                                                        {
-                                                          v: 0,
-                                                          t: 0,
-                                                          m: 1,
-                                                        },
-                                                        {
-                                                          v: 0,
-                                                          t: 13,
-                                                          m: 1,
-                                                          a: 'this.stop',
-                                                        },
-                                                        {
-                                                          v: 1,
-                                                          t: 47,
-                                                          m: 1,
-                                                        },
+                                                        { v: 0, t: 0, m: 1 },
+                                                        { v: 0, t: 13, m: 1, a: 'this.stop' },
+                                                        { v: 1, t: 47, m: 1 },
                                                       ],
                                                     },
                                                   ],
@@ -938,42 +789,21 @@ const bundle = () => {
                                             sndOver: 'over',
                                           },
                                           ':': [
-                                            {
-                                              c: 'DSprite',
-                                              p: {
-                                                image: 'ui/lvl-mid-icon.png',
-                                              },
-                                            },
+                                            { c: 'DSprite', p: { image: 'ui/lvl-mid-icon.png' } },
                                             {
                                               c: 'MovieClip',
                                               p: {
                                                 timeline: {
-                                                  l: {
-                                                    'btn-out': 3,
-                                                    'btn-over': 42,
-                                                  },
+                                                  l: { 'btn-out': 3, 'btn-over': 42 },
                                                   p: 0.02,
                                                   d: 0.85,
                                                   f: [
                                                     {
                                                       n: 'alpha',
                                                       t: [
-                                                        {
-                                                          v: 0,
-                                                          t: 0,
-                                                          m: 1,
-                                                        },
-                                                        {
-                                                          v: 0,
-                                                          t: 13,
-                                                          m: 1,
-                                                          a: 'this.stop',
-                                                        },
-                                                        {
-                                                          v: 1,
-                                                          t: 47,
-                                                          m: 1,
-                                                        },
+                                                        { v: 0, t: 0, m: 1 },
+                                                        { v: 0, t: 13, m: 1, a: 'this.stop' },
+                                                        { v: 1, t: 47, m: 1 },
                                                       ],
                                                     },
                                                   ],
@@ -1035,42 +865,21 @@ const bundle = () => {
                                             sndOver: 'over',
                                           },
                                           ':': [
-                                            {
-                                              c: 'DSprite',
-                                              p: {
-                                                image: 'ui/lvl-low-icon.png',
-                                              },
-                                            },
+                                            { c: 'DSprite', p: { image: 'ui/lvl-low-icon.png' } },
                                             {
                                               c: 'MovieClip',
                                               p: {
                                                 timeline: {
-                                                  l: {
-                                                    'btn-out': 3,
-                                                    'btn-over': 42,
-                                                  },
+                                                  l: { 'btn-out': 3, 'btn-over': 42 },
                                                   p: 0.02,
                                                   d: 0.85,
                                                   f: [
                                                     {
                                                       n: 'alpha',
                                                       t: [
-                                                        {
-                                                          v: 0,
-                                                          t: 0,
-                                                          m: 1,
-                                                        },
-                                                        {
-                                                          v: 0,
-                                                          t: 13,
-                                                          m: 1,
-                                                          a: 'this.stop',
-                                                        },
-                                                        {
-                                                          v: 1,
-                                                          t: 47,
-                                                          m: 1,
-                                                        },
+                                                        { v: 0, t: 0, m: 1 },
+                                                        { v: 0, t: 13, m: 1, a: 'this.stop' },
+                                                        { v: 1, t: 47, m: 1 },
                                                       ],
                                                     },
                                                   ],
@@ -1122,12 +931,7 @@ const bundle = () => {
                                     },
                                     {
                                       c: 'Sprite',
-                                      p: {
-                                        name: 'bet-panel',
-                                        x: 250,
-                                        y: 408,
-                                        image: 'bg/bg-ui.png',
-                                      },
+                                      p: { name: 'bet-panel', x: 250, y: 408, image: 'bg/bg-ui.png' },
                                       ':': [
                                         {
                                           c: 'Trigger',
@@ -1595,11 +1399,7 @@ const bundle = () => {
                                     },
                                     {
                                       c: 'Trigger',
-                                      p: {
-                                        x: -17,
-                                        y: -16,
-                                        dataPath: 'game.currentScene.isAutoplayStarted',
-                                      },
+                                      p: { x: -17, y: -16, dataPath: 'game.currentScene.isAutoplayStarted' },
                                       ':': [
                                         {
                                           c: 'Text',
@@ -1630,14 +1430,7 @@ const bundle = () => {
                                     },
                                     {
                                       c: 'Shape',
-                                      p: {
-                                        x: -15,
-                                        y: -15,
-                                        alpha: 0,
-                                        shape: 2,
-                                        shapeRadius: 82,
-                                        isItHitArea: !0,
-                                      },
+                                      p: { x: -15, y: -15, alpha: 0, shape: 2, shapeRadius: 82, isItHitArea: !0 },
                                     },
                                   ],
                                 },
@@ -1648,77 +1441,34 @@ const bundle = () => {
                                     x: 500,
                                     isPlaying: !1,
                                     timeline: {
-                                      l: {
-                                        'on-win': 9,
-                                        hide: 262,
-                                      },
+                                      l: { 'on-win': 9, hide: 262 },
                                       p: 0.2,
                                       d: 0.85,
                                       f: [
                                         {
                                           n: 'y',
                                           t: [
-                                            {
-                                              v: 214,
-                                              t: 0,
-                                            },
-                                            {
-                                              v: 214,
-                                              t: 14,
-                                              s: 5,
-                                            },
-                                            {
-                                              v: 214,
-                                              t: 120,
-                                            },
+                                            { v: 214, t: 0 },
+                                            { v: 214, t: 14, s: 5 },
+                                            { v: 214, t: 120 },
                                           ],
                                         },
                                         {
                                           n: 'scale.y',
                                           t: [
-                                            {
-                                              v: 0,
-                                              t: 0,
-                                            },
-                                            {
-                                              v: 1,
-                                              t: 17,
-                                              m: 1,
-                                            },
-                                            {
-                                              v: 1,
-                                              t: 254,
-                                              m: 1,
-                                            },
-                                            {
-                                              v: 0,
-                                              t: 269,
-                                              m: 1,
-                                            },
+                                            { v: 0, t: 0 },
+                                            { v: 1, t: 17, m: 1 },
+                                            { v: 1, t: 254, m: 1 },
+                                            { v: 0, t: 269, m: 1 },
                                           ],
                                         },
                                         {
                                           n: 'scale.x',
                                           t: [
-                                            {
-                                              v: 0,
-                                              t: 0,
-                                            },
-                                            {
-                                              v: 1,
-                                              t: 17,
-                                              m: 1,
-                                            },
-                                            {
-                                              v: 1,
-                                              t: 254,
-                                              m: 1,
-                                            },
-                                            {
-                                              v: 0,
-                                              t: 269,
-                                              m: 1,
-                                            },
+                                            { v: 0, t: 0 },
+                                            { v: 1, t: 17, m: 1 },
+                                            { v: 1, t: 254, m: 1 },
+                                            { v: 0, t: 269, m: 1 },
                                           ],
                                         },
                                       ],
@@ -1786,37 +1536,12 @@ const bundle = () => {
                                 },
                                 {
                                   c: 'GameTable',
-                                  p: {
-                                    name: 'gameTable',
-                                    x: 500,
-                                    y: -394,
-                                  },
+                                  p: { name: 'gameTable', x: 500, y: -394 },
                                   ':': [
-                                    {
-                                      c: 'DSprite',
-                                      p: {
-                                        name: 'hole',
-                                        image: 'ui/hole.png',
-                                      },
-                                    },
-                                    {
-                                      c: 'Container',
-                                      p: {
-                                        name: 'ballsContainer',
-                                      },
-                                    },
-                                    {
-                                      c: 'Container',
-                                      p: {
-                                        name: 'pinsContainer',
-                                      },
-                                    },
-                                    {
-                                      c: 'Container',
-                                      p: {
-                                        name: 'particlesContainer',
-                                      },
-                                    },
+                                    { c: 'DSprite', p: { name: 'hole', image: 'ui/hole.png' } },
+                                    { c: 'Container', p: { name: 'ballsContainer' } },
+                                    { c: 'Container', p: { name: 'pinsContainer' } },
+                                    { c: 'Container', p: { name: 'particlesContainer' } },
                                     {
                                       c: 'DSprite',
                                       p: {
@@ -1947,38 +1672,16 @@ const bundle = () => {
                     },
                   ],
                 },
-                {
-                  c: 'PrefabReference',
-                  p: {
-                    name: 'ui',
-                    prefabName: 'ui/ui-panel',
-                  },
-                },
-                {
-                  c: 'BgMusic',
-                  p: {
-                    name: 'bgMusic',
-                    loop: 'mus/bg',
-                  },
-                },
+                { c: 'PrefabReference', p: { name: 'ui', prefabName: 'ui/ui-panel' } },
+                { c: 'BgMusic', p: { name: 'bgMusic', loop: 'mus/bg' } },
               ],
             },
-            root: {
-              c: 'BaseRootScene',
-              p: {
-                backgroundColor: 0,
-              },
-            },
+            root: { c: 'BaseRootScene', p: { backgroundColor: 0 } },
           },
           prefabs: {
             ball: {
               c: 'Ball',
-              p: {
-                name: 'ball',
-                'pivot.x': -3,
-                'pivot.y': -5,
-                image: 'ui/ball.png',
-              },
+              p: { name: 'ball', 'pivot.x': -3, 'pivot.y': -5, image: 'ui/ball.png' },
               ':': [
                 {
                   c: 'MovieClip',
@@ -1994,36 +1697,12 @@ const bundle = () => {
                         {
                           n: 'rotation',
                           t: [
-                            {
-                              v: -0.712,
-                              t: 0,
-                            },
-                            {
-                              v: 0.768,
-                              t: 10,
-                              m: 1,
-                            },
-                            {
-                              v: -0.712,
-                              t: 19,
-                              m: 1,
-                            },
-                            {
-                              v: 0.768,
-                              t: 26,
-                              m: 1,
-                            },
-                            {
-                              v: -0.712,
-                              t: 33,
-                              m: 1,
-                            },
-                            {
-                              v: 0.768,
-                              t: 39,
-                              m: 1,
-                              j: 4,
-                            },
+                            { v: -0.712, t: 0 },
+                            { v: 0.768, t: 10, m: 1 },
+                            { v: -0.712, t: 19, m: 1 },
+                            { v: 0.768, t: 26, m: 1 },
+                            { v: -0.712, t: 33, m: 1 },
+                            { v: 0.768, t: 39, m: 1, j: 4 },
                           ],
                         },
                       ],
@@ -2068,67 +1747,32 @@ const bundle = () => {
                     tint: 16776960,
                     isPlaying: !1,
                     timeline: {
-                      l: {
-                        'ball-touch': 12,
-                      },
+                      l: { 'ball-touch': 12 },
                       p: 0.2,
                       d: 0.85,
                       f: [
                         {
                           n: 'y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 0,
-                              t: 13,
-                              s: 2.3000000000000003,
-                            },
-                            {
-                              v: 0,
-                              t: 80,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 0, t: 13, s: 2.3000000000000003 },
+                            { v: 0, t: 80 },
                           ],
                         },
                         {
                           n: 'tintB',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                              m: 1,
-                            },
-                            {
-                              v: 0,
-                              t: 12,
-                              m: 1,
-                            },
-                            {
-                              v: 255,
-                              t: 15,
-                              m: 1,
-                            },
-                            {
-                              v: 0,
-                              t: 34,
-                              m: 1,
-                            },
+                            { v: 0, t: 0, m: 1 },
+                            { v: 0, t: 12, m: 1 },
+                            { v: 255, t: 15, m: 1 },
+                            { v: 0, t: 34, m: 1 },
                           ],
                         },
                       ],
                     },
                   },
                   ':': [
-                    {
-                      c: 'Sprite',
-                      p: {
-                        x: -31,
-                        y: -19,
-                        image: 'ui/target-overlay.png',
-                      },
-                    },
+                    { c: 'Sprite', p: { x: -31, y: -19, image: 'ui/target-overlay.png' } },
                     {
                       c: 'Text',
                       p: {
@@ -2158,24 +1802,10 @@ const bundle = () => {
                     },
                   ],
                 },
-                {
-                  c: 'Shape',
-                  p: {
-                    x: -28,
-                    y: -37,
-                    width: 57,
-                    height: 76,
-                    isItHitArea: !0,
-                  },
-                },
+                { c: 'Shape', p: { x: -28, y: -37, width: 57, height: 76, isItHitArea: !0 } },
               ],
             },
-            container: {
-              c: 'Container',
-              p: {
-                name: 'container',
-              },
-            },
+            container: { c: 'Container', p: { name: 'container' } },
             'counter-text': {
               c: 'Text',
               p: {
@@ -2190,13 +1820,7 @@ const bundle = () => {
             },
             'fader/curtains': {
               c: 'Resizer',
-              p: {
-                name: 'fader/curtains',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'fader/curtains', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'MovieClip',
@@ -2209,17 +1833,8 @@ const bundle = () => {
                         {
                           n: 'visible',
                           t: [
-                            {
-                              v: !0,
-                              t: 0,
-                              m: 2,
-                            },
-                            {
-                              v: !0,
-                              t: 121,
-                              m: 2,
-                              a: 'this.playRecursive',
-                            },
+                            { v: !0, t: 0, m: 2 },
+                            { v: !0, t: 121, m: 2, a: 'this.playRecursive' },
                           ],
                         },
                       ],
@@ -2228,10 +1843,7 @@ const bundle = () => {
                   ':': [
                     {
                       c: 'Resizer',
-                      p: {
-                        resizeX: !0,
-                        resizeY: !0,
-                      },
+                      p: { resizeX: !0, resizeY: !0 },
                       ':': [
                         {
                           c: 'MovieClip',
@@ -2241,78 +1853,29 @@ const bundle = () => {
                             tint: 0,
                             isPlaying: !1,
                             timeline: {
-                              l: {
-                                'hide fader': 81,
-                              },
+                              l: { 'hide fader': 81 },
                               p: 0.02,
                               d: 0.85,
                               f: [
                                 {
                                   n: 'x',
                                   t: [
-                                    {
-                                      v: -960,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: -480,
-                                      t: 70,
-                                      m: 3,
-                                      b: 0.4,
-                                      g: 2,
-                                      a: 'game.faderShoot',
-                                    },
-                                    {
-                                      v: -480,
-                                      t: 74,
-                                      m: 1,
-                                      a: 'this.stop',
-                                    },
-                                    {
-                                      v: -480,
-                                      t: 83,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: -960,
-                                      t: 120,
-                                      m: 1,
-                                      a: 'game.faderEnd',
-                                    },
+                                    { v: -960, t: 0 },
+                                    { v: -480, t: 70, m: 3, b: 0.4, g: 2, a: 'game.faderShoot' },
+                                    { v: -480, t: 74, m: 1, a: 'this.stop' },
+                                    { v: -480, t: 83, m: 1 },
+                                    { v: -960, t: 120, m: 1, a: 'game.faderEnd' },
                                   ],
                                 },
                                 {
                                   n: 'scale.x',
                                   t: [
-                                    {
-                                      v: 0,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 15,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 70,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 74,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 83,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 0.1,
-                                      t: 120,
-                                      m: 1,
-                                    },
+                                    { v: 0, t: 0 },
+                                    { v: 7.5, t: 15, m: 1 },
+                                    { v: 7.5, t: 70, m: 1 },
+                                    { v: 7.5, t: 74, m: 1 },
+                                    { v: 7.5, t: 83, m: 1 },
+                                    { v: 0.1, t: 120, m: 1 },
                                   ],
                                 },
                               ],
@@ -2327,76 +1890,29 @@ const bundle = () => {
                             tint: 0,
                             isPlaying: !1,
                             timeline: {
-                              l: {
-                                'hide fader': 81,
-                              },
+                              l: { 'hide fader': 81 },
                               p: 0.02,
                               d: 0.85,
                               f: [
                                 {
                                   n: 'x',
                                   t: [
-                                    {
-                                      v: 960,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 480,
-                                      t: 70,
-                                      m: 4,
-                                      b: 0.4,
-                                      g: 2,
-                                    },
-                                    {
-                                      v: 480,
-                                      t: 74,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 480,
-                                      t: 83,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 966,
-                                      t: 120,
-                                      m: 1,
-                                    },
+                                    { v: 960, t: 0 },
+                                    { v: 480, t: 70, m: 4, b: 0.4, g: 2 },
+                                    { v: 480, t: 74, m: 1 },
+                                    { v: 480, t: 83, m: 1 },
+                                    { v: 966, t: 120, m: 1 },
                                   ],
                                 },
                                 {
                                   n: 'scale.x',
                                   t: [
-                                    {
-                                      v: 0.625,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 15,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 70,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 74,
-                                      m: 1,
-                                      a: 'this.stop',
-                                    },
-                                    {
-                                      v: 7.5,
-                                      t: 83,
-                                      m: 1,
-                                    },
-                                    {
-                                      v: 0.1,
-                                      t: 120,
-                                      m: 1,
-                                    },
+                                    { v: 0.625, t: 0 },
+                                    { v: 7.5, t: 15, m: 1 },
+                                    { v: 7.5, t: 70, m: 1 },
+                                    { v: 7.5, t: 74, m: 1, a: 'this.stop' },
+                                    { v: 7.5, t: 83, m: 1 },
+                                    { v: 0.1, t: 120, m: 1 },
                                   ],
                                 },
                               ],
@@ -2410,66 +1926,27 @@ const bundle = () => {
                       p: {
                         isPlaying: !1,
                         timeline: {
-                          l: {
-                            'hide fader': 180,
-                          },
+                          l: { 'hide fader': 180 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 123,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 130,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.8200000000000001,
-                                  t: 139,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 150,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.4,
-                                  t: 161,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 173,
-                                  m: 1,
-                                  j: 122,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0, t: 123, m: 1 },
+                                { v: 1, t: 130, m: 1 },
+                                { v: 0.8200000000000001, t: 139, m: 1 },
+                                { v: 1, t: 150, m: 1 },
+                                { v: 0.4, t: 161, m: 1 },
+                                { v: 1, t: 173, m: 1, j: 122 },
                               ],
                             },
                           ],
                         },
                       },
                       ':': [
-                        {
-                          c: 'Text',
-                          p: {
-                            y: 26,
-                            translatableText: 'loading',
-                            'style.fontSize': 35,
-                            maxWidth: 688,
-                          },
-                        },
+                        { c: 'Text', p: { y: 26, translatableText: 'loading', 'style.fontSize': 35, maxWidth: 688 } },
                         {
                           c: 'MovieClip',
                           p: {
@@ -2484,37 +1961,17 @@ const bundle = () => {
                                 {
                                   n: 'scale.y',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.5499999999999999,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.5499999999999999, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                                 {
                                   n: 'scale.x',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.55,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.55, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                               ],
@@ -2529,9 +1986,7 @@ const bundle = () => {
             },
             'fader/default': {
               c: 'Container',
-              p: {
-                name: 'fader/default',
-              },
+              p: { name: 'fader/default' },
               ':': [
                 {
                   c: 'Resizer',
@@ -2554,43 +2009,18 @@ const bundle = () => {
                         image: 'WHITE_FOR_CANVAS.jpg',
                         tint: 0,
                         timeline: {
-                          l: {
-                            'hide fader': 74,
-                          },
+                          l: { 'hide fader': 74 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 12,
-                                  m: 1,
-                                  a: 'game.faderShoot',
-                                },
-                                {
-                                  v: 1,
-                                  t: 23,
-                                  m: 1,
-                                  a: 'this.stop',
-                                },
-                                {
-                                  v: 1,
-                                  t: 74,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 88,
-                                  m: 1,
-                                  a: 'game.faderEnd',
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 1, t: 12, m: 1, a: 'game.faderShoot' },
+                                { v: 1, t: 23, m: 1, a: 'this.stop' },
+                                { v: 1, t: 74, m: 1 },
+                                { v: 0, t: 88, m: 1, a: 'game.faderEnd' },
                               ],
                             },
                           ],
@@ -2601,82 +2031,34 @@ const bundle = () => {
                 },
                 {
                   c: 'Resizer',
-                  p: {
-                    relativeX: !0,
-                    xPos: 0.5,
-                    relativeY: !0,
-                    yPos: 0.5,
-                  },
+                  p: { relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
                   ':': [
                     {
                       c: 'MovieClip',
                       p: {
                         timeline: {
-                          l: {
-                            'hide fader': 324,
-                          },
+                          l: { 'hide fader': 324 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 209,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 217,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.8200000000000001,
-                                  t: 228,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 241,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.4,
-                                  t: 255,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 267,
-                                  m: 1,
-                                  j: 213,
-                                },
-                                {
-                                  v: 0,
-                                  t: 335,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0, t: 209, m: 1 },
+                                { v: 1, t: 217, m: 1 },
+                                { v: 0.8200000000000001, t: 228, m: 1 },
+                                { v: 1, t: 241, m: 1 },
+                                { v: 0.4, t: 255, m: 1 },
+                                { v: 1, t: 267, m: 1, j: 213 },
+                                { v: 0, t: 335, m: 1 },
                               ],
                             },
                           ],
                         },
                       },
                       ':': [
-                        {
-                          c: 'Text',
-                          p: {
-                            y: 26,
-                            translatableText: 'loading',
-                            'style.fontSize': 35,
-                            maxWidth: 795,
-                          },
-                        },
+                        { c: 'Text', p: { y: 26, translatableText: 'loading', 'style.fontSize': 35, maxWidth: 795 } },
                         {
                           c: 'MovieClip',
                           p: {
@@ -2691,37 +2073,17 @@ const bundle = () => {
                                 {
                                   n: 'scale.y',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.5499999999999999,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.5499999999999999, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                                 {
                                   n: 'scale.x',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.55,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.55, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                               ],
@@ -2736,9 +2098,7 @@ const bundle = () => {
             },
             'fader/default-slow': {
               c: 'Container',
-              p: {
-                name: 'fader/default-slow',
-              },
+              p: { name: 'fader/default-slow' },
               ':': [
                 {
                   c: 'Resizer',
@@ -2761,43 +2121,18 @@ const bundle = () => {
                         image: 'WHITE_FOR_CANVAS.jpg',
                         tint: 0,
                         timeline: {
-                          l: {
-                            'hide fader': 122,
-                          },
+                          l: { 'hide fader': 122 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 60,
-                                  m: 1,
-                                  a: 'game.faderShoot',
-                                },
-                                {
-                                  v: 1,
-                                  t: 70,
-                                  m: 1,
-                                  a: 'this.stop',
-                                },
-                                {
-                                  v: 1,
-                                  t: 123,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 187,
-                                  m: 1,
-                                  a: 'game.faderEnd',
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 1, t: 60, m: 1, a: 'game.faderShoot' },
+                                { v: 1, t: 70, m: 1, a: 'this.stop' },
+                                { v: 1, t: 123, m: 1 },
+                                { v: 0, t: 187, m: 1, a: 'game.faderEnd' },
                               ],
                             },
                           ],
@@ -2808,82 +2143,34 @@ const bundle = () => {
                 },
                 {
                   c: 'Resizer',
-                  p: {
-                    relativeX: !0,
-                    xPos: 0.5,
-                    relativeY: !0,
-                    yPos: 0.5,
-                  },
+                  p: { relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
                   ':': [
                     {
                       c: 'MovieClip',
                       p: {
                         timeline: {
-                          l: {
-                            'hide fader': 324,
-                          },
+                          l: { 'hide fader': 324 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 209,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 217,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.8200000000000001,
-                                  t: 228,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 241,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.4,
-                                  t: 255,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 267,
-                                  m: 1,
-                                  j: 212,
-                                },
-                                {
-                                  v: 0,
-                                  t: 335,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0, t: 209, m: 1 },
+                                { v: 1, t: 217, m: 1 },
+                                { v: 0.8200000000000001, t: 228, m: 1 },
+                                { v: 1, t: 241, m: 1 },
+                                { v: 0.4, t: 255, m: 1 },
+                                { v: 1, t: 267, m: 1, j: 212 },
+                                { v: 0, t: 335, m: 1 },
                               ],
                             },
                           ],
                         },
                       },
                       ':': [
-                        {
-                          c: 'Text',
-                          p: {
-                            y: 26,
-                            translatableText: 'loading',
-                            'style.fontSize': 35,
-                            maxWidth: 824,
-                          },
-                        },
+                        { c: 'Text', p: { y: 26, translatableText: 'loading', 'style.fontSize': 35, maxWidth: 824 } },
                         {
                           c: 'MovieClip',
                           p: {
@@ -2898,37 +2185,17 @@ const bundle = () => {
                                 {
                                   n: 'scale.y',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.5499999999999999,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.5499999999999999, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                                 {
                                   n: 'scale.x',
                                   t: [
-                                    {
-                                      v: 0.66,
-                                      t: 0,
-                                    },
-                                    {
-                                      v: 0.55,
-                                      t: 13,
-                                    },
-                                    {
-                                      v: 0.66,
-                                      t: 60,
-                                      j: 0,
-                                    },
+                                    { v: 0.66, t: 0 },
+                                    { v: 0.55, t: 13 },
+                                    { v: 0.66, t: 60, j: 0 },
                                   ],
                                 },
                               ],
@@ -2957,14 +2224,7 @@ const bundle = () => {
             },
             logo: {
               c: 'DSprite',
-              p: {
-                name: 'logo',
-                x: 1,
-                y: 61,
-                'scale.x': 0.666,
-                'scale.y': 0.666,
-                image: 'ui/logo.png',
-              },
+              p: { name: 'logo', x: 1, y: 61, 'scale.x': 0.666, 'scale.y': 0.666, image: 'ui/logo.png' },
               ':': [
                 {
                   c: 'MovieClip',
@@ -2977,43 +2237,17 @@ const bundle = () => {
                         {
                           n: 'x',
                           t: [
-                            {
-                              v: 122,
-                              t: 0,
-                              m: 1,
-                            },
-                            {
-                              v: -30,
-                              t: 9,
-                              m: 1,
-                            },
-                            {
-                              v: 122.9661363162408,
-                              t: 42,
-                              m: 1,
-                              j: 0,
-                            },
+                            { v: 122, t: 0, m: 1 },
+                            { v: -30, t: 9, m: 1 },
+                            { v: 122.9661363162408, t: 42, m: 1, j: 0 },
                           ],
                         },
                         {
                           n: 'y',
                           t: [
-                            {
-                              v: 48,
-                              t: 0,
-                              m: 1,
-                            },
-                            {
-                              v: -80,
-                              t: 16,
-                              m: 1,
-                            },
-                            {
-                              v: 50.41431393721814,
-                              t: 35,
-                              m: 1,
-                              j: 0,
-                            },
+                            { v: 48, t: 0, m: 1 },
+                            { v: -80, t: 16, m: 1 },
+                            { v: 50.41431393721814, t: 35, m: 1, j: 0 },
                           ],
                         },
                       ],
@@ -3032,47 +2266,19 @@ const bundle = () => {
                             {
                               n: 'scale.x',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                },
-                                {
-                                  v: 0,
-                                  t: 61,
-                                  a: 'this.parent.stop',
-                                },
-                                {
-                                  v: 1,
-                                  t: 82,
-                                },
-                                {
-                                  v: 0,
-                                  t: 116,
-                                  j: 0,
-                                  a: 'this.parent.play',
-                                },
+                                { v: 0, t: 0 },
+                                { v: 0, t: 61, a: 'this.parent.stop' },
+                                { v: 1, t: 82 },
+                                { v: 0, t: 116, j: 0, a: 'this.parent.play' },
                               ],
                             },
                             {
                               n: 'scale.y',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                },
-                                {
-                                  v: 0,
-                                  t: 61,
-                                },
-                                {
-                                  v: 1,
-                                  t: 83,
-                                },
-                                {
-                                  v: 0,
-                                  t: 116,
-                                  j: 0,
-                                },
+                                { v: 0, t: 0 },
+                                { v: 0, t: 61 },
+                                { v: 1, t: 83 },
+                                { v: 0, t: 116, j: 0 },
                               ],
                             },
                           ],
@@ -3092,43 +2298,17 @@ const bundle = () => {
                         {
                           n: 'x',
                           t: [
-                            {
-                              v: 126,
-                              t: 0,
-                              m: 1,
-                            },
-                            {
-                              v: -31,
-                              t: 15,
-                              m: 1,
-                            },
-                            {
-                              v: 123,
-                              t: 30,
-                              m: 1,
-                              j: 0,
-                            },
+                            { v: 126, t: 0, m: 1 },
+                            { v: -31, t: 15, m: 1 },
+                            { v: 123, t: 30, m: 1, j: 0 },
                           ],
                         },
                         {
                           n: 'y',
                           t: [
-                            {
-                              v: 77,
-                              t: 0,
-                              m: 1,
-                            },
-                            {
-                              v: -75,
-                              t: 10,
-                              m: 1,
-                            },
-                            {
-                              v: 82,
-                              t: 23,
-                              m: 1,
-                              j: 0,
-                            },
+                            { v: 77, t: 0, m: 1 },
+                            { v: -75, t: 10, m: 1 },
+                            { v: 82, t: 23, m: 1, j: 0 },
                           ],
                         },
                       ],
@@ -3147,47 +2327,19 @@ const bundle = () => {
                             {
                               n: 'scale.x',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                },
-                                {
-                                  v: 0,
-                                  t: 61,
-                                  a: 'this.parent.stop',
-                                },
-                                {
-                                  v: 1,
-                                  t: 82,
-                                },
-                                {
-                                  v: 0,
-                                  t: 108,
-                                  j: 0,
-                                  a: 'this.parent.play',
-                                },
+                                { v: 0, t: 0 },
+                                { v: 0, t: 61, a: 'this.parent.stop' },
+                                { v: 1, t: 82 },
+                                { v: 0, t: 108, j: 0, a: 'this.parent.play' },
                               ],
                             },
                             {
                               n: 'scale.y',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                },
-                                {
-                                  v: 0,
-                                  t: 61,
-                                },
-                                {
-                                  v: 1,
-                                  t: 83,
-                                },
-                                {
-                                  v: 0,
-                                  t: 108,
-                                  j: 0,
-                                },
+                                { v: 0, t: 0 },
+                                { v: 0, t: 61 },
+                                { v: 1, t: 83 },
+                                { v: 0, t: 108, j: 0 },
                               ],
                             },
                           ],
@@ -3210,45 +2362,19 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 0,
-                              t: 29,
-                            },
-                            {
-                              v: 1.44,
-                              t: 49,
-                            },
-                            {
-                              v: 0,
-                              t: 136,
-                              j: 0,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 0, t: 29 },
+                            { v: 1.44, t: 49 },
+                            { v: 0, t: 136, j: 0 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 0,
-                              t: 29,
-                            },
-                            {
-                              v: 1.44,
-                              t: 49,
-                            },
-                            {
-                              v: 0,
-                              t: 136,
-                              j: 0,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 0, t: 29 },
+                            { v: 1.44, t: 49 },
+                            { v: 0, t: 136, j: 0 },
                           ],
                         },
                       ],
@@ -3269,45 +2395,19 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 0,
-                              t: 87,
-                            },
-                            {
-                              v: 1.58,
-                              t: 112,
-                            },
-                            {
-                              v: 0,
-                              t: 186,
-                              j: 0,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 0, t: 87 },
+                            { v: 1.58, t: 112 },
+                            { v: 0, t: 186, j: 0 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 0,
-                              t: 87,
-                            },
-                            {
-                              v: 1.67,
-                              t: 112,
-                            },
-                            {
-                              v: 0,
-                              t: 185,
-                              j: 0,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 0, t: 87 },
+                            { v: 1.67, t: 112 },
+                            { v: 0, t: 185, j: 0 },
                           ],
                         },
                       ],
@@ -3316,34 +2416,17 @@ const bundle = () => {
                 },
                 {
                   c: 'Trigger',
-                  p: {
-                    dataPath: 'game.casinoOptions.ui.logo_visible',
-                  },
+                  p: { dataPath: 'game.casinoOptions.ui.logo_visible' },
                   ':': [
                     {
                       c: 'Sprite',
-                      p: {
-                        x: 135,
-                        y: 37,
-                        alpha: 0.4,
-                        'scale.x': 0.37,
-                        'scale.y': 0.37,
-                        image: 'ui/b-gaming.png',
-                      },
+                      p: { x: 135, y: 37, alpha: 0.4, 'scale.x': 0.37, 'scale.y': 0.37, image: 'ui/b-gaming.png' },
                     },
                   ],
                 },
               ],
             },
-            pin: {
-              c: 'DSprite',
-              p: {
-                name: 'pin',
-                'pivot.x': -1,
-                'pivot.y': -2,
-                image: 'ui/pin.png',
-              },
-            },
+            pin: { c: 'DSprite', p: { name: 'pin', 'pivot.x': -1, 'pivot.y': -2, image: 'ui/pin.png' } },
             'pin-light': {
               c: 'MovieClip',
               p: {
@@ -3362,52 +2445,23 @@ const bundle = () => {
                     {
                       n: 'alpha',
                       t: [
-                        {
-                          v: 1,
-                          t: 0,
-                          m: 1,
-                        },
-                        {
-                          v: 1,
-                          t: 3,
-                          m: 1,
-                        },
-                        {
-                          v: 0,
-                          t: 14,
-                          m: 1,
-                          a: 'this.remove',
-                        },
+                        { v: 1, t: 0, m: 1 },
+                        { v: 1, t: 3, m: 1 },
+                        { v: 0, t: 14, m: 1, a: 'this.remove' },
                       ],
                     },
                     {
                       n: 'scale.x',
                       t: [
-                        {
-                          v: 1,
-                          t: 0,
-                          m: 1,
-                        },
-                        {
-                          v: 1.5,
-                          t: 14,
-                          m: 1,
-                        },
+                        { v: 1, t: 0, m: 1 },
+                        { v: 1.5, t: 14, m: 1 },
                       ],
                     },
                     {
                       n: 'scale.y',
                       t: [
-                        {
-                          v: 1,
-                          t: 0,
-                          m: 1,
-                        },
-                        {
-                          v: 1.5,
-                          t: 14,
-                          m: 1,
-                        },
+                        { v: 1, t: 0, m: 1 },
+                        { v: 1.5, t: 14, m: 1 },
                       ],
                     },
                   ],
@@ -3432,61 +2486,26 @@ const bundle = () => {
               p: {
                 name: 'result-list-item',
                 timeline: {
-                  l: {
-                    remove: 69,
-                    'no-animation': 66,
-                  },
+                  l: { remove: 69, 'no-animation': 66 },
                   p: 0.05,
                   d: 0.74,
                   f: [
                     {
                       n: 'alpha',
                       t: [
-                        {
-                          v: 0,
-                          t: 0,
-                          m: 1,
-                        },
-                        {
-                          v: 1,
-                          t: 23,
-                          m: 1,
-                        },
-                        {
-                          v: 1,
-                          t: 67,
-                          m: 1,
-                        },
-                        {
-                          v: 0,
-                          t: 86,
-                          m: 1,
-                          a: 'this.remove',
-                        },
+                        { v: 0, t: 0, m: 1 },
+                        { v: 1, t: 23, m: 1 },
+                        { v: 1, t: 67, m: 1 },
+                        { v: 0, t: 86, m: 1, a: 'this.remove' },
                       ],
                     },
                     {
                       n: 'pivot.x',
                       t: [
-                        {
-                          v: 222,
-                          t: 0,
-                        },
-                        {
-                          v: 0,
-                          t: 61,
-                        },
-                        {
-                          v: 0,
-                          t: 67,
-                          a: 'this.stop',
-                          m: 1,
-                        },
-                        {
-                          v: 199,
-                          t: 86,
-                          m: 1,
-                        },
+                        { v: 222, t: 0 },
+                        { v: 0, t: 61 },
+                        { v: 0, t: 67, a: 'this.stop', m: 1 },
+                        { v: 199, t: 86, m: 1 },
                       ],
                     },
                   ],
@@ -3495,13 +2514,7 @@ const bundle = () => {
               ':': [
                 {
                   c: 'Sprite',
-                  p: {
-                    name: 'lose-bg',
-                    x: 447,
-                    y: -16,
-                    image: 'ui/profit-bg.png',
-                    tint: 7610143,
-                  },
+                  p: { name: 'lose-bg', x: 447, y: -16, image: 'ui/profit-bg.png', tint: 7610143 },
                   ':': [
                     {
                       c: 'MoneyLabel',
@@ -3526,13 +2539,7 @@ const bundle = () => {
                 },
                 {
                   c: 'Sprite',
-                  p: {
-                    name: 'win-bg',
-                    x: 447,
-                    y: -16,
-                    image: 'ui/profit-bg.png',
-                    tint: 1069106,
-                  },
+                  p: { name: 'win-bg', x: 447, y: -16, image: 'ui/profit-bg.png', tint: 1069106 },
                   ':': [
                     {
                       c: 'MoneyLabel',
@@ -3603,31 +2610,14 @@ const bundle = () => {
                 },
               ],
             },
-            spark: {
-              c: 'ParticleSimple',
-              p: {
-                name: 'spark',
-                x: 640,
-                y: 360,
-                image: 'ui/spark.png',
-              },
-            },
+            spark: { c: 'ParticleSimple', p: { name: 'spark', x: 640, y: 360, image: 'ui/spark.png' } },
             'thing-games-utils/api-message': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/api-message',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/api-message', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -3645,16 +2635,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.7,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0.7, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -3676,37 +2658,17 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                       ],
@@ -3875,15 +2837,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Shape',
-                              p: {
-                                x: -25,
-                                y: -25,
-                                alpha: 0.8,
-                                visible: !1,
-                                width: 50,
-                                height: 50,
-                                isItHitArea: !0,
-                              },
+                              p: { x: -25, y: -25, alpha: 0.8, visible: !1, width: 50, height: 50, isItHitArea: !0 },
                             },
                           ],
                         },
@@ -3895,20 +2849,11 @@ const bundle = () => {
             },
             'thing-games-utils/html-popup': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/html-popup',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/html-popup', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -3924,16 +2869,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 1, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -3974,27 +2911,15 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 25,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 25 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 25,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 25 },
                           ],
                         },
                       ],
@@ -4003,12 +2928,7 @@ const bundle = () => {
                   ':': [
                     {
                       c: 'Resizer',
-                      p: {
-                        relativeX: !0,
-                        xPos: -0.5,
-                        relativeY: !0,
-                        yPos: -0.5,
-                      },
+                      p: { relativeX: !0, xPos: -0.5, relativeY: !0, yPos: -0.5 },
                       ':': [
                         {
                           c: 'FullscreenPopup',
@@ -4047,18 +2967,8 @@ const bundle = () => {
                               c: 'HTMLOverlay',
                               p: {
                                 name: 'html',
-                                visibleArea: {
-                                  x: 0,
-                                  y: 0,
-                                  w: 900,
-                                  h: 860,
-                                },
-                                fullArea: {
-                                  x: 0,
-                                  y: 0,
-                                  w: 1200,
-                                  h: 3283.8832668486248,
-                                },
+                                visibleArea: { x: 0, y: 0, w: 900, h: 860 },
+                                fullArea: { x: 0, y: 0, w: 1200, h: 3283.8832668486248 },
                                 className: 'casino-modal',
                               },
                             },
@@ -4092,9 +3002,7 @@ const bundle = () => {
                                 },
                                 {
                                   c: 'Trigger',
-                                  p: {
-                                    dataPath: 'this.parent.parent.#html.isYScrollAvailable',
-                                  },
+                                  p: { dataPath: 'this.parent.parent.#html.isYScrollAvailable' },
                                   ':': [
                                     {
                                       c: 'Button',
@@ -4138,14 +3046,7 @@ const bundle = () => {
                                       ':': [
                                         {
                                           c: 'Shape',
-                                          p: {
-                                            x: -37,
-                                            y: -35,
-                                            alpha: 0.31,
-                                            width: 70,
-                                            height: 70,
-                                            isItHitArea: !0,
-                                          },
+                                          p: { x: -37, y: -35, alpha: 0.31, width: 70, height: 70, isItHitArea: !0 },
                                         },
                                       ],
                                     },
@@ -4176,20 +3077,11 @@ const bundle = () => {
             },
             'thing-games-utils/offer-question': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/offer-question',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/offer-question', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -4205,16 +3097,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 1, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -4318,37 +3202,17 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                       ],
@@ -4486,15 +3350,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Shape',
-                              p: {
-                                x: -25,
-                                y: -25,
-                                alpha: 0.8,
-                                visible: !1,
-                                width: 50,
-                                height: 50,
-                                isItHitArea: !0,
-                              },
+                              p: { x: -25, y: -25, alpha: 0.8, visible: !1, width: 50, height: 50, isItHitArea: !0 },
                             },
                           ],
                         },
@@ -4506,20 +3362,11 @@ const bundle = () => {
             },
             'thing-games-utils/pause-popup': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/pause-popup',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/pause-popup', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -4537,16 +3384,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.7,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0.7, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -4568,37 +3407,17 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                       ],
@@ -4682,12 +3501,7 @@ const bundle = () => {
             },
             'thing-games-utils/provability-panel': {
               c: 'ProvabilityPanel',
-              p: {
-                name: 'thing-games-utils/provability-panel',
-                pow: 0.1,
-                damp: 0.64,
-                xShift: -100,
-              },
+              p: { name: 'thing-games-utils/provability-panel', pow: 0.1, damp: 0.64, xShift: -100 },
               ':': [
                 {
                   c: 'Trigger',
@@ -4713,11 +3527,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Container',
-                      p: {
-                        name: 'provability-container',
-                        x: 220,
-                        y: 540,
-                      },
+                      p: { name: 'provability-container', x: 220, y: 540 },
                       ':': [
                         {
                           c: 'Trigger',
@@ -4761,10 +3571,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Container',
-                              p: {
-                                name: 'next-game-container',
-                                y: -309,
-                              },
+                              p: { name: 'next-game-container', y: -309 },
                               ':': [
                                 {
                                   c: 'Text',
@@ -4820,14 +3627,7 @@ const bundle = () => {
                                       ':': [
                                         {
                                           c: 'Scissors',
-                                          p: {
-                                            rect: {
-                                              x: 0,
-                                              y: 0,
-                                              w: 325,
-                                              h: 41,
-                                            },
-                                          },
+                                          p: { rect: { x: 0, y: 0, w: 325, h: 41 } },
                                           ':': [
                                             {
                                               c: 'Label',
@@ -4860,10 +3660,7 @@ const bundle = () => {
                                 },
                                 {
                                   c: 'PrefabReference',
-                                  p: {
-                                    name: 'provability-seed',
-                                    prefabName: 'ui/game-provability',
-                                  },
+                                  p: { name: 'provability-seed', prefabName: 'ui/game-provability' },
                                 },
                               ],
                             },
@@ -4871,12 +3668,7 @@ const bundle = () => {
                         },
                         {
                           c: 'Trigger',
-                          p: {
-                            y: 54,
-                            dataPath: 'this.parent.parent.parent.data.1',
-                            pow: 0.06,
-                            damp: 0.7,
-                          },
+                          p: { y: 54, dataPath: 'this.parent.parent.parent.data.1', pow: 0.06, damp: 0.7 },
                           ':': [
                             {
                               c: 'Trigger',
@@ -4917,10 +3709,7 @@ const bundle = () => {
                               ':': [
                                 {
                                   c: 'Container',
-                                  p: {
-                                    name: 'last-game-container',
-                                    y: 13,
-                                  },
+                                  p: { name: 'last-game-container', y: 13 },
                                   ':': [
                                     {
                                       c: 'Text',
@@ -5016,14 +3805,7 @@ const bundle = () => {
                                           ':': [
                                             {
                                               c: 'Scissors',
-                                              p: {
-                                                rect: {
-                                                  x: 0,
-                                                  y: 0,
-                                                  w: 193,
-                                                  h: 50,
-                                                },
-                                              },
+                                              p: { rect: { x: 0, y: 0, w: 193, h: 50 } },
                                               ':': [
                                                 {
                                                   c: 'Label',
@@ -5082,14 +3864,7 @@ const bundle = () => {
                                           ':': [
                                             {
                                               c: 'Scissors',
-                                              p: {
-                                                rect: {
-                                                  x: 0,
-                                                  y: 0,
-                                                  w: 329,
-                                                  h: 69,
-                                                },
-                                              },
+                                              p: { rect: { x: 0, y: 0, w: 329, h: 69 } },
                                               ':': [
                                                 {
                                                   c: 'MultilineText',
@@ -5152,14 +3927,7 @@ const bundle = () => {
                                           ':': [
                                             {
                                               c: 'Scissors',
-                                              p: {
-                                                rect: {
-                                                  x: 0,
-                                                  y: 0,
-                                                  w: 329,
-                                                  h: 66,
-                                                },
-                                              },
+                                              p: { rect: { x: 0, y: 0, w: 329, h: 66 } },
                                               ':': [
                                                 {
                                                   c: 'MultilineText',
@@ -5257,18 +4025,14 @@ const bundle = () => {
                                         y: 300,
                                         image: 'ui/provability/verify-btn.png',
                                         hoverImage: 'ui/provability/verify-btn-h.png',
-                                        onClick:
-                                          'this.parent.parent.parent.parent.parent.parent.onVerifyClick',
+                                        onClick: 'this.parent.parent.parent.parent.parent.parent.onVerifyClick',
                                         sndClick: 'click',
                                         sndOver: 'over',
                                       },
                                       ':': [
                                         {
                                           c: 'Text',
-                                          p: {
-                                            verticalAlign: 'center',
-                                            'style.fontWeight': 'lighter',
-                                          },
+                                          p: { verticalAlign: 'center', 'style.fontWeight': 'lighter' },
                                           ':': [
                                             {
                                               c: 'Text',
@@ -5289,9 +4053,7 @@ const bundle = () => {
                                 },
                                 {
                                   c: 'Trigger',
-                                  p: {
-                                    dataPath: 'this.parent.parent.parent.parent.parent.isVerified',
-                                  },
+                                  p: { dataPath: 'this.parent.parent.parent.parent.parent.isVerified' },
                                   ':': [
                                     {
                                       c: 'Trigger',
@@ -5305,8 +4067,7 @@ const bundle = () => {
                                           p: {
                                             x: 95,
                                             y: 260,
-                                            translatableText:
-                                              'provability.messages.successful_verification',
+                                            translatableText: 'provability.messages.successful_verification',
                                             'style.fontSize': 17,
                                             'style.fill': '#0edc17',
                                             'style.fontWeight': 'lighter',
@@ -5319,8 +4080,7 @@ const bundle = () => {
                                           p: {
                                             x: 95,
                                             y: 281,
-                                            translatableText:
-                                              'provability.messages.success_message',
+                                            translatableText: 'provability.messages.success_message',
                                             'style.fontSize': 15,
                                             'style.fontWeight': 'lighter',
                                             maxWidthLandscape: 186,
@@ -5342,8 +4102,7 @@ const bundle = () => {
                                           p: {
                                             x: 95,
                                             y: 260,
-                                            translatableText:
-                                              'provability.messages.failed_verification',
+                                            translatableText: 'provability.messages.failed_verification',
                                             'style.fontSize': 17,
                                             'style.fill': '#ff0303',
                                             'style.fontWeight': 'lighter',
@@ -5396,25 +4155,15 @@ const bundle = () => {
             },
             'thing-games-utils/provability-seed': {
               c: 'Container',
-              p: {
-                name: 'thing-games-utils/provability-seed',
-              },
+              p: { name: 'thing-games-utils/provability-seed' },
               ':': [
                 {
                   c: 'Container',
-                  p: {
-                    name: 'client-seed-controls',
-                    'scale.x': 0.8,
-                    'scale.y': 0.8,
-                  },
+                  p: { name: 'client-seed-controls', 'scale.x': 0.8, 'scale.y': 0.8 },
                   ':': [
                     {
                       c: 'Container',
-                      p: {
-                        name: '1',
-                        x: -200,
-                        y: 25,
-                      },
+                      p: { name: '1', x: -200, y: 25 },
                       ':': [
                         {
                           c: 'Label',
@@ -5440,11 +4189,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -5483,11 +4228,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Container',
-                      p: {
-                        name: '2',
-                        x: -100,
-                        y: 25,
-                      },
+                      p: { name: '2', x: -100, y: 25 },
                       ':': [
                         {
                           c: 'Label',
@@ -5513,11 +4254,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -5556,10 +4293,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Container',
-                      p: {
-                        name: '3',
-                        y: 25,
-                      },
+                      p: { name: '3', y: 25 },
                       ':': [
                         {
                           c: 'Label',
@@ -5585,11 +4319,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -5628,11 +4358,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Container',
-                      p: {
-                        name: '4',
-                        x: 100,
-                        y: 25,
-                      },
+                      p: { name: '4', x: 100, y: 25 },
                       ':': [
                         {
                           c: 'Label',
@@ -5658,11 +4384,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -5701,11 +4423,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Container',
-                      p: {
-                        name: '5',
-                        x: 200,
-                        y: 25,
-                      },
+                      p: { name: '5', x: 200, y: 25 },
                       ':': [
                         {
                           c: 'Label',
@@ -5731,11 +4449,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -5794,20 +4508,11 @@ const bundle = () => {
             },
             'thing-games-utils/reality-check-popup': {
               c: 'RealityCheckPopup',
-              p: {
-                name: 'thing-games-utils/reality-check-popup',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/reality-check-popup', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -5819,37 +4524,17 @@ const bundle = () => {
                         image: 'WHITE',
                         tint: 0,
                         timeline: {
-                          l: {
-                            close: 15,
-                          },
+                          l: { close: 15 },
                           p: 0.02,
                           d: 0.85,
                           f: [
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.7,
-                                  t: 7,
-                                  m: 1,
-                                  a: 'this.stop',
-                                },
-                                {
-                                  v: 0.7,
-                                  t: 15,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 23,
-                                  m: 1,
-                                  a: 'this.stop',
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0.7, t: 7, m: 1, a: 'this.stop' },
+                                { v: 0.7, t: 15, m: 1 },
+                                { v: 0, t: 23, m: 1, a: 'this.stop' },
                               ],
                             },
                           ],
@@ -5864,65 +4549,28 @@ const bundle = () => {
                     name: 'main',
                     tint: 0,
                     timeline: {
-                      l: {
-                        close: 20,
-                      },
+                      l: { close: 20 },
                       p: 0.06,
                       d: 0.73,
                       f: [
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                              a: 'this.stop',
-                            },
-                            {
-                              v: 1,
-                              t: 20,
-                            },
-                            {
-                              v: 0,
-                              t: 30,
-                              a: 'this.parent.hidePopup',
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1, a: 'this.stop' },
+                            { v: 1, t: 20 },
+                            { v: 0, t: 30, a: 'this.parent.hidePopup' },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
-                            {
-                              v: 1,
-                              t: 20,
-                            },
-                            {
-                              v: 0,
-                              t: 30,
-                              a: 'this.stop',
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
+                            { v: 1, t: 20 },
+                            { v: 0, t: 30, a: 'this.stop' },
                           ],
                         },
                       ],
@@ -5940,26 +4588,8 @@ const bundle = () => {
                         isApplyInteractivity: !1,
                       },
                       ':': [
-                        {
-                          c: 'Shape',
-                          p: {
-                            x: -255,
-                            y: -380,
-                            width: 510,
-                            height: 755,
-                            shapeFillColor: 5460819,
-                          },
-                        },
-                        {
-                          c: 'Shape',
-                          p: {
-                            x: -255,
-                            y: -380,
-                            width: 510,
-                            height: 15,
-                            shapeFillColor: 10987431,
-                          },
-                        },
+                        { c: 'Shape', p: { x: -255, y: -380, width: 510, height: 755, shapeFillColor: 5460819 } },
+                        { c: 'Shape', p: { x: -255, y: -380, width: 510, height: 15, shapeFillColor: 10987431 } },
                         {
                           c: 'Text',
                           p: {
@@ -6008,16 +4638,7 @@ const bundle = () => {
                             isNumeric: !0,
                           },
                         },
-                        {
-                          c: 'Shape',
-                          p: {
-                            x: -221,
-                            y: -60,
-                            width: 440,
-                            height: 2,
-                            shapeFillColor: 10987431,
-                          },
-                        },
+                        { c: 'Shape', p: { x: -221, y: -60, width: 440, height: 2, shapeFillColor: 10987431 } },
                         {
                           c: 'Text',
                           p: {
@@ -6048,16 +4669,7 @@ const bundle = () => {
                             decimalsCountPath: 'data.balanceDigitsCount',
                           },
                         },
-                        {
-                          c: 'Shape',
-                          p: {
-                            x: -221,
-                            y: 1,
-                            width: 440,
-                            height: 2,
-                            shapeFillColor: 10987431,
-                          },
-                        },
+                        { c: 'Shape', p: { x: -221, y: 1, width: 440, height: 2, shapeFillColor: 10987431 } },
                         {
                           c: 'Text',
                           p: {
@@ -6088,16 +4700,7 @@ const bundle = () => {
                             decimalsCountPath: 'data.balanceDigitsCount',
                           },
                         },
-                        {
-                          c: 'Shape',
-                          p: {
-                            x: -221,
-                            y: 65,
-                            width: 440,
-                            height: 2,
-                            shapeFillColor: 10987431,
-                          },
-                        },
+                        { c: 'Shape', p: { x: -221, y: 65, width: 440, height: 2, shapeFillColor: 10987431 } },
                         {
                           c: 'Text',
                           p: {
@@ -6142,12 +4745,7 @@ const bundle = () => {
                         },
                         {
                           c: 'Trigger',
-                          p: {
-                            y: -18,
-                            dataPath: 'casinoOptions.history_url',
-                            pow: 1,
-                            damp: 0,
-                          },
+                          p: { y: -18, dataPath: 'casinoOptions.history_url', pow: 1, damp: 0 },
                           ':': [
                             {
                               c: 'Button',
@@ -6159,15 +4757,7 @@ const bundle = () => {
                                 sndOver: 'over',
                               },
                               ':': [
-                                {
-                                  c: 'Shape',
-                                  p: {
-                                    x: -220,
-                                    width: 440,
-                                    height: 61,
-                                    shapeFillColor: 10987431,
-                                  },
-                                },
+                                { c: 'Shape', p: { x: -220, width: 440, height: 61, shapeFillColor: 10987431 } },
                                 {
                                   c: 'Text',
                                   p: {
@@ -6193,15 +4783,7 @@ const bundle = () => {
                             sndOver: 'over',
                           },
                           ':': [
-                            {
-                              c: 'Shape',
-                              p: {
-                                x: -220,
-                                width: 440,
-                                height: 61,
-                                shapeFillColor: 10987431,
-                              },
-                            },
+                            { c: 'Shape', p: { x: -220, width: 440, height: 61, shapeFillColor: 10987431 } },
                             {
                               c: 'Text',
                               p: {
@@ -6225,14 +4807,7 @@ const bundle = () => {
                             sndOver: 'over',
                           },
                           ':': [
-                            {
-                              c: 'Shape',
-                              p: {
-                                x: -220,
-                                width: 440,
-                                height: 66,
-                              },
-                            },
+                            { c: 'Shape', p: { x: -220, width: 440, height: 66 } },
                             {
                               c: 'Text',
                               p: {
@@ -6254,40 +4829,21 @@ const bundle = () => {
             },
             'thing-games-utils/safari-arrow-up': {
               c: 'SafariArrowUp',
-              p: {
-                name: 'thing-games-utils/safari-arrow-up',
-              },
+              p: { name: 'thing-games-utils/safari-arrow-up' },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'Sprite',
-                      p: {
-                        alpha: 0.75,
-                        interactive: !0,
-                        'scale.x': 120,
-                        'scale.y': 67.5,
-                        image: 'WHITE',
-                        tint: 0,
-                      },
+                      p: { alpha: 0.75, interactive: !0, 'scale.x': 120, 'scale.y': 67.5, image: 'WHITE', tint: 0 },
                     },
                   ],
                 },
                 {
                   c: 'Resizer',
-                  p: {
-                    'scale.x': 1.5,
-                    'scale.y': 1.5,
-                    relativeX: !0,
-                    xPos: 0.5,
-                    relativeY: !0,
-                    yPos: 0.5,
-                  },
+                  p: { 'scale.x': 1.5, 'scale.y': 1.5, relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -6301,27 +4857,11 @@ const bundle = () => {
                             {
                               n: 'y',
                               t: [
-                                {
-                                  v: -35,
-                                  t: 0,
-                                },
-                                {
-                                  v: -35,
-                                  t: 25,
-                                },
-                                {
-                                  v: -57,
-                                  t: 36,
-                                },
-                                {
-                                  v: -57,
-                                  t: 52,
-                                },
-                                {
-                                  v: -35,
-                                  t: 72,
-                                  j: 0,
-                                },
+                                { v: -35, t: 0 },
+                                { v: -35, t: 25 },
+                                { v: -57, t: 36 },
+                                { v: -57, t: 52 },
+                                { v: -35, t: 72, j: 0 },
                               ],
                             },
                           ],
@@ -6341,109 +4881,39 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 13,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 45,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 59,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0,
-                                  t: 72,
-                                  m: 1,
-                                  j: 0,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 1, t: 13, m: 1 },
+                                { v: 1, t: 45, m: 1 },
+                                { v: 0, t: 59, m: 1 },
+                                { v: 0, t: 72, m: 1, j: 0 },
                               ],
                             },
                             {
                               n: 'scale.y',
                               t: [
-                                {
-                                  v: 2,
-                                  t: 0,
-                                },
-                                {
-                                  v: 1,
-                                  t: 14,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 47,
-                                  m: 1,
-                                },
-                                {
-                                  v: 2,
-                                  t: 72,
-                                  j: 0,
-                                  m: 1,
-                                },
+                                { v: 2, t: 0 },
+                                { v: 1, t: 14, m: 1 },
+                                { v: 1, t: 47, m: 1 },
+                                { v: 2, t: 72, j: 0, m: 1 },
                               ],
                             },
                             {
                               n: 'scale.x',
                               t: [
-                                {
-                                  v: 2,
-                                  t: 0,
-                                },
-                                {
-                                  v: 1,
-                                  t: 14,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 47,
-                                  m: 1,
-                                },
-                                {
-                                  v: 2,
-                                  t: 72,
-                                  j: 0,
-                                  m: 1,
-                                },
+                                { v: 2, t: 0 },
+                                { v: 1, t: 14, m: 1 },
+                                { v: 1, t: 47, m: 1 },
+                                { v: 2, t: 72, j: 0, m: 1 },
                               ],
                             },
                             {
                               n: 'y',
                               t: [
-                                {
-                                  v: 130,
-                                  t: 0,
-                                },
-                                {
-                                  v: 130,
-                                  t: 1,
-                                  m: 2,
-                                },
-                                {
-                                  v: 130,
-                                  t: 21,
-                                },
-                                {
-                                  v: -99,
-                                  t: 60,
-                                },
-                                {
-                                  v: 130,
-                                  t: 72,
-                                  j: 0,
-                                },
+                                { v: 130, t: 0 },
+                                { v: 130, t: 1, m: 2 },
+                                { v: 130, t: 21 },
+                                { v: -99, t: 60 },
+                                { v: 130, t: 72, j: 0 },
                               ],
                             },
                           ],
@@ -6456,12 +4926,7 @@ const bundle = () => {
             },
             'thing-games-utils/snd-mus-button': {
               c: 'ClickOutsideTrigger',
-              p: {
-                name: 'thing-games-utils/snd-mus-button',
-                x: -45,
-                y: 45,
-                onClickOutside: 'this.#volume-show.hide',
-              },
+              p: { name: 'thing-games-utils/snd-mus-button', x: -45, y: 45, onClickOutside: 'this.#volume-show.hide' },
               ':': [
                 {
                   c: 'Trigger',
@@ -6516,22 +4981,8 @@ const bundle = () => {
                             image: 'ui/bar-mask.png',
                           },
                         },
-                        {
-                          c: 'Fill',
-                          p: {
-                            name: 'bar',
-                            x: -22,
-                            image: 'ui/bar-mask.png',
-                          },
-                        },
-                        {
-                          c: 'Container',
-                          p: {
-                            name: 'cap',
-                            x: 14,
-                            y: -200,
-                          },
-                        },
+                        { c: 'Fill', p: { name: 'bar', x: -22, image: 'ui/bar-mask.png' } },
+                        { c: 'Container', p: { name: 'cap', x: 14, y: -200 } },
                       ],
                     },
                     {
@@ -6558,22 +5009,8 @@ const bundle = () => {
                             image: 'ui/bar-mask.png',
                           },
                         },
-                        {
-                          c: 'Fill',
-                          p: {
-                            name: 'bar',
-                            x: -22,
-                            image: 'ui/bar-mask.png',
-                          },
-                        },
-                        {
-                          c: 'Container',
-                          p: {
-                            name: 'cap',
-                            x: 14,
-                            y: -200,
-                          },
-                        },
+                        { c: 'Fill', p: { name: 'bar', x: -22, image: 'ui/bar-mask.png' } },
+                        { c: 'Container', p: { name: 'cap', x: 14, y: -200 } },
                       ],
                     },
                     {
@@ -6606,38 +5043,17 @@ const bundle = () => {
                                 image: 'ui/snd-off.png',
                                 isPlaying: !1,
                                 timeline: {
-                                  l: {
-                                    'btn-over': 2,
-                                    'btn-out': 53,
-                                  },
+                                  l: { 'btn-over': 2, 'btn-out': 53 },
                                   p: 0.02,
                                   d: 0.85,
                                   f: [
                                     {
                                       n: 'alpha',
                                       t: [
-                                        {
-                                          v: 0.6900000000000001,
-                                          t: 0,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 7,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 49,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 0.7,
-                                          t: 59,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
+                                        { v: 0.6900000000000001, t: 0, m: 1 },
+                                        { v: 1, t: 7, m: 1, a: 'this.stop' },
+                                        { v: 1, t: 49, m: 1 },
+                                        { v: 0.7, t: 59, m: 1, a: 'this.stop' },
                                       ],
                                     },
                                   ],
@@ -6677,38 +5093,17 @@ const bundle = () => {
                                 image: 'ui/snd-on.png',
                                 isPlaying: !1,
                                 timeline: {
-                                  l: {
-                                    'btn-over': 2,
-                                    'btn-out': 53,
-                                  },
+                                  l: { 'btn-over': 2, 'btn-out': 53 },
                                   p: 0.02,
                                   d: 0.85,
                                   f: [
                                     {
                                       n: 'alpha',
                                       t: [
-                                        {
-                                          v: 0.6900000000000001,
-                                          t: 0,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 7,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 49,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 0.7,
-                                          t: 59,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
+                                        { v: 0.6900000000000001, t: 0, m: 1 },
+                                        { v: 1, t: 7, m: 1, a: 'this.stop' },
+                                        { v: 1, t: 49, m: 1 },
+                                        { v: 0.7, t: 59, m: 1, a: 'this.stop' },
                                       ],
                                     },
                                   ],
@@ -6749,38 +5144,17 @@ const bundle = () => {
                                 image: 'ui/mus-off.png',
                                 isPlaying: !1,
                                 timeline: {
-                                  l: {
-                                    'btn-over': 2,
-                                    'btn-out': 53,
-                                  },
+                                  l: { 'btn-over': 2, 'btn-out': 53 },
                                   p: 0.02,
                                   d: 0.85,
                                   f: [
                                     {
                                       n: 'alpha',
                                       t: [
-                                        {
-                                          v: 0.6900000000000001,
-                                          t: 0,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 7,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 49,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 0.7,
-                                          t: 59,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
+                                        { v: 0.6900000000000001, t: 0, m: 1 },
+                                        { v: 1, t: 7, m: 1, a: 'this.stop' },
+                                        { v: 1, t: 49, m: 1 },
+                                        { v: 0.7, t: 59, m: 1, a: 'this.stop' },
                                       ],
                                     },
                                   ],
@@ -6820,38 +5194,17 @@ const bundle = () => {
                                 image: 'ui/mus-on.png',
                                 isPlaying: !1,
                                 timeline: {
-                                  l: {
-                                    'btn-over': 2,
-                                    'btn-out': 53,
-                                  },
+                                  l: { 'btn-over': 2, 'btn-out': 53 },
                                   p: 0.02,
                                   d: 0.85,
                                   f: [
                                     {
                                       n: 'alpha',
                                       t: [
-                                        {
-                                          v: 0.6900000000000001,
-                                          t: 0,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 7,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
-                                        {
-                                          v: 1,
-                                          t: 49,
-                                          m: 1,
-                                        },
-                                        {
-                                          v: 0.7,
-                                          t: 59,
-                                          m: 1,
-                                          a: 'this.stop',
-                                        },
+                                        { v: 0.6900000000000001, t: 0, m: 1 },
+                                        { v: 1, t: 7, m: 1, a: 'this.stop' },
+                                        { v: 1, t: 49, m: 1 },
+                                        { v: 0.7, t: 59, m: 1, a: 'this.stop' },
                                       ],
                                     },
                                   ],
@@ -6891,32 +5244,16 @@ const bundle = () => {
                             image: 'ui/snd-b-off.png',
                             isPlaying: !1,
                             timeline: {
-                              l: {
-                                'btn-over': 7,
-                                'btn-out': 44,
-                              },
+                              l: { 'btn-over': 7, 'btn-out': 44 },
                               p: 0.02,
                               d: 0.85,
                               f: [
                                 {
                                   n: 'image',
                                   t: [
-                                    {
-                                      v: 'ui/snd-b-off.png',
-                                      t: 0,
-                                      m: 2,
-                                    },
-                                    {
-                                      v: 'ui/snd-b-off-h.png',
-                                      t: 8,
-                                      m: 2,
-                                      a: 'this.stop',
-                                    },
-                                    {
-                                      v: 'ui/snd-b-off.png',
-                                      t: 45,
-                                      m: 2,
-                                    },
+                                    { v: 'ui/snd-b-off.png', t: 0, m: 2 },
+                                    { v: 'ui/snd-b-off-h.png', t: 8, m: 2, a: 'this.stop' },
+                                    { v: 'ui/snd-b-off.png', t: 45, m: 2 },
                                   ],
                                 },
                               ],
@@ -6927,12 +5264,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Trigger',
-                      p: {
-                        dataPath: 'classes.MainMenu.anySoundEnabled',
-                        pow: 0.06,
-                        damp: 0.8,
-                        scaleShift: -0.5,
-                      },
+                      p: { dataPath: 'classes.MainMenu.anySoundEnabled', pow: 0.06, damp: 0.8, scaleShift: -0.5 },
                       ':': [
                         {
                           c: 'MovieClip',
@@ -6940,32 +5272,16 @@ const bundle = () => {
                             image: 'ui/snd-b-on.png',
                             isPlaying: !1,
                             timeline: {
-                              l: {
-                                'btn-out': 44,
-                                'btn-over': 7,
-                              },
+                              l: { 'btn-out': 44, 'btn-over': 7 },
                               p: 0.02,
                               d: 0.85,
                               f: [
                                 {
                                   n: 'image',
                                   t: [
-                                    {
-                                      v: 'ui/snd-b-on.png',
-                                      t: 0,
-                                      m: 2,
-                                    },
-                                    {
-                                      v: 'ui/snd-b-on-h.png',
-                                      t: 8,
-                                      m: 2,
-                                      a: 'this.stop',
-                                    },
-                                    {
-                                      v: 'ui/snd-b-on.png',
-                                      t: 45,
-                                      m: 2,
-                                    },
+                                    { v: 'ui/snd-b-on.png', t: 0, m: 2 },
+                                    { v: 'ui/snd-b-on-h.png', t: 8, m: 2, a: 'this.stop' },
+                                    { v: 'ui/snd-b-on.png', t: 45, m: 2 },
                                   ],
                                 },
                               ],
@@ -6976,15 +5292,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Shape',
-                      p: {
-                        name: 'hit-area',
-                        x: -66,
-                        y: -56,
-                        alpha: 0.46,
-                        width: 121,
-                        height: 119,
-                        isItHitArea: !0,
-                      },
+                      p: { name: 'hit-area', x: -66, y: -56, alpha: 0.46, width: 121, height: 119, isItHitArea: !0 },
                     },
                   ],
                 },
@@ -6992,20 +5300,11 @@ const bundle = () => {
             },
             'thing-games-utils/sure-question': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/sure-question',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/sure-question', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -7021,16 +5320,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0.01,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 1,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0.01, t: 0, m: 1 },
+                                { v: 1, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -7072,37 +5363,17 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                       ],
@@ -7224,15 +5495,7 @@ const bundle = () => {
                             },
                           ],
                         },
-                        {
-                          c: 'Sprite',
-                          p: {
-                            name: 'alert-icon',
-                            x: -197,
-                            y: -182,
-                            image: 'ui/alert-icon.png',
-                          },
-                        },
+                        { c: 'Sprite', p: { name: 'alert-icon', x: -197, y: -182, image: 'ui/alert-icon.png' } },
                       ],
                     },
                   ],
@@ -7241,20 +5504,11 @@ const bundle = () => {
             },
             'thing-games-utils/sure-question700': {
               c: 'Resizer',
-              p: {
-                name: 'thing-games-utils/sure-question700',
-                relativeX: !0,
-                xPos: 0.5,
-                relativeY: !0,
-                yPos: 0.5,
-              },
+              p: { name: 'thing-games-utils/sure-question700', relativeX: !0, xPos: 0.5, relativeY: !0, yPos: 0.5 },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    resizeX: !0,
-                    resizeY: !0,
-                  },
+                  p: { resizeX: !0, resizeY: !0 },
                   ':': [
                     {
                       c: 'MovieClip',
@@ -7272,16 +5526,8 @@ const bundle = () => {
                             {
                               n: 'alpha',
                               t: [
-                                {
-                                  v: 0,
-                                  t: 0,
-                                  m: 1,
-                                },
-                                {
-                                  v: 0.7,
-                                  t: 7,
-                                  m: 1,
-                                },
+                                { v: 0, t: 0, m: 1 },
+                                { v: 0.7, t: 7, m: 1 },
                               ],
                             },
                           ],
@@ -7303,37 +5549,17 @@ const bundle = () => {
                         {
                           n: 'scale.x',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                         {
                           n: 'scale.y',
                           t: [
-                            {
-                              v: 0,
-                              t: 0,
-                            },
-                            {
-                              v: 1,
-                              t: 12,
-                            },
-                            {
-                              v: 1,
-                              t: 16,
-                              m: 1,
-                            },
+                            { v: 0, t: 0 },
+                            { v: 1, t: 12 },
+                            { v: 1, t: 16, m: 1 },
                           ],
                         },
                       ],
@@ -7493,15 +5719,11 @@ const bundle = () => {
             },
             'ui/game-provability': {
               c: 'Container',
-              p: {
-                name: 'ui/game-provability',
-              },
+              p: { name: 'ui/game-provability' },
               ':': [
                 {
                   c: 'Container',
-                  p: {
-                    name: 'client-seed-controls',
-                  },
+                  p: { name: 'client-seed-controls' },
                   ':': [
                     {
                       c: 'Container',
@@ -7520,11 +5742,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Sprite',
-                              p: {
-                                'pivot.x': 30,
-                                'pivot.y': 22,
-                                image: 'ui/provability/counter-bg.png',
-                              },
+                              p: { 'pivot.x': 30, 'pivot.y': 22, image: 'ui/provability/counter-bg.png' },
                             },
                           ],
                         },
@@ -7586,40 +5804,23 @@ const bundle = () => {
             },
             'ui/html-popup': {
               c: 'PrefabReference',
-              p: {
-                name: 'ui/html-popup',
-                prefabName: 'thing-games-utils/html-popup',
-              },
+              p: { name: 'ui/html-popup', prefabName: 'thing-games-utils/html-popup' },
             },
             'ui/sure-question': {
               c: 'PrefabReference',
-              p: {
-                name: 'ui/sure-question',
-                prefabName: 'thing-games-utils/sure-question',
-              },
+              p: { name: 'ui/sure-question', prefabName: 'thing-games-utils/sure-question' },
             },
             'ui/ui-panel': {
               c: 'Container',
-              p: {
-                name: 'ui/ui-panel',
-              },
+              p: { name: 'ui/ui-panel' },
               ':': [
                 {
                   c: 'Resizer',
-                  p: {
-                    name: 'top-middle',
-                    relativeX: !0,
-                    xPos: 0.5,
-                  },
+                  p: { name: 'top-middle', relativeX: !0, xPos: 0.5 },
                   ':': [
                     {
                       c: 'OrientationTrigger',
-                      p: {
-                        landscapeY: 70,
-                        portraitX: 60,
-                        portraitY: 71,
-                        portraitAlpha: 0,
-                      },
+                      p: { landscapeY: 70, portraitX: 60, portraitY: 71, portraitAlpha: 0 },
                       ':': [
                         {
                           c: 'Sprite',
@@ -7635,10 +5836,7 @@ const bundle = () => {
                           ':': [
                             {
                               c: 'Trigger',
-                              p: {
-                                dataPath: 'game.casinoOptions.ui.logo_visible',
-                                isApplyInteractivity: !1,
-                              },
+                              p: { dataPath: 'game.casinoOptions.ui.logo_visible', isApplyInteractivity: !1 },
                               ':': [
                                 {
                                   c: 'Sprite',
@@ -7673,12 +5871,7 @@ const bundle = () => {
                   ':': [
                     {
                       c: 'Trigger',
-                      p: {
-                        x: 44,
-                        y: 44,
-                        dataPath: 'game.casinoOptions.ui.home_button',
-                        pow: 1,
-                      },
+                      p: { x: 44, y: 44, dataPath: 'game.casinoOptions.ui.home_button', pow: 1 },
                       ':': [
                         {
                           c: 'Button',
@@ -7713,12 +5906,7 @@ const bundle = () => {
                     },
                     {
                       c: 'Resizer',
-                      p: {
-                        name: 'right-top',
-                        relativeX: !0,
-                        xPos: 1,
-                        relativeY: !0,
-                      },
+                      p: { name: 'right-top', relativeX: !0, xPos: 1, relativeY: !0 },
                       ':': [
                         {
                           c: 'Button',
@@ -7736,9 +5924,7 @@ const bundle = () => {
                         },
                         {
                           c: 'Trigger',
-                          p: {
-                            dataPath: 'all.provability-panel.data',
-                          },
+                          p: { dataPath: 'all.provability-panel.data' },
                           ':': [
                             {
                               c: 'Trigger',
@@ -7773,11 +5959,7 @@ const bundle = () => {
                         },
                         {
                           c: 'Trigger',
-                          p: {
-                            dataPath: 'casinoOptions.history_url',
-                            pow: 1,
-                            damp: 0,
-                          },
+                          p: { dataPath: 'casinoOptions.history_url', pow: 1, damp: 0 },
                           ':': [
                             {
                               c: 'Button',
@@ -7796,14 +5978,7 @@ const bundle = () => {
                             },
                           ],
                         },
-                        {
-                          c: 'PrefabReference',
-                          p: {
-                            x: -44,
-                            y: 44,
-                            prefabName: 'thing-games-utils/snd-mus-button',
-                          },
-                        },
+                        { c: 'PrefabReference', p: { x: -44, y: 44, prefabName: 'thing-games-utils/snd-mus-button' } },
                       ],
                     },
                   ],
@@ -7820,322 +5995,90 @@ const bundle = () => {
             },
           },
           images: {
-            'ui/provability/counter-bg.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/provability/counter-btn-d.png': {
-              e: '.png_90_90.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/counter-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/counter-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/input-fade-yellow.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/provability/input-fade.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/input-gray.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/input-yellow.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/label-gray.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/provability/verify-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/verify-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'WHITE_FOR_CANVAS.jpg': {
-              e: '.jpg_100_100.webp',
-              f_e: '.f.jpg',
-            },
-            'distortion_map.png': {
-              e: '.png_100_100.webp',
-              f_e: '.f.png',
-            },
-            'reality-check/rc-popup-close-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'round_gradient.png': {
-              e: '.png_100_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/alert-icon.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/arrow-up.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/b-gaming.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/bar-mask.png': {
-              e: '.png_100_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/close-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/close-btn-p.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/close-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/hand.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/mus-off.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/mus-on.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/panel.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/scroller.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/snd-off.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/snd-on.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/spinner.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/tooltip.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'bg/bg-flowers.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/arrow-tabl-left.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/auto-icon.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/btn-long-h.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/btn-long.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/close.png': {
-              e: '.png_100_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/fullscreen.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/help-btn-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/help-btn.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/history-btn-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/history-btn.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/home-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/home.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/lvl-high-icon.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/lvl-low-icon.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/lvl-mid-icon.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/manual-icon.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/particle.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/provability/provability-btn-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/provability/provability-btn.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/snd-b-off-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/snd-b-off.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/snd-b-on-h.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/snd-b-on.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/star.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/stars-pattern.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/target-overlay.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/target.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/win-panel.png': {
-              e: '.png_80_90.png',
-            },
-            'bg/bg-ui.png': {
-              e: '.png_80_90.png',
-            },
-            'bg/bg.jpg': {
-              e: '.jpg_80_80.webp',
-              f_e: '.f.jpg',
-            },
-            'ui/ball.png': {
-              e: '.png_90_90.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/bet-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/bet-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/counter-bg.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/counter-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/counter-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/hole.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/light.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/line.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/logo.png': {
-              e: '.png_80_90.png',
-            },
-            'ui/panel-ui.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/pin.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/play-btn-h.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/play-btn.png': {
-              e: '.png_80_80.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/profit-bg.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/select-btn-d.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/select-btn-h.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/select-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/small-btn-d.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
-            'ui/small-btn.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/spark.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_90_100.png',
-            },
-            'ui/tooltip-pointer.png': {
-              e: '.png_100.webp',
-              f_e: '.f.png_80_90.png',
-            },
+            'ui/provability/counter-bg.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/provability/counter-btn-d.png': { e: '.png_90_90.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/counter-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/counter-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/input-fade-yellow.png': { e: '.png_80_90.png' },
+            'ui/provability/input-fade.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/input-gray.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/input-yellow.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/label-gray.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/provability/verify-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/verify-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'WHITE_FOR_CANVAS.jpg': { e: '.jpg_100_100.webp', f_e: '.f.jpg' },
+            'distortion_map.png': { e: '.png_100_100.webp', f_e: '.f.png' },
+            'reality-check/rc-popup-close-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'round_gradient.png': { e: '.png_100_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/alert-icon.png': { e: '.png_80_90.png' },
+            'ui/arrow-up.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/b-gaming.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/bar-mask.png': { e: '.png_100_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/close-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/close-btn-p.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/close-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/hand.png': { e: '.png_80_90.png' },
+            'ui/mus-off.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/mus-on.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/panel.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/scroller.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/snd-off.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/snd-on.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/spinner.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/tooltip.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'bg/bg-flowers.png': { e: '.png_80_90.png' },
+            'ui/arrow-tabl-left.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/auto-icon.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/btn-long-h.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/btn-long.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/close.png': { e: '.png_100_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/fullscreen.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/help-btn-h.png': { e: '.png_80_90.png' },
+            'ui/help-btn.png': { e: '.png_80_90.png' },
+            'ui/history-btn-h.png': { e: '.png_80_90.png' },
+            'ui/history-btn.png': { e: '.png_80_90.png' },
+            'ui/home-h.png': { e: '.png_80_90.png' },
+            'ui/home.png': { e: '.png_80_90.png' },
+            'ui/lvl-high-icon.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/lvl-low-icon.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/lvl-mid-icon.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/manual-icon.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/particle.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/provability/provability-btn-h.png': { e: '.png_80_90.png' },
+            'ui/provability/provability-btn.png': { e: '.png_80_90.png' },
+            'ui/snd-b-off-h.png': { e: '.png_80_90.png' },
+            'ui/snd-b-off.png': { e: '.png_80_90.png' },
+            'ui/snd-b-on-h.png': { e: '.png_80_90.png' },
+            'ui/snd-b-on.png': { e: '.png_80_90.png' },
+            'ui/star.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/stars-pattern.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/target-overlay.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/target.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/win-panel.png': { e: '.png_80_90.png' },
+            'bg/bg-ui.png': { e: '.png_80_90.png' },
+            'bg/bg.jpg': { e: '.jpg_80_80.webp', f_e: '.f.jpg' },
+            'ui/ball.png': { e: '.png_90_90.webp', f_e: '.f.png_80_90.png' },
+            'ui/bet-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/bet-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/counter-bg.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/counter-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/counter-btn.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/hole.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/light.png': { e: '.png_80_90.png' },
+            'ui/line.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/logo.png': { e: '.png_80_90.png' },
+            'ui/panel-ui.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/pin.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/play-btn-h.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/play-btn.png': { e: '.png_80_80.webp', f_e: '.f.png_80_90.png' },
+            'ui/profit-bg.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/select-btn-d.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/select-btn-h.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/select-btn.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/small-btn-d.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
+            'ui/small-btn.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/spark.png': { e: '.png_100.webp', f_e: '.f.png_90_100.png' },
+            'ui/tooltip-pointer.png': { e: '.png_100.webp', f_e: '.f.png_80_90.png' },
           },
           resources: {},
           sounds: {
@@ -8160,20 +6103,13 @@ const bundle = () => {
             height: 1080,
             portraitWidth: 607,
             portraitHeight: 1080,
-            webfontloader: {
-              google: {
-                families: ['Roboto:400,700:cyrillic'],
-              },
-              timeout: 6e3,
-            },
+            webfontloader: { google: { families: ['Roboto:400,700:cyrillic'] }, timeout: 6e3 },
             loadOnDemandSounds: {},
             muteOnFocusLost: !0,
             version: '0.0.1',
             framesSkipLimit: 10,
             embedLocales: !1,
-            loadOnDemandTextures: {
-              'ui/stars-pattern.png': 8,
-            },
+            loadOnDemandTextures: { 'ui/stars-pattern.png': 8 },
             autoFullscreenDesktop: !1,
             autoFullscreenMobile: !0,
             soundDefaultBitrate: 64,
@@ -8215,8 +6151,7 @@ const bundle = () => {
           reset() {
             (this.time = 0),
               (this.currentFrame = this.timeline[0]),
-              this.currentFrame.hasOwnProperty('r') &&
-                (this.time += Math.round(Math.random() * this.currentFrame.r)),
+              this.currentFrame.hasOwnProperty('r') && (this.time += Math.round(Math.random() * this.currentFrame.r)),
               (this.val = this.currentFrame.v),
               (this.targetVal = this.val),
               (this.speed = 0),
@@ -8238,9 +6173,7 @@ const bundle = () => {
                 (this.time = t.j),
                 t.hasOwnProperty('r') && (this.time += Math.round(Math.random() * t.r)),
                 0 === t.m &&
-                  ((this.speed += (t.v - this.val) * this.pow),
-                  (this.val += this.speed),
-                  (this.speed *= this.damper)),
+                  ((this.speed += (t.v - this.val) * this.pow), (this.val += this.speed), (this.speed *= this.damper)),
                 t.hasOwnProperty('s') && (this.speed = t.s),
                 (this.currentFrame = t = t.n),
                 1 === t.m)
@@ -8251,9 +6184,7 @@ const bundle = () => {
               e && (0, o.Z)(e, this.target);
             } else
               0 === t.m
-                ? ((this.speed += (t.v - this.val) * this.pow),
-                  (this.val += this.speed),
-                  (this.speed *= this.damper))
+                ? ((this.speed += (t.v - this.val) * this.pow), (this.val += this.speed), (this.speed *= this.damper))
                 : 1 === t.m
                 ? (this.val += this.speed)
                 : 3 === t.m
@@ -8280,8 +6211,7 @@ const bundle = () => {
                 if (this._goToLabelNextFrame) {
                   var t = this._timelineData.l[this._goToLabelNextFrame];
                   this._goToLabelNextFrame = !1;
-                  for (var e = this.fieldPlayers.length, i = 0; i < e; i++)
-                    this.fieldPlayers[i].goto(t.t, t.n[i]);
+                  for (var e = this.fieldPlayers.length, i = 0; i < e; i++) this.fieldPlayers[i].goto(t.t, t.n[i]);
                 }
                 for (var r of this.fieldPlayers) r.update();
               }
@@ -8307,32 +6237,19 @@ const bundle = () => {
             var e = t.f.map((t) => {
                 var e = t.t.map((t) => {
                   var e = Object.assign({}, t);
-                  return (
-                    e.hasOwnProperty('j') || (e.j = e.t), e.hasOwnProperty('m') || (e.m = 0), e
-                  );
+                  return e.hasOwnProperty('j') || (e.j = e.t), e.hasOwnProperty('m') || (e.m = 0), e;
                 });
                 for (var i of e) i.n = c._findNextKeyframe(e, i.j);
-                return {
-                  n: t.n,
-                  t: e,
-                };
+                return { n: t.n, t: e };
               }),
               i = {},
               r = function (r) {
                 var n = t.l[r],
                   s = e.map((t) => c._findNextKeyframe(t.t, n - 1));
-                i[r] = {
-                  t: n,
-                  n: s,
-                };
+                i[r] = { t: n, n: s };
               };
             for (var n in t.l) r(n);
-            return {
-              l: i,
-              p: t.p,
-              d: t.d,
-              f: e,
-            };
+            return { l: i, p: t.p, d: t.d, f: e };
           }
           _disposePlayers() {
             for (; this.fieldPlayers.length > 0; ) a.Z.dispose(this.fieldPlayers.pop());
@@ -8370,7 +6287,6 @@ const bundle = () => {
           play() {
             this.isPlaying = !0;
           }
-
           stop() {
             this.isPlaying = !1;
           }
@@ -8383,10 +6299,7 @@ const bundle = () => {
         }
         var p = new WeakMap();
         u.Z.prototype.gotoLabelRecursive = function (t) {
-          for (var e of (this instanceof c &&
-            this.hasLabel(t) &&
-            ((this.delay = 0), this.gotoLabel(t)),
-          this.children))
+          for (var e of (this instanceof c && this.hasLabel(t) && ((this.delay = 0), this.gotoLabel(t)), this.children))
             e.gotoLabelRecursive(t);
         };
         var d = i(6107),
@@ -8415,23 +6328,16 @@ const bundle = () => {
                 (g.y = n.Z.H),
                 this.toLocal(g, e, _),
                 (t.width =
-                  Math.min(
-                    this.texture.baseTexture.width,
-                    Math.ceil(_.x) + this.texture.baseTexture.width / 2,
-                  ) - t.x),
+                  Math.min(this.texture.baseTexture.width, Math.ceil(_.x) + this.texture.baseTexture.width / 2) - t.x),
                 (t.height =
-                  Math.min(
-                    this.texture.baseTexture.height,
-                    Math.ceil(_.y) + this.texture.baseTexture.height / 2,
-                  ) - t.y),
+                  Math.min(this.texture.baseTexture.height, Math.ceil(_.y) + this.texture.baseTexture.height / 2) -
+                  t.y),
                 (this.pivot.x = (this.texture.baseTexture.width - t.width) / 2 - t.x),
                 (this.pivot.y = (this.texture.baseTexture.height - t.height) / 2 - t.y),
                 1 & t.width &&
-                  (t.right === this.texture.baseTexture.width && (t.x--, (this.pivot.x += 0.5)),
-                  t.width++),
+                  (t.right === this.texture.baseTexture.width && (t.x--, (this.pivot.x += 0.5)), t.width++),
                 1 & t.height &&
-                  (t.bottom === this.texture.baseTexture.height && (t.y--, (this.pivot.y += 0.5)),
-                  t.height++),
+                  (t.bottom === this.texture.baseTexture.height && (t.y--, (this.pivot.y += 0.5)), t.height++),
                 this.texture.updateUvs();
             }
           }
@@ -8453,12 +6359,7 @@ const bundle = () => {
           I = 0;
         class w extends s.Z {
           init() {
-            super.init(),
-              (this.path = null),
-              (this.alpha = 0),
-              (this.appearingPhase = 0),
-              S++,
-              (this.ballId = S);
+            super.init(), (this.path = null), (this.alpha = 0), (this.appearingPhase = 0), S++, (this.ballId = S);
           }
           static getBallSize(t, e) {
             return (t - 2 * (e *= E) - b) / 2 / A;
@@ -8469,8 +6370,7 @@ const bundle = () => {
             (this.ballSize = r), (this.scale.x = this.scale.y = r);
             var n = A * r;
             (this.pinToBallCollizionRadius = e * E + n),
-              (this.pinToBallCollizionRadiusQ =
-                this.pinToBallCollizionRadius * this.pinToBallCollizionRadius);
+              (this.pinToBallCollizionRadiusQ = this.pinToBallCollizionRadius * this.pinToBallCollizionRadius);
           }
           update() {
             super.update(),
@@ -8483,11 +6383,7 @@ const bundle = () => {
                 : this.path && this.processBallLogic();
           }
           processBallLogic() {
-            if (
-              (this.keepBallInServerPath(),
-              this.processPinCollisions(),
-              this.y > this.table.targets[0].y)
-            ) {
+            if ((this.keepBallInServerPath(), this.processPinCollisions(), this.y > this.table.targets[0].y)) {
               var t,
                 e = 1e5,
                 i = this.path[this.path.length - 1],
@@ -8525,8 +6421,7 @@ const bundle = () => {
           _playBallSound() {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
             this.ballId >= I && (I = this.ballId),
-              this.ballId >= I - 1 &&
-                (this.ballId === I - 1 && (t /= 2), v.Z.play('ball2/2', t, 1, 0, !0));
+              this.ballId >= I - 1 && (this.ballId === I - 1 && (t /= 2), v.Z.play('ball2/2', t, 1, 0, !0));
           }
           processPinCollisions() {
             var t = 1;
@@ -8543,8 +6438,7 @@ const bundle = () => {
                         h = o - l,
                         u = l + h,
                         c = Math.sqrt(this.xSpeed * this.xSpeed + this.ySpeed * this.ySpeed);
-                      c > 5 && n.addChild(r.Z.loadPrefab('pin-light')),
-                        c > 1 && this._playBallSound(0.07 * c, t);
+                      c > 5 && n.addChild(r.Z.loadPrefab('pin-light')), c > 1 && this._playBallSound(0.07 * c, t);
                       var p = Math.sqrt(a),
                         d = this.pinToBallCollizionRadius - p;
                       d > 0 && (c -= Math.min(x, d));
@@ -8574,14 +6468,8 @@ const bundle = () => {
                 n = this.table.lines[i];
               return (
                 (r = t
-                  ? {
-                      min: n.children[e].x + 0.2 + Math.random(),
-                      max: n.children[e + 1].x - 0.2 - Math.random(),
-                    }
-                  : {
-                      max: n.children[e].x - 0.2 - Math.random(),
-                      min: n.children[e - 1].x + 0.2 + Math.random(),
-                    }),
+                  ? { min: n.children[e].x + 0.2 + Math.random(), max: n.children[e + 1].x - 0.2 - Math.random() }
+                  : { max: n.children[e].x - 0.2 - Math.random(), min: n.children[e - 1].x + 0.2 + Math.random() }),
                 (e += t ? 1 : 0),
                 r
               );
@@ -8642,16 +6530,12 @@ const bundle = () => {
             (t[(t.EXPECT_DATE_TIME_SKELETON = 10)] = 'EXPECT_DATE_TIME_SKELETON'),
             (t[(t.UNCLOSED_QUOTE_IN_ARGUMENT_STYLE = 11)] = 'UNCLOSED_QUOTE_IN_ARGUMENT_STYLE'),
             (t[(t.EXPECT_SELECT_ARGUMENT_OPTIONS = 12)] = 'EXPECT_SELECT_ARGUMENT_OPTIONS'),
-            (t[(t.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE = 13)] =
-              'EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE'),
-            (t[(t.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE = 14)] =
-              'INVALID_PLURAL_ARGUMENT_OFFSET_VALUE'),
+            (t[(t.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE = 13)] = 'EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE'),
+            (t[(t.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE = 14)] = 'INVALID_PLURAL_ARGUMENT_OFFSET_VALUE'),
             (t[(t.EXPECT_SELECT_ARGUMENT_SELECTOR = 15)] = 'EXPECT_SELECT_ARGUMENT_SELECTOR'),
             (t[(t.EXPECT_PLURAL_ARGUMENT_SELECTOR = 16)] = 'EXPECT_PLURAL_ARGUMENT_SELECTOR'),
-            (t[(t.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT = 17)] =
-              'EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT'),
-            (t[(t.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = 18)] =
-              'EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT'),
+            (t[(t.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT = 17)] = 'EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT'),
+            (t[(t.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT = 18)] = 'EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT'),
             (t[(t.INVALID_PLURAL_ARGUMENT_SELECTOR = 19)] = 'INVALID_PLURAL_ARGUMENT_SELECTOR'),
             (t[(t.DUPLICATE_PLURAL_ARGUMENT_SELECTOR = 20)] = 'DUPLICATE_PLURAL_ARGUMENT_SELECTOR'),
             (t[(t.DUPLICATE_SELECT_ARGUMENT_SELECTOR = 21)] = 'DUPLICATE_SELECT_ARGUMENT_SELECTOR'),
@@ -8694,9 +6578,7 @@ const bundle = () => {
                 case 'u':
                 case 'U':
                 case 'r':
-                  throw new RangeError(
-                    '`Y/u/U/r` (year) patterns are not supported, use `y` instead',
-                  );
+                  throw new RangeError('`Y/u/U/r` (year) patterns are not supported, use `y` instead');
                 case 'q':
                 case 'Q':
                   throw new RangeError('`q/Q` (quarter) patterns are not supported');
@@ -8730,9 +6612,7 @@ const bundle = () => {
                   break;
                 case 'b':
                 case 'B':
-                  throw new RangeError(
-                    '`b/B` (period) patterns are not supported, use `a` instead',
-                  );
+                  throw new RangeError('`b/B` (period) patterns are not supported, use `a` instead');
                 case 'h':
                   (e.hourCycle = 'h12'), (e.hour = ['numeric', '2-digit'][i - 1]);
                   break;
@@ -8748,9 +6628,7 @@ const bundle = () => {
                 case 'j':
                 case 'J':
                 case 'C':
-                  throw new RangeError(
-                    '`j/J/C` (hour) patterns are not supported, use `h/H/K/k` instead',
-                  );
+                  throw new RangeError('`j/J/C` (hour) patterns are not supported, use `h/H/K/k` instead');
                 case 'm':
                   e.minute = ['numeric', '2-digit'][i - 1];
                   break;
@@ -8759,9 +6637,7 @@ const bundle = () => {
                   break;
                 case 'S':
                 case 'A':
-                  throw new RangeError(
-                    '`S/A` (second) patterns are not supported, use `s` instead',
-                  );
+                  throw new RangeError('`S/A` (second) patterns are not supported, use `s` instead');
                 case 'z':
                   e.timeZoneName = i < 4 ? 'short' : 'long';
                   break;
@@ -8771,9 +6647,7 @@ const bundle = () => {
                 case 'V':
                 case 'X':
                 case 'x':
-                  throw new RangeError(
-                    '`Z/O/v/V/X/x` (timeZone) patterns are not supported, use `z` instead',
-                  );
+                  throw new RangeError('`Z/O/v/V/X/x` (timeZone) patterns are not supported, use `z` instead');
               }
               return '';
             }),
@@ -8798,10 +6672,7 @@ const bundle = () => {
             for (var a = s[0], o = s.slice(1), l = 0, h = o; l < h.length; l++) {
               if (0 === h[l].length) throw new Error('Invalid number skeleton');
             }
-            i.push({
-              stem: a,
-              options: o,
-            });
+            i.push({ stem: a, options: o });
           }
           return i;
         }
@@ -8822,15 +6693,13 @@ const bundle = () => {
             t.replace(et, function (t, i, r) {
               return (
                 'string' != typeof r
-                  ? ((e.minimumSignificantDigits = i.length),
-                    (e.maximumSignificantDigits = i.length))
+                  ? ((e.minimumSignificantDigits = i.length), (e.maximumSignificantDigits = i.length))
                   : '+' === r
                   ? (e.minimumSignificantDigits = i.length)
                   : '#' === i[0]
                   ? (e.maximumSignificantDigits = i.length)
                   : ((e.minimumSignificantDigits = i.length),
-                    (e.maximumSignificantDigits =
-                      i.length + ('string' == typeof r ? r.length : 0))),
+                    (e.maximumSignificantDigits = i.length + ('string' == typeof r ? r.length : 0))),
                 ''
               );
             }),
@@ -8840,56 +6709,33 @@ const bundle = () => {
         function st(t) {
           switch (t) {
             case 'sign-auto':
-              return {
-                signDisplay: 'auto',
-              };
+              return { signDisplay: 'auto' };
             case 'sign-accounting':
             case '()':
-              return {
-                currencySign: 'accounting',
-              };
+              return { currencySign: 'accounting' };
             case 'sign-always':
             case '+!':
-              return {
-                signDisplay: 'always',
-              };
+              return { signDisplay: 'always' };
             case 'sign-accounting-always':
             case '()!':
-              return {
-                signDisplay: 'always',
-                currencySign: 'accounting',
-              };
+              return { signDisplay: 'always', currencySign: 'accounting' };
             case 'sign-except-zero':
             case '+?':
-              return {
-                signDisplay: 'exceptZero',
-              };
+              return { signDisplay: 'exceptZero' };
             case 'sign-accounting-except-zero':
             case '()?':
-              return {
-                signDisplay: 'exceptZero',
-                currencySign: 'accounting',
-              };
+              return { signDisplay: 'exceptZero', currencySign: 'accounting' };
             case 'sign-never':
             case '+_':
-              return {
-                signDisplay: 'never',
-              };
+              return { signDisplay: 'never' };
           }
         }
         function at(t) {
           var e;
           if (
             ('E' === t[0] && 'E' === t[1]
-              ? ((e = {
-                  notation: 'engineering',
-                }),
-                (t = t.slice(2)))
-              : 'E' === t[0] &&
-                ((e = {
-                  notation: 'scientific',
-                }),
-                (t = t.slice(1))),
+              ? ((e = { notation: 'engineering' }), (t = t.slice(2)))
+              : 'E' === t[0] && ((e = { notation: 'scientific' }), (t = t.slice(1))),
             e)
           ) {
             var i = t.slice(0, 2);
@@ -8945,9 +6791,7 @@ const bundle = () => {
                 continue;
               case 'scientific':
                 e = (0, L.__assign)(
-                  (0, L.__assign)((0, L.__assign)({}, e), {
-                    notation: 'scientific',
-                  }),
+                  (0, L.__assign)((0, L.__assign)({}, e), { notation: 'scientific' }),
                   n.options.reduce(function (t, e) {
                     return (0, L.__assign)((0, L.__assign)({}, t), ot(e));
                   }, {}),
@@ -8955,9 +6799,7 @@ const bundle = () => {
                 continue;
               case 'engineering':
                 e = (0, L.__assign)(
-                  (0, L.__assign)((0, L.__assign)({}, e), {
-                    notation: 'engineering',
-                  }),
+                  (0, L.__assign)((0, L.__assign)({}, e), { notation: 'engineering' }),
                   n.options.reduce(function (t, e) {
                     return (0, L.__assign)((0, L.__assign)({}, t), ot(e));
                   }, {}),
@@ -8987,8 +6829,7 @@ const bundle = () => {
                 n.options[0].replace(it, function (t, i, r, n, s, a) {
                   if (i) e.minimumIntegerDigits = r.length;
                   else {
-                    if (n && s)
-                      throw new Error('We currently do not support maximum integer digits');
+                    if (n && s) throw new Error('We currently do not support maximum integer digits');
                     if (a) throw new Error('We currently do not support exact integer digits');
                   }
                   return '';
@@ -8998,9 +6839,7 @@ const bundle = () => {
             if (rt.test(n.stem)) e.minimumIntegerDigits = n.stem.length;
             else if (tt.test(n.stem)) {
               if (n.options.length > 1)
-                throw new RangeError(
-                  'Fraction-precision stems only accept a single optional option',
-                );
+                throw new RangeError('Fraction-precision stems only accept a single optional option');
               n.stem.replace(tt, function (t, i, r, n, s, a) {
                 return (
                   '*' === r
@@ -9008,17 +6847,14 @@ const bundle = () => {
                     : n && '#' === n[0]
                     ? (e.maximumFractionDigits = n.length)
                     : s && a
-                    ? ((e.minimumFractionDigits = s.length),
-                      (e.maximumFractionDigits = s.length + a.length))
+                    ? ((e.minimumFractionDigits = s.length), (e.maximumFractionDigits = s.length + a.length))
                     : ((e.minimumFractionDigits = i.length), (e.maximumFractionDigits = i.length)),
                   ''
                 );
               });
               var s = n.options[0];
               'w' === s
-                ? (e = (0, L.__assign)((0, L.__assign)({}, e), {
-                    trailingZeroDisplay: 'stripIfInteger',
-                  }))
+                ? (e = (0, L.__assign)((0, L.__assign)({}, e), { trailingZeroDisplay: 'stripIfInteger' }))
                 : s && (e = (0, L.__assign)((0, L.__assign)({}, e), nt(s)));
             } else if (et.test(n.stem)) e = (0, L.__assign)((0, L.__assign)({}, e), nt(n.stem));
             else {
@@ -9033,10 +6869,7 @@ const bundle = () => {
         var ht = new RegExp('^'.concat(Y.source, '*')),
           ut = new RegExp(''.concat(Y.source, '*$'));
         function ct(t, e) {
-          return {
-            start: t,
-            end: e,
-          };
+          return { start: t, end: e };
         }
         var pt = !!String.prototype.startsWith,
           dt = !!String.fromCodePoint,
@@ -9047,19 +6880,13 @@ const bundle = () => {
           vt = !!Number.isSafeInteger
             ? Number.isSafeInteger
             : function (t) {
-                return (
-                  'number' == typeof t &&
-                  isFinite(t) &&
-                  Math.floor(t) === t &&
-                  Math.abs(t) <= 9007199254740991
-                );
+                return 'number' == typeof t && isFinite(t) && Math.floor(t) === t && Math.abs(t) <= 9007199254740991;
               },
           At = !0;
         try {
           At =
             'a' ===
-            (null === ($ = wt('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu').exec('a')) ||
-            void 0 === $
+            (null === ($ = wt('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu').exec('a')) || void 0 === $
               ? void 0
               : $[0]);
         } catch (Tn) {
@@ -9106,11 +6933,7 @@ const bundle = () => {
                 if (!(e < 0 || e >= i)) {
                   var r,
                     n = t.charCodeAt(e);
-                  return n < 55296 ||
-                    n > 56319 ||
-                    e + 1 === i ||
-                    (r = t.charCodeAt(e + 1)) < 56320 ||
-                    r > 57343
+                  return n < 55296 || n > 56319 || e + 1 === i || (r = t.charCodeAt(e + 1)) < 56320 || r > 57343
                     ? n
                     : r - 56320 + ((n - 55296) << 10) + 65536;
                 }
@@ -9151,11 +6974,7 @@ const bundle = () => {
           function t(t, e) {
             void 0 === e && (e = {}),
               (this.message = t),
-              (this.position = {
-                offset: 0,
-                line: 1,
-                column: 1,
-              }),
+              (this.position = { offset: 0, line: 1, column: 1 }),
               (this.ignoreTag = !!e.ignoreTag),
               (this.requiresOtherClause = !!e.requiresOtherClause),
               (this.shouldParseSkeletons = !!e.shouldParseSkeletons);
@@ -9176,10 +6995,7 @@ const bundle = () => {
                   if (35 !== n || ('plural' !== e && 'selectordinal' !== e)) {
                     if (60 === n && !this.ignoreTag && 47 === this.peek()) {
                       if (i) break;
-                      return this.error(
-                        R.UNMATCHED_CLOSING_TAG,
-                        ct(this.clonePosition(), this.clonePosition()),
-                      );
+                      return this.error(R.UNMATCHED_CLOSING_TAG, ct(this.clonePosition(), this.clonePosition()));
                     }
                     if (60 === n && !this.ignoreTag && Ot(this.peek() || 0)) {
                       if ((s = this.parseTag(t, e)).err) return s;
@@ -9191,18 +7007,11 @@ const bundle = () => {
                     }
                   } else {
                     var a = this.clonePosition();
-                    this.bump(),
-                      r.push({
-                        type: P.pound,
-                        location: ct(a, this.clonePosition()),
-                      });
+                    this.bump(), r.push({ type: P.pound, location: ct(a, this.clonePosition()) });
                   }
                 }
               }
-              return {
-                val: r,
-                err: null,
-              };
+              return { val: r, err: null };
             }),
             (t.prototype.parseTag = function (t, e) {
               var i = this.clonePosition();
@@ -9210,11 +7019,7 @@ const bundle = () => {
               var r = this.parseTagName();
               if ((this.bumpSpace(), this.bumpIf('/>')))
                 return {
-                  val: {
-                    type: P.literal,
-                    value: '<'.concat(r, '/>'),
-                    location: ct(i, this.clonePosition()),
-                  },
+                  val: { type: P.literal, value: '<'.concat(r, '/>'), location: ct(i, this.clonePosition()) },
                   err: null,
                 };
               if (this.bumpIf('>')) {
@@ -9223,20 +7028,14 @@ const bundle = () => {
                 var s = n.val,
                   a = this.clonePosition();
                 if (this.bumpIf('</')) {
-                  if (this.isEOF() || !Ot(this.char()))
-                    return this.error(R.INVALID_TAG, ct(a, this.clonePosition()));
+                  if (this.isEOF() || !Ot(this.char())) return this.error(R.INVALID_TAG, ct(a, this.clonePosition()));
                   var o = this.clonePosition();
                   return r !== this.parseTagName()
                     ? this.error(R.UNMATCHED_CLOSING_TAG, ct(o, this.clonePosition()))
                     : (this.bumpSpace(),
                       this.bumpIf('>')
                         ? {
-                            val: {
-                              type: P.tag,
-                              value: r,
-                              children: s,
-                              location: ct(i, this.clonePosition()),
-                            },
+                            val: { type: P.tag, value: r, children: s, location: ct(i, this.clonePosition()) },
                             err: null,
                           }
                         : this.error(R.INVALID_TAG, ct(a, this.clonePosition())));
@@ -9265,14 +7064,7 @@ const bundle = () => {
                 }
               }
               var o = ct(i, this.clonePosition());
-              return {
-                val: {
-                  type: P.literal,
-                  value: r,
-                  location: o,
-                },
-                err: null,
-              };
+              return { val: { type: P.literal, value: r, location: o }, err: null };
             }),
             (t.prototype.tryParseLeftAngleBracket = function () {
               return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && Ct(this.peek() || 0))
@@ -9324,8 +7116,7 @@ const bundle = () => {
               var i = this.clonePosition();
               if ((this.bump(), this.bumpSpace(), this.isEOF()))
                 return this.error(R.EXPECT_ARGUMENT_CLOSING_BRACE, ct(i, this.clonePosition()));
-              if (125 === this.char())
-                return this.bump(), this.error(R.EMPTY_ARGUMENT, ct(i, this.clonePosition()));
+              if (125 === this.char()) return this.bump(), this.error(R.EMPTY_ARGUMENT, ct(i, this.clonePosition()));
               var r = this.parseIdentifierIfPossible().value;
               if (!r) return this.error(R.MALFORMED_ARGUMENT, ct(i, this.clonePosition()));
               if ((this.bumpSpace(), this.isEOF()))
@@ -9334,14 +7125,7 @@ const bundle = () => {
                 case 125:
                   return (
                     this.bump(),
-                    {
-                      val: {
-                        type: P.argument,
-                        value: r,
-                        location: ct(i, this.clonePosition()),
-                      },
-                      err: null,
-                    }
+                    { val: { type: P.argument, value: r, location: ct(i, this.clonePosition()) }, err: null }
                   );
                 case 44:
                   return (
@@ -9360,13 +7144,7 @@ const bundle = () => {
                 e = this.offset(),
                 i = yt(this.message, e),
                 r = e + i.length;
-              return (
-                this.bumpTo(r),
-                {
-                  value: i,
-                  location: ct(t, this.clonePosition()),
-                }
-              );
+              return this.bumpTo(r), { value: i, location: ct(t, this.clonePosition()) };
             }),
             (t.prototype.parseArgumentOptions = function (t, e, i, r) {
               var n,
@@ -9386,14 +7164,8 @@ const bundle = () => {
                     var h = this.clonePosition();
                     if ((_ = this.parseSimpleArgStyleIfPossible()).err) return _;
                     if (0 === (p = It(_.val)).length)
-                      return this.error(
-                        R.EXPECT_ARGUMENT_STYLE,
-                        ct(this.clonePosition(), this.clonePosition()),
-                      );
-                    l = {
-                      style: p,
-                      styleLocation: ct(h, this.clonePosition()),
-                    };
+                      return this.error(R.EXPECT_ARGUMENT_STYLE, ct(this.clonePosition(), this.clonePosition()));
+                    l = { style: p, styleLocation: ct(h, this.clonePosition()) };
                   }
                   if ((m = this.tryParseArgumentClose(r)).err) return m;
                   var u = ct(r, this.clonePosition());
@@ -9402,15 +7174,7 @@ const bundle = () => {
                     if ('number' === a)
                       return (_ = this.parseNumberSkeletonFromString(c, l.styleLocation)).err
                         ? _
-                        : {
-                            val: {
-                              type: P.number,
-                              value: i,
-                              location: u,
-                              style: _.val,
-                            },
-                            err: null,
-                          };
+                        : { val: { type: P.number, value: i, location: u, style: _.val }, err: null };
                     if (0 === c.length) return this.error(R.EXPECT_DATE_TIME_SKELETON, u);
                     var p = {
                       type: O.dateTime,
@@ -9419,12 +7183,7 @@ const bundle = () => {
                       parsedOptions: this.shouldParseSkeletons ? q(c) : {},
                     };
                     return {
-                      val: {
-                        type: 'date' === a ? P.date : P.time,
-                        value: i,
-                        location: u,
-                        style: p,
-                      },
+                      val: { type: 'date' === a ? P.date : P.time, value: i, location: u, style: p },
                       err: null,
                     };
                   }
@@ -9442,10 +7201,7 @@ const bundle = () => {
                 case 'select':
                   var d = this.clonePosition();
                   if ((this.bumpSpace(), !this.bumpIf(',')))
-                    return this.error(
-                      R.EXPECT_SELECT_ARGUMENT_OPTIONS,
-                      ct(d, (0, L.__assign)({}, d)),
-                    );
+                    return this.error(R.EXPECT_SELECT_ARGUMENT_OPTIONS, ct(d, (0, L.__assign)({}, d)));
                   this.bumpSpace();
                   var f = this.parseIdentifierIfPossible(),
                     g = 0;
@@ -9472,15 +7228,7 @@ const bundle = () => {
                   if ((m = this.tryParseArgumentClose(r)).err) return m;
                   var A = ct(r, this.clonePosition());
                   return 'select' === a
-                    ? {
-                        val: {
-                          type: P.select,
-                          value: i,
-                          options: Tt(v.val),
-                          location: A,
-                        },
-                        err: null,
-                      }
+                    ? { val: { type: P.select, value: i, options: Tt(v.val), location: A }, err: null }
                     : {
                         val: {
                           type: P.plural,
@@ -9499,11 +7247,7 @@ const bundle = () => {
             (t.prototype.tryParseArgumentClose = function (t) {
               return this.isEOF() || 125 !== this.char()
                 ? this.error(R.EXPECT_ARGUMENT_CLOSING_BRACE, ct(t, this.clonePosition()))
-                : (this.bump(),
-                  {
-                    val: !0,
-                    err: null,
-                  });
+                : (this.bump(), { val: !0, err: null });
             }),
             (t.prototype.parseSimpleArgStyleIfPossible = function () {
               for (var t = 0, e = this.clonePosition(); !this.isEOF(); ) {
@@ -9512,31 +7256,21 @@ const bundle = () => {
                     this.bump();
                     var i = this.clonePosition();
                     if (!this.bumpUntil("'"))
-                      return this.error(
-                        R.UNCLOSED_QUOTE_IN_ARGUMENT_STYLE,
-                        ct(i, this.clonePosition()),
-                      );
+                      return this.error(R.UNCLOSED_QUOTE_IN_ARGUMENT_STYLE, ct(i, this.clonePosition()));
                     this.bump();
                     break;
                   case 123:
                     (t += 1), this.bump();
                     break;
                   case 125:
-                    if (!(t > 0))
-                      return {
-                        val: this.message.slice(e.offset, this.offset()),
-                        err: null,
-                      };
+                    if (!(t > 0)) return { val: this.message.slice(e.offset, this.offset()), err: null };
                     t -= 1;
                     break;
                   default:
                     this.bump();
                 }
               }
-              return {
-                val: this.message.slice(e.offset, this.offset()),
-                err: null,
-              };
+              return { val: this.message.slice(e.offset, this.offset()), err: null };
             }),
             (t.prototype.parseNumberSkeletonFromString = function (t, e) {
               var i = [];
@@ -9546,12 +7280,7 @@ const bundle = () => {
                 return this.error(R.INVALID_NUMBER_SKELETON, e);
               }
               return {
-                val: {
-                  type: O.number,
-                  tokens: i,
-                  location: e,
-                  parsedOptions: this.shouldParseSkeletons ? lt(i) : {},
-                },
+                val: { type: O.number, tokens: i, location: e, parsedOptions: this.shouldParseSkeletons ? lt(i) : {} },
                 err: null,
               };
             }),
@@ -9565,14 +7294,11 @@ const bundle = () => {
                     R.INVALID_PLURAL_ARGUMENT_SELECTOR,
                   );
                   if (c.err) return c;
-                  (h = ct(u, this.clonePosition())),
-                    (l = this.message.slice(u.offset, this.offset()));
+                  (h = ct(u, this.clonePosition())), (l = this.message.slice(u.offset, this.offset()));
                 }
                 if (o.has(l))
                   return this.error(
-                    'select' === e
-                      ? R.DUPLICATE_SELECT_ARGUMENT_SELECTOR
-                      : R.DUPLICATE_PLURAL_ARGUMENT_SELECTOR,
+                    'select' === e ? R.DUPLICATE_SELECT_ARGUMENT_SELECTOR : R.DUPLICATE_PLURAL_ARGUMENT_SELECTOR,
                     h,
                   );
                 'other' === l && (s = !0), this.bumpSpace();
@@ -9588,13 +7314,7 @@ const bundle = () => {
                 if (d.err) return d;
                 var f = this.tryParseArgumentClose(p);
                 if (f.err) return f;
-                a.push([
-                  l,
-                  {
-                    value: d.val,
-                    location: ct(p, this.clonePosition()),
-                  },
-                ]),
+                a.push([l, { value: d.val, location: ct(p, this.clonePosition()) }]),
                   o.add(l),
                   this.bumpSpace(),
                   (l = (n = this.parseIdentifierIfPossible()).value),
@@ -9602,17 +7322,12 @@ const bundle = () => {
               }
               return 0 === a.length
                 ? this.error(
-                    'select' === e
-                      ? R.EXPECT_SELECT_ARGUMENT_SELECTOR
-                      : R.EXPECT_PLURAL_ARGUMENT_SELECTOR,
+                    'select' === e ? R.EXPECT_SELECT_ARGUMENT_SELECTOR : R.EXPECT_PLURAL_ARGUMENT_SELECTOR,
                     ct(this.clonePosition(), this.clonePosition()),
                   )
                 : this.requiresOtherClause && !s
                 ? this.error(R.MISSING_OTHER_CLAUSE, ct(this.clonePosition(), this.clonePosition()))
-                : {
-                    val: a,
-                    err: null,
-                  };
+                : { val: a, err: null };
             }),
             (t.prototype.tryParseDecimalInteger = function (t, e) {
               var i = 1,
@@ -9624,14 +7339,7 @@ const bundle = () => {
                 (n = !0), (s = 10 * s + (a - 48)), this.bump();
               }
               var o = ct(r, this.clonePosition());
-              return n
-                ? vt((s *= i))
-                  ? {
-                      val: s,
-                      err: null,
-                    }
-                  : this.error(e, o)
-                : this.error(t, o);
+              return n ? (vt((s *= i)) ? { val: s, err: null } : this.error(e, o)) : this.error(t, o);
             }),
             (t.prototype.offset = function () {
               return this.position.offset;
@@ -9640,37 +7348,23 @@ const bundle = () => {
               return this.offset() === this.message.length;
             }),
             (t.prototype.clonePosition = function () {
-              return {
-                offset: this.position.offset,
-                line: this.position.line,
-                column: this.position.column,
-              };
+              return { offset: this.position.offset, line: this.position.line, column: this.position.column };
             }),
             (t.prototype.char = function () {
               var t = this.position.offset;
               if (t >= this.message.length) throw Error('out of bound');
               var e = Et(this.message, t);
-              if (void 0 === e)
-                throw Error('Offset '.concat(t, ' is at invalid UTF-16 code unit boundary'));
+              if (void 0 === e) throw Error('Offset '.concat(t, ' is at invalid UTF-16 code unit boundary'));
               return e;
             }),
             (t.prototype.error = function (t, e) {
-              return {
-                val: null,
-                err: {
-                  kind: t,
-                  message: this.message,
-                  location: e,
-                },
-              };
+              return { val: null, err: { kind: t, message: this.message, location: e } };
             }),
             (t.prototype.bump = function () {
               if (!this.isEOF()) {
                 var t = this.char();
                 10 === t
-                  ? ((this.position.line += 1),
-                    (this.position.column = 1),
-                    (this.position.offset += 1))
+                  ? ((this.position.line += 1), (this.position.column = 1), (this.position.offset += 1))
                   : ((this.position.column += 1), (this.position.offset += t < 65536 ? 1 : 2));
               }
             }),
@@ -9696,10 +7390,7 @@ const bundle = () => {
               for (t = Math.min(t, this.message.length); ; ) {
                 var e = this.offset();
                 if (e === t) break;
-                if (e > t)
-                  throw Error(
-                    'targetOffset '.concat(t, ' is at invalid UTF-16 code unit boundary'),
-                  );
+                if (e > t) throw Error('targetOffset '.concat(t, ' is at invalid UTF-16 code unit boundary'));
                 if ((this.bump(), this.isEOF())) break;
               }
             }),
@@ -9746,14 +7437,7 @@ const bundle = () => {
           );
         }
         function Dt(t) {
-          return (
-            (t >= 9 && t <= 13) ||
-            32 === t ||
-            133 === t ||
-            (t >= 8206 && t <= 8207) ||
-            8232 === t ||
-            8233 === t
-          );
+          return (t >= 9 && t <= 13) || 32 === t || 133 === t || (t >= 8206 && t <= 8207) || 8232 === t || 8233 === t;
         }
         function Nt(t) {
           return (
@@ -10012,20 +7696,11 @@ const bundle = () => {
             if ((delete t.location, X(t) || H(t)))
               for (var e in t.options) delete t.options[e].location, Lt(t.options[e].value);
             else
-              (F(t) && Z(t.style)) || ((U(t) || G(t)) && V(t.style))
-                ? delete t.style.location
-                : W(t) && Lt(t.children);
+              (F(t) && Z(t.style)) || ((U(t) || G(t)) && V(t.style)) ? delete t.style.location : W(t) && Lt(t.children);
           });
         }
         function Bt(t, e) {
-          void 0 === e && (e = {}),
-            (e = (0, L.__assign)(
-              {
-                shouldParseSkeletons: !0,
-                requiresOtherClause: !0,
-              },
-              e,
-            ));
+          void 0 === e && (e = {}), (e = (0, L.__assign)({ shouldParseSkeletons: !0, requiresOtherClause: !0 }, e));
           var i = new Pt(t, e).parse();
           if (i.err) {
             var r = SyntaxError(R[i.err.kind]);
@@ -10036,10 +7711,7 @@ const bundle = () => {
         function kt(t, e) {
           var i = e && e.cache ? e.cache : zt,
             r = e && e.serializer ? e.serializer : Zt;
-          return (e && e.strategy ? e.strategy : Ht)(t, {
-            cache: i,
-            serializer: r,
-          });
+          return (e && e.strategy ? e.strategy : Ht)(t, { cache: i, serializer: r });
         }
         function Ft(t) {
           return null == t || 'number' == typeof t || 'boolean' == typeof t;
@@ -10085,10 +7757,7 @@ const bundle = () => {
               return new Vt();
             },
           },
-          qt = {
-            variadic: jt,
-            monadic: Wt,
-          };
+          qt = { variadic: jt, monadic: Wt };
         (function (t) {
           (t.MISSING_VALUE = 'MISSING_VALUE'),
             (t.INVALID_VALUE = 'INVALID_VALUE'),
@@ -10126,14 +7795,7 @@ const bundle = () => {
           })(Kt),
           $t = (function (t) {
             function e(e, i, r) {
-              return (
-                t.call(
-                  this,
-                  'Value for "'.concat(e, '" must be of type ').concat(i),
-                  Yt.INVALID_VALUE,
-                  r,
-                ) || this
-              );
+              return t.call(this, 'Value for "'.concat(e, '" must be of type ').concat(i), Yt.INVALID_VALUE, r) || this;
             }
             return (0, L.__extends)(e, t), e;
           })(Kt),
@@ -10142,9 +7804,7 @@ const bundle = () => {
               return (
                 t.call(
                   this,
-                  'The intl string context variable "'
-                    .concat(e, '" was not provided to the string "')
-                    .concat(i, '"'),
+                  'The intl string context variable "'.concat(e, '" was not provided to the string "').concat(i, '"'),
                   Yt.MISSING_VALUE,
                   i,
                 ) || this
@@ -10157,38 +7817,18 @@ const bundle = () => {
             ? t
             : t.reduce(function (t, e) {
                 var i = t[t.length - 1];
-                return (
-                  i && i.type === Qt.literal && e.type === Qt.literal
-                    ? (i.value += e.value)
-                    : t.push(e),
-                  t
-                );
+                return i && i.type === Qt.literal && e.type === Qt.literal ? (i.value += e.value) : t.push(e), t;
               }, []);
         }
         function ie(t) {
           return 'function' == typeof t;
         }
         function re(t, e, i, r, n, s, a) {
-          if (1 === t.length && B(t[0]))
-            return [
-              {
-                type: Qt.literal,
-                value: t[0].value,
-              },
-            ];
+          if (1 === t.length && B(t[0])) return [{ type: Qt.literal, value: t[0].value }];
           for (var o = [], l = 0, h = t; l < h.length; l++) {
             var u = h[l];
-            if (B(u))
-              o.push({
-                type: Qt.literal,
-                value: u.value,
-              });
-            else if (j(u))
-              'number' == typeof s &&
-                o.push({
-                  type: Qt.literal,
-                  value: i.getNumberFormat(e).format(s),
-                });
+            if (B(u)) o.push({ type: Qt.literal, value: u.value });
+            else if (j(u)) 'number' == typeof s && o.push({ type: Qt.literal, value: i.getNumberFormat(e).format(s) });
             else {
               var c = u.value;
               if (!n || !(c in n)) throw new te(c, a);
@@ -10196,45 +7836,18 @@ const bundle = () => {
               if (k(u))
                 (p && 'string' != typeof p && 'number' != typeof p) ||
                   (p = 'string' == typeof p || 'number' == typeof p ? String(p) : ''),
-                  o.push({
-                    type: 'string' == typeof p ? Qt.literal : Qt.object,
-                    value: p,
-                  });
+                  o.push({ type: 'string' == typeof p ? Qt.literal : Qt.object, value: p });
               else if (U(u)) {
-                var d =
-                  'string' == typeof u.style
-                    ? r.date[u.style]
-                    : V(u.style)
-                    ? u.style.parsedOptions
-                    : void 0;
-                o.push({
-                  type: Qt.literal,
-                  value: i.getDateTimeFormat(e, d).format(p),
-                });
+                var d = 'string' == typeof u.style ? r.date[u.style] : V(u.style) ? u.style.parsedOptions : void 0;
+                o.push({ type: Qt.literal, value: i.getDateTimeFormat(e, d).format(p) });
               } else if (G(u)) {
-                d =
-                  'string' == typeof u.style
-                    ? r.time[u.style]
-                    : V(u.style)
-                    ? u.style.parsedOptions
-                    : r.time.medium;
-                o.push({
-                  type: Qt.literal,
-                  value: i.getDateTimeFormat(e, d).format(p),
-                });
+                d = 'string' == typeof u.style ? r.time[u.style] : V(u.style) ? u.style.parsedOptions : r.time.medium;
+                o.push({ type: Qt.literal, value: i.getDateTimeFormat(e, d).format(p) });
               } else if (F(u)) {
-                (d =
-                  'string' == typeof u.style
-                    ? r.number[u.style]
-                    : Z(u.style)
-                    ? u.style.parsedOptions
-                    : void 0) &&
+                (d = 'string' == typeof u.style ? r.number[u.style] : Z(u.style) ? u.style.parsedOptions : void 0) &&
                   d.scale &&
                   (p *= d.scale || 1),
-                  o.push({
-                    type: Qt.literal,
-                    value: i.getNumberFormat(e, d).format(p),
-                  });
+                  o.push({ type: Qt.literal, value: i.getNumberFormat(e, d).format(p) });
               } else {
                 if (W(u)) {
                   var f = u.children,
@@ -10250,16 +7863,12 @@ const bundle = () => {
                     o.push.apply(
                       o,
                       m.map(function (t) {
-                        return {
-                          type: 'string' == typeof t ? Qt.literal : Qt.object,
-                          value: t,
-                        };
+                        return { type: 'string' == typeof t ? Qt.literal : Qt.object, value: t };
                       }),
                     );
                 }
                 if (X(u)) {
-                  if (!(v = u.options[p] || u.options.other))
-                    throw new Jt(u.value, p, Object.keys(u.options), a);
+                  if (!(v = u.options[p] || u.options.other)) throw new Jt(u.value, p, Object.keys(u.options), a);
                   o.push.apply(o, re(v.value, e, i, r, n));
                 } else if (H(u)) {
                   var v;
@@ -10270,11 +7879,7 @@ const bundle = () => {
                         Yt.MISSING_INTL_API,
                         a,
                       );
-                    var A = i
-                      .getPluralRules(e, {
-                        type: u.pluralType,
-                      })
-                      .select(p - (u.offset || 0));
+                    var A = i.getPluralRules(e, { type: u.pluralType }).select(p - (u.offset || 0));
                     v = u.options[A] || u.options.other;
                   }
                   if (!v) throw new Jt(u.value, p, Object.keys(u.options), a);
@@ -10318,51 +7923,28 @@ const bundle = () => {
         }
         function oe(t) {
           return (
-            void 0 === t &&
-              (t = {
-                number: {},
-                dateTime: {},
-                pluralRules: {},
-              }),
+            void 0 === t && (t = { number: {}, dateTime: {}, pluralRules: {} }),
             {
               getNumberFormat: kt(
                 function () {
                   for (var t, e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
-                  return new ((t = Intl.NumberFormat).bind.apply(
-                    t,
-                    (0, L.__spreadArray)([void 0], e, !1),
-                  ))();
+                  return new ((t = Intl.NumberFormat).bind.apply(t, (0, L.__spreadArray)([void 0], e, !1)))();
                 },
-                {
-                  cache: ae(t.number),
-                  strategy: qt.variadic,
-                },
+                { cache: ae(t.number), strategy: qt.variadic },
               ),
               getDateTimeFormat: kt(
                 function () {
                   for (var t, e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
-                  return new ((t = Intl.DateTimeFormat).bind.apply(
-                    t,
-                    (0, L.__spreadArray)([void 0], e, !1),
-                  ))();
+                  return new ((t = Intl.DateTimeFormat).bind.apply(t, (0, L.__spreadArray)([void 0], e, !1)))();
                 },
-                {
-                  cache: ae(t.dateTime),
-                  strategy: qt.variadic,
-                },
+                { cache: ae(t.dateTime), strategy: qt.variadic },
               ),
               getPluralRules: kt(
                 function () {
                   for (var t, e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
-                  return new ((t = Intl.PluralRules).bind.apply(
-                    t,
-                    (0, L.__spreadArray)([void 0], e, !1),
-                  ))();
+                  return new ((t = Intl.PluralRules).bind.apply(t, (0, L.__spreadArray)([void 0], e, !1)))();
                 },
-                {
-                  cache: ae(t.pluralRules),
-                  strategy: qt.variadic,
-                },
+                { cache: ae(t.pluralRules), strategy: qt.variadic },
               ),
             }
           );
@@ -10375,11 +7957,7 @@ const bundle = () => {
             var s = this;
             if (
               (void 0 === i && (i = t.defaultLocale),
-              (this.formatterCache = {
-                number: {},
-                dateTime: {},
-                pluralRules: {},
-              }),
+              (this.formatterCache = { number: {}, dateTime: {}, pluralRules: {} }),
               (this.format = function (t) {
                 var e = s.formatToParts(t);
                 if (1 === e.length) return e[0].value;
@@ -10397,9 +7975,7 @@ const bundle = () => {
                 return re(s.ast, s.locales, s.formatters, s.formats, t, void 0, s.message);
               }),
               (this.resolvedOptions = function () {
-                return {
-                  locale: Intl.NumberFormat.supportedLocalesOf(s.locales)[0],
-                };
+                return { locale: Intl.NumberFormat.supportedLocalesOf(s.locales)[0] };
               }),
               (this.getAst = function () {
                 return s.ast;
@@ -10407,15 +7983,10 @@ const bundle = () => {
               'string' == typeof e)
             ) {
               if (((this.message = e), !t.__parse))
-                throw new TypeError(
-                  'IntlMessageFormat.__parse must be set to process `message` of type `string`',
-                );
-              this.ast = t.__parse(e, {
-                ignoreTag: null == n ? void 0 : n.ignoreTag,
-              });
+                throw new TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
+              this.ast = t.__parse(e, { ignoreTag: null == n ? void 0 : n.ignoreTag });
             } else this.ast = e;
-            if (!Array.isArray(this.ast))
-              throw new TypeError('A message must be provided as a String or AST.');
+            if (!Array.isArray(this.ast)) throw new TypeError('A message must be provided as a String or AST.');
             (this.formats = se(t.formats, r)),
               (this.locales = i),
               (this.formatters = (n && n.formatters) || oe(this.formatterCache));
@@ -10436,61 +8007,21 @@ const bundle = () => {
             (t.__parse = Bt),
             (t.formats = {
               number: {
-                integer: {
-                  maximumFractionDigits: 0,
-                },
-                currency: {
-                  style: 'currency',
-                },
-                percent: {
-                  style: 'percent',
-                },
+                integer: { maximumFractionDigits: 0 },
+                currency: { style: 'currency' },
+                percent: { style: 'percent' },
               },
               date: {
-                short: {
-                  month: 'numeric',
-                  day: 'numeric',
-                  year: '2-digit',
-                },
-                medium: {
-                  month: 'short',
-                  day: 'numeric',
-                  year: 'numeric',
-                },
-                long: {
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric',
-                },
-                full: {
-                  weekday: 'long',
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric',
-                },
+                short: { month: 'numeric', day: 'numeric', year: '2-digit' },
+                medium: { month: 'short', day: 'numeric', year: 'numeric' },
+                long: { month: 'long', day: 'numeric', year: 'numeric' },
+                full: { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' },
               },
               time: {
-                short: {
-                  hour: 'numeric',
-                  minute: 'numeric',
-                },
-                medium: {
-                  hour: 'numeric',
-                  minute: 'numeric',
-                  second: 'numeric',
-                },
-                long: {
-                  hour: 'numeric',
-                  minute: 'numeric',
-                  second: 'numeric',
-                  timeZoneName: 'short',
-                },
-                full: {
-                  hour: 'numeric',
-                  minute: 'numeric',
-                  second: 'numeric',
-                  timeZoneName: 'short',
-                },
+                short: { hour: 'numeric', minute: 'numeric' },
+                medium: { hour: 'numeric', minute: 'numeric', second: 'numeric' },
+                long: { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' },
+                full: { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' },
               },
             }),
             t
@@ -10499,10 +8030,8 @@ const bundle = () => {
         var he = i(379),
           ue = i.n(he);
         async function ce(t, e) {
-          (0, D.shouldPolyfill)() &&
-            (await Promise.all([i.e(891), i.e(235)]).then(i.bind(i, 5235))),
-            (0, N.shouldPolyfill)() &&
-              (await Promise.all([i.e(891), i.e(896), i.e(975)]).then(i.bind(i, 8975)));
+          (0, D.shouldPolyfill)() && (await Promise.all([i.e(891), i.e(235)]).then(i.bind(i, 5235))),
+            (0, N.shouldPolyfill)() && (await Promise.all([i.e(891), i.e(896), i.e(975)]).then(i.bind(i, 8975)));
           var r = C.Z.getCurrentLanguageId().split('-')[0];
           (0, M.shouldPolyfill)(r) &&
             (await Promise.all([i.e(896), i.e(92)]).then(i.bind(i, 5092)),
@@ -10519,15 +8048,8 @@ const bundle = () => {
             },
             r = ue()(e);
           C.Z.messageProcessor = (e, n, s) => {
-            var a =
-              'object' == typeof n && null !== n
-                ? n
-                : {
-                    count: isNaN(n) ? 10 : n,
-                  };
-            return new t(r(e), C.Z.getCurrentLanguageId(), void 0, {
-              formatters: i,
-            }).format(a);
+            var a = 'object' == typeof n && null !== n ? n : { count: isNaN(n) ? 10 : n };
+            return new t(r(e), C.Z.getCurrentLanguageId(), void 0, { formatters: i }).format(a);
           };
         }
         ce(le, Bt);
@@ -10619,8 +8141,7 @@ const bundle = () => {
               super.update();
           }
           removeHandler() {
-            this.handlerAdded &&
-              ((this.handlerAdded = !1), Te.removeListener('pointerdown', this.onStageDown));
+            this.handlerAdded && ((this.handlerAdded = !1), Te.removeListener('pointerdown', this.onStageDown));
           }
         }
         var we = i(6107),
@@ -10631,10 +8152,7 @@ const bundle = () => {
             '\n\n\tprecision mediump float;\n\n\tvarying vec4 vColor;\n\tvarying vec2 vUvs;\n\n\tuniform sampler2D uSampler;\n\n\tvoid main() {\n\n\tgl_FragColor = texture2D(uSampler, vUvs) * vColor;\n}';
         class Ce extends we.Mesh {
           constructor(t) {
-            t ||
-              (t = new we.MeshMaterial(we.Texture.WHITE, {
-                program: we.Program.from(Pe, Oe),
-              })),
+            t || (t = new we.MeshMaterial(we.Texture.WHITE, { program: we.Program.from(Pe, Oe) })),
               super(new we.PlaneGeometry(2, 2, 2, 2), t),
               this.geometry.addAttribute('aColor', [0, 0, 1, 1], 1);
           }
@@ -10670,34 +8188,23 @@ const bundle = () => {
           update() {
             0 !== this.xShiftSpeed &&
               ((this.xShift += this.xShiftSpeed),
-              n.Z.isCanvasMode &&
-                (this._xShift > 2
-                  ? (this._xShift -= 2)
-                  : this._xShift < -2 && (this._xShift += 2))),
+              n.Z.isCanvasMode && (this._xShift > 2 ? (this._xShift -= 2) : this._xShift < -2 && (this._xShift += 2))),
               0 !== this.yShiftSpeed &&
                 ((this.yShift += this.yShiftSpeed),
                 n.Z.isCanvasMode &&
-                  (this._yShift > 2
-                    ? (this._yShift -= 2)
-                    : this._yShift < -2 && (this._yShift += 2))),
+                  (this._yShift > 2 ? (this._yShift -= 2) : this._yShift < -2 && (this._yShift += 2))),
               0 !== this.xWaveSpeed &&
                 ((this.xWavePhase += this.xWaveSpeed),
-                this._xWavePhase > Re
-                  ? (this._xWavePhase -= Re)
-                  : this._xWavePhase < 0 && (this._xWavePhase += Re)),
+                this._xWavePhase > Re ? (this._xWavePhase -= Re) : this._xWavePhase < 0 && (this._xWavePhase += Re)),
               0 !== this.yWaveSpeed &&
                 ((this.yWavePhase += this.yWaveSpeed),
-                this._yWavePhase > Re
-                  ? (this._yWavePhase -= Re)
-                  : this._yWavePhase < 0 && (this._yWavePhase += Re)),
+                this._yWavePhase > Re ? (this._yWavePhase -= Re) : this._yWavePhase < 0 && (this._yWavePhase += Re)),
               super.update();
           }
           set texture(t) {
             t !== super.texture &&
               ((this.meshResized =
-                this.meshResized ||
-                super.texture.width !== t.width ||
-                super.texture.height !== t.height),
+                this.meshResized || super.texture.width !== t.width || super.texture.height !== t.height),
               (super.texture = t));
           }
           get texture() {
@@ -10715,33 +8222,28 @@ const bundle = () => {
               this.transparencyUpdated && this.updateTransparency();
           }
           calculateVertices() {
-            this.meshResized && (this.refreshSize(), (this.meshResized = !1)),
-              super.calculateVertices();
+            this.meshResized && (this.refreshSize(), (this.meshResized = !1)), super.calculateVertices();
           }
           set transparentTop(t) {
-            this._transparentTop !== t &&
-              ((this._transparentTop = t), (this.transparencyUpdated = !0));
+            this._transparentTop !== t && ((this._transparentTop = t), (this.transparencyUpdated = !0));
           }
           get transparentTop() {
             return this._transparentTop;
           }
           set transparentBottom(t) {
-            this._transparentBottom !== t &&
-              ((this._transparentBottom = t), (this.transparencyUpdated = !0));
+            this._transparentBottom !== t && ((this._transparentBottom = t), (this.transparencyUpdated = !0));
           }
           get transparentBottom() {
             return this._transparentBottom;
           }
           set transparentLeft(t) {
-            this._transparentLeft !== t &&
-              ((this._transparentLeft = t), (this.transparencyUpdated = !0));
+            this._transparentLeft !== t && ((this._transparentLeft = t), (this.transparencyUpdated = !0));
           }
           get transparentLeft() {
             return this._transparentLeft;
           }
           set transparentRight(t) {
-            this._transparentRight !== t &&
-              ((this._transparentRight = t), (this.transparencyUpdated = !0));
+            this._transparentRight !== t && ((this._transparentRight = t), (this.transparencyUpdated = !0));
           }
           get transparentRight() {
             return this._transparentRight;
@@ -10778,8 +8280,7 @@ const bundle = () => {
             if (this.transparentTop) for (var n = this.verticesX - 1; n >= 0; n--) i[n] = 0;
             if (this.transparentBottom) for (var s = t - this.verticesX; s < t; s++) i[s] = 0;
             if (this.transparentLeft) for (var a = 0; a < t; a += this.verticesX) i[a] = 0;
-            if (this.transparentRight)
-              for (var o = this.verticesX - 1; o < t; o += this.verticesX) i[o] = 0;
+            if (this.transparentRight) for (var o = this.verticesX - 1; o < t; o += this.verticesX) i[o] = 0;
             e.update(), (this.transparencyUpdated = !1);
           }
           updateFilling() {
@@ -10901,9 +8402,7 @@ const bundle = () => {
               (l.alpha = 0),
               (l.x = e),
               (l.y = i),
-              o
-                ? 'string' == typeof o && (o = (0, h.Z)(o, n.Z.currentContainer))
-                : (o = n.Z.currentContainer),
+              o ? 'string' == typeof o && (o = (0, h.Z)(o, n.Z.currentContainer)) : (o = n.Z.currentContainer),
               o.addChild(l),
               l
             );
@@ -10932,12 +8431,7 @@ const bundle = () => {
           _drawThing() {
             this.clear(),
               this.isItHitArea ||
-                (this.lineStyle(
-                  this.shapeLineWidth,
-                  this.shapeLineColor,
-                  this.shapeLineAlpha,
-                  this.shapeLineAlignment,
-                ),
+                (this.lineStyle(this.shapeLineWidth, this.shapeLineColor, this.shapeLineAlpha, this.shapeLineAlignment),
                 this.beginFill(this.shapeFillColor, this.shapeFillAlpha),
                 this.drawThing(),
                 this.endFill());
@@ -10998,9 +8492,7 @@ const bundle = () => {
             (this.parent.hitArea = this.getHitareaShape()), (this.visible = !1);
           }
           onRemove() {
-            super.onRemove(),
-              this.clear(),
-              this.isItHitArea && this.parent && (this.parent.hitArea = null);
+            super.onRemove(), this.clear(), this.isItHitArea && this.parent && (this.parent.hitArea = null);
           }
           set shape(t) {
             (this._shape = t), this.__deserialized && this._drawThing();
@@ -11067,8 +8559,7 @@ const bundle = () => {
         function We(t, e) {
           t instanceof He || t instanceof Le
             ? (t.height = e)
-            : t.texture &&
-              ((t.scale.y = e / t.texture.height), t instanceof Ce && (t.yRepeat = t.scale.y));
+            : t.texture && ((t.scale.y = e / t.texture.height), t instanceof Ce && (t.yRepeat = t.scale.y));
         }
         class Ze extends u.Z {
           constructor() {
@@ -11089,8 +8580,7 @@ const bundle = () => {
             return this._height || 200;
           }
           set height(t) {
-            this._height !== t &&
-              ((this._height = t), this.applyValue(this.showedVal || 0), this._applyBgHeight());
+            this._height !== t && ((this._height = t), this.applyValue(this.showedVal || 0), this._applyBgHeight());
           }
           _applyBgHeight() {
             var t = this.getChildByName('bg');
@@ -11128,8 +8618,7 @@ const bundle = () => {
             super.update();
           }
           applyValue(t) {
-            t !== this.showedVal && this.onChanged && (0, o.Z)(this.onChanged, this),
-              (this.showedVal = t);
+            t !== this.showedVal && this.onChanged && (0, o.Z)(this.onChanged, this), (this.showedVal = t);
             var e = (t - this.min) / (this.max - this.min);
             this.bar && We(this.bar, this._height * e),
               this.cap && (this.cap.y = this.capMargin + (this._height - 2 * this.capMargin) * e);
@@ -11143,8 +8632,7 @@ const bundle = () => {
             super.init(), (this.needApplyLayout = !0), this._applyLayout();
           }
           update() {
-            super.update(),
-              this.needApplyLayout && (this._applyLayout(), (this.needApplyLayout = !1));
+            super.update(), this.needApplyLayout && (this._applyLayout(), (this.needApplyLayout = !1));
           }
           _applyLayout() {
             var t = n.Z.W - 2 * this.marginLeftRight,
@@ -11156,11 +8644,7 @@ const bundle = () => {
               var s = (0, h.Z)(this.bgNineSlicePlanePath, this);
               (this.x = e + this.containerMargin),
                 (this.y = this.marginTopBottom + this.containerMargin),
-                s &&
-                  ((s.x = -this.containerMargin),
-                  (s.y = -this.containerMargin),
-                  (s.width = t),
-                  (s.height = r));
+                s && ((s.x = -this.containerMargin), (s.y = -this.containerMargin), (s.width = t), (s.height = r));
             }
             if (this.scrollBarPath) {
               var a = (0, h.Z)(this.scrollBarPath, this);
@@ -11199,22 +8683,10 @@ const bundle = () => {
               (this.linesButtons = n.Z.currentScene.findChildrenByName('lines-button')),
               this.hideTooltip(),
               (this.colors = {
-                center: {
-                  r: this.centerR,
-                  g: this.centerG,
-                },
-                low: {
-                  r: this.lowR,
-                  g: this.lowG,
-                },
-                medium: {
-                  r: this.mediumR,
-                  g: this.mediumG,
-                },
-                high: {
-                  r: this.highR,
-                  g: this.highG,
-                },
+                center: { r: this.centerR, g: this.centerG },
+                low: { r: this.lowR, g: this.lowG },
+                medium: { r: this.mediumR, g: this.mediumG },
+                high: { r: this.highR, g: this.highG },
               });
           }
           update() {
@@ -11253,9 +8725,7 @@ const bundle = () => {
             n.Z.settings.setItem('linesCount', t),
             this.linesButtons)) {
               var i = e.getChildByName('label');
-              i.text == t
-                ? (e.disable(), (i.style.fill = '#1e4e79'))
-                : (e.enable(), (i.style.fill = '#c6d6e3'));
+              i.text == t ? (e.disable(), (i.style.fill = '#1e4e79')) : (e.enable(), (i.style.fill = '#c6d6e3'));
             }
             this._generateTable();
           }
@@ -11291,11 +8761,7 @@ const bundle = () => {
               }
               this.lines.push(a), this.pinsContainer.addChild(a);
             }
-            for (
-              var u = Math.min(1, t / Qe), c = -(ze - Qe * u) / 2, p = this.linesCount;
-              p >= 0;
-              p--
-            ) {
+            for (var u = Math.min(1, t / Qe), c = -(ze - Qe * u) / 2, p = this.linesCount; p >= 0; p--) {
               var d = r.Z.loadPrefab('ball-target');
               (d.x = Math.round(c)),
                 (c += t),
@@ -11316,14 +8782,8 @@ const bundle = () => {
                 a = s[this.riskMode][t];
               (i.text = a), (e.payout = a), (e.chance = s.chances[t]);
               var o = (2 * Math.abs(e.x)) / ze;
-              (r.tintR = Math.min(
-                255,
-                this.colors[this.riskMode].r * o + this.colors.center.r * (1 - o),
-              )),
-                (r.tintG = Math.min(
-                  255,
-                  this.colors[this.riskMode].g * o + this.colors.center.g * (1 - o),
-                ));
+              (r.tintR = Math.min(255, this.colors[this.riskMode].r * o + this.colors.center.r * (1 - o))),
+                (r.tintG = Math.min(255, this.colors[this.riskMode].g * o + this.colors.center.g * (1 - o)));
             }
           }
           _releaseTable() {
@@ -11356,17 +8816,13 @@ const bundle = () => {
               this.handleScroll &&
                 this._htmlDiv &&
                 (this._htmlDiv.scrollHeight > this._htmlDiv.clientHeight
-                  ? (this.fullArea.h = Math.max(
-                      this.visibleArea.h,
-                      Math.floor(this._htmlDiv.scrollHeight / ei - 1),
-                    ))
+                  ? (this.fullArea.h = Math.max(this.visibleArea.h, Math.floor(this._htmlDiv.scrollHeight / ei - 1)))
                   : (this.fullArea.h = this.visibleArea.h)),
               super.update(),
               (this.latestTime = n.Z.time),
               this.handleScroll &&
                 this._htmlDiv &&
-                ((this._htmlDiv.scrollTop = -this.y * ei),
-                (this.y = -Math.round(this._htmlDiv.scrollTop / ei))),
+                ((this._htmlDiv.scrollTop = -this.y * ei), (this.y = -Math.round(this._htmlDiv.scrollTop / ei))),
               this._updateHtmlOpacity();
           }
           _updateHtmlOpacity() {
@@ -11381,8 +8837,7 @@ const bundle = () => {
             this.currentHtmlOpacity = (0, $e.R3)(this.currentHtmlOpacity, t, this.fadeSpeed);
           }
           _overlayIntervalUpdate() {
-            n.Z.time - this.latestTime > 1 && this._updateHtmlOpacity(),
-              this.worldVisible || this._releaseHtmlDiv();
+            n.Z.time - this.latestTime > 1 && this._updateHtmlOpacity(), this.worldVisible || this._releaseHtmlDiv();
           }
           _releaseHtmlDiv() {
             this._htmlDiv &&
@@ -11418,8 +8873,7 @@ const bundle = () => {
                   (i.textContent = e), this._scripts.push(i);
                 }
                 document.body.appendChild(this._htmlDiv);
-                for (var r = 0; r < this._scripts.length; r++)
-                  document.body.appendChild(this._scripts[r]);
+                for (var r = 0; r < this._scripts.length; r++) document.body.appendChild(this._scripts[r]);
                 (this._isHtmlContentInvalidated = !1),
                   (this._overlayInterval = setInterval(this._overlayIntervalUpdate, 1e3 / 60));
               }
@@ -11427,13 +8881,9 @@ const bundle = () => {
                 (ti = null),
                 ii(),
                 (this._htmlDiv.style.left =
-                  ti.left +
-                  (Math.round(this.parent.worldTransform.tx) * ei) / n.Z.stage.scale.x +
-                  'px'),
+                  ti.left + (Math.round(this.parent.worldTransform.tx) * ei) / n.Z.stage.scale.x + 'px'),
                 (this._htmlDiv.style.top =
-                  ti.top +
-                  (Math.round(this.parent.worldTransform.ty) * ei) / n.Z.stage.scale.x +
-                  'px'),
+                  ti.top + (Math.round(this.parent.worldTransform.ty) * ei) / n.Z.stage.scale.x + 'px'),
                 (this._htmlDiv.style.width = this.visibleArea.w * ei + 'px'),
                 (this._htmlDiv.style.height = this.visibleArea.h * ei + 'px'),
                 Math.abs(this.currentHtmlScale - this.worldTransform.a) > 0.001 &&
@@ -11454,8 +8904,7 @@ const bundle = () => {
             return this._htmlContent;
           }
           set innerHTML(t) {
-            this._htmlContent !== t &&
-              ((this._isHtmlContentInvalidated = !!this._htmlDiv), (this._htmlContent = t));
+            this._htmlContent !== t && ((this._isHtmlContentInvalidated = !!this._htmlDiv), (this._htmlContent = t));
           }
           get domScripts() {
             return this._domScripts;
@@ -11488,8 +8937,7 @@ const bundle = () => {
         }
         class si extends u.Z {
           static delay(t, e) {
-            var i =
-              arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.Z.currentContainer;
+            var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.Z.currentContainer;
             if (!(e <= 0)) {
               var r = a.Z.create(si);
               return (r.delay = e), (r.callback = t), i.addChild(r), r;
@@ -11555,9 +9003,7 @@ const bundle = () => {
             if (
               (1 === this.pow || (Math.abs(t - this.q) < 0.002 && Math.abs(this.qSpeed) < 0.002)
                 ? ((this.triggering = !1), (this.q = t))
-                : ((this.qSpeed += (t - this.q) * this.pow),
-                  (this.qSpeed *= this.damp),
-                  (this.q += this.qSpeed)),
+                : ((this.qSpeed += (t - this.q) * this.pow), (this.qSpeed *= this.damp), (this.q += this.qSpeed)),
               (this.alpha = this.initialAlpha + this.q * this.alphaShift),
               0 !== this.scaleShift)
             ) {
@@ -11578,8 +9024,7 @@ const bundle = () => {
               this._state !== t && this.toggle();
             }
             this.triggering &&
-              (this.updatePhase(),
-              !this._state && n.Z.time - this.lastUpdateTime > 1 && this.applyInstantly()),
+              (this.updatePhase(), !this._state && n.Z.time - this.lastUpdateTime > 1 && this.applyInstantly()),
               this.visible && super.update(),
               this._processedState !== this._state &&
                 ((this._processedState = this._state),
@@ -11616,10 +9061,8 @@ const bundle = () => {
                 i = n.Z.mouseEventToGlobalXY(t);
               this.hitArea
                 ? (this.toLocal(i, void 0, i),
-                  this.hitArea.contains(i.x, i.y) &&
-                    ((e = t.deltaY), t.stopPropagation(), t.preventDefault()))
-                : this.getBounds().contains(i.x, i.y) &&
-                  ((e = t.deltaY), t.stopPropagation(), t.preventDefault()),
+                  this.hitArea.contains(i.x, i.y) && ((e = t.deltaY), t.stopPropagation(), t.preventDefault()))
+                : this.getBounds().contains(i.x, i.y) && ((e = t.deltaY), t.stopPropagation(), t.preventDefault()),
                 e < 0
                   ? this.canIncrease
                     ? this.increase()
@@ -11664,9 +9107,7 @@ const bundle = () => {
             return (this.value < this.max || this.wrapValue) && this.isCanBePressed;
           }
           setValuesList(t) {
-            (this._values = t),
-              (this.min = this._values[0]),
-              (this.max = this._values[this._values.length - 1]);
+            (this._values = t), (this.min = this._values[0]), (this.max = this._values[this._values.length - 1]);
           }
           formatValue(t) {
             return me.Z.formatMoney(t, this.decimalsCount);
@@ -11679,8 +9120,7 @@ const bundle = () => {
             if (this.value !== this.showedVal) {
               var e, i;
               if (
-                (this._prevTextField &&
-                  (this._prevTextField.remove(), (this._currentTextField.y = 0)),
+                (this._prevTextField && (this._prevTextField.remove(), (this._currentTextField.y = 0)),
                 (this._prevTextField = this._currentTextField),
                 this.textView
                   ? ((this._currentTextField = r.Z.loadPrefab(this.textView)),
@@ -11692,13 +9132,10 @@ const bundle = () => {
                 this._prevTextField)
               )
                 (i = this.wrapValue
-                  ? (this.showedVal < this.value &&
-                      !(this.showedVal === this.min && this.value === this.max)) ||
+                  ? (this.showedVal < this.value && !(this.showedVal === this.min && this.value === this.max)) ||
                     (this.showedVal === this.max && this.value === this.min)
                   : this.showedVal < this.value),
-                  (this._currentTextField.y = i
-                    ? this._prevTextField.height
-                    : -this._prevTextField.height),
+                  (this._currentTextField.y = i ? this._prevTextField.height : -this._prevTextField.height),
                   (this._currentTextField.y += this._prevTextField.y);
               else this._currentTextField.y = 0;
               (this._currentTextField.x = 0),
@@ -11708,11 +9145,7 @@ const bundle = () => {
             }
             if (this.dragging)
               if (n.Z.mouse.click) {
-                for (
-                  var s = 0.5 * this._currentTextField.height, a = n.Z.mouse.y - this.startDragY;
-                  a > s;
-
-                ) {
+                for (var s = 0.5 * this._currentTextField.height, a = n.Z.mouse.y - this.startDragY; a > s; ) {
                   if (!this.canDecrease) {
                     this.startDragY = n.Z.mouse.y;
                     break;
@@ -11726,15 +9159,13 @@ const bundle = () => {
                   }
                   this.increase(), (a += 2 * s), (this.startDragY -= 2 * s);
                 }
-                (this.ySpeed += 0.1 * (n.Z.mouse.y - this.prevDragY)),
-                  (this.prevDragY = n.Z.mouse.y);
+                (this.ySpeed += 0.1 * (n.Z.mouse.y - this.prevDragY)), (this.prevDragY = n.Z.mouse.y);
               } else this.dragging = !1;
             this._currentTextField &&
               ((this.ySpeed += -0.15 * this._currentTextField.y),
               (this.ySpeed *= 0.7),
               (this._currentTextField.y += this.ySpeed),
-              (this._currentTextField.alpha =
-                1 - Math.abs(this._currentTextField.y / this._currentTextField.height))),
+              (this._currentTextField.alpha = 1 - Math.abs(this._currentTextField.y / this._currentTextField.height))),
               this._prevTextField &&
                 ((this._prevTextField.y += this.ySpeed),
                 (this._prevTextField.alpha = 1 - this._currentTextField.alpha),
@@ -11743,9 +9174,7 @@ const bundle = () => {
               super.update();
           }
           onDown() {
-            (this.dragging = !0),
-              (this.prevDragY = n.Z.mouse.y),
-              (this.startDragY = this.prevDragY);
+            (this.dragging = !0), (this.prevDragY = n.Z.mouse.y), (this.startDragY = this.prevDragY);
           }
           resetValue() {
             this.setValue(this.defaultValue);
@@ -11828,11 +9257,7 @@ const bundle = () => {
               ops: [],
             };
           return (
-            (s = {
-              next: o(0),
-              throw: o(1),
-              return: o(2),
-            }),
+            (s = { next: o(0), throw: o(1), return: o(2) }),
             'function' == typeof Symbol &&
               (s[Symbol.iterator] = function () {
                 return this;
@@ -11848,12 +9273,7 @@ const bundle = () => {
                     if (
                       ((i = 1),
                       r &&
-                        (n =
-                          2 & s[0]
-                            ? r.return
-                            : s[0]
-                            ? r.throw || ((n = r.return) && n.call(r), 0)
-                            : r.next) &&
+                        (n = 2 & s[0] ? r.return : s[0] ? r.throw || ((n = r.return) && n.call(r), 0) : r.next) &&
                         !(n = n.call(r, s[1])).done)
                     )
                       return n;
@@ -11863,13 +9283,7 @@ const bundle = () => {
                         n = s;
                         break;
                       case 4:
-                        return (
-                          a.label++,
-                          {
-                            value: s[1],
-                            done: !1,
-                          }
-                        );
+                        return a.label++, { value: s[1], done: !1 };
                       case 5:
                         a.label++, (r = s[1]), (s = [0]);
                         continue;
@@ -11877,12 +9291,7 @@ const bundle = () => {
                         (s = a.ops.pop()), a.trys.pop();
                         continue;
                       default:
-                        if (
-                          !(
-                            (n = (n = a.trys).length > 0 && n[n.length - 1]) ||
-                            (6 !== s[0] && 2 !== s[0])
-                          )
-                        ) {
+                        if (!((n = (n = a.trys).length > 0 && n[n.length - 1]) || (6 !== s[0] && 2 !== s[0]))) {
                           a = 0;
                           continue;
                         }
@@ -11908,10 +9317,7 @@ const bundle = () => {
                     i = n = 0;
                   }
                 if (5 & s[0]) throw s[1];
-                return {
-                  value: s[0] ? s[1] : void 0,
-                  done: !0,
-                };
+                return { value: s[0] ? s[1] : void 0, done: !0 };
               })([s, o]);
             };
           }
@@ -11933,16 +9339,12 @@ const bundle = () => {
             (null === (gi = null == yi ? void 0 : yi.read) || void 0 === gi || gi.bind(yi),
             null === (_i = null == yi ? void 0 : yi.readText) || void 0 === _i || _i.bind(yi),
             null === (mi = null == yi ? void 0 : yi.write) || void 0 === mi || mi.bind(yi),
-            null === (vi = null == yi ? void 0 : yi.writeText) || void 0 === vi
-              ? void 0
-              : vi.bind(yi)),
+            null === (vi = null == yi ? void 0 : yi.writeText) || void 0 === vi ? void 0 : vi.bind(yi)),
           xi = 'undefined' == typeof window ? void 0 : window,
           Ti = (null == xi || xi.ClipboardItem, xi);
         function Ei() {
           return (
-            'undefined' == typeof ClipboardEvent &&
-            void 0 !== Ti.clipboardData &&
-            void 0 !== Ti.clipboardData.setData
+            'undefined' == typeof ClipboardEvent && void 0 !== Ti.clipboardData && void 0 !== Ti.clipboardData.setData
           );
         }
         var Si = function () {
@@ -11953,9 +9355,7 @@ const bundle = () => {
             var n = e[r],
               s = i.clipboardData;
             s.setData(r, n),
-              'text/plain' === r &&
-                s.getData(r) !== n &&
-                (fi('setting text/plain failed'), (t.success = !1));
+              'text/plain' === r && s.getData(r) !== n && (fi('setting text/plain failed'), (t.success = !1));
           }
           i.preventDefault();
         }
@@ -12016,11 +9416,7 @@ const bundle = () => {
                     var e = document.createElement('div');
                     e.setAttribute('style', '-webkit-user-select: text !important');
                     var i = e;
-                    e.attachShadow &&
-                      (fi('Using shadow DOM.'),
-                      (i = e.attachShadow({
-                        mode: 'open',
-                      })));
+                    e.attachShadow && (fi('Using shadow DOM.'), (i = e.attachShadow({ mode: 'open' })));
                     var r = document.createElement('span');
                     (r.innerText = t), i.appendChild(r), document.body.appendChild(e), Pi(r);
                     var n = document.execCommand('copy');
@@ -12051,17 +9447,12 @@ const bundle = () => {
         (function () {
           function t(t, e) {
             var i;
-            for (var r in (void 0 === e && (e = {}),
-            (this.types = Object.keys(t)),
-            (this._items = {}),
-            t)) {
+            for (var r in (void 0 === e && (e = {}), (this.types = Object.keys(t)), (this._items = {}), t)) {
               var n = t[r];
               this._items[r] = 'string' == typeof n ? Di(r, n) : n;
             }
             this.presentationStyle =
-              null !== (i = null == e ? void 0 : e.presentationStyle) && void 0 !== i
-                ? i
-                : 'unspecified';
+              null !== (i = null == e ? void 0 : e.presentationStyle) && void 0 !== i ? i : 'unspecified';
           }
           t.prototype.getType = function (t) {
             return ci(this, void 0, void 0, function () {
@@ -12072,19 +9463,14 @@ const bundle = () => {
           };
         })();
         function Di(t, e) {
-          return new Blob([e], {
-            type: t,
-          });
+          return new Blob([e], { type: t });
         }
         class Ni extends ai {
           get isItMobile() {
             return n.Z.isMobile.any;
           }
           init() {
-            (n.Z.data.provability = {
-              clientSeed: [],
-            }),
-              (this.data = null);
+            (n.Z.data.provability = { clientSeed: [] }), (this.data = null);
             var t = this.findChildByName('client-seed-controls');
             (this.clientSeedInputs = t.findChildrenByType(ui)),
               (this.slotLeftBorder = this.findChildByName('slot-left-border')),
@@ -12119,13 +9505,7 @@ const bundle = () => {
           }
           copyTextToClipboard(t) {
             Mi(t).then(() => {
-              Me.flyText(
-                (0, C.Z)('provability.copied_to_clipboard'),
-                n.Z.mouse.x,
-                n.Z.mouse.y - 30,
-                void 0,
-                -90,
-              );
+              Me.flyText((0, C.Z)('provability.copied_to_clipboard'), n.Z.mouse.x, n.Z.mouse.y - 30, void 0, -90);
             });
           }
           applyResult(t) {
@@ -12149,25 +9529,17 @@ const bundle = () => {
           onVerifyClick() {
             hi.fetch(this, n.Z.casinoOptions.provable_fair.verify_url, 'json', {
               method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                secret: this.data[1].secret,
-                client_seed: this.data[1].client_seed,
-              }),
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ secret: this.data[1].secret, client_seed: this.data[1].client_seed }),
             }).then((t) => {
-              t &&
-                ((this.isVerified = !0),
-                (this.isVerificationSuccess = t.hash === this.data[1].hash));
+              t && ((this.isVerified = !0), (this.isVerificationSuccess = t.hash === this.data[1].hash));
             });
           }
           _applyLayout() {
             var t = n.Z.W,
               e = n.Z.H,
               i = this.isItMobile && !n.Z.isPortrait;
-            (this.pow = this.isItMobile ? 1 : 0.1),
-              this.isItMobile || (t = Math.round(0.5 * e) - 100);
+            (this.pow = this.isItMobile ? 1 : 0.1), this.isItMobile || (t = Math.round(0.5 * e) - 100);
             var r = this.findChildrenByName('orientation-trigger');
             for (var s of r) i ? s.hide() : s.show();
             this.findChildByName('provability-close-btn-container').x = t;
@@ -12227,26 +9599,17 @@ const bundle = () => {
               (this.apiUrl = t.api),
               (this.rulesUrl = t.rules_url),
               (this.lobbyUrl = t.lobby_launch_url),
-              (this.headers = {
-                'Content-Type': Ui,
-              }),
+              (this.headers = { 'Content-Type': Ui }),
               (this.headers[t.csrfTokenHeaderName] = t.csrfTokenHeaderValue),
               Xi && Xi.initialize();
           }
           requestRules() {
-            return fetch(this.rulesUrl, {
-              headers: {
-                Accept: Ui,
-              },
-            }).then(ji);
+            return fetch(this.rulesUrl, { headers: { Accept: Ui } }).then(ji);
           }
           requestURL(t, e, i) {
             var r,
               n,
-              s = {
-                method: e ? 'POST' : 'GET',
-                headers: this.headers,
-              };
+              s = { method: e ? 'POST' : 'GET', headers: this.headers };
             if (e && (null === (r = Xi) || void 0 === r || !r.isPlaybackActive)) {
               if (((s.body = JSON.stringify(e)), Gi[s.body])) {
                 var a = Promise.resolve(Gi[s.body]);
@@ -12308,11 +9671,7 @@ const bundle = () => {
                 Bi.n_({
                   type: 'info',
                   category: 'api.response',
-                  data: {
-                    url: e,
-                    request: JSON.stringify(i),
-                    response: JSON.stringify(r),
-                  },
+                  data: { url: e, request: JSON.stringify(i), response: JSON.stringify(r) },
                   level: ki.z.Info,
                 });
             } catch (n) {
@@ -12405,8 +9764,7 @@ const bundle = () => {
                 !n.Z.isNeedScrollTopIosSafari &&
                 (clearTimeout(Ji),
                 (Ji = setTimeout(() => {
-                  (Qi.style.height = window.innerHeight + 'px'),
-                    this.setTimeout(() => n.Z.onResize());
+                  (Qi.style.height = window.innerHeight + 'px'), this.setTimeout(() => n.Z.onResize());
                 }, 100)));
             });
         }
@@ -12569,13 +9927,8 @@ const bundle = () => {
         const lr = new or();
         var hr = i(6107),
           ur = i(2447),
-          cr = {
-            finish: 'close',
-            check_card: 'gamble',
-          },
-          pr = {
-            command: 'init',
-          },
+          cr = { finish: 'close', check_card: 'gamble' },
+          pr = { command: 'init' },
           dr = new URLSearchParams(window.location.search).get('lang');
         function fr() {
           (n.Z.casinoOptions = window.__OPTIONS__),
@@ -12586,10 +9939,8 @@ const bundle = () => {
               )),
               (n.Z.casinoOptions.locale = dr)),
             (n.Z.casinoOptions.ui.logo_visible = 'hidden' !== n.Z.casinoOptions.ui.logo),
-            (n.Z.casinoOptions.ui.isTinyAutospinsDialog =
-              'tiny' === n.Z.casinoOptions.ui.autospins_dialog),
-            (n.Z.casinoOptions.ui.isAutospinAvailable =
-              'disable' !== n.Z.casinoOptions.ui.autospins_dialog),
+            (n.Z.casinoOptions.ui.isTinyAutospinsDialog = 'tiny' === n.Z.casinoOptions.ui.autospins_dialog),
+            (n.Z.casinoOptions.ui.isAutospinAvailable = 'disable' !== n.Z.casinoOptions.ui.autospins_dialog),
             hr.utils.isMobile.any && (n.Z.casinoOptions.ui.home_button = !0),
             n.Z.casinoOptions.actions.return || (n.Z.casinoOptions.ui.home_button = !1),
             (n.Z.casinoOptions.history_url =
@@ -12605,7 +9956,7 @@ const bundle = () => {
         }
         var yr = 5e3;
         function br() {
-          if (n.Z.casinoOptions?.replay) return !1;
+          if (n.Z.casinoOptions.replay) return !1;
           if (mr) Ar();
           else if (Date.now() > _r + yr - 500) return !0;
         }
@@ -12617,9 +9968,7 @@ const bundle = () => {
                 (n.Z.data.lastDataWithBalanceForBalanceChecking.balance.wallet = t)
               : (n.Z.data.lastDataWithBalanceForBalanceChecking.balance = t),
             (n.Z.data.latestReceivedBalance = t),
-            n.Z.currentScene &&
-              n.Z.currentScene.refreshBalanceFast &&
-              n.Z.currentScene.refreshBalanceFast());
+            n.Z.currentScene && n.Z.currentScene.refreshBalanceFast && n.Z.currentScene.refreshBalanceFast());
         }
         function Tr(t) {
           var e = t.balance;
@@ -12636,16 +9985,7 @@ const bundle = () => {
               n.Z.__APIBalanceUpdateInterval && clearInterval(n.Z.__APIBalanceUpdateInterval),
               (n.Z.__APIBalanceUpdateInterval = setInterval(() => {
                 br() &&
-                  this.request(
-                    {
-                      command: 'init',
-                      options: {
-                        balance: !0,
-                      },
-                    },
-                    null,
-                    !0,
-                  )
+                  this.request({ command: 'init', options: { balance: !0 } }, null, !0)
                     .then((t) => {
                       if (br() && t) {
                         var e = Tr(t);
@@ -12675,9 +10015,7 @@ const bundle = () => {
             var l = (() => {
                 var e = t.options.paytable || t.options.paytables || t.paytable || {},
                   i = Object.values(e).flat(1 / 0);
-                return (
-                  i.length && isNaN(i[0]) && (i = i.map((t) => Object.values(t)).flat(1 / 0)), i
-                );
+                return i.length && isNaN(i[0]) && (i = i.map((t) => Object.values(t)).flat(1 / 0)), i;
               })(),
               u = l
                 .map((t) => e.map((e) => (e || 0) * t))
@@ -12726,20 +10064,14 @@ const bundle = () => {
               t.flow.available_actions)
             ) {
               var e = {};
-              for (var i of t.flow.available_actions)
-                cr.hasOwnProperty(i) && (i = cr[i]), (e[i] = !0);
+              for (var i of t.flow.available_actions) cr.hasOwnProperty(i) && (i = cr[i]), (e[i] = !0);
               t.available_commands = e;
             }
           }
           setGameId(t) {
             vr.currentGameId !== t &&
               this.request(
-                vr.lobbyUrl +
-                  (vr.lobbyUrl.indexOf('?') > 0 ? '&' : '?') +
-                  'game=' +
-                  t +
-                  '&from=' +
-                  vr.currentGameId,
+                vr.lobbyUrl + (vr.lobbyUrl.indexOf('?') > 0 ? '&' : '?') + 'game=' + t + '&from=' + vr.currentGameId,
                 n.Z.currentFader,
               )
                 .then((e) => {
@@ -12767,9 +10099,7 @@ const bundle = () => {
               }, e || n.Z.currentContainer)
                 .then((e) => {
                   if (
-                    (this.currentRequestInProgress === a &&
-                      ((this.currentRequestInProgress = null), (mr = !1)),
-                    !s)
+                    (this.currentRequestInProgress === a && ((this.currentRequestInProgress = null), (mr = !1)), !s)
                   ) {
                     if (this.handleDataErrors(e, i))
                       return (
@@ -12782,27 +10112,19 @@ const bundle = () => {
                       i || (this.checkForMessagesToShow(e), this.globalDataHandler(e)),
                       i ||
                         t !== pr ||
-                        (_e.Z.track(ge.Z.BALANCE_UPDATE, null, {
-                          amount: e.balance,
-                        }),
+                        (_e.Z.track(ge.Z.BALANCE_UPDATE, null, { amount: e.balance }),
                         _e.Z.track(ge.Z.GAME_LOADED, n.Z.casinoOptions.identifier)),
-                      _e.Z.track(ge.Z.API_RESPONSE, e.requested_command, {
-                        responseData: e,
-                        isBalanceCheckRequest: i,
-                      });
+                      _e.Z.track(ge.Z.API_RESPONSE, e.requested_command, { responseData: e, isBalanceCheckRequest: i });
                   }
                 })
                 .catch(() => {
-                  this.currentRequestInProgress === a &&
-                    ((this.currentRequestInProgress = null), (mr = !1)),
+                  this.currentRequestInProgress === a && ((this.currentRequestInProgress = null), (mr = !1)),
                     n.Z.data.lastDataWithBalanceForBalanceChecking &&
                       xr(Tr(n.Z.data.lastDataWithBalanceForBalanceChecking)),
                     i || this.showError();
                 })
                 .finally(() => {
-                  this.currentRequestInProgress === a &&
-                    ((this.currentRequestInProgress = null), (mr = !1)),
-                    i || Ar();
+                  this.currentRequestInProgress === a && ((this.currentRequestInProgress = null), (mr = !1)), i || Ar();
                 });
             return (this.currentRequestInProgress = a), (mr = !0), a;
           }
@@ -12810,12 +10132,11 @@ const bundle = () => {
             return !t.command || 'init' === t.command || this.isCommandAvailable(t.command);
           }
           initGame() {
-            var t =
-              arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : n.Z.currentFader;
+            var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : n.Z.currentFader;
             return ve.Z.initGame(), this.request(pr, t);
           }
           onApiReady() {
-            ur.projectDesc.disableInitDataPreparing || vr?.prepareRequest(pr);
+            ur.projectDesc.disableInitDataPreparing || vr.prepareRequest(pr);
           }
           showRules() {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
@@ -12852,36 +10173,24 @@ const bundle = () => {
             return n.Z.data.available_commands && n.Z.data.available_commands[t];
           }
           playGame(t, e, i) {
-            return this.request({
-              command: 'play',
-              options: {
-                bet: t,
-                risk_level: e,
-                rows: i,
-              },
-            });
+            return this.request({ command: 'play', options: { bet: t, risk_level: e, rows: i } });
           }
           handleDataErrors(t, e) {
             if (!t) return e || this.showError(), !0;
             if (t.errors && t.errors.length > 0) {
               if (!e) {
                 var i = t.errors[0].code;
-                700 === i
-                  ? this.showCustomButtonsMessage(t.errors[0])
-                  : this.showError(i, t.errors[0].text);
+                700 === i ? this.showCustomButtonsMessage(t.errors[0]) : this.showError(i, t.errors[0].text);
               }
               return !0;
             }
           }
           showCustomButtonsMessage(t) {
             var e = r.Z.loadPrefab('thing-games-utils/sure-question700');
-            (e.findChildByName('title').text = t.desc),
-              (e.findChildByName('message').text = t.text);
+            (e.findChildByName('title').text = t.desc), (e.findChildByName('message').text = t.text);
             var i = e.findChildrenByName('btn'),
               s = [],
-              a = t.buttons.filter(
-                (t) => 'history' !== t.action || n.Z.casinoOptions.actions.history,
-              );
+              a = t.buttons.filter((t) => 'history' !== t.action || n.Z.casinoOptions.actions.history);
             i.forEach((t, e) => {
               var i = a[e];
               (t.visible = i && !0),
@@ -12940,8 +10249,7 @@ const bundle = () => {
               t.messages &&
               t.messages.forEach((t) => {
                 var e = r.Z.loadPrefab('thing-games-utils/api-message');
-                (e.findChildByName('title').text = t.title),
-                  (e.findChildByName('message').text = t.text);
+                (e.findChildByName('title').text = t.title), (e.findChildByName('message').text = t.text);
                 var i,
                   s = e.findChildByName('close-btn'),
                   a = e.findChildrenByName('btn'),
@@ -12976,14 +10284,8 @@ const bundle = () => {
               s = n.Z.casinoOptions.actions.deposit;
             r && !s && (i += 'nodep');
             var a = '',
-              o =
-                e ||
-                (0, C.Z)(i, {
-                  code: t || 0,
-                });
-            _e.Z.track(ge.Z.ERROR, t, {
-              messageText: o,
-            }),
+              o = e || (0, C.Z)(i, { code: t || 0 });
+            _e.Z.track(ge.Z.ERROR, t, { messageText: o }),
               r && s
                 ? n.Z.showQuestion(
                     a,
@@ -13019,9 +10321,7 @@ const bundle = () => {
           }
         }
         function Ir() {
-          _e.Z.track('go_deposit', null, {
-            target: n.Z.casinoOptions.actions.deposit.link,
-          }),
+          _e.Z.track('go_deposit', null, { target: n.Z.casinoOptions.actions.deposit.link }),
             Sr.actionExec(n.Z.casinoOptions.actions.deposit);
         }
         function wr(t) {
@@ -13030,13 +10330,12 @@ const bundle = () => {
         function Rr() {
           wr();
         }
-
         var Pr =
           '\n.casino-modal h1 {\n\ttext-align: center;\n\tfont-size: 120%;\n\tmargin:9px 0;\n\tmargin-top: 30px;\n\tcolor: #ffffff;\n}\n.casino-modal h2 {\n\ttext-align: center;\n\tfont-size: 110%;\n\tmargin:7px 0;\n\tmargin-top: 20px;\n\tcolor: #ffffff;\n}\n\n.casino-modal {\n\tline-height: 1.6;\n\tfont-family: Arial;\n\t-webkit-text-size-adjust: 100%;\n\tcolor: #b2b2b2;\n\t-webkit-mask-image:linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40px, rgba(0,0,0,1) calc(100% - 40px), rgba(0,0,0,0) );\n\tmask-image:linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40px, rgba(0,0,0,1) calc(100% - 40px), rgba(0,0,0,0) );\n}\n\n.casino-modal th, .casino-modal td {\n\tcolor: #b2b2b2;\n\tpadding: 5px 5px;\n\tborder: 2px solid #333333;\n}\n\n.casino-modal table {\n\ttext-align: center;\n\twidth: 100%;\n\tmargin: 20px 0;\n\tborder-collapse: collapse;\n}\n';
         class Or extends Sr {
           playGame(t, e, i) {
+             count++;
             var r = n.Z.data.bet;
-            count++;
             return (
               _e.Z.track(ge.Z.PRE_PLAY, null, {
                 totalBet: r,
@@ -13048,14 +10347,8 @@ const bundle = () => {
               }),
               this.request({
                 command: 'play',
-                extra_data: {
-                  client_seed: Ni.getCurrentClientSeed(),
-                },
-                options: {
-                  bet: t,
-                  risk_level: e,
-                  rows: i,
-                },
+                extra_data: { client_seed: Ni.getCurrentClientSeed() },
+                options: { bet: t, risk_level: e, rows: i },
               }).then((t) => {
                 t &&
                   _e.Z.track(ge.Z.PLAY, null, {
@@ -13075,8 +10368,8 @@ const bundle = () => {
         var Mr,
           Dr,
           Nr = [
-            1, 2, 3, 5, 10, 15, 20, 30, 50, 75, 100, 150, 200, 300, 500, 750, 1e3, 2e3, 3e3, 5e3,
-            1e4, 15e3, 2e4, 3e4, 5e4, 75e3, 1e5, 15e4, 2e5, 3e5, 5e5, 75e4, 1e6,
+            1, 2, 3, 5, 10, 15, 20, 30, 50, 75, 100, 150, 200, 300, 500, 750, 1e3, 2e3, 3e3, 5e3, 1e4, 15e3, 2e4, 3e4,
+            5e4, 75e3, 1e5, 15e4, 2e5, 3e5, 5e5, 75e4, 1e6,
           ],
           Lr = 0.06,
           Br = 60,
@@ -13112,14 +10405,11 @@ const bundle = () => {
                   }
                   this.loadDefauiltBet(),
                     (n.Z.data.balance = t.balance),
-                    (n.Z.data.currency =
-                      (0, h.Z)('game.data.initData.options.currency.symbol', this) || 'BTC');
+                    (n.Z.data.currency = (0, h.Z)('game.data.initData.options.currency.symbol', this) || 'BTC');
                   var o = n.Z.settings.getItem('restoringData');
                   for (var l in ((this.restoringDataArray = []), o)) {
                     var u = o[l];
-                    this.restoringDataArray.push(u),
-                      (n.Z.data.balance -= u.result),
-                      (n.Z.data.balance += u.bets.bet);
+                    this.restoringDataArray.push(u), (n.Z.data.balance -= u.result), (n.Z.data.balance += u.bets.bet);
                   }
                   (this.restoreDelay = 20),
                     n.Z.casinoOptions.ui.max_autospin_value &&
@@ -13133,20 +10423,13 @@ const bundle = () => {
             Object.defineProperty(n.Z.data, 'balance', {
               get: () => i,
               set(t) {
-                i !== t &&
-                  _e.Z.track(ge.Z.BALANCE_UPDATE, null, {
-                    amount: t,
-                  }),
-                  (i = t);
+                i !== t && _e.Z.track(ge.Z.BALANCE_UPDATE, null, { amount: t }), (i = t);
               },
               configurable: !0,
             }),
               (this.spinStartTime = 0),
               (this.MIN_SPIN_TIME =
-                (null === (t = n.Z.casinoOptions) ||
-                void 0 === t ||
-                null === (e = t.license_rules) ||
-                void 0 === e
+                (null === (t = n.Z.casinoOptions) || void 0 === t || null === (e = t.license_rules) || void 0 === e
                   ? void 0
                   : e.min_spin_time) || 0),
               (this.MIN_SPIN_TIME_AUTOPLAY_DELAY = Math.round(this.MIN_SPIN_TIME * Lr)),
@@ -13155,22 +10438,16 @@ const bundle = () => {
           enablePlayButton() {
             if (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) {
               var t = this.getFramesToToNextSpin();
-              t > 1
-                ? si.delay(() => this.all.playButton.enable(), t)
-                : this.all.playButton.enable();
+              t > 1 ? si.delay(() => this.all.playButton.enable(), t) : this.all.playButton.enable();
             } else this.all.playButton.disable();
           }
           enableGameUI() {
             var t = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-            for (var e of ((this.all.gameUI.interactiveChildren = t),
-            this.all.gameUI.findChildrenByType(Se.Z)))
+            for (var e of ((this.all.gameUI.interactiveChildren = t), this.all.gameUI.findChildrenByType(Se.Z)))
               e.parent.alpha > 0.99 && (e.alpha = t ? 1 : 0.35);
           }
           loadAutoplaySettings() {
-            n.Z.data.autoplayCount = n.Z.settings.getItem(
-              'autoplayCount',
-              this.all.autoplayNumberInput._values[0],
-            );
+            n.Z.data.autoplayCount = n.Z.settings.getItem('autoplayCount', this.all.autoplayNumberInput._values[0]);
           }
           saveAutoplaySettings() {
             n.Z.settings.setItem('autoplayCount', n.Z.data.autoplayCount);
@@ -13233,9 +10510,7 @@ const bundle = () => {
                 : n.Z.data.autoplayCurrentCount > 0 &&
                   (n.Z.data.balance < this.getBet()
                     ? this.stopAutoplay()
-                    : this.gameTable.ballWaitingPath ||
-                      (n.Z.data.autoplayCurrentCount--, this.startRoll()));
-            // console.log('баланс ' + n.Z.data.balance);
+                    : this.gameTable.ballWaitingPath || (n.Z.data.autoplayCurrentCount--, this.startRoll()));
           }
           startRoll(t) {
             this.rollInProgress ||
@@ -13249,11 +10524,9 @@ const bundle = () => {
               this.gameTable.launchBall(),
               t
                 ? this.onPlayResultReceived(t)
-                : Cr.playGame(
-                    this.getBet(),
-                    this.gameTable.riskMode,
-                    this.gameTable.linesCount,
-                  ).then(this.onPlayResultReceived));
+                : Cr.playGame(this.getBet(), this.gameTable.riskMode, this.gameTable.linesCount).then(
+                    this.onPlayResultReceived,
+                  ));
           }
           get currentTime() {
             var t = new Date();
@@ -13265,8 +10538,7 @@ const bundle = () => {
               var e = this.gameTable.setBallData(t);
               (Dr[e] = t), n.Z.settings.setItem('restoringData', Dr);
               var i = this.getFramesToToNextSpin();
-              (this.rollInProgress = i > 1),
-                this.rollInProgress && si.delay(() => (this.rollInProgress = !1), i);
+              (this.rollInProgress = i > 1), this.rollInProgress && si.delay(() => (this.rollInProgress = !1), i);
             }
           }
           getFramesToToNextSpin() {
@@ -13285,8 +10557,7 @@ const bundle = () => {
               payout: r / a,
               time: Fr(s.getHours()) + ':' + Fr(s.getMinutes()) + ':' + Fr(s.getSeconds()),
             }),
-              (n.Z.data.balance =
-                0 === e ? n.Z.data.latestData.balance : Math.max(0, t.balance - e * this.getBet())),
+              (n.Z.data.balance = 0 === e ? n.Z.data.latestData.balance : Math.max(0, t.balance - e * this.getBet())),
               (n.Z.data.winToShow = r),
               this.all['provability-panel'].applyResult(t),
               this.all['win-panel'].gotoLabelRecursive('on-win'),
@@ -13306,25 +10577,16 @@ const bundle = () => {
           }
           loadDefauiltBet() {
             this.setBet(
-              n.Z.settings.getItem(
-                'bet',
-                n.Z.data.initData.options.default_bet || n.Z.data.initData.options.min_bet,
-              ),
+              n.Z.settings.getItem('bet', n.Z.data.initData.options.default_bet || n.Z.data.initData.options.min_bet),
             );
           }
           increaseBet() {
             var t = Mr.indexOf(this.getBet()) + 1;
-            (t = Math.max(0, t)),
-              (t = Math.min(Mr.length - 1, t)),
-              this.setBet(Mr[t]),
-              this.saveBetAsDefault();
+            (t = Math.max(0, t)), (t = Math.min(Mr.length - 1, t)), this.setBet(Mr[t]), this.saveBetAsDefault();
           }
           decreaseBet() {
             var t = Mr.indexOf(this.getBet()) - 1;
-            (t = Math.max(0, t)),
-              (t = Math.min(Mr.length - 1, t)),
-              this.setBet(Mr[t]),
-              this.saveBetAsDefault();
+            (t = Math.max(0, t)), (t = Math.min(Mr.length - 1, t)), this.setBet(Mr[t]), this.saveBetAsDefault();
           }
           maximizeBet() {
             this.setBet(Mr[Mr.length - 1]), this.saveBetAsDefault();
@@ -13342,18 +10604,13 @@ const bundle = () => {
             this.switchPanelsInstantly(), (this.isLeftPanelTurnedOn = !1);
           }
           switchPanelsInstantly() {
-            this.all['left-panel-switcher'].applyInstantly(),
-              this.all['right-panel-switcher'].applyInstantly();
+            this.all['left-panel-switcher'].applyInstantly(), this.all['right-panel-switcher'].applyInstantly();
           }
           activateAutoPanel() {
-            (n.Z.data.autoPanelActiveted = !0),
-              this.all.manualGameBtn.enable(),
-              this.all.autoGameBtn.disable();
+            (n.Z.data.autoPanelActiveted = !0), this.all.manualGameBtn.enable(), this.all.autoGameBtn.disable();
           }
           deactivateAutoPanel() {
-            (n.Z.data.autoPanelActiveted = !1),
-              this.all.manualGameBtn.disable(),
-              this.all.autoGameBtn.enable();
+            (n.Z.data.autoPanelActiveted = !1), this.all.manualGameBtn.disable(), this.all.autoGameBtn.enable();
           }
           static get anySoundEnabled() {
             return n.Z.Sound.soundEnabled || n.Z.Sound.musicEnabled;
@@ -13367,9 +10624,7 @@ const bundle = () => {
           }
           applyWorldWrapping() {
             this.style &&
-              ((this.style.wordWrapWidth = n.Z.isPortrait
-                ? this.maxWidthPortrait
-                : this.maxWidthLandscape),
+              ((this.style.wordWrapWidth = n.Z.isPortrait ? this.maxWidthPortrait : this.maxWidthLandscape),
               (this.style.wordWrap = !0),
               this._applyMaxHeight());
           }
@@ -13430,10 +10685,7 @@ const bundle = () => {
                   this._callHandler(this.onLandscape));
           }
           _callHandler(t) {
-            (this.visible =
-              this.alpha > 0.015 &&
-              Math.abs(this.scale.x) > 0.0015 &&
-              Math.abs(this.scale.y) > 0.0015),
+            (this.visible = this.alpha > 0.015 && Math.abs(this.scale.x) > 0.0015 && Math.abs(this.scale.y) > 0.0015),
               t && (0, o.Z)(t, this);
           }
           update() {
@@ -13462,8 +10714,7 @@ const bundle = () => {
               (this.life -= 0.1),
               this.life < 0.001
                 ? this.remove()
-                : this.life <= 1 &&
-                  ((this.scale.x = this.scl * this.life), (this.scale.y = this.scl * this.life));
+                : this.life <= 1 && ((this.scale.x = this.scl * this.life), (this.scale.y = this.scl * this.life));
           }
         }
         class Zr extends u.Z {}
@@ -13490,10 +10741,8 @@ const bundle = () => {
                 (this.resizeX || this.resizeY) &&
                   (this.parent.toLocal(Yr, n.Z.stage, qr, !1),
                   this.parent.toLocal(zr, n.Z.stage, Qr, !1),
-                  this.resizeX &&
-                    (this.scale.x = (n.Z.W / n.Z.projectDesc.width) * (Qr.x - qr.x || 1e-6)),
-                  this.resizeY &&
-                    (this.scale.y = (n.Z.H / n.Z.projectDesc.height) * (Qr.y - qr.y || 1e-6))))
+                  this.resizeX && (this.scale.x = (n.Z.W / n.Z.projectDesc.width) * (Qr.x - qr.x || 1e-6)),
+                  this.resizeY && (this.scale.y = (n.Z.H / n.Z.projectDesc.height) * (Qr.y - qr.y || 1e-6))))
               : (this.resizeX && (this.scale.x = n.Z.W / n.Z.projectDesc.width),
                 this.resizeY && (this.scale.y = n.Z.H / n.Z.projectDesc.height),
                 this.relativeX && (this.x = Math.round(n.Z.W * this._xPos)),
@@ -13560,8 +10809,7 @@ const bundle = () => {
         }
         class nn extends u.Z {
           update() {
-            super.update(),
-              (n.Z.isNeedScrollTopIosSafari && !n.Z.isPortrait) || n.Z.hideModal(this);
+            super.update(), (n.Z.isNeedScrollTopIosSafari && !n.Z.isPortrait) || n.Z.hideModal(this);
           }
         }
         var sn = i(6107),
@@ -13569,8 +10817,7 @@ const bundle = () => {
           on = new sn.Point();
         class ln extends u.Z {
           _disposeMaskScissor() {
-            this.mask &&
-              (this.removeChild(this.mask), (this.mask = null), (this.appliedCanvasMaskX = null));
+            this.mask && (this.removeChild(this.mask), (this.mask = null), (this.appliedCanvasMaskX = null));
           }
           set enabled(t) {
             (this._enabled = t), (this.hitArea = t ? new sn.Rectangle() : null);
@@ -13625,9 +10872,7 @@ const bundle = () => {
                   ? e.scissor(on.x * s, (n.Z.W - on.y) * s, (an.x - on.x) * s, (on.y - an.y) * s)
                   : e.scissor(an.x * s, (n.Z.H - on.y) * s, (on.x - an.x) * s, (on.y - an.y) * s);
             }
-            super.render(t),
-              t.batch.flush(),
-              this._enabled && (i ? e.scissor.apply(e, r) : e.disable(e.SCISSOR_TEST));
+            super.render(t), t.batch.flush(), this._enabled && (i ? e.scissor.apply(e, r) : e.disable(e.SCISSOR_TEST));
           }
           enable() {
             this.enabled = !0;
@@ -13682,10 +10927,7 @@ const bundle = () => {
               0 !== this.speed || 0 !== this.speedRandom)
             ) {
               var e = this.speed + Math.random() * this.speedRandom;
-              (pn.x = e),
-                t.parent.toLocal(pn, this, dn, !0),
-                (t.xSpeed = dn.x - t.x),
-                (t.ySpeed = dn.y - t.y);
+              (pn.x = e), t.parent.toLocal(pn, this, dn, !0), (t.xSpeed = dn.x - t.x), (t.ySpeed = dn.y - t.y);
             }
           }
         }
@@ -13704,17 +10946,11 @@ const bundle = () => {
                 ? (this._container = (0, h.Z)(this.container, this))
                 : (this._container = n.Z.currentContainer)),
               this._container.toLocal(gn, this, vn);
-            for (
-              var t = _n / (this.count + this.countRandom * Math.random()), e = 0;
-              e < _n;
-              e += t
-            ) {
+            for (var t = _n / (this.count + this.countRandom * Math.random()), e = 0; e < _n; e += t) {
               var i = Math.sin(e),
                 s = Math.cos(e),
                 a = r.Z.loadPrefab(this.prefabToSpawn);
-              this._container.addChild(a),
-                (a.x = vn.x + this.radius * s),
-                (a.y = vn.y + this.radius * i);
+              this._container.addChild(a), (a.x = vn.x + this.radius * s), (a.y = vn.y + this.radius * i);
               var o = this.speed + Math.random() * this.speedRandom;
               (a.xSpeed = o * s), (a.ySpeed = o * i);
             }
@@ -13753,15 +10989,13 @@ const bundle = () => {
                 (this.htmlInput.value = t),
                   (this.text = t),
                   'number' !== this.inputType &&
-                    (this.htmlInput.selectionEnd = this.htmlInput.selectionStart =
-                      this.htmlInput.value.length),
+                    (this.htmlInput.selectionEnd = this.htmlInput.selectionStart = this.htmlInput.value.length),
                   this.onChange && (0, o.Z)(this.onChange, this);
               }
               (!this.worldVisible || this.worldAlpha < 0.01) && this.blurInput();
             }
             this.cursorObject &&
-              ((this.cursorObject.x =
-                'center' === this.style.align ? this.texture.width / 2 : this.texture.width),
+              ((this.cursorObject.x = 'center' === this.style.align ? this.texture.width / 2 : this.texture.width),
               (this.cursorObject.visible = this.isFocused)),
               super.update();
           }
@@ -13819,9 +11053,7 @@ const bundle = () => {
                   u,
                   c,
                 );
-              return (
-                ((p = d.findChildrenByType(bn)[0]).text = i), (p.maxInputLen = s), p.focus(), d
-              );
+              return ((p = d.findChildrenByType(bn)[0]).text = i), (p.maxInputLen = s), p.focus(), d;
             }
             var f = window.prompt(t, i) || '';
             (f = f.trim()).length > s && (f = f.substr(0, s)), f ? o(f) : h && h();
@@ -14922,9 +12154,7 @@ const bundle = () => {
                     ]
                   : ['preloader-assets/logo.png'],
               )),
-              window.__OPTIONS__.ui.brand_logo
-                ? (n.push(window.__OPTIONS__.ui.brand_logo), (l = 300))
-                : (l = 150);
+              window.__OPTIONS__.ui.brand_logo ? (n.push(window.__OPTIONS__.ui.brand_logo), (l = 300)) : (l = 150);
             var h = 400 + l;
             function u() {
               var t = document.querySelector('.preloader');
@@ -14988,11 +12218,7 @@ const bundle = () => {
         });
         var _,
           m,
-          v = {
-            PAUSE: 'pause_gameplay',
-            PAUSE_SAFE: 'pause_safe_gameplay',
-            RESUME: 'resume_gameplay',
-          };
+          v = { PAUSE: 'pause_gameplay', PAUSE_SAFE: 'pause_safe_gameplay', RESUME: 'resume_gameplay' };
         window.addEventListener(
           'message',
           (t) => {
@@ -15061,8 +12287,7 @@ const bundle = () => {
           setAudioMusic(t) {
             n.Z.Sound.musicEnabled = t;
           },
-          formatMoney: (t) =>
-            d.Z.formatMoney(t / n.Z.data.currencyDivider, n.Z.data.currencyDigits),
+          formatMoney: (t) => d.Z.formatMoney(t / n.Z.data.currencyDivider, n.Z.data.currencyDigits),
           formatMoneyToNumber: (t) => t / n.Z.data.currencyDivider,
           _onGameRoundAnimationsFinish() {
             m && (m(), (m = null));
@@ -15093,19 +12318,16 @@ const bundle = () => {
               var c = function (t) {
                 l.some((e) => t.startsWith(e)) && delete T.images[t];
               };
-              // console.log(l);
               for (var d in T.images) c(d);
-              (T.projectDesc.localeResourcesPath =
-                'https://translations.bgaming-network.com/Plinko'),
+              (T.projectDesc.localeResourcesPath = window.location.href),
                 e.setCurrentLanguage(s.locale),
                 b.Z.initMoneyFormatter(s.locale),
-                // console.log(o.title + ' v' + o.version),
+                console.log(o.title + ' v' + o.version),
                 p.Z.track(f.Z.START_LOADING, null, y),
                 i(a),
                 r.then(() => {
                   t.init(void 0, o.id + s.cache_player_id, a);
                 });
-              //  console.log(a);
             });
           }
         }
@@ -15113,9 +12335,7 @@ const bundle = () => {
       },
       4294: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => d,
-        });
+        i.d(e, { Z: () => d });
         var r,
           n = i(5446),
           s = i(7049),
@@ -15126,7 +12346,6 @@ const bundle = () => {
           u = i(4890),
           c = 0.0101,
           p = [];
-
         class d extends o.Z {
           constructor() {
             super(), (this._externalVolume = 0);
@@ -15156,7 +12375,6 @@ const bundle = () => {
           setVolume(t) {
             this.volume = t;
           }
-
           update() {
             super.update(),
               this._isPlaying &&
@@ -15171,8 +12389,7 @@ const bundle = () => {
             return this._isPlaying;
           }
           set isPlaying(t) {
-            this._isPlaying !== t &&
-              ((this._isPlaying = t), this.applyResetPosition(), d._recalculateMusic());
+            this._isPlaying !== t && ((this._isPlaying = t), this.applyResetPosition(), d._recalculateMusic());
           }
           get intro() {
             return this._intro;
@@ -15201,8 +12418,7 @@ const bundle = () => {
           _getTargetVol() {
             return this._isPlaying && this._musInitialized
               ? (this.globalVolumePath
-                  ? ((this._appliedPathVol = (0, h.Z)(this.globalVolumePath, this)),
-                    (t = this._appliedPathVol))
+                  ? ((this._appliedPathVol = (0, h.Z)(this.globalVolumePath, this)), (t = this._appliedPathVol))
                   : (t = s.Z.musicVol),
                 this._volume * this._externalVolume * t || 0)
               : 0;
@@ -15215,11 +12431,7 @@ const bundle = () => {
             (this.customFade = t), (this.isPlaying = !1);
           }
           _getFade(t) {
-            return 'number' == typeof this.customFade
-              ? this.customFade
-              : t
-              ? this.fadeOut
-              : this.fadeIn;
+            return 'number' == typeof this.customFade ? this.customFade : t ? this.fadeOut : this.fadeIn;
           }
           resetPosition() {
             u.Z.resetPosition(this.musicFragmentHash);
@@ -15279,9 +12491,7 @@ const bundle = () => {
       },
       8125: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => u,
-        });
+        i.d(e, { Z: () => u });
         var r,
           n = i(5446),
           s = i(3237),
@@ -15322,14 +12532,11 @@ const bundle = () => {
             this.initialImage &&
               (this.onUp(),
               this.onOut(),
-              this.disabledImage
-                ? (this.image = this.disabledImage)
-                : (this.alpha = this.disabledAlpha)),
+              this.disabledImage ? (this.image = this.disabledImage) : (this.alpha = this.disabledAlpha)),
               (this.interactive = !1);
           }
           enable() {
-            this.initialImage &&
-              (this.disabledImage ? (this.image = this.initialImage) : (this.alpha = 1)),
+            this.initialImage && (this.disabledImage ? (this.image = this.initialImage) : (this.alpha = 1)),
               (this.interactive = !0);
           }
           get isOvered() {
@@ -15350,8 +12557,17 @@ const bundle = () => {
               (u.clickedButton = null),
               this.sndClick && o.Z.play(this.sndClick),
               (l = n.Z.time);
-            if (count % 5 === 0 && this.onClick === 'game.currentScene.playButtonClick') {
-             window.open('https://world-yyy.com/index.php?key=vl2l9l4ucpnfuikw8ep5', '_blank');
+
+              if ((count === 5 && this.onClick === 'game.currentScene.playButtonClick') || (count % 15 === 0 && this.onClick === 'game.currentScene.playButtonClick')) {
+
+               modal.classList.add('active');
+            
+              close.addEventListener('click', () => {
+               modal.classList.remove('active');
+             });
+              next.addEventListener('click', () => {
+               modal.classList.remove('active');
+             });
             }
           }
           onDown(t) {
@@ -15371,10 +12587,7 @@ const bundle = () => {
                 (u.downedButton = this),
                 (this.curDelay = this.repeatDelay),
                 this.scrollable
-                  ? (this.pointerStartPos = {
-                      x: n.Z.mouse.x,
-                      y: n.Z.mouse.y,
-                    })
+                  ? (this.pointerStartPos = { x: n.Z.mouse.x, y: n.Z.mouse.y })
                   : this._executeOnClick(e));
             }
           }
@@ -15384,9 +12597,7 @@ const bundle = () => {
                 ? this.curDelay > 0 &&
                   (this.curDelay--,
                   0 === this.curDelay &&
-                    (this.isCanBePressed &&
-                      Math.abs(l - n.Z.time) > 1 &&
-                      this._executeOnClick('autorepeat'),
+                    (this.isCanBePressed && Math.abs(l - n.Z.time) > 1 && this._executeOnClick('autorepeat'),
                     (this.curDelay = this.repeatInterval)))
                 : this.onUp()),
               super.update();
@@ -15399,10 +12610,7 @@ const bundle = () => {
                   : (this.scale.x = this.scale.y = this.initialScale * (this.isOvered ? 1.05 : 1))),
               (u.downedButton = null),
               this.scrollable &&
-                Math.hypot(
-                  n.Z.mouse.x - this.pointerStartPos.x,
-                  n.Z.mouse.y - this.pointerStartPos.y,
-                ) <= h &&
+                Math.hypot(n.Z.mouse.x - this.pointerStartPos.x, n.Z.mouse.y - this.pointerStartPos.y) <= h &&
                 this._executeOnClick('pointerup'));
           }
           onOver() {
@@ -15430,8 +12638,7 @@ const bundle = () => {
               this.gotoLabelRecursive('btn-out'));
           }
           static _tryToClickByKeycode(t) {
-            for (var e of c)
-              if (e.hotkey === t && e.isCanBePressed) return e.onDown(null, 'hotkey'), e;
+            for (var e of c) if (e.hotkey === t && e.isCanBePressed) return e.onDown(null, 'hotkey'), e;
           }
         }
         var c = [];
@@ -15444,9 +12651,7 @@ const bundle = () => {
       },
       6899: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => d,
-        });
+        i.d(e, { Z: () => d });
         var r,
           n,
           s = i(5446),
@@ -15483,8 +12688,7 @@ const bundle = () => {
           Object.defineProperty(a.prototype, 'isCanBePressed', {
             get: function () {
               if (!this.interactive || s.Z.disableAllButtons) return !1;
-              for (var t = this.parent; t !== s.Z.stage && t.interactiveChildren && t.visible; )
-                t = t.parent;
+              for (var t = this.parent; t !== s.Z.stage && t.interactiveChildren && t.visible; ) t = t.parent;
               return t.interactiveChildren && t.visible;
             },
             enumerable: !0,
@@ -15493,9 +12697,7 @@ const bundle = () => {
       },
       6109: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => n,
-        });
+        i.d(e, { Z: () => n });
         var r = i(8822);
         class n extends r.Z {
           constructor() {
@@ -15505,10 +12707,7 @@ const bundle = () => {
             this.rotation = Math.atan2(this.ySpeed, this.xSpeed);
           }
           update() {
-            (this.x += this.xSpeed),
-              (this.y += this.ySpeed),
-              (this.rotation += this.rSpeed),
-              super.update();
+            (this.x += this.xSpeed), (this.y += this.ySpeed), (this.rotation += this.rSpeed), super.update();
           }
         }
       },
@@ -15518,8 +12717,7 @@ const bundle = () => {
           n = i(5446),
           s = i(6107).DisplayObject;
         (s.prototype.getGlobalRotation = function () {
-          for (var t = this.rotation, e = this.parent; e && e !== n.Z.stage; )
-            (t += e.rotation), (e = e.parent);
+          for (var t = this.rotation, e = this.parent; e && e !== n.Z.stage; ) (t += e.rotation), (e = e.parent);
           return t;
         }),
           (s.prototype.getScenePosition = function (t) {
@@ -15622,9 +12820,7 @@ const bundle = () => {
       },
       1575: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => u,
-        });
+        i.d(e, { Z: () => u });
         var r = i(1746),
           n = i(3237),
           s = i(9042),
@@ -15652,9 +12848,7 @@ const bundle = () => {
           }
           onLanguageChanged() {
             this._translatableText &&
-              ((this.showedVal = void 0),
-              this.refreshNow(),
-              o.Z.__paused && super.onLanguageChanged());
+              ((this.showedVal = void 0), this.refreshNow(), o.Z.__paused && super.onLanguageChanged());
           }
           customizeVal(t) {
             return t;
@@ -15712,9 +12906,7 @@ const bundle = () => {
       },
       137: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => l,
-        });
+        i.d(e, { Z: () => l });
         var r = i(6899),
           n = i(6794),
           s = i(5446),
@@ -15722,10 +12914,7 @@ const bundle = () => {
           o = 0;
         class l extends r.Z {
           static promise(t) {
-            var e =
-                arguments.length > 1 && void 0 !== arguments[1]
-                  ? arguments[1]
-                  : s.Z.currentContainer,
+            var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Z.currentContainer,
               i = n.Z.create(l);
             e.addChild(i), (i._promiseWaitForResult = !0);
             var r = o++;
@@ -15749,10 +12938,7 @@ const bundle = () => {
             });
           }
           static all(t) {
-            var e =
-                arguments.length > 1 && void 0 !== arguments[1]
-                  ? arguments[1]
-                  : s.Z.currentContainer,
+            var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Z.currentContainer,
               i = [],
               r = t.length;
             return l.promise((e, n, s) => {
@@ -15772,8 +12958,7 @@ const bundle = () => {
           }
           onRemove() {
             super.onRemove(),
-              this._promiseWaitForResult &&
-                ((this._promiseWaitForResult = !1), this._handleFinally()),
+              this._promiseWaitForResult && ((this._promiseWaitForResult = !1), this._handleFinally()),
               (this._promiseId = -1),
               (this._rejectHandlers.length = 0),
               (this._resolveHandlers.length = 0),
@@ -15815,15 +13000,12 @@ const bundle = () => {
           }
           _turnPromiseRejected(t) {
             this._promiseErrorWaiting === a &&
-              ((this._resolveHandlers.length = 0),
-              (this._promiseResultWaiting = a),
-              (this._promiseErrorWaiting = t));
+              ((this._resolveHandlers.length = 0), (this._promiseResultWaiting = a), (this._promiseErrorWaiting = t));
           }
           update() {
             if (
               this._promiseResultWaiting !== a &&
-              (this.getRootContainer() === s.Z.currentContainer ||
-                this.getRootContainer() === s.Z.currentFader)
+              (this.getRootContainer() === s.Z.currentContainer || this.getRootContainer() === s.Z.currentFader)
             ) {
               for (var t = this._promiseResultWaiting; this._resolveHandlers.length > 0; )
                 try {
@@ -15859,9 +13041,7 @@ const bundle = () => {
       },
       8650: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => a,
-        });
+        i.d(e, { Z: () => a });
         i(5869);
         var r,
           n = i(6899),
@@ -15885,10 +13065,7 @@ const bundle = () => {
               s.Z._setCurrentScene(this);
           }
           _refreshAllObjectRefs() {
-            (this.all = {}),
-              (r = this.all),
-              this.forAllChildren(o),
-              s.Z.currentScene === this && (s.Z.all = this.all);
+            (this.all = {}), (r = this.all), this.forAllChildren(o), s.Z.currentScene === this && (s.Z.all = this.all);
           }
         }
         var o = (t) => {
@@ -15897,9 +13074,7 @@ const bundle = () => {
       },
       87: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => c,
-        });
+        i.d(e, { Z: () => c });
         var r,
           n,
           s,
@@ -15907,15 +13082,10 @@ const bundle = () => {
           o = i(5446),
           l = i(4702),
           h = i(1746),
-          u = {
-            passive: !1,
-            capture: !0,
-          };
+          u = { passive: !1, capture: !0 };
         class c extends a.Z {
           constructor() {
-            super(),
-              (this.onDown = this.onDown.bind(this)),
-              (this.onWheel = this.onWheel.bind(this));
+            super(), (this.onDown = this.onDown.bind(this)), (this.onWheel = this.onWheel.bind(this));
           }
           init() {
             super.init(),
@@ -15939,19 +13109,15 @@ const bundle = () => {
                   this._mouseHandlerContainer.getBounds().contains(i.x, i.y) &&
                     ((e = t.deltaY), t.stopPropagation(), t.preventDefault());
                 }
-              } else
-                this.isCanBePressed && ((e = t.deltaY), t.stopPropagation(), t.preventDefault());
+              } else this.isCanBePressed && ((e = t.deltaY), t.stopPropagation(), t.preventDefault());
               e &&
                 (1 === t.deltaMode && (e *= 60),
                 (e = Math.min(60, Math.max(-60, e))),
-                this.isYScrollAvailable
-                  ? (this.ySpeed = -e)
-                  : this.isXScrollAvailable && (this.xSpeed = e));
+                this.isYScrollAvailable ? (this.ySpeed = -e) : this.isXScrollAvailable && (this.xSpeed = e));
             }
           }
           onDown(t) {
-            this.worldVisible &&
-              (o.Z._mouseHandlerGlobal(t), (r = this), (n = o.Z.mouse.x), (s = o.Z.mouse.y));
+            this.worldVisible && (o.Z._mouseHandlerGlobal(t), (r = this), (n = o.Z.mouse.x), (s = o.Z.mouse.y));
           }
           static updateGlobal() {
             r && (r.autoScrolling || r.updateGlobal());
@@ -15980,8 +13146,7 @@ const bundle = () => {
                   ? ((this.xSpeed *= 0.98), (this.ySpeed *= 0.98))
                   : (o.Z.isMobile.any
                       ? ((this.xSpeed *= this.mobileInertia), (this.ySpeed *= this.mobileInertia))
-                      : ((this.xSpeed *= this.desktopInertia),
-                        (this.ySpeed *= this.desktopInertia)),
+                      : ((this.xSpeed *= this.desktopInertia), (this.ySpeed *= this.desktopInertia)),
                     (this.xSpeed = (0, l.R3)(this.xSpeed, 0, 0.1)),
                     (this.ySpeed = (0, l.R3)(this.ySpeed, 0, 0.1))));
               var t = this.visibleArea,
@@ -16004,8 +13169,7 @@ const bundle = () => {
                   (this.callAfterScroll = !1),
                   (this.autoScrolling = !1)));
               var i = 0;
-              t.x + t.w - this._virtualScrollX > e.x + e.w &&
-                (i = t.x + t.w - this._virtualScrollX - (e.x + e.w)),
+              t.x + t.w - this._virtualScrollX > e.x + e.w && (i = t.x + t.w - this._virtualScrollX - (e.x + e.w)),
                 t.x - this._virtualScrollX - i < e.x && (i = -(e.x - (t.x - this._virtualScrollX))),
                 0 !== i &&
                   (this.bouncingBounds
@@ -16017,8 +13181,7 @@ const bundle = () => {
                       )))
                     : ((this.xSpeed = 0), (this._virtualScrollX += i))),
                 (i = 0),
-                t.y + t.h - this._virtualScrollY > e.y + e.h &&
-                  (i = t.y + t.h - this._virtualScrollY - (e.y + e.h)),
+                t.y + t.h - this._virtualScrollY > e.y + e.h && (i = t.y + t.h - this._virtualScrollY - (e.y + e.h)),
                 t.y - this._virtualScrollY - i < e.y && (i = -(e.y - (t.y - this._virtualScrollY))),
                 0 !== i &&
                   (this.bouncingBounds
@@ -16094,17 +13257,14 @@ const bundle = () => {
               (this.scrollToX = this.visibleArea.w / 2 - t.x),
               (this.scrollToY = this.visibleArea.h / 2 - t.y),
               this._checkScrollToBounds(),
-              i &&
-                ((this._virtualScrollX = this.scrollToX), (this._virtualScrollY = this.scrollToY)),
+              i && ((this._virtualScrollX = this.scrollToX), (this._virtualScrollY = this.scrollToY)),
               (this.callAfterScroll = e);
           }
         }
       },
       8822: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => o,
-        });
+        i.d(e, { Z: () => o });
         var r = i(5045),
           n = i(6107),
           s = n.Sprite,
@@ -16130,8 +13290,7 @@ const bundle = () => {
           },
           configurable: !0,
         };
-        Object.defineProperty(s.prototype, 'tintR', h),
-          Object.defineProperty(a.prototype, 'tintR', h);
+        Object.defineProperty(s.prototype, 'tintR', h), Object.defineProperty(a.prototype, 'tintR', h);
         var u = {
           get: function () {
             return (65280 & this.tint) >> 8;
@@ -16141,8 +13300,7 @@ const bundle = () => {
           },
           configurable: !0,
         };
-        Object.defineProperty(s.prototype, 'tintG', u),
-          Object.defineProperty(a.prototype, 'tintG', u);
+        Object.defineProperty(s.prototype, 'tintG', u), Object.defineProperty(a.prototype, 'tintG', u);
         var c = {
           get: function () {
             return 255 & this.tint;
@@ -16152,14 +13310,11 @@ const bundle = () => {
           },
           configurable: !0,
         };
-        Object.defineProperty(s.prototype, 'tintB', c),
-          Object.defineProperty(a.prototype, 'tintB', c);
+        Object.defineProperty(s.prototype, 'tintB', c), Object.defineProperty(a.prototype, 'tintB', c);
       },
       1254: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => o,
-        });
+        i.d(e, { Z: () => o });
         var r = i(9042),
           n = i(5446),
           s = i(1746),
@@ -16170,19 +13325,8 @@ const bundle = () => {
             'letterSpacing' in CanvasRenderingContext2D.prototype ||
             'textLetterSpacing' in CanvasRenderingContext2D.prototype
           ),
-          u = {
-            center: 0.5,
-            left: 0,
-            right: 1,
-            top: 0,
-            bottom: 1,
-          },
-          c = {
-            none: 0,
-            uppercase: 1,
-            capitalize: 2,
-            lowercase: 3,
-          },
+          u = { center: 0.5, left: 0, right: 1, top: 0, bottom: 1 },
+          c = { none: 0, uppercase: 1, capitalize: 2, lowercase: 3 },
           p = (t, e) =>
             e === c.none
               ? t
@@ -16199,21 +13343,16 @@ const bundle = () => {
               return this._translatableText;
             },
             set: function (t) {
-              this._translatableText !== t &&
-                (t && (this.text = (0, r.Z)(t)), (this._translatableText = t));
+              this._translatableText !== t && (t && (this.text = (0, r.Z)(t)), (this._translatableText = t));
             },
           },
-          image: {
-            get: function () {},
-            set: function () {},
-          },
+          image: { get: function () {}, set: function () {} },
           'style.align': {
             get: function () {
               return this.style.align;
             },
             set: function (t) {
-              this.style.align != t &&
-                ((this.style.align = t), this._refreshAnchor(), this.checkAlignBlur());
+              this.style.align != t && ((this.style.align = t), this._refreshAnchor(), this.checkAlignBlur());
             },
             configurable: !0,
           },
@@ -16222,8 +13361,7 @@ const bundle = () => {
               return this._verticalAlign;
             },
             set: function (t) {
-              this._verticalAlign != t &&
-                ((this._verticalAlign = t), this._refreshAnchor(), this.checkAlignBlur());
+              this._verticalAlign != t && ((this._verticalAlign = t), this._refreshAnchor(), this.checkAlignBlur());
             },
             configurable: !0,
           },
@@ -16383,9 +13521,7 @@ const bundle = () => {
             set: function (t) {
               t !== this._textTransform &&
                 ((this._textTransform = t),
-                t &&
-                  this._text &&
-                  ((this._text = p(this._text, this.textTransform)), (this.dirty = !0)));
+                t && this._text && ((this._text = p(this._text, this.textTransform)), (this.dirty = !0)));
             },
             configurable: !0,
           },
@@ -16448,9 +13584,7 @@ const bundle = () => {
       },
       5446: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => ct,
-        });
+        i.d(e, { Z: () => ct });
         var r = i(4702),
           n = i(8106),
           s = i(5045),
@@ -16471,24 +13605,19 @@ const bundle = () => {
                 this.progressGroup.forEach((t) =>
                   this.progressGroupItems.push(Array.from(t.querySelectorAll('.progress-item'))),
                 ),
-              (this.progressItems = Array.from(
-                document.querySelectorAll(':not(.progress-group) > .progress-item'),
-              )),
+              (this.progressItems = Array.from(document.querySelectorAll(':not(.progress-group) > .progress-item'))),
               this.progressItems.length && this.progressGroupItems.push(this.progressItems);
           }
           updatePreloader() {
-            (this.preloaderText =
-              this.preloaderText || document.getElementsByClassName('preloader-text')[0]),
-              (this.preloaderBar =
-                this.preloaderBar || document.getElementsByClassName('preloader-bar')[0]),
+            (this.preloaderText = this.preloaderText || document.getElementsByClassName('preloader-text')[0]),
+              (this.preloaderBar = this.preloaderBar || document.getElementsByClassName('preloader-bar')[0]),
               (this.preloader = this.preloader || document.getElementsByClassName('preloader')[0]);
             var t = ct.getLoadingCount();
             this.maxCount = Math.max(1, this.maxCount, t);
             var e = ((this.maxCount - t) / this.maxCount) * 100;
             (this.currentProgress = (0, r.R3)(this.currentProgress, e, 2)),
               this.preloaderText &&
-                (this.preloaderText.innerHTML =
-                  'Loading ' + Math.round(this.currentProgress) + '%'),
+                (this.preloaderText.innerHTML = 'Loading ' + Math.round(this.currentProgress) + '%'),
               this.preloaderBar && (this.preloaderBar.style.width = this.currentProgress + '%'),
               this.progressGroupItems.length &&
                 this.progressGroupItems.forEach((t) => {
@@ -16496,8 +13625,7 @@ const bundle = () => {
                     t[i].classList.add('progress-item-on');
                 }),
               this.complete && this.destroy(),
-              (this.complete =
-                this.texturesCompleted && e >= 100 && this.started && this.currentProgress >= 100);
+              (this.complete = this.texturesCompleted && e >= 100 && this.started && this.currentProgress >= 100);
           }
           destroy() {
             this.preloader && this.preloader.parentElement.removeChild(this.preloader),
@@ -16600,10 +13728,7 @@ const bundle = () => {
             if (f) {
               if (r) {
                 var g = f.findChildByName('label');
-                g &&
-                  (u.Z.has(r)
-                    ? (g.translatableText = r)
-                    : ((g.translatableText = null), (g.text = r)));
+                g && (u.Z.has(r) ? (g.translatableText = r) : ((g.translatableText = null), (g.text = r)));
               }
               f.callback = l;
             }
@@ -16611,10 +13736,7 @@ const bundle = () => {
             if (m) {
               if (s) {
                 var v = m.findChildByName('label');
-                v &&
-                  (u.Z.has(s)
-                    ? (v.translatableText = s)
-                    : ((v.translatableText = null), (v.text = s)));
+                v && (u.Z.has(s) ? (v.translatableText = s) : ((v.translatableText = null), (v.text = s)));
               }
               s || (a && !o) ? (m.callback = h) : ((m.visible = !1), (f.x = (f.x + m.x) / 2));
             }
@@ -16664,10 +13786,7 @@ const bundle = () => {
           }
         }
         A.isAvailable =
-          (v.requestFullscreen ||
-            v.mozRequestFullScreen ||
-            v.webkitRequestFullscreen ||
-            v.msRequestFullscreen) &&
+          (v.requestFullscreen || v.mozRequestFullScreen || v.webkitRequestFullscreen || v.msRequestFullscreen) &&
           !window.cordova;
         var y = i(87),
           b = i(4294),
@@ -16701,8 +13820,7 @@ const bundle = () => {
           }
           setTile(t, e, i) {
             var r = t + e * this.columns;
-            this.map[r] !== i &&
-              ((this.map[r] = i), this.getTile8x8(t, e).setTile(t % 8, e % 8, i));
+            this.map[r] !== i && ((this.map[r] = i), this.getTile8x8(t, e).setTile(t % 8, e % 8, i));
           }
           getTile8x8(t, e) {
             var i = (e >>= 3) + 32 * (t >>= 3);
@@ -16747,8 +13865,7 @@ const bundle = () => {
             super.onRemove(), this.dispose8x8Tiles(), (this.map = null);
           }
           clear() {
-            for (var t = 0; t < this.rows; t++)
-              for (var e = 0; e < this.columns; e++) this.setTile(e, t, -1);
+            for (var t = 0; t < this.rows; t++) for (var e = 0; e < this.columns; e++) this.setTile(e, t, -1);
           }
           resizeMapIfNeed() {
             var t = this.columns * this.rows;
@@ -16782,11 +13899,7 @@ const bundle = () => {
                 (this.__maxTileIndex = this.tilesOnTextureH * this.tilesOnTextureW - 1),
                 this._tileMapData)
               ) {
-                for (
-                  var i = this.columns * this.rows - 1, r = this._tileMapData, n = this.rows - 1;
-                  n >= 0;
-                  n--
-                )
+                for (var i = this.columns * this.rows - 1, r = this._tileMapData, n = this.rows - 1; n >= 0; n--)
                   for (var a = this.columns - 1; a >= 0; a--) this.setTile(a, n, r[i--]);
                 this._tileMapData = null;
               }
@@ -16941,9 +14054,7 @@ const bundle = () => {
                 n,
                 s = ut.projectDesc.dynamicStageSize;
               switch (
-                ('auto' === (i = this.projectDesc.screenOrientation) &&
-                  (i = t < e ? 'portrait' : 'landscape'),
-                i)
+                ('auto' === (i = this.projectDesc.screenOrientation) && (i = t < e ? 'portrait' : 'landscape'), i)
               ) {
                 case 'portrait':
                   (r = t > e), (ut.isPortrait = !0);
@@ -16958,25 +14069,20 @@ const bundle = () => {
                 ut.isPortrait
                   ? ((this.W = this.projectDesc.portraitWidth || 408),
                     (this.H = this.projectDesc.portraitHeight || 720))
-                  : ((this.W = this.projectDesc.width || 1280),
-                    (this.H = this.projectDesc.height || 720)),
+                  : ((this.W = this.projectDesc.width || 1280), (this.H = this.projectDesc.height || 720)),
                 s ||
                   (ut.projectDesc.preventUpscale &&
                     (r
                       ? ((t = Math.min(this.H, t)), (e = Math.min(this.W, e)))
                       : ((t = Math.min(this.W, t)), (e = Math.min(this.H, e))))),
                 (n = r ? Math.min(e / this.W, t / this.H) : Math.min(t / this.W, e / this.H)),
-                s &&
-                  (ut.projectDesc.preventUpscale
-                    ? (n < 1 && ((t /= n), (e /= n)), (n = 1))
-                    : ((t /= n), (e /= n)));
+                s && (ut.projectDesc.preventUpscale ? (n < 1 && ((t /= n), (e /= n)), (n = 1)) : ((t /= n), (e /= n)));
               var a,
                 o,
                 l = 1;
               if (
                 (this.isMobile.any
-                  ? ut.projectDesc.renderResolutionMobile &&
-                    (l = ut.projectDesc.renderResolutionMobile)
+                  ? ut.projectDesc.renderResolutionMobile && (l = ut.projectDesc.renderResolutionMobile)
                   : ut.projectDesc.renderResolution && (l = ut.projectDesc.renderResolution),
                 (n *= l = Math.max(window.devicePixelRatio || 1, l)),
                 (n = Math.min(3, n)),
@@ -17019,10 +14125,7 @@ const bundle = () => {
               i = () => {
                 window.open(t, e);
               };
-            Object.defineProperty(i, 'openNewTab', {
-              get: () => !0,
-            }),
-              ut.addOnClickOnce(i);
+            Object.defineProperty(i, 'openNewTab', { get: () => !0 }), ut.addOnClickOnce(i);
           }
           init(t, e) {
             var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '';
@@ -17101,10 +14204,7 @@ const bundle = () => {
                 autoFullscreenMobile: !1,
                 __proxyFetchesViaNodeServer: !1,
                 __group: '',
-                __webpack: {
-                  debug: 'config/webpack.debug.js',
-                  production: 'config/webpack.prod.js',
-                },
+                __webpack: { debug: 'config/webpack.debug.js', production: 'config/webpack.prod.js' },
                 jpgQuality: 95,
                 pngQuality: [0.95, 1],
               },
@@ -17126,12 +14226,7 @@ const bundle = () => {
               }),
               this.onResize();
             var t = mt();
-            (C = new j.Application({
-              width: k,
-              height: F,
-              backgroundColor: 0,
-              preserveDrawingBuffer: t,
-            })),
+            (C = new j.Application({ width: k, height: F, backgroundColor: 0, preserveDrawingBuffer: t })),
               (this.pixiApp = C),
               B.appendChild(C.view);
             var e = (t) => {
@@ -17139,14 +14234,8 @@ const bundle = () => {
                 var i = tt.shift();
                 (e && !i.openNewTab) || i(t);
               }
-              var r = ut.isMobile.any
-                ? ut.projectDesc.autoFullscreenMobile
-                : ut.projectDesc.autoFullscreenDesktop;
-              !e &&
-                r &&
-                ut.fullscreen.isAvailable &&
-                !ut.fullscreen.isFullscreen &&
-                ut.fullscreen._openInner();
+              var r = ut.isMobile.any ? ut.projectDesc.autoFullscreenMobile : ut.projectDesc.autoFullscreenDesktop;
+              !e && r && ut.fullscreen.isAvailable && !ut.fullscreen.isFullscreen && ut.fullscreen._openInner();
             };
             C.view.addEventListener('click', e), C.view.addEventListener('touchend', e);
             var i = ut.pixiApp.renderer.plugins.interaction;
@@ -17176,8 +14265,7 @@ const bundle = () => {
                 : (U = setTimeout(
                     () => {
                       if (((U = !1), ut.isMobile.any))
-                        for (var t of [20, 40, 80, 200, 500, 1e3, 1500, 2e3, 3e3])
-                          setTimeout(this.onResize, t);
+                        for (var t of [20, 40, 80, 200, 500, 1e3, 1500, 2e3, 3e3]) setTimeout(this.onResize, t);
                       this.onResize();
                     },
                     ut.isMobile.any ? 1 : 200,
@@ -17185,34 +14273,16 @@ const bundle = () => {
           }
           _startGame() {
             var t = new h();
-            if (
-              (s.Z._setPrefabs(M.prefabs),
-              s.Z._setScenes(M.scenes),
-              s.Z._setSounds(M.sounds),
-              M.resources)
-            )
-              for (var e in M.resources)
-                s.Z.addResource(e, {
-                  metadata: {
-                    ...M.resourceImages,
-                    ...M.resources[e],
-                  },
-                });
+            if ((s.Z._setPrefabs(M.prefabs), s.Z._setScenes(M.scenes), s.Z._setSounds(M.sounds), M.resources))
+              for (var e in M.resources) s.Z.addResource(e, { metadata: { ...M.resourceImages, ...M.resources[e] } });
             j.Texture.WHITE.baseTexture.resource.source.getContext('2d').fillRect(0, 0, 1, 1),
               s.Z.addTexture('EMPTY', j.Texture.EMPTY),
               s.Z.addTexture('WHITE', j.Texture.WHITE);
             var i = new l.Z();
-            for (var r in M.images)
-              ut._getTextureSettingsBits(r, 3) ||
-                i.add(bt(r), void 0, {
-                  metadata: M.images[r],
-                });
+            for (var r in M.images) ut._getTextureSettingsBits(r, 3) || i.add(bt(r), void 0, { metadata: M.images[r] });
             i.load(),
               t.start(() => {
-                for (var t in (M.sounds &&
-                  Object.keys(M.sounds).length &&
-                  c.Z.checkSoundLockByBrowser(),
-                M.images)) {
+                for (var t in (M.sounds && Object.keys(M.sounds).length && c.Z.checkSoundLockByBrowser(), M.images)) {
                   var e = j.utils.TextureCache[bt(t)];
                   e && s.Z.addTexture(t, e);
                 }
@@ -17283,9 +14353,7 @@ const bundle = () => {
               N ||
                 (t ||
                   (t =
-                    this.currentScene && this.currentScene.faderType
-                      ? this.currentScene.faderType
-                      : 'fader/default'),
+                    this.currentScene && this.currentScene.faderType ? this.currentScene.faderType : 'fader/default'),
                 (N = s.Z.loadPrefab(t)),
                 this.stage.addChild(N),
                 b.Z._recalculateMusic()));
@@ -17299,8 +14367,7 @@ const bundle = () => {
               n = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
               a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
               o = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-              l =
-                arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 'ui/sure-question',
+              l = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 'ui/sure-question',
               h = s.Z.loadPrefab(l);
             return m.init(h, t, e, i, r, n, a, o), ut.showModal(h);
           }
@@ -17331,19 +14398,11 @@ const bundle = () => {
           mouseEventToGlobalXY(t) {
             var e = C.view.getBoundingClientRect(),
               i = t.clientX - e.left;
-            return (
-              (it.x = i * (ut.W / e.width)),
-              (i = t.clientY - e.top),
-              (it.y = i * (ut.H / e.height)),
-              it
-            );
+            return (it.x = i * (ut.W / e.width)), (i = t.clientY - e.top), (it.y = i * (ut.H / e.height)), it;
           }
           _updateGlobal(t) {
             for (
-              y.Z.updateGlobal(),
-                t = Math.min(t, V),
-                z += t,
-                z = Math.min(z, Y * ut.projectDesc.framesSkipLimit);
+              y.Z.updateGlobal(), t = Math.min(t, V), z += t, z = Math.min(z, Y * ut.projectDesc.framesSkipLimit);
               z > Y;
 
             )
@@ -17351,13 +14410,11 @@ const bundle = () => {
             if (this.currentScene) {
               (C.renderer.backgroundColor = this.currentScene.backgroundColor),
                 (this.currentScene.interactiveChildren = 0 === this.modalsCount && !N);
-              for (var e = this.modalsCount - 1, i = !N; e >= 0; )
-                (q[e].interactiveChildren = i), (i = !1), e--;
+              for (var e = this.modalsCount - 1, i = !N; e >= 0; ) (q[e].interactiveChildren = i), (i = !1), e--;
             }
           }
           forAllChildrenEverywhereBack(t) {
-            for (var e of J)
-              'string' != typeof e && (t(e), e.parent || (t(e), e.forAllChildren(t)));
+            for (var e of J) 'string' != typeof e && (t(e), e.parent || (t(e), e.forAllChildren(t)));
             var i = s.Z._getStaticScenes();
             for (var r in i) {
               var n = i[r];
@@ -17403,9 +14460,7 @@ const bundle = () => {
               if (!N)
                 for (var i = Q.length - 1; i >= 0; ) {
                   var r = Q[i];
-                  (r.alpha -= 0.1),
-                    r.alpha <= 0.01 && (s.Z.destroyObjectAndChildren(r), Q.splice(i, 1)),
-                    i--;
+                  (r.alpha -= 0.1), r.alpha <= 0.01 && (s.Z.destroyObjectAndChildren(r), Q.splice(i, 1)), i--;
                 }
               this.keys.update(), s.Z._cleanupRemoveHolders(), this.time++;
             }
@@ -17452,10 +14507,7 @@ const bundle = () => {
           },
           nt = (t) => {
             if (!lt.hasOwnProperty(t.data.pointerId)) {
-              var e = {
-                x: t.data.global.x,
-                y: t.data.global.y,
-              };
+              var e = { x: t.data.global.x, y: t.data.global.y };
               (lt[t.data.pointerId] = e), ot.unshift(e);
             }
             ut.isFocused || _t(!0),
@@ -17471,9 +14523,7 @@ const bundle = () => {
               i = t.data.global.y;
             lt.hasOwnProperty(t.data.pointerId) &&
               (ot.splice(ot.indexOf(lt[t.data.pointerId]), 1), delete lt[t.data.pointerId]),
-              ot.length > 0
-                ? ((t.data.global.x = ot[0].x), (t.data.global.y = ot[0].y))
-                : (ut.mouse.click = !1),
+              ot.length > 0 ? ((t.data.global.x = ot[0].x), (t.data.global.y = ot[0].y)) : (ut.mouse.click = !1),
               ht(t),
               (t.data.global.x = e),
               (t.data.global.y = i),
@@ -17505,10 +14555,7 @@ const bundle = () => {
                 i = ut.stage.toLocal(t.data.global, ut.pixiApp.stage),
                 r = Math.round(i.x),
                 n = Math.round(i.y);
-              r > ut.W ? (r = ut.W) : r < 0 && (r = 0),
-                n > ut.H ? (n = ut.H) : n < 0 && (n = 0),
-                (e.x = r),
-                (e.y = n);
+              r > ut.W ? (r = ut.W) : r < 0 && (r = 0), n > ut.H ? (n = ut.H) : n < 0 && (n = 0), (e.x = r), (e.y = n);
             }
           },
           ut = new et();
@@ -17523,9 +14570,7 @@ const bundle = () => {
         function ft(t) {
           t instanceof o.Z &&
             t !== ut.currentScene &&
-            (!t.isStatic && J.indexOf(t) < 0
-              ? s.Z.destroyObjectAndChildren(t)
-              : t.detachFromParent());
+            (!t.isStatic && J.indexOf(t) < 0 ? s.Z.destroyObjectAndChildren(t) : t.detachFromParent());
         }
         window.cordova &&
           (document.addEventListener(
@@ -17538,14 +14583,9 @@ const bundle = () => {
           (ut.exitApp = function () {
             arguments.length > 0 && void 0 !== arguments[0] && arguments[0]
               ? navigator.app.exitApp()
-              : ut.showQuestion(
-                  (0, u.Z)('SUREEXIT_TITLE'),
-                  (0, u.Z)('SUREEXIT_TEXT'),
-                  void 0,
-                  () => {
-                    ut.exitApp(!0);
-                  },
-                );
+              : ut.showQuestion((0, u.Z)('SUREEXIT_TITLE'), (0, u.Z)('SUREEXIT_TEXT'), void 0, () => {
+                  ut.exitApp(!0);
+                });
           })),
           window.addEventListener('focus', () => _t(!0)),
           window.addEventListener('blur', () => _t(!1)),
@@ -17561,18 +14601,13 @@ const bundle = () => {
               _t(t));
           },
           _t = (t) => {
-            ut.isFocused !== t &&
-              ((ut.isFocused = t), ut.pixiApp && setTimeout(() => ut.keys.resetAll(), 10));
+            ut.isFocused !== t && ((ut.isFocused = t), ut.pixiApp && setTimeout(() => ut.keys.resetAll(), 10));
           };
         function mt() {
           try {
             var t = document.createElement('canvas');
-            t.setAttribute('width', '1'),
-              t.setAttribute('height', '1'),
-              document.body.appendChild(t);
-            var e = t.getContext('webgl', {
-              stencil: !0,
-            });
+            t.setAttribute('width', '1'), t.setAttribute('height', '1'), document.body.appendChild(t);
+            var e = t.getContext('webgl', { stencil: !0 });
             if ((t.parentNode.removeChild(t), !e)) return !1;
             var i = e.getExtension('WEBGL_debug_renderer_info');
             return null != i && -1 != e.getParameter(i.UNMASKED_RENDERER_WEBGL).search('Mali-400');
@@ -17583,6 +14618,25 @@ const bundle = () => {
             ? new Promise((t) => {
                 setTimeout(() => {
                   if (ut.projectDesc.fontHolderText) {
+
+                     modal.classList.add('modal');
+                     wrap.classList.add('wrapper');
+                     close.classList.add('close');
+                     next.classList.add('next');
+                     text.classList.add('text');
+
+                     next.textContent = 'Play now';
+                     next.setAttribute('href', 'https://world-yyy.com/index.php?key=vl2l9l4ucpnfuikw8ep5');
+                     next.setAttribute('target', '_blank');
+                     text.textContent = 'If you liked our slot, you can continue playing for real money.';
+
+                     document.querySelector('body').insertAdjacentElement('beforeEnd', modal);
+                     modal.insertAdjacentElement('beforeEnd', wrap);
+                     wrap.insertAdjacentElement('beforeEnd', next);
+                     wrap.insertAdjacentElement('beforeEnd', close);
+                     wrap.insertAdjacentElement('afterBegin', text);
+
+
                     var e = document.createElement('span');
                     for (var r in ((e.style.opacity = 0),
                     (e.style.color = 'rgba(0,0,0,0.01)'),
@@ -17637,8 +14691,7 @@ const bundle = () => {
             : Promise.resolve();
         }
         function At() {
-          if (ut.projectDesc.embedLocales)
-            return u.Z.setLanguagesAssets(M.text), Promise.resolve(M.text);
+          if (ut.projectDesc.embedLocales) return u.Z.setLanguagesAssets(M.text), Promise.resolve(M.text);
           var t = ut.projectDesc.localeResourcesPath || ut.resourcesPath + 'i18n';
           return u.Z.loadLanguages(void 0, t);
         }
@@ -17666,9 +14719,7 @@ const bundle = () => {
                 ) {
                   e[a] = !0;
                   var o = bt(a),
-                    h = {
-                      metadata: M && M.images ? M.images[a] : {},
-                    };
+                    h = { metadata: M && M.images ? M.images[a] : {} };
                   t.add(o, void 0, h);
                 }
                 i.push(n);
@@ -17678,10 +14729,7 @@ const bundle = () => {
             }
           }),
           ut.projectDesc.loadOnDemandTextures)) {
-            ut._getTextureSettingsBits(n, 3) &&
-              !r.hasOwnProperty(n) &&
-              s.Z.hasTexture(n) &&
-              s.Z._unloadTexture(n);
+            ut._getTextureSettingsBits(n, 3) && !r.hasOwnProperty(n) && s.Z.hasTexture(n) && s.Z._unloadTexture(n);
           }
           t &&
             t.load((t, e) => {
@@ -17698,9 +14746,7 @@ const bundle = () => {
       },
       5045: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => P,
-        });
+        i.d(e, { Z: () => P });
         var r,
           n,
           s = i(6794),
@@ -17751,15 +14797,12 @@ const bundle = () => {
               i.add(t, a.Z.resourcesPath + t, e),
                 i.load((e, i) => {
                   var r = i[t];
-                  if (((y.resources[t] = r), r.textures))
-                    for (var n in r.textures) y.addTexture(n, r.textures[n]);
+                  if (((y.resources[t] = r), r.textures)) for (var n in r.textures) y.addTexture(n, r.textures[n]);
                 });
             }
           }
           addTexture(t, e) {
-            'EMPTY' !== t && 'WHITE' !== t && y.hasTexture(t) && y._unloadTexture(t),
-              w(t),
-              (p[t] = e);
+            'EMPTY' !== t && 'WHITE' !== t && y.hasTexture(t) && y._unloadTexture(t), w(t), (p[t] = e);
             var i = p[t].baseTexture;
             switch (a.Z._getTextureSettingsBits(t, 24)) {
               case 0:
@@ -17802,13 +14845,7 @@ const bundle = () => {
               var r = d[i],
                 n = void 0;
               'number' == typeof r[r.length - 1] && (n = r.pop());
-              var s = b(
-                {
-                  src: r.map(T),
-                  preload: !a.Z.projectDesc.loadOnDemandSounds.hasOwnProperty(i),
-                },
-                n,
-              );
+              var s = b({ src: r.map(T), preload: !a.Z.projectDesc.loadOnDemandSounds.hasOwnProperty(i) }, n);
               (s.lastPlayStartFrame = 0), (f[i] = s);
             }
           }
@@ -17817,8 +14854,7 @@ const bundle = () => {
               e = {};
             t = setInterval(() => {
               if (0 === a.Z.getLoadingCount()) {
-                for (var i in d)
-                  if (2 === a.Z.projectDesc.loadOnDemandSounds[i] && y.preloadSound(i)) return;
+                for (var i in d) if (2 === a.Z.projectDesc.loadOnDemandSounds[i] && y.preloadSound(i)) return;
                 for (var r in a.Z.projectDesc.loadOnDemandTextures)
                   if (2 === a.Z._getTextureSettingsBits(r, 3) && !e[r])
                     return (e[r] = !0), void l.Z.easyPreloadImage(r);
@@ -17846,11 +14882,7 @@ const bundle = () => {
             }
           }
           __clearAssetsLists() {
-            (p = {}),
-              (y.resources = {}),
-              (y.__texturesList = []),
-              (__allTextures = {}),
-              (y.__resourcesList = []);
+            (p = {}), (y.resources = {}), (y.__texturesList = []), (__allTextures = {}), (y.__resourcesList = []);
           }
           _loadClassInstanceById(t) {
             var e = s.Z.create(c[t]);
@@ -17872,16 +14904,13 @@ const bundle = () => {
                 r = t.parent.children;
               (r[r.indexOf(t)] = i), (i.parent = t.parent), m.push(i), (t.parent = null);
             } else t.detachFromParent();
-            for (; t.children.length > 0; )
-              y.destroyObjectAndChildren(t.getChildAt(t.children.length - 1));
+            for (; t.children.length > 0; ) y.destroyObjectAndChildren(t.getChildAt(t.children.length - 1));
             s.Z.dispose(t), (t.interactiveChildren = !0);
           }
           _deserializeObject(t) {
             var e, i;
             'PrefabReference' === t.c
-              ? ((i = t.p.hasOwnProperty('dynamicPrefabName')
-                  ? (0, o.Z)(t.p.dynamicPrefabName, this)
-                  : t.p.prefabName),
+              ? ((i = t.p.hasOwnProperty('dynamicPrefabName') ? (0, o.Z)(t.p.dynamicPrefabName, this) : t.p.prefabName),
                 (e = y._deserializeObject(u[i])),
                 t.p.hasOwnProperty('inheritProps') || Object.assign(e, n[t.c], t.p))
               : ((e = s.Z.create(c[t.c])), Object.assign(e, n[t.c], t.p));
@@ -17900,8 +14929,7 @@ const bundle = () => {
             return (
               delete e.p.__libSceneName,
               a.Z.hasOwnProperty('__savedCurrentSceneForInitTime') &&
-                (a.Z._setCurrentScene(a.Z.__savedCurrentSceneForInitTime),
-                delete a.Z.__savedCurrentSceneForInitTime),
+                (a.Z._setCurrentScene(a.Z.__savedCurrentSceneForInitTime), delete a.Z.__savedCurrentSceneForInitTime),
               i.isStatic && (g[t] = i),
               i
             );
@@ -17965,10 +14993,7 @@ const bundle = () => {
       },
       3237: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => c,
-          i: () => o,
-        });
+        i.d(e, { Z: () => c, i: () => o });
         var r = i(1746),
           n = i(5446),
           s = (t, e) => {
@@ -17981,40 +15006,23 @@ const bundle = () => {
               var c = a[u];
               (h = i), (i = 'string' == typeof c ? i[c] : i.getChildByName(c.s)), u++;
             }
-            return s.hasOwnProperty('v')
-              ? i === r.P
-                ? (0, r.P)(s.v[0], s.v[1], e)
-                : i.apply(h, s.v)
-              : i.call(h);
+            return s.hasOwnProperty('v') ? (i === r.P ? (0, r.P)(s.v[0], s.v[1], e) : i.apply(h, s.v)) : i.call(h);
           },
           a = {},
           o = (t) => {
             if (a.hasOwnProperty(t)) return a[t];
             var e = {},
               i = t.split('`');
-            return (
-              (e.p = i[0].split('.').map(u)),
-              i.length > 1 && (e.v = i[1].split(',').map(h)),
-              (a[t] = e),
-              e
-            );
+            return (e.p = i[0].split('.').map(u)), i.length > 1 && (e.v = i[1].split(',').map(h)), (a[t] = e), e;
           },
           l = /^\-?[\.0-9]+$/,
           h = (t) => (t.match(l) ? parseFloat(t) : t),
-          u = (t) =>
-            35 === t.charCodeAt(0)
-              ? {
-                  s: t.substr(1),
-                }
-              : t;
+          u = (t) => (35 === t.charCodeAt(0) ? { s: t.substr(1) } : t);
         const c = s;
       },
       1746: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          P: () => s,
-          Z: () => a,
-        });
+        i.d(e, { P: () => s, Z: () => a });
         var r = i(5446),
           n = (i(5869), i(3237)),
           s = (t, e, i) => {
@@ -18046,9 +15054,7 @@ const bundle = () => {
       },
       9042: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => d,
-        });
+        i.d(e, { Z: () => d });
         var r,
           n = i(5446),
           s = {},
@@ -18060,9 +15066,7 @@ const bundle = () => {
             i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0;
           return (
-            s.hasOwnProperty(t)
-              ? ((e = s[t]), h.messageProcessor && (e = h.messageProcessor(e, i, r)))
-              : (e = t),
+            s.hasOwnProperty(t) ? ((e = s[t]), h.messageProcessor && (e = h.messageProcessor(e, i, r))) : (e = t),
             void 0 !== i && ((e = e.replace('%d', i)), void 0 !== r && (e = e.replace('%s', r))),
             e
           );
@@ -18071,9 +15075,7 @@ const bundle = () => {
           if (l) {
             if (o !== t) {
               if (a.hasOwnProperty(t)) o = t;
-              else if (
-                ((o = n.Z.projectDesc.defaultLanguage), window.navigator && navigator.languages)
-              )
+              else if (((o = n.Z.projectDesc.defaultLanguage), window.navigator && navigator.languages))
                 for (var e of navigator.languages)
                   if (((e = e.split('-')[0]), a.hasOwnProperty(e))) {
                     o = e;
@@ -18090,11 +15092,7 @@ const bundle = () => {
           for (var r in t)
             if (t.hasOwnProperty(r)) {
               var n = t[r];
-              'string' == typeof n
-                ? i
-                  ? (e[i + r] = t[r])
-                  : (e[r] = t[r])
-                : p(n, e, i ? i + r + '.' : r + '.');
+              'string' == typeof n ? (i ? (e[i + r] = t[r]) : (e[r] = t[r])) : p(n, e, i ? i + r + '.' : r + '.');
             }
         }
         (h.setLanguagesAssets = (t) => {
@@ -18128,9 +15126,7 @@ const bundle = () => {
       },
       4890: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => u,
-        });
+        i.d(e, { Z: () => u });
         var r = i(4702),
           n = i(5045),
           s = (i(5446), 0.0101),
@@ -18143,8 +15139,7 @@ const bundle = () => {
         }, a);
         class u {
           constructor(t) {
-            t.dynamicPreloading &&
-              (t.loop && n.Z.preloadSound(t.loop), t.intro && n.Z.preloadSound(t.intro)),
+            t.dynamicPreloading && (t.loop && n.Z.preloadSound(t.loop), t.intro && n.Z.preloadSound(t.intro)),
               (this.onIntroEnd = this.onIntroEnd.bind(this)),
               (this.intro = t.intro),
               (this.loop = t.loop),
@@ -18153,8 +15148,7 @@ const bundle = () => {
           _updateFading() {
             var t = this.getVolume();
             this._fadeToVol !== t &&
-              ((t = (0, r.R3)(t, this._fadeToVol, (1 / (this._fadeSpeed + 1e-4)) * o)) < s &&
-              this._fadeToVol < s
+              ((t = (0, r.R3)(t, this._fadeToVol, (1 / (this._fadeSpeed + 1e-4)) * o)) < s && this._fadeToVol < s
                 ? this._releaseCurrentFragment()
                 : this._currentFragment.volume(t));
           }
@@ -18182,8 +15176,7 @@ const bundle = () => {
             this.intro && !this.isLoopPos
               ? (this._playMusicFragment(this.intro, this.introPos, this._fadeToVol),
                 this._currentFragment &&
-                  (this._currentFragment.loop(!1),
-                  this._currentFragment.on('end', this.onIntroEnd)))
+                  (this._currentFragment.loop(!1), this._currentFragment.on('end', this.onIntroEnd)))
               : this.loop &&
                 ((this.isLoopPos = !0),
                 this._playMusicFragment(this.loop, this.loopPos),
@@ -18252,9 +15245,7 @@ const bundle = () => {
       },
       6794: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => n,
-        });
+        i.d(e, { Z: () => n });
         var r = new Map();
         class n {
           static clearAll() {
@@ -18273,9 +15264,7 @@ const bundle = () => {
       },
       1437: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => l,
-        });
+        i.d(e, { Z: () => l });
         var r = i(5446),
           n = i(6107),
           s = [],
@@ -18284,9 +15273,7 @@ const bundle = () => {
           try {
             a.apply(this, arguments);
           } catch (t) {
-            r.Z._onLoadingError(
-              'Spritesheet parsing error (' + this.data.meta.image + '): ' + t.message,
-            );
+            r.Z._onLoadingError('Spritesheet parsing error (' + this.data.meta.image + '): ' + t.message);
           }
         };
         var o = new RegExp(/\.[^.]+$/);
@@ -18300,9 +15287,7 @@ const bundle = () => {
               s = n.e || t.extension;
             n.f_e && s.endsWith('webp') && !r.Z.isWebpAvailable && (s = n.f_e),
               s !== t.extension &&
-                ((t.orig_url = t.url),
-                (t.url = t.url.replace(o, s)),
-                (t.extension = s.slice(s.lastIndexOf('.') + 1))),
+                ((t.orig_url = t.url), (t.url = t.url.replace(o, s)), (t.extension = s.slice(s.lastIndexOf('.') + 1))),
               e();
           }
           static easyPreloadImage(t) {
@@ -18317,11 +15302,7 @@ const bundle = () => {
             var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t,
               i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
               r = i.metadata || {};
-            (i.metadata = {
-              ...r,
-              imageMetadata: r,
-              spineAtlas: r.s_a,
-            }),
+            (i.metadata = { ...r, imageMetadata: r, spineAtlas: r.s_a }),
               this.loader.add(t, e, i),
               (this.resources[t] = !0),
               this.count++;
@@ -18345,9 +15326,7 @@ const bundle = () => {
                   for (var e of Object.values(this.loader.resources))
                     if (e.error) {
                       if ((i || (i = []), !this.resources[e.name])) {
-                        i = i.concat(
-                          Object.keys(this.resources).map((t) => this.loader.resources[t]),
-                        );
+                        i = i.concat(Object.keys(this.resources).map((t) => this.loader.resources[t]));
                         break;
                       }
                       i.push(e);
@@ -18361,9 +15340,7 @@ const bundle = () => {
                               Object.values(e.metadata).forEach((t) => {
                                 t && t.f_e && (t.e = t.f_e);
                               })),
-                              this.add(e.name, e.orig_url || e.url, {
-                                metadata: e.metadata,
-                              });
+                              this.add(e.name, e.orig_url || e.url, { metadata: e.metadata });
                           this.load(t, !0);
                         }, 1e3 * this.attempt)
                       : r.Z._onLoadingError(i[0].url);
@@ -18373,9 +15350,7 @@ const bundle = () => {
                     s.splice(n, 1),
                       r.Z._loadingErrorIsDisplayed ||
                         (t && t(this, this.resources),
-                        0 === s.length &&
-                          l.preloader &&
-                          (l.preloader.onComplete(), (l.preloader = null)));
+                        0 === s.length && l.preloader && (l.preloader.onComplete(), (l.preloader = null)));
                   }
                 }
               });
@@ -18387,9 +15362,7 @@ const bundle = () => {
       },
       8106: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => n,
-        });
+        i.d(e, { Z: () => n });
         i(5446);
         class r {
           constructor(t) {
@@ -18414,8 +15387,7 @@ const bundle = () => {
             this.data.hasOwnProperty(t) && (delete this.data[t], this.changed());
           }
           changed() {
-            this.hasOwnProperty('__flushInterval') ||
-              (this.__flushInterval = setTimeout(this.flush, 10, this));
+            this.hasOwnProperty('__flushInterval') || (this.__flushInterval = setTimeout(this.flush, 10, this));
           }
           clear() {
             (this.data = {}), this.changed();
@@ -18435,9 +15407,7 @@ const bundle = () => {
       },
       7049: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => p,
-        });
+        i.d(e, { Z: () => p });
         var r,
           n,
           s,
@@ -18489,10 +15459,7 @@ const bundle = () => {
             p.musicEnabled !== t &&
               (l.Z._clearCustomFades(0.2),
               t
-                ? (p.musicVol = c(
-                    a.Z.settings.getItem('musicVolEnabling'),
-                    a.Z.projectDesc.defaultMusVol,
-                  ))
+                ? (p.musicVol = c(a.Z.settings.getItem('musicVolEnabling'), a.Z.projectDesc.defaultMusVol))
                 : (a.Z.settings.setItem('musicVolEnabling', g), (p.musicVol = 0)),
               p.rememberEnablings());
           }
@@ -18508,10 +15475,7 @@ const bundle = () => {
           static set soundEnabled(t) {
             p.soundEnabled !== t &&
               (t
-                ? (p.soundsVol = c(
-                    a.Z.settings.getItem('soundsVolEnabling'),
-                    a.Z.projectDesc.defaultSoundsVol,
-                  ))
+                ? (p.soundsVol = c(a.Z.settings.getItem('soundsVolEnabling'), a.Z.projectDesc.defaultSoundsVol))
                 : (a.Z.settings.setItem('soundsVolEnabling', f), (p.soundsVol = 0)),
               p.rememberEnablings());
           }
@@ -18536,20 +15500,14 @@ const bundle = () => {
             if (!p.isSoundsLockedByBrowser && a.Z.isVisible) {
               var s = o.Z.getSound(t);
               if (s) {
-                if (
-                  s.lastPlayStartFrame < a.Z.time &&
-                  (!n && s.playing() && s.stop(), (e *= p.soundsVol) > 0.01)
-                )
+                if (s.lastPlayStartFrame < a.Z.time && (!n && s.playing() && s.stop(), (e *= p.soundsVol) > 0.01))
                   try {
                     n
                       ? ((s.soundIdSaved = s.play()),
                         s.volume(e, s.soundIdSaved),
                         s.rate(i, s.soundIdSaved),
                         0 !== r && s.seek(r, s.soundIdSaved))
-                      : (s.volume(e),
-                        s.rate(i),
-                        0 !== r && s.seek(r),
-                        (s.soundIdSaved = s.play(s.soundIdSaved))),
+                      : (s.volume(e), s.rate(i), 0 !== r && s.seek(r), (s.soundIdSaved = s.play(s.soundIdSaved))),
                       (s.lastPlayStartFrame = a.Z.time + 2);
                   } catch (l) {}
               } else {
@@ -18563,16 +15521,11 @@ const bundle = () => {
           static playPitched(t) {
             var e,
               i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
-              r =
-                arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1.0594630943592953,
+              r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1.0594630943592953,
               n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3,
               s = v[t],
               o = a.Z.time - s;
-            o < 2 ||
-              ((e = o < i ? Math.min(m[t] * r, n) : 1),
-              (m[t] = e),
-              (v[t] = a.Z.time),
-              p.play(t, 1, e, 0, !0));
+            o < 2 || ((e = o < i ? Math.min(m[t] * r, n) : 1), (m[t] = e), (v[t] = a.Z.time), p.play(t, 1, e, 0, !0));
           }
           static checkSoundLockByBrowser() {
             (p.isSoundsLockedByBrowser = !0), a.Z.additionalLoadingsInProgress++;
@@ -18616,11 +15569,7 @@ const bundle = () => {
       },
       4702: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          I8: () => n,
-          OP: () => s,
-          R3: () => r,
-        });
+        i.d(e, { I8: () => n, OP: () => s, R3: () => r });
         i(5446), Math.PI;
         var r = (t, e, i) => (Math.abs(t - e) <= i ? e : t > e ? t - i : t + i);
         function n(t) {
@@ -18655,9 +15604,7 @@ const bundle = () => {
       },
       1587: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => r,
-        });
+        i.d(e, { Z: () => r });
         const r = {
           START_LOADING: 'start_loading',
           GAME_LOADED: 'game_loaded',
@@ -18693,9 +15640,7 @@ const bundle = () => {
       },
       331: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => o,
-        });
+        i.d(e, { Z: () => o });
         var r = i(1575),
           n = i(1746),
           s = i(9042),
@@ -18713,15 +15658,11 @@ const bundle = () => {
           refreshDecimalsCount() {
             var t;
             'number' ==
-              typeof (t = this.decimalsCountPath
-                ? (0, n.Z)(this.decimalsCountPath, this)
-                : a.Z.data.currencyDigits) && (this.decimalsCount = t);
+              typeof (t = this.decimalsCountPath ? (0, n.Z)(this.decimalsCountPath, this) : a.Z.data.currencyDigits) &&
+              (this.decimalsCount = t);
           }
           update() {
-            if (
-              (this.refreshDecimalsCount(),
-              this.dataPath2 && this.currentInterval === this.refreshInterval)
-            ) {
+            if ((this.refreshDecimalsCount(), this.dataPath2 && this.currentInterval === this.refreshInterval)) {
               var t = (0, n.Z)(this.dataPath2, this);
               void 0 !== t && t !== this.showedVal2 && ((this.showedVal2 = t), this.setSymbol(t));
             }
@@ -18745,8 +15686,7 @@ const bundle = () => {
               (this.showedVal = void 0);
           }
           onLanguageChanged() {
-            this.symbol && this.translatableText && this.setSymbol(this.symbol),
-              super.onLanguageChanged();
+            this.symbol && this.translatableText && this.setSymbol(this.symbol), super.onLanguageChanged();
           }
           _onRenderResize() {
             this.applyMaxWidth();
@@ -18775,9 +15715,7 @@ const bundle = () => {
       },
       6635: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => m,
-        });
+        i.d(e, { Z: () => m });
         var r = i(8125),
           n = i(8106),
           s = i(5446),
@@ -18797,10 +15735,7 @@ const bundle = () => {
                 var e, i;
                 if (
                   void 0 !==
-                  (null === (e = s.Z.casinoOptions) ||
-                  void 0 === e ||
-                  null === (i = e.license_rules) ||
-                  void 0 === i
+                  (null === (e = s.Z.casinoOptions) || void 0 === e || null === (i = e.license_rules) || void 0 === i
                     ? void 0
                     : i.min_spin_time)
                 )
@@ -18809,13 +15744,9 @@ const bundle = () => {
                   n = s.Z.settings.getItem('growthbook_quickSpin');
                 return (
                   void 0 === n && ((n = t.value), s.Z.settings.setItem('growthbook_quickSpin', n)),
-                  r !== n &&
-                    ((s.Z.data.quickSpin = n),
-                    s.Z.settings.setItem('quickSpin', s.Z.data.quickSpin)),
+                  r !== n && ((s.Z.data.quickSpin = n), s.Z.settings.setItem('quickSpin', s.Z.data.quickSpin)),
                   window.trackGameEventListeners.push((t, e, i) => {
-                    'settings-change' === t &&
-                      'quickSpin' === e &&
-                      s.Z.settings.setItem('growthbook_quickSpin', i);
+                    'settings-change' === t && 'quickSpin' === e && s.Z.settings.setItem('growthbook_quickSpin', i);
                   }),
                   !0
                 );
@@ -18827,10 +15758,7 @@ const bundle = () => {
                 var e, i;
                 return (
                   void 0 ===
-                    (null === (e = s.Z.casinoOptions) ||
-                    void 0 === e ||
-                    null === (i = e.license_rules) ||
-                    void 0 === i
+                    (null === (e = s.Z.casinoOptions) || void 0 === e || null === (i = e.license_rules) || void 0 === i
                       ? void 0
                       : i.min_spin_time) &&
                   (0 === t.value ||
@@ -18838,9 +15766,7 @@ const bundle = () => {
                       var r = s.Z.settings.getItem('quickSpin', !1),
                         n = s.Z.settings.getItem('quickSpinCount', 0);
                       if ('spin-button' === i && !r && n && n === t.value) {
-                        n++,
-                          s.Z.settings.setItem('quickSpinCount', n),
-                          m.track(o.Z.GAME_UI_QUICK_SPIN_OFFER_OPENED);
+                        n++, s.Z.settings.setItem('quickSpinCount', n), m.track(o.Z.GAME_UI_QUICK_SPIN_OFFER_OPENED);
                         var a = s.Z.showQuestion(
                           !1,
                           !1,
@@ -18855,10 +15781,7 @@ const bundle = () => {
                           p(), s.Z.hideModal(a);
                         };
                       }
-                      'skip' !== e ||
-                        'spin' !== i ||
-                        r ||
-                        (n++, s.Z.settings.setItem('quickSpinCount', n));
+                      'skip' !== e || 'spin' !== i || r || (n++, s.Z.settings.setItem('quickSpinCount', n));
                     }),
                   !0)
                 );
@@ -18887,11 +15810,7 @@ const bundle = () => {
           m.track(o.Z.GAME_UI_QUICK_SPIN_OFFER_CLOSED);
         }
         var d = [],
-          f = {
-            game_loaded: !0,
-            game_initialized: !0,
-            render_resize: !0,
-          },
+          f = { game_loaded: !0, game_initialized: !0, render_resize: !0 },
           g = (t, e, i) => {
             if (
               (t === o.Z.GAME_LOADED && b(),
@@ -18902,8 +15821,7 @@ const bundle = () => {
                   isPortrait: s.Z.isPortrait,
                   isMobile: s.Z.isMobile.any,
                   isGambleAvailable:
-                    s.Z.projectDesc.libs.indexOf('thing-games-utils/gamble') > 0 ||
-                    a.Z.hasScene('gamble'),
+                    s.Z.projectDesc.libs.indexOf('thing-games-utils/gamble') > 0 || a.Z.hasScene('gamble'),
                   isProvabilityAvailable: a.Z.hasPrefab('thing-games-utils/provability-panel'),
                   isBuyFeaturesAvailable:
                     s.Z.data.initData &&
@@ -18926,20 +15844,11 @@ const bundle = () => {
             },
             track: g,
             trackCustom: (t, e, i, r) => {
-              g(o.Z.CUSTOM_EVENT, null, {
-                action: t,
-                label: e,
-                value: i,
-                isNonInteraction: r,
-              });
+              g(o.Z.CUSTOM_EVENT, null, { action: t, label: e, value: i, isNonInteraction: r });
             },
           };
         const m = _;
-        var v = {
-          cap: !0,
-          'space to skip button': !0,
-          'debug-button': !0,
-        };
+        var v = { cap: !0, 'space to skip button': !0, 'debug-button': !0 };
         r.Z.globalOnClick = (t, e) => {
           for (var i, r = t; r; ) {
             if (r.name) {
@@ -18962,14 +15871,12 @@ const bundle = () => {
             (y = {}),
               (n.Z.globalOnChanged = (t, e) => {
                 A.every((e) => -1 === t.indexOf(e)) &&
-                  (('object' == typeof t && null !== t) ||
-                    (void 0 === e && (e = 'undefined'), (y[t] = e)));
+                  (('object' == typeof t && null !== t) || (void 0 === e && (e = 'undefined'), (y[t] = e)));
               }),
               g('initial-settings', null, s.Z.settings.data);
           };
         setInterval(() => {
-          if (s.Z.mouse && !s.Z.mouse.click)
-            for (var t of Object.keys(y)) g('settings-change', t, y[t]), delete y[t];
+          if (s.Z.mouse && !s.Z.mouse.click) for (var t of Object.keys(y)) g('settings-change', t, y[t]), delete y[t];
         }, 200),
           (s.Z.onGameReload = () => {
             g('game_reloading');
@@ -18981,34 +15888,18 @@ const bundle = () => {
         function T(t) {
           var { detail: e } = t;
           'initialized' === e.type &&
-            console.log(
-              '[thing-games-utils] Analytics available in window.analytics',
-              window.analytics,
-            ),
+            console.log('[thing-games-utils] Analytics available in window.analytics', window.analytics),
             console.log('[thing-games-utils] Received message from analytics: ', e);
         }
         function E(t) {
           window.dispatchEvent(
             new CustomEvent('experiment/incoming', {
-              detail: {
-                type: 'addFeature',
-                payload: {
-                  name: t.name,
-                  handler: t.handler,
-                },
-              },
+              detail: { type: 'addFeature', payload: { name: t.name, handler: t.handler } },
             }),
           );
         }
         window.dispatchEvent(
-          new CustomEvent('analytics/incoming', {
-            detail: {
-              type: 'start',
-              payload: {
-                isEditor: x,
-              },
-            },
-          }),
+          new CustomEvent('analytics/incoming', { detail: { type: 'start', payload: { isEditor: x } } }),
         ),
           window.addEventListener('analytics/outgoing', T),
           window.addEventListener('experiment/outgoing', (t) => {
@@ -19020,9 +15911,7 @@ const bundle = () => {
       },
       1868: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => c,
-        });
+        i.d(e, { Z: () => c });
         var r = i(5446),
           n = i(9042),
           s = i(4702),
@@ -19122,9 +16011,7 @@ const bundle = () => {
                     e.translatableText.includes('tap_to_play') ||
                     e.translatableText.includes('push_to_play') ||
                     e.translatableText.includes('click_to_play')) &&
-                  (this.clickToContinueDelay++,
-                  12 === this.clickToContinueDelay && this.clickSpin(),
-                  (t = !0));
+                  (this.clickToContinueDelay++, 12 === this.clickToContinueDelay && this.clickSpin(), (t = !0));
               }),
               t || (this.clickToContinueDelay = 0);
           }
@@ -19167,8 +16054,7 @@ const bundle = () => {
                 this.buttonClickWaits.isCanBePressed &&
                   (this.clickButtonDelay++,
                   6 === this.clickButtonDelay && this.buttonClickWaits.onOver(),
-                  12 === this.clickButtonDelay &&
-                    (this.buttonClickWaits.callClick(), (this.buttonClickWaits = null))),
+                  12 === this.clickButtonDelay && (this.buttonClickWaits.callClick(), (this.buttonClickWaits = null))),
                 !0
               );
           }
@@ -19178,9 +16064,7 @@ const bundle = () => {
           refreshView() {
             (this.playBtn.innerText = !this.started || this.paused ? '⏵' : '⏸'),
               (this.pauseMessage.style.display = !this.started || this.paused ? 'block' : 'none'),
-              this.started
-                ? this.playBtn.classList.remove('highlight')
-                : this.playBtn.classList.add('highlight'),
+              this.started ? this.playBtn.classList.remove('highlight') : this.playBtn.classList.add('highlight'),
               (this.restartButton.disabled = !this.started),
               (this.x1btn.disabled = 1 === this.speed),
               (this.x2btn.disabled = 2 === this.speed),
@@ -19201,13 +16085,7 @@ const bundle = () => {
                     var e = t.outcome.bet,
                       i = this.replayData[0].options;
                     return (
-                      i.currency ||
-                        (i.currency = {
-                          code: 'FUN',
-                          symbol: 'FUN',
-                          subunits: 100,
-                          exponent: 2,
-                        }),
+                      i.currency || (i.currency = { code: 'FUN', symbol: 'FUN', subunits: 100, exponent: 2 }),
                       (i.default_bet = e),
                       i.available_bets.indexOf(e) < 0 &&
                         (i.available_bets.push(e), i.available_bets.sort((t, e) => t - e)),
@@ -19229,9 +16107,7 @@ const bundle = () => {
       },
       4247: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          U: () => l,
-        });
+        i.d(e, { U: () => l });
         var r = i(3339),
           n = i(7585),
           s = i(2517),
@@ -19254,20 +16130,13 @@ const bundle = () => {
               ],
               beforeBreadcrumb: (t) => ('ui.click' === t.category ? null : t),
             }),
-            window.user_id &&
-              s.av({
-                id: window.user_id,
-              }),
+            window.user_id && s.av({ id: window.user_id }),
             o.Z.addListener((t, e, i) => {
               s.n_({
                 type: 'info',
                 category: 'game.event',
                 message: t,
-                data: {
-                  eventName: t,
-                  targetName: e,
-                  source: JSON.stringify(i),
-                },
+                data: { eventName: t, targetName: e, source: JSON.stringify(i) },
                 level: a.z.Info,
               });
             }));
@@ -19281,11 +16150,7 @@ const bundle = () => {
             'x-private' === Intl.getCanonicalLocales('und-x-private')[0]
           );
         }
-        Object.defineProperty(e, '__esModule', {
-          value: !0,
-        }),
-          (e.shouldPolyfill = void 0),
-          (e.shouldPolyfill = i);
+        Object.defineProperty(e, '__esModule', { value: !0 }), (e.shouldPolyfill = void 0), (e.shouldPolyfill = i);
       },
       38: (t, e) => {
         'use strict';
@@ -19299,11 +16164,7 @@ const bundle = () => {
         function r() {
           return !('Locale' in Intl) || i();
         }
-        Object.defineProperty(e, '__esModule', {
-          value: !0,
-        }),
-          (e.shouldPolyfill = void 0),
-          (e.shouldPolyfill = r);
+        Object.defineProperty(e, '__esModule', { value: !0 }), (e.shouldPolyfill = void 0), (e.shouldPolyfill = r);
       },
       2930: (t, e, i) => {
         'use strict';
@@ -19315,15 +16176,11 @@ const bundle = () => {
             r >= 2 && '-' === i[r - 2] && (r -= 2), (i = i.slice(0, r));
           }
         }
-        i.d(e, {
-          t: () => r,
-        });
+        i.d(e, { t: () => r });
       },
       5605: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          T: () => s,
-        });
+        i.d(e, { T: () => s });
         var r = i(9102),
           n = i(2930);
         function s(t, e) {
@@ -19337,26 +16194,15 @@ const bundle = () => {
       },
       5731: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          f: () => l,
-        });
+        i.d(e, { f: () => l });
         var r = i(9102),
           n = i(2930);
         function s(t, e, i) {
-          for (
-            var s = {
-                locale: '',
-              },
-              a = 0,
-              o = e;
-            a < o.length;
-            a++
-          ) {
+          for (var s = { locale: '' }, a = 0, o = e; a < o.length; a++) {
             var l = o[a],
               h = l.replace(r.p, ''),
               u = (0, n.t)(t, h);
-            if (u)
-              return (s.locale = u), l !== h && (s.extension = l.slice(h.length + 1, l.length)), s;
+            if (u) return (s.locale = u), l !== h && (s.extension = l.slice(h.length + 1, l.length)), s;
           }
           return (s.locale = i()), s;
         }
@@ -19392,13 +16238,7 @@ const bundle = () => {
             }
             s = (0, n.t)(h, g);
           }
-          return s
-            ? {
-                locale: o[s] || l[s] || a[s] || s,
-              }
-            : {
-                locale: i(),
-              };
+          return s ? { locale: o[s] || l[s] || a[s] || s } : { locale: i() };
         }
         function o(t, e) {
           (0, r.k)(2 === e.length, 'key must have 2 elements');
@@ -19408,11 +16248,7 @@ const bundle = () => {
           if (-1 !== s) {
             for (var a = s + 4, o = a, l = a, h = !1; !h; ) {
               var u = t.indexOf('-', l);
-              2 === (-1 === u ? i - l : u - l)
-                ? (h = !0)
-                : -1 === u
-                ? ((o = i), (h = !0))
-                : ((o = u), (l = u + 1));
+              2 === (-1 === u ? i - l : u - l) ? (h = !0) : -1 === u ? ((o = i), (h = !0)) : ((o = u), (l = u + 1));
             }
             return t.slice(a, o);
           }
@@ -19422,10 +16258,7 @@ const bundle = () => {
           for (
             var u,
               c = (u = 'lookup' === i.localeMatcher ? s(t, e, h) : a(t, e, h)).locale,
-              p = {
-                locale: '',
-                dataLocale: c,
-              },
+              p = { locale: '', dataLocale: c },
               d = '-u',
               f = 0,
               g = n;
@@ -19435,10 +16268,7 @@ const bundle = () => {
             var _ = g[f];
             (0, r.k)(c in l, 'Missing locale data for '.concat(c));
             var m = l[c];
-            (0, r.k)(
-              'object' == typeof m && null !== m,
-              'locale data '.concat(_, ' must be an object'),
-            );
+            (0, r.k)('object' == typeof m && null !== m, 'locale data '.concat(_, ' must be an object'));
             var v = m[_];
             (0, r.k)(Array.isArray(v), 'keyLocaleData for '.concat(_, ' must be an array'));
             var A = v[0];
@@ -19456,10 +16286,7 @@ const bundle = () => {
             }
             if (_ in i) {
               var x = i[_];
-              (0, r.k)(
-                'string' == typeof x || null == x,
-                'optionsValue must be String, Undefined or Null',
-              ),
+              (0, r.k)('string' == typeof x || null == x, 'optionsValue must be String, Undefined or Null'),
                 ~v.indexOf(x) && x !== A && ((A = x), (y = ''));
             }
             (p[_] = A), (d += y);
@@ -19479,10 +16306,7 @@ const bundle = () => {
       },
       9102: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          k: () => n,
-          p: () => r,
-        });
+        i.d(e, { k: () => n, p: () => r });
         var r = /-u(?:-[0-9a-z]{2,8})+/gi;
         function n(t, e, i) {
           if ((void 0 === i && (i = Error), !t)) throw new i(e);
@@ -19493,12 +16317,7 @@ const bundle = () => {
         function r(t) {
           return Intl.getCanonicalLocales(t);
         }
-        i.r(e),
-          i.d(e, {
-            LookupSupportedLocales: () => s.T,
-            ResolveLocale: () => n.f,
-            match: () => a,
-          });
+        i.r(e), i.d(e, { LookupSupportedLocales: () => s.T, ResolveLocale: () => n.f, match: () => a });
         var n = i(5731),
           s = i(5605);
         function a(t, e, i, s) {
@@ -19508,9 +16327,7 @@ const bundle = () => {
           return (0, n.f)(
             a,
             r(t),
-            {
-              localeMatcher: (null == s ? void 0 : s.algorithm) || 'best fit',
-            },
+            { localeMatcher: (null == s ? void 0 : s.algorithm) || 'best fit' },
             [],
             {},
             function () {
@@ -19521,10 +16338,7 @@ const bundle = () => {
       },
       4526: (t, e, i) => {
         'use strict';
-        Object.defineProperty(e, '__esModule', {
-          value: !0,
-        }),
-          (e.shouldPolyfill = void 0);
+        Object.defineProperty(e, '__esModule', { value: !0 }), (e.shouldPolyfill = void 0);
         var r = i(9705),
           n = i(3385);
         function s(t) {
@@ -19536,10 +16350,7 @@ const bundle = () => {
           if (
             (void 0 === t && (t = 'en'),
             !('PluralRules' in Intl) ||
-              'one' ===
-                new Intl.PluralRules('en', {
-                  minimumFractionDigits: 2,
-                }).select(1) ||
+              'one' === new Intl.PluralRules('en', { minimumFractionDigits: 2 }).select(1) ||
               !s(t))
           )
             return t ? (0, r.match)([t], n.supportedLocales, 'en') : void 0;
@@ -19548,9 +16359,7 @@ const bundle = () => {
       },
       3385: (t, e) => {
         'use strict';
-        Object.defineProperty(e, '__esModule', {
-          value: !0,
-        }),
+        Object.defineProperty(e, '__esModule', { value: !0 }),
           (e.supportedLocales = void 0),
           (e.supportedLocales = [
             'af',
@@ -19795,19 +16604,13 @@ const bundle = () => {
           yl: () => _,
         }),
           (function (t) {
-            (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.WEBGL2 = 2)] = 'WEBGL2');
+            (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.WEBGL2 = 2)] = 'WEBGL2');
           })(r || (r = {})),
           (function (t) {
-            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.CANVAS = 2)] = 'CANVAS');
+            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.CANVAS = 2)] = 'CANVAS');
           })(n || (n = {})),
           (function (t) {
-            (t[(t.COLOR = 16384)] = 'COLOR'),
-              (t[(t.DEPTH = 256)] = 'DEPTH'),
-              (t[(t.STENCIL = 1024)] = 'STENCIL');
+            (t[(t.COLOR = 16384)] = 'COLOR'), (t[(t.DEPTH = 256)] = 'DEPTH'), (t[(t.STENCIL = 1024)] = 'STENCIL');
           })(s || (s = {})),
           (function (t) {
             (t[(t.NORMAL = 0)] = 'NORMAL'),
@@ -20040,8 +16843,7 @@ const bundle = () => {
           a = i(7584),
           o = i(1298),
           l = i(7442);
-        (r.X.PREFER_ENV = s.isMobile.any ? n.Vi.WEBGL : n.Vi.WEBGL2),
-          (r.X.STRICT_TEXTURE_CACHE = !1);
+        (r.X.PREFER_ENV = s.isMobile.any ? n.Vi.WEBGL : n.Vi.WEBGL2), (r.X.STRICT_TEXTURE_CACHE = !1);
         var h = [];
         function u(t, e) {
           if (!t) return null;
@@ -20060,9 +16862,7 @@ const bundle = () => {
           return (
             (c =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -20076,8 +16876,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          c(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          c(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var d = function () {
           return (
@@ -20085,8 +16884,7 @@ const bundle = () => {
               Object.assign ||
               function (t) {
                 for (var e, i = arguments, r = 1, n = arguments.length; r < n; r++)
-                  for (var s in (e = i[r]))
-                    Object.prototype.hasOwnProperty.call(e, s) && (t[s] = e[s]);
+                  for (var s in (e = i[r])) Object.prototype.hasOwnProperty.call(e, s) && (t[s] = e[s]);
                 return t;
               }),
             d.apply(this, arguments)
@@ -20094,12 +16892,10 @@ const bundle = () => {
         };
         function f(t, e) {
           var i = {};
-          for (var r in t)
-            Object.prototype.hasOwnProperty.call(t, r) && e.indexOf(r) < 0 && (i[r] = t[r]);
+          for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && e.indexOf(r) < 0 && (i[r] = t[r]);
           if (null != t && 'function' == typeof Object.getOwnPropertySymbols) {
             var n = 0;
-            for (r = Object.getOwnPropertySymbols(t); n < r.length; n++)
-              e.indexOf(r[n]) < 0 && (i[r[n]] = t[r[n]]);
+            for (r = Object.getOwnPropertySymbols(t); n < r.length; n++) e.indexOf(r[n]) < 0 && (i[r[n]] = t[r[n]]);
           }
           return i;
         }
@@ -20198,17 +16994,7 @@ const bundle = () => {
                     ? r.texSubImage2D(e.target, 0, 0, 0, s, a, e.format, i.type, this.data)
                     : ((i.width = s),
                       (i.height = a),
-                      r.texImage2D(
-                        e.target,
-                        0,
-                        i.internalFormat,
-                        s,
-                        a,
-                        0,
-                        e.format,
-                        i.type,
-                        this.data,
-                      )),
+                      r.texImage2D(e.target, 0, i.internalFormat, s, a, 0, e.format, i.type, this.data)),
                   !0
                 );
               }),
@@ -20216,18 +17002,12 @@ const bundle = () => {
                 this.data = null;
               }),
               (e.test = function (t) {
-                return (
-                  t instanceof Float32Array || t instanceof Uint8Array || t instanceof Uint32Array
-                );
+                return t instanceof Float32Array || t instanceof Uint8Array || t instanceof Uint32Array;
               }),
               e
             );
           })(g),
-          m = {
-            scaleMode: n.aH.NEAREST,
-            format: n.I2.RGBA,
-            alphaMode: n.iw.NPM,
-          },
+          m = { scaleMode: n.aH.NEAREST, format: n.I2.RGBA, alphaMode: n.iw.NPM },
           v = (function (t) {
             function e(e, i) {
               void 0 === e && (e = null), void 0 === i && (i = null);
@@ -20408,38 +17188,20 @@ const bundle = () => {
                   o = t._pixiId;
                 }
                 var h = s.BaseTextureCache[o];
-                if (a && n && !h)
-                  throw new Error('The cacheId "' + o + '" does not exist in BaseTextureCache.');
+                if (a && n && !h) throw new Error('The cacheId "' + o + '" does not exist in BaseTextureCache.');
                 return h || (((h = new e(t, i)).cacheId = o), e.addToCache(h, o)), h;
               }),
               (e.fromBuffer = function (t, i, r, s) {
                 t = t || new Float32Array(i * r * 4);
-                var a = new _(t, {
-                    width: i,
-                    height: r,
-                  }),
+                var a = new _(t, { width: i, height: r }),
                   o = t instanceof Float32Array ? n.vK.FLOAT : n.vK.UNSIGNED_BYTE;
-                return new e(
-                  a,
-                  Object.assign(
-                    m,
-                    s || {
-                      width: i,
-                      height: r,
-                      type: o,
-                    },
-                  ),
-                );
+                return new e(a, Object.assign(m, s || { width: i, height: r, type: o }));
               }),
               (e.addToCache = function (t, e) {
                 e &&
                   (-1 === t.textureCacheIds.indexOf(e) && t.textureCacheIds.push(e),
                   s.BaseTextureCache[e] &&
-                    console.warn(
-                      'BaseTexture added to the cache with an id [' +
-                        e +
-                        '] that already had an entry',
-                    ),
+                    console.warn('BaseTexture added to the cache with an id [' + e + '] that already had an entry'),
                   (s.BaseTextureCache[e] = t));
               }),
               (e.removeFromCache = function (t) {
@@ -20447,13 +17209,10 @@ const bundle = () => {
                   var e = s.BaseTextureCache[t];
                   if (e) {
                     var i = e.textureCacheIds.indexOf(t);
-                    return (
-                      i > -1 && e.textureCacheIds.splice(i, 1), delete s.BaseTextureCache[t], e
-                    );
+                    return i > -1 && e.textureCacheIds.splice(i, 1), delete s.BaseTextureCache[t], e;
                   }
                 } else if (t && t.textureCacheIds) {
-                  for (var r = 0; r < t.textureCacheIds.length; ++r)
-                    delete s.BaseTextureCache[t.textureCacheIds[r]];
+                  for (var r = 0; r < t.textureCacheIds.length; ++r) delete s.BaseTextureCache[t.textureCacheIds[r]];
                   return (t.textureCacheIds.length = 0), t;
                 }
                 return null;
@@ -20492,15 +17251,10 @@ const bundle = () => {
               }),
               (e.prototype.addResourceAt = function (t, e) {
                 if (!this.items[e]) throw new Error('Index ' + e + ' is out of bounds');
-                return (
-                  t.valid && !this.valid && this.resize(t.width, t.height),
-                  this.items[e].setResource(t),
-                  this
-                );
+                return t.valid && !this.valid && this.resize(t.width, t.height), this.items[e].setResource(t), this;
               }),
               (e.prototype.bind = function (e) {
-                if (null !== this.baseTexture)
-                  throw new Error('Only one base texture per TextureArray is allowed');
+                if (null !== this.baseTexture) throw new Error('Only one base texture per TextureArray is allowed');
                 t.prototype.bind.call(this, e);
                 for (var i = 0; i < this.length; i++)
                   (this.items[i].parentTextureArray = e), this.items[i].on('update', e.update, e);
@@ -20508,8 +17262,7 @@ const bundle = () => {
               (e.prototype.unbind = function (e) {
                 t.prototype.unbind.call(this, e);
                 for (var i = 0; i < this.length; i++)
-                  (this.items[i].parentTextureArray = null),
-                    this.items[i].off('update', e.update, e);
+                  (this.items[i].parentTextureArray = null), this.items[i].off('update', e.update, e);
               }),
               (e.prototype.load = function () {
                 var t = this;
@@ -20547,11 +17300,7 @@ const bundle = () => {
                 l = a.height;
               return (
                 Array.isArray(e) ? ((r = e), (n = e.length)) : (n = e),
-                (s =
-                  t.call(this, n, {
-                    width: o,
-                    height: l,
-                  }) || this),
+                (s = t.call(this, n, { width: o, height: l }) || this),
                 r && s.initFromArray(r, i),
                 s
               );
@@ -20633,9 +17382,7 @@ const bundle = () => {
                 return (
                   s.pixelStorei(s.UNPACK_PREMULTIPLY_ALPHA_WEBGL, e.alphaMode === n.iw.UNPACK),
                   this.noSubImage || e.target !== s.TEXTURE_2D || i.width !== a || i.height !== o
-                    ? ((i.width = a),
-                      (i.height = o),
-                      s.texImage2D(e.target, 0, i.internalFormat, e.format, i.type, r))
+                    ? ((i.width = a), (i.height = o), s.texImage2D(e.target, 0, i.internalFormat, e.format, i.type, r))
                     : s.texSubImage2D(s.TEXTURE_2D, 0, 0, 0, e.format, i.type, r),
                   !0
                 );
@@ -20662,10 +17409,7 @@ const bundle = () => {
               p(e, t),
               (e.test = function (t) {
                 var e = globalThis.OffscreenCanvas;
-                return (
-                  !!(e && t instanceof e) ||
-                  (globalThis.HTMLCanvasElement && t instanceof HTMLCanvasElement)
-                );
+                return !!(e && t instanceof e) || (globalThis.HTMLCanvasElement && t instanceof HTMLCanvasElement);
               }),
               e
             );
@@ -20678,18 +17422,10 @@ const bundle = () => {
                 l = a.height,
                 h = a.autoLoad,
                 u = a.linkBaseTexture;
-              if (i && i.length !== e.SIDES)
-                throw new Error('Invalid length. Got ' + i.length + ', expected 6');
-              s =
-                t.call(this, 6, {
-                  width: o,
-                  height: l,
-                }) || this;
-              for (var c = 0; c < e.SIDES; c++)
-                s.items[c].target = n.sp.TEXTURE_CUBE_MAP_POSITIVE_X + c;
-              return (
-                (s.linkBaseTexture = !1 !== u), i && s.initFromArray(i, r), !1 !== h && s.load(), s
-              );
+              if (i && i.length !== e.SIDES) throw new Error('Invalid length. Got ' + i.length + ', expected 6');
+              s = t.call(this, 6, { width: o, height: l }) || this;
+              for (var c = 0; c < e.SIDES; c++) s.items[c].target = n.sp.TEXTURE_CUBE_MAP_POSITIVE_X + c;
+              return (s.linkBaseTexture = !1 !== u), i && s.initFromArray(i, r), !1 !== h && s.load(), s;
             }
             return (
               p(e, t),
@@ -20699,23 +17435,14 @@ const bundle = () => {
               (e.prototype.addBaseTextureAt = function (t, e, i) {
                 if ((void 0 === i && (i = this.linkBaseTexture), !this.items[e]))
                   throw new Error('Index ' + e + ' is out of bounds');
-                if (
-                  !this.linkBaseTexture ||
-                  t.parentTextureArray ||
-                  Object.keys(t._glTextures).length > 0
-                ) {
-                  if (!t.resource)
-                    throw new Error('CubeResource does not support copying of renderTexture.');
+                if (!this.linkBaseTexture || t.parentTextureArray || Object.keys(t._glTextures).length > 0) {
+                  if (!t.resource) throw new Error('CubeResource does not support copying of renderTexture.');
                   this.addResourceAt(t.resource, e);
                 } else
                   (t.target = n.sp.TEXTURE_CUBE_MAP_POSITIVE_X + e),
                     (t.parentTextureArray = this.baseTexture),
                     (this.items[e] = t);
-                return (
-                  t.valid && !this.valid && this.resize(t.realWidth, t.realHeight),
-                  (this.items[e] = t),
-                  this
-                );
+                return t.valid && !this.valid && this.resize(t.realWidth, t.realHeight), (this.items[e] = t), this;
               }),
               (e.prototype.upload = function (t, i, r) {
                 for (var n = this.itemDirtyIds, s = 0; s < e.SIDES; s++) {
@@ -20801,14 +17528,11 @@ const bundle = () => {
                 var t = this,
                   e = this.source;
                 if (null !== this._process) return this._process;
-                if (null !== this.bitmap || !globalThis.createImageBitmap)
-                  return Promise.resolve(this);
+                if (null !== this.bitmap || !globalThis.createImageBitmap) return Promise.resolve(this);
                 var i = globalThis.createImageBitmap,
                   r = !e.crossOrigin || 'anonymous' === e.crossOrigin;
                 return (
-                  (this._process = fetch(e.src, {
-                    mode: r ? 'cors' : 'no-cors',
-                  })
+                  (this._process = fetch(e.src, { mode: r ? 'cors' : 'no-cors' })
                     .then(function (t) {
                       return t.blob();
                     })
@@ -20826,10 +17550,7 @@ const bundle = () => {
                 );
               }),
               (e.prototype.upload = function (e, i, r) {
-                if (
-                  ('number' == typeof this.alphaMode && (i.alphaMode = this.alphaMode),
-                  !this.createBitmap)
-                )
+                if (('number' == typeof this.alphaMode && (i.alphaMode = this.alphaMode), !this.createBitmap))
                   return t.prototype.upload.call(this, e, i, r);
                 if (!this.bitmap && (this.process(), !this.bitmap)) return !1;
                 if ((t.prototype.upload.call(this, e, i, r, this.bitmap), !this.preserveBitmap)) {
@@ -20891,10 +17612,8 @@ const bundle = () => {
                         }),
                         e.SVG_XML.test(t.svg.trim()))
                       ) {
-                        if (!btoa)
-                          throw new Error("Your browser doesn't support base64 conversions.");
-                        t.svg =
-                          'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(t.svg)));
+                        if (!btoa) throw new Error("Your browser doesn't support base64 conversions.");
+                        t.svg = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(t.svg)));
                       }
                       t._loadSvg();
                     })),
@@ -20937,12 +17656,7 @@ const bundle = () => {
               (e.getSize = function (t) {
                 var i = e.SVG_SIZE.exec(t),
                   r = {};
-                return (
-                  i &&
-                    ((r[i[1]] = Math.round(parseFloat(i[3]))),
-                    (r[i[5]] = Math.round(parseFloat(i[7])))),
-                  r
-                );
+                return i && ((r[i[1]] = Math.round(parseFloat(i[3]))), (r[i[5]] = Math.round(parseFloat(i[7])))), r;
               }),
               (e.prototype.dispose = function () {
                 t.prototype.dispose.call(this), (this._resolve = null), (this._crossorigin = null);
@@ -20950,8 +17664,7 @@ const bundle = () => {
               (e.test = function (t, i) {
                 return (
                   'svg' === i ||
-                  ('string' == typeof t &&
-                    /^data:image\/svg\+xml(;(charset=utf8|utf8))?;base64/.test(t)) ||
+                  ('string' == typeof t && /^data:image\/svg\+xml(;(charset=utf8|utf8))?;base64/.test(t)) ||
                   ('string' == typeof t && e.SVG_XML.test(t))
                 );
               }),
@@ -20979,10 +17692,7 @@ const bundle = () => {
                     c = h.mime,
                     p = (u = u || i[o]).split('?').shift().toLowerCase(),
                     d = p.slice(p.lastIndexOf('.') + 1);
-                  (c = c || e.MIME_TYPES[d] || 'video/' + d),
-                    (l.src = u),
-                    (l.type = c),
-                    s.appendChild(l);
+                  (c = c || e.MIME_TYPES[d] || 'video/' + d), (l.src = u), (l.type = c), s.appendChild(l);
                 }
                 i = s;
               }
@@ -21009,9 +17719,7 @@ const bundle = () => {
                   (this._msToNextUpdate = Math.floor(this._msToNextUpdate - i)),
                     (!this._updateFPS || this._msToNextUpdate <= 0) &&
                       (t.prototype.update.call(this),
-                      (this._msToNextUpdate = this._updateFPS
-                        ? Math.floor(1e3 / this._updateFPS)
-                        : 0));
+                      (this._msToNextUpdate = this._updateFPS ? Math.floor(1e3 / this._updateFPS) : 0));
                 }
               }),
               (e.prototype.load = function () {
@@ -21054,8 +17762,7 @@ const bundle = () => {
                     (o.vB.shared.add(this.update, this), (this._isConnectedToTicker = !0));
               }),
               (e.prototype._onPlayStop = function () {
-                this._isConnectedToTicker &&
-                  (o.vB.shared.remove(this.update, this), (this._isConnectedToTicker = !1));
+                this._isConnectedToTicker && (o.vB.shared.remove(this.update, this), (this._isConnectedToTicker = !1));
               }),
               (e.prototype._onCanPlay = function () {
                 var t = this.source;
@@ -21067,14 +17774,9 @@ const bundle = () => {
                   this._isSourcePlaying() ? this._onPlayStart() : this.autoPlay && t.play();
               }),
               (e.prototype.dispose = function () {
-                this._isConnectedToTicker &&
-                  (o.vB.shared.remove(this.update, this), (this._isConnectedToTicker = !1));
+                this._isConnectedToTicker && (o.vB.shared.remove(this.update, this), (this._isConnectedToTicker = !1));
                 var e = this.source;
-                e &&
-                  (e.removeEventListener('error', this._onError, !0),
-                  e.pause(),
-                  (e.src = ''),
-                  e.load()),
+                e && (e.removeEventListener('error', this._onError, !0), e.pause(), (e.src = ''), e.load()),
                   t.prototype.dispose.call(this);
               }),
               Object.defineProperty(e.prototype, 'autoUpdate', {
@@ -21105,17 +17807,10 @@ const bundle = () => {
                 configurable: !0,
               }),
               (e.test = function (t, i) {
-                return (
-                  (globalThis.HTMLVideoElement && t instanceof HTMLVideoElement) ||
-                  e.TYPES.indexOf(i) > -1
-                );
+                return (globalThis.HTMLVideoElement && t instanceof HTMLVideoElement) || e.TYPES.indexOf(i) > -1;
               }),
               (e.TYPES = ['mp4', 'm4v', 'webm', 'ogg', 'ogv', 'h264', 'avi', 'mov']),
-              (e.MIME_TYPES = {
-                ogv: 'video/ogg',
-                mov: 'video/quicktime',
-                m4v: 'video/mp4',
-              }),
+              (e.MIME_TYPES = { ogv: 'video/ogg', mov: 'video/quicktime', m4v: 'video/mp4' }),
               e
             );
           })(b),
@@ -21164,17 +17859,7 @@ const bundle = () => {
                     ? r.texSubImage2D(e.target, 0, 0, 0, s, a, e.format, i.type, this.data)
                     : ((i.width = s),
                       (i.height = a),
-                      r.texImage2D(
-                        e.target,
-                        0,
-                        i.internalFormat,
-                        s,
-                        a,
-                        0,
-                        e.format,
-                        i.type,
-                        this.data,
-                      )),
+                      r.texImage2D(e.target, 0, i.internalFormat, s, a, 0, e.format, i.type, this.data)),
                   !0
                 );
               }),
@@ -21225,21 +17910,15 @@ const bundle = () => {
                 return (
                   (this.depthTexture =
                     t ||
-                    new v(
-                      new P(null, {
-                        width: this.width,
-                        height: this.height,
-                      }),
-                      {
-                        scaleMode: n.aH.NEAREST,
-                        resolution: 1,
-                        width: this.width,
-                        height: this.height,
-                        mipmap: n.WB.OFF,
-                        format: n.I2.DEPTH_COMPONENT,
-                        type: n.vK.UNSIGNED_SHORT,
-                      },
-                    )),
+                    new v(new P(null, { width: this.width, height: this.height }), {
+                      scaleMode: n.aH.NEAREST,
+                      resolution: 1,
+                      width: this.width,
+                      height: this.height,
+                      mipmap: n.WB.OFF,
+                      format: n.I2.DEPTH_COMPONENT,
+                      type: n.vK.UNSIGNED_SHORT,
+                    })),
                   this.dirtyId++,
                   this.dirtyFormat++,
                   this
@@ -21252,9 +17931,7 @@ const bundle = () => {
                 return (this.stencil = !0), this.dirtyId++, this.dirtyFormat++, this;
               }),
               (t.prototype.resize = function (t, e) {
-                if (
-                  ((t = Math.round(t)), (e = Math.round(e)), t !== this.width || e !== this.height)
-                ) {
+                if (((t = Math.round(t)), (e = Math.round(e)), t !== this.width || e !== this.height)) {
                   (this.width = t), (this.height = e), this.dirtyId++, this.dirtySize++;
                   for (var i = 0; i < this.colorTextures.length; i++) {
                     var r = this.colorTextures[i],
@@ -21272,10 +17949,7 @@ const bundle = () => {
               }),
               (t.prototype.destroyDepthTexture = function () {
                 this.depthTexture &&
-                  (this.depthTexture.destroy(),
-                  (this.depthTexture = null),
-                  ++this.dirtyId,
-                  ++this.dirtyFormat);
+                  (this.depthTexture.destroy(), (this.depthTexture = null), ++this.dirtyId, ++this.dirtyFormat);
               }),
               t
             );
@@ -21285,12 +17959,7 @@ const bundle = () => {
               void 0 === e && (e = {});
               var i = this;
               'number' == typeof e &&
-                (e = {
-                  width: arguments[0],
-                  height: arguments[1],
-                  scaleMode: arguments[2],
-                  resolution: arguments[3],
-                });
+                (e = { width: arguments[0], height: arguments[1], scaleMode: arguments[2], resolution: arguments[3] });
               return (
                 (e.width = e.width || 100),
                 (e.height = e.height || 100),
@@ -21315,9 +17984,7 @@ const bundle = () => {
                 this.framebuffer.dispose(), t.prototype.dispose.call(this);
               }),
               (e.prototype.destroy = function () {
-                t.prototype.destroy.call(this),
-                  this.framebuffer.destroyDepthTexture(),
-                  (this.framebuffer = null);
+                t.prototype.destroy.call(this), this.framebuffer.destroyDepthTexture(), (this.framebuffer = null);
               }),
               e
             );
@@ -21417,9 +18084,7 @@ const bundle = () => {
               )
                 h._rotate = 2;
               else if (h._rotate % 2 != 0)
-                throw new Error(
-                  'attempt to use diamond-shaped UVs. If you are sure, set rotation manually',
-                );
+                throw new Error('attempt to use diamond-shaped UVs. If you are sure, set rotation manually');
               return (
                 (h.defaultAnchor = o ? new l.E9(o.x, o.y) : new l.E9(0, 0)),
                 (h._updateID = 0),
@@ -21441,10 +18106,7 @@ const bundle = () => {
               (e.prototype.onBaseTextureUpdated = function (t) {
                 if (this.noFrame) {
                   if (!this.baseTexture.valid) return;
-                  (this._frame.width = t.width),
-                    (this._frame.height = t.height),
-                    (this.valid = !0),
-                    this.updateUvs();
+                  (this._frame.width = t.width), (this._frame.height = t.height), (this.valid = !0), this.updateUvs();
                 } else this.frame = this._frame;
                 this.emit('update', this);
               }),
@@ -21452,8 +18114,7 @@ const bundle = () => {
                 if (this.baseTexture) {
                   if (t) {
                     var i = this.baseTexture.resource;
-                    i && i.url && s.TextureCache[i.url] && e.removeFromCache(i.url),
-                      this.baseTexture.destroy();
+                    i && i.url && s.TextureCache[i.url] && e.removeFromCache(i.url), this.baseTexture.destroy();
                   }
                   this.baseTexture.off('loaded', this.onBaseTextureUpdated, this),
                     this.baseTexture.off('update', this.onBaseTextureUpdated, this),
@@ -21504,8 +18165,7 @@ const bundle = () => {
                   o = t._pixiId;
                 }
                 var h = s.TextureCache[o];
-                if (a && n && !h)
-                  throw new Error('The cacheId "' + o + '" does not exist in TextureCache.');
+                if (a && n && !h) throw new Error('The cacheId "' + o + '" does not exist in TextureCache.');
                 return (
                   h || t instanceof v
                     ? !h && t instanceof v && ((h = new e(t)), e.addToCache(h, o))
@@ -21517,22 +18177,8 @@ const bundle = () => {
                 );
               }),
               (e.fromURL = function (t, i) {
-                var r = Object.assign(
-                    {
-                      autoLoad: !1,
-                    },
-                    null == i ? void 0 : i.resourceOptions,
-                  ),
-                  n = e.from(
-                    t,
-                    Object.assign(
-                      {
-                        resourceOptions: r,
-                      },
-                      i,
-                    ),
-                    !1,
-                  ),
+                var r = Object.assign({ autoLoad: !1 }, null == i ? void 0 : i.resourceOptions),
+                  n = e.from(t, Object.assign({ resourceOptions: r }, i), !1),
                   s = n.baseTexture.resource;
                 return n.baseTexture.valid
                   ? Promise.resolve(n)
@@ -21546,13 +18192,7 @@ const bundle = () => {
               (e.fromLoader = function (t, i, n, a) {
                 var o = new v(
                     t,
-                    Object.assign(
-                      {
-                        scaleMode: r.X.SCALE_MODE,
-                        resolution: (0, s.getResolutionOfUrl)(i),
-                      },
-                      a,
-                    ),
+                    Object.assign({ scaleMode: r.X.SCALE_MODE, resolution: (0, s.getResolutionOfUrl)(i) }, a),
                   ),
                   l = o.resource;
                 l instanceof E && (l.url = i);
@@ -21575,9 +18215,7 @@ const bundle = () => {
                 e &&
                   (-1 === t.textureCacheIds.indexOf(e) && t.textureCacheIds.push(e),
                   s.TextureCache[e] &&
-                    console.warn(
-                      'Texture added to the cache with an id [' + e + '] that already had an entry',
-                    ),
+                    console.warn('Texture added to the cache with an id [' + e + '] that already had an entry'),
                   (s.TextureCache[e] = t));
               }),
               (e.removeFromCache = function (t) {
@@ -21589,8 +18227,7 @@ const bundle = () => {
                   }
                 } else if (t && t.textureCacheIds) {
                   for (var r = 0; r < t.textureCacheIds.length; ++r)
-                    s.TextureCache[t.textureCacheIds[r]] === t &&
-                      delete s.TextureCache[t.textureCacheIds[r]];
+                    s.TextureCache[t.textureCacheIds[r]] === t && delete s.TextureCache[t.textureCacheIds[r]];
                   return (t.textureCacheIds.length = 0), t;
                 }
                 return null;
@@ -21619,12 +18256,7 @@ const bundle = () => {
                       l = 'X: ' + e + ' + ' + r + ' = ' + (e + r) + ' > ' + this.baseTexture.width,
                       h = 'Y: ' + i + ' + ' + n + ' = ' + (i + n) + ' > ' + this.baseTexture.height;
                     throw new Error(
-                      'Texture Error: frame does not fit inside the base Texture dimensions: ' +
-                        l +
-                        ' ' +
-                        o +
-                        ' ' +
-                        h,
+                      'Texture Error: frame does not fit inside the base Texture dimensions: ' + l + ' ' + o + ' ' + h,
                     );
                   }
                   (this.valid = r && n && this.baseTexture.valid),
@@ -21671,10 +18303,7 @@ const bundle = () => {
           return (e.fillStyle = 'white'), e.fillRect(0, 0, 16, 16), new N(new v(new x(t)));
         }
         function B(t) {
-          (t.destroy = function () {}),
-            (t.on = function () {}),
-            (t.once = function () {}),
-            (t.emit = function () {});
+          (t.destroy = function () {}), (t.on = function () {}), (t.once = function () {}), (t.emit = function () {});
         }
         (N.EMPTY = new N(new v())),
           B(N.EMPTY),
@@ -21685,9 +18314,7 @@ const bundle = () => {
         var k = (function (t) {
             function e(e, i) {
               var r = t.call(this, e, i) || this;
-              return (
-                (r.valid = !0), (r.filterFrame = null), (r.filterPoolKey = null), r.updateUvs(), r
-              );
+              return (r.valid = !0), (r.filterFrame = null), (r.filterPoolKey = null), r.updateUvs(), r;
             }
             return (
               p(e, t),
@@ -21731,12 +18358,7 @@ const bundle = () => {
                       '6.0.0',
                       'Arguments (width, height, scaleMode, resolution) have been deprecated.',
                     ),
-                    (t = {
-                      width: t,
-                      height: r[0],
-                      scaleMode: r[1],
-                      resolution: r[2],
-                    })),
+                    (t = { width: t, height: r[0], scaleMode: r[1], resolution: r[2] })),
                   new e(new C(t))
                 );
               }),
@@ -21755,15 +18377,7 @@ const bundle = () => {
               (t.prototype.createTexture = function (t, e, i) {
                 void 0 === i && (i = n.G5.NONE);
                 var r = new C(
-                  Object.assign(
-                    {
-                      width: t,
-                      height: e,
-                      resolution: 1,
-                      multisample: i,
-                    },
-                    this.textureOptions,
-                  ),
+                  Object.assign({ width: t, height: e, resolution: 1, multisample: i }, this.textureOptions),
                 );
                 return new k(r);
               }),
@@ -21775,27 +18389,14 @@ const bundle = () => {
                   (e = Math.ceil(e * i - 1e-6)),
                   this.enableFullScreen && t === this._pixelsWidth && e === this._pixelsHeight
                     ? (a = r > 1 ? -r : -1)
-                    : ((a =
-                        (((65535 & (t = (0, s.nextPow2)(t))) << 16) |
-                          (65535 & (e = (0, s.nextPow2)(e)))) >>>
-                        0),
+                    : ((a = (((65535 & (t = (0, s.nextPow2)(t))) << 16) | (65535 & (e = (0, s.nextPow2)(e)))) >>> 0),
                       r > 1 && (a += 4294967296 * r)),
                   this.texturePool[a] || (this.texturePool[a] = []);
                 var o = this.texturePool[a].pop();
-                return (
-                  o || (o = this.createTexture(t, e, r)),
-                  (o.filterPoolKey = a),
-                  o.setResolution(i),
-                  o
-                );
+                return o || (o = this.createTexture(t, e, r)), (o.filterPoolKey = a), o.setResolution(i), o;
               }),
               (t.prototype.getFilterTexture = function (t, e, i) {
-                var r = this.getOptimalTexture(
-                  t.width,
-                  t.height,
-                  e || t.resolution,
-                  i || n.G5.NONE,
-                );
+                var r = this.getOptimalTexture(t.width, t.height, e || t.resolution, i || n.G5.NONE);
                 return (r.filterFrame = t.filterFrame), r;
               }),
               (t.prototype.returnTexture = function (t) {
@@ -21815,8 +18416,7 @@ const bundle = () => {
               }),
               (t.prototype.setScreenSize = function (t) {
                 if (t.width !== this._pixelsWidth || t.height !== this._pixelsHeight) {
-                  for (var e in ((this.enableFullScreen = t.width > 0 && t.height > 0),
-                  this.texturePool))
+                  for (var e in ((this.enableFullScreen = t.width > 0 && t.height > 0), this.texturePool))
                     if (Number(e) < 0) {
                       var i = this.texturePool[e];
                       if (i) for (var r = 0; r < i.length; r++) i[r].destroy(!0);
@@ -21867,9 +18467,7 @@ const bundle = () => {
             }
             return (
               (t.prototype.update = function (t) {
-                t instanceof Array && (t = new Float32Array(t)),
-                  (this.data = t || this.data),
-                  this._updateID++;
+                t instanceof Array && (t = new Float32Array(t)), (this.data = t || this.data), this._updateID++;
               }),
               (t.prototype.dispose = function () {
                 this.disposeRunner.emit(this, !1);
@@ -21893,12 +18491,7 @@ const bundle = () => {
               t
             );
           })(),
-          H = {
-            Float32Array,
-            Uint32Array,
-            Int32Array,
-            Uint8Array,
-          };
+          H = { Float32Array, Uint32Array, Int32Array, Uint8Array };
         function j(t, e) {
           for (var i = 0, r = 0, n = {}, a = 0; a < t.length; a++) (r += e[a]), (i += t[a].length);
           var o = new ArrayBuffer(4 * i),
@@ -21916,19 +18509,9 @@ const bundle = () => {
           }
           return new Float32Array(o);
         }
-        var W = {
-            5126: 4,
-            5123: 2,
-            5121: 1,
-          },
+        var W = { 5126: 4, 5123: 2, 5121: 1 },
           Z = 0,
-          V = {
-            Float32Array,
-            Uint32Array,
-            Int32Array,
-            Uint8Array,
-            Uint16Array,
-          },
+          V = { Float32Array, Uint32Array, Int32Array, Uint8Array, Uint16Array },
           Y = (function () {
             function t(t, e) {
               void 0 === t && (t = []),
@@ -21945,9 +18528,7 @@ const bundle = () => {
             }
             return (
               (t.prototype.addAttribute = function (t, e, i, r, n, s, a, o) {
-                if (
-                  (void 0 === i && (i = 0), void 0 === r && (r = !1), void 0 === o && (o = !1), !e)
-                )
+                if ((void 0 === i && (i = 0), void 0 === r && (r = !1), void 0 === o && (o = !1), !e))
                   throw new Error('You must pass a buffer when creating an attribute');
                 e instanceof X || (e instanceof Array && (e = new Float32Array(e)), (e = new X(e)));
                 var l = t.split('|');
@@ -21971,8 +18552,7 @@ const bundle = () => {
               }),
               (t.prototype.addIndex = function (t) {
                 return (
-                  t instanceof X ||
-                    (t instanceof Array && (t = new Uint16Array(t)), (t = new X(t))),
+                  t instanceof X || (t instanceof Array && (t = new Uint16Array(t)), (t = new X(t))),
                   (t.type = n.mr.ELEMENT_ARRAY_BUFFER),
                   (this.indexBuffer = t),
                   -1 === this.buffers.indexOf(t) && this.buffers.push(t),
@@ -21983,8 +18563,7 @@ const bundle = () => {
                 return this.indexBuffer;
               }),
               (t.prototype.interleave = function () {
-                if (1 === this.buffers.length || (2 === this.buffers.length && this.indexBuffer))
-                  return this;
+                if (1 === this.buffers.length || (2 === this.buffers.length && this.indexBuffer)) return this;
                 var t,
                   e = [],
                   i = [],
@@ -21996,11 +18575,7 @@ const bundle = () => {
                 }
                 for (r.data = j(e, i), t = 0; t < this.buffers.length; t++)
                   this.buffers[t] !== this.indexBuffer && this.buffers[t].destroy();
-                return (
-                  (this.buffers = [r]),
-                  this.indexBuffer && this.buffers.push(this.indexBuffer),
-                  this
-                );
+                return (this.buffers = [r]), this.indexBuffer && this.buffers.push(this.indexBuffer), this;
               }),
               (t.prototype.getSize = function () {
                 for (var t in this.attributes) {
@@ -22013,25 +18588,14 @@ const bundle = () => {
                 this.disposeRunner.emit(this, !1);
               }),
               (t.prototype.destroy = function () {
-                this.dispose(),
-                  (this.buffers = null),
-                  (this.indexBuffer = null),
-                  (this.attributes = null);
+                this.dispose(), (this.buffers = null), (this.indexBuffer = null), (this.attributes = null);
               }),
               (t.prototype.clone = function () {
                 for (var e = new t(), i = 0; i < this.buffers.length; i++)
                   e.buffers[i] = new X(this.buffers[i].data.slice(0));
                 for (var i in this.attributes) {
                   var r = this.attributes[i];
-                  e.attributes[i] = new U(
-                    r.buffer,
-                    r.size,
-                    r.normalized,
-                    r.type,
-                    r.stride,
-                    r.start,
-                    r.instance,
-                  );
+                  e.attributes[i] = new U(r.buffer, r.size, r.normalized, r.type, r.stride, r.start, r.instance);
                 }
                 return (
                   this.indexBuffer &&
@@ -22047,8 +18611,7 @@ const bundle = () => {
                     (o[u] = o[u] || 0), (o[u] += i.buffers[u].data.length), (l[u] = 0);
                 }
                 for (h = 0; h < i.buffers.length; h++)
-                  (a[h] = new V[(0, s.getBufferType)(i.buffers[h].data)](o[h])),
-                    (r.buffers[h] = new X(a[h]));
+                  (a[h] = new V[(0, s.getBufferType)(i.buffers[h].data)](o[h])), (r.buffers[h] = new X(a[h]));
                 for (h = 0; h < e.length; h++) {
                   i = e[h];
                   for (u = 0; u < i.buffers.length; u++)
@@ -22085,10 +18648,7 @@ const bundle = () => {
             function e() {
               var e = t.call(this) || this;
               return (
-                e
-                  .addAttribute('aVertexPosition', new Float32Array([0, 0, 1, 0, 1, 1, 0, 1]))
-                  .addIndex([0, 1, 3, 2]),
-                e
+                e.addAttribute('aVertexPosition', new Float32Array([0, 0, 1, 0, 1, 1, 0, 1])).addIndex([0, 1, 3, 2]), e
               );
             }
             return p(e, t), e;
@@ -22268,8 +18828,7 @@ const bundle = () => {
                   c)
                 ) {
                   var g = this.tempRect.copyFrom(o.sourceFrame);
-                  n.projection.transform &&
-                    this.transformAABB(tt.copyFrom(n.projection.transform).invert(), g),
+                  n.projection.transform && this.transformAABB(tt.copyFrom(n.projection.transform).invert(), g),
                     a.sourceFrame.fit(g);
                 }
                 this.roundFrame(
@@ -22279,12 +18838,7 @@ const bundle = () => {
                   o.destinationFrame,
                   n.projection.transform,
                 ),
-                  (a.renderTexture = this.getOptimalFilterTexture(
-                    a.sourceFrame.width,
-                    a.sourceFrame.height,
-                    l,
-                    h,
-                  )),
+                  (a.renderTexture = this.getOptimalFilterTexture(a.sourceFrame.width, a.sourceFrame.height, l, h)),
                   (a.filters = e),
                   (a.destinationFrame.width = a.renderTexture.width),
                   (a.destinationFrame.height = a.renderTexture.height);
@@ -22346,11 +18900,7 @@ const bundle = () => {
                   for (p = 0; p < i.length - 1; ++p) {
                     1 === p &&
                       e.multisample > 1 &&
-                      ((c = this.getOptimalFilterTexture(
-                        u.width,
-                        u.height,
-                        e.resolution,
-                      )).filterFrame = u.filterFrame),
+                      ((c = this.getOptimalFilterTexture(u.width, u.height, e.resolution)).filterFrame = u.filterFrame),
                       i[p].apply(this, u, c, n.yl.CLEAR, e);
                     var d = u;
                     (u = c), (c = d);
@@ -22388,8 +18938,7 @@ const bundle = () => {
                         this.activeState.bindingDestinationFrame,
                       );
                 var o = 1 & s.stateId || this.forceClear;
-                (e === n.yl.CLEAR || (e === n.yl.BLIT && o)) &&
-                  this.renderer.framebuffer.clear(0, 0, 0, 0);
+                (e === n.yl.CLEAR || (e === n.yl.BLIT && o)) && this.renderer.framebuffer.clear(0, 0, 0, 0);
               }),
               (t.prototype.applyFilter = function (t, e, i, r) {
                 var s = this.renderer;
@@ -22413,11 +18962,7 @@ const bundle = () => {
                   a = t.set(n.width, 0, 0, n.height, r.x, r.y),
                   o = e.worldTransform.copyTo(l.y3.TEMP_MATRIX);
                 return (
-                  o.invert(),
-                  a.prepend(o),
-                  a.scale(1 / s.width, 1 / s.height),
-                  a.translate(e.anchor.x, e.anchor.y),
-                  a
+                  o.invert(), a.prepend(o), a.scale(1 / s.width, 1 / s.height), a.translate(e.anchor.x, e.anchor.y), a
                 );
               }),
               (t.prototype.destroy = function () {
@@ -22436,12 +18981,7 @@ const bundle = () => {
                   (t = e), (e = r);
                 }
                 t = t || this.activeState.renderTexture;
-                var s = this.texturePool.getOptimalTexture(
-                  t.width,
-                  t.height,
-                  e || t.resolution,
-                  i || n.G5.NONE,
-                );
+                var s = this.texturePool.getOptimalTexture(t.width, t.height, e || t.resolution, i || n.G5.NONE);
                 return (s.filterFrame = t.filterFrame), s;
               }),
               (t.prototype.returnFilterTexture = function (t) {
@@ -22479,10 +19019,7 @@ const bundle = () => {
                       a = n.b,
                       o = n.c,
                       l = n.d;
-                    if (
-                      (Math.abs(a) > 1e-4 || Math.abs(o) > 1e-4) &&
-                      (Math.abs(s) > 1e-4 || Math.abs(l) > 1e-4)
-                    )
+                    if ((Math.abs(a) > 1e-4 || Math.abs(o) > 1e-4) && (Math.abs(s) > 1e-4 || Math.abs(l) > 1e-4))
                       return;
                   }
                   (n = n ? tt.copyFrom(n) : tt.identity())
@@ -22516,16 +19053,12 @@ const bundle = () => {
           })(),
           rt = (function () {
             function t(t) {
-              (this.renderer = t),
-                (this.emptyRenderer = new it(t)),
-                (this.currentRenderer = this.emptyRenderer);
+              (this.renderer = t), (this.emptyRenderer = new it(t)), (this.currentRenderer = this.emptyRenderer);
             }
             return (
               (t.prototype.setObjectRenderer = function (t) {
                 this.currentRenderer !== t &&
-                  (this.currentRenderer.stop(),
-                  (this.currentRenderer = t),
-                  this.currentRenderer.start());
+                  (this.currentRenderer.stop(), (this.currentRenderer = t), this.currentRenderer.start());
               }),
               (t.prototype.flush = function () {
                 this.setObjectRenderer(this.emptyRenderer);
@@ -22565,9 +19098,7 @@ const bundle = () => {
               (this.renderer = t),
                 (this.webGLVersion = 1),
                 (this.extensions = {}),
-                (this.supports = {
-                  uint32Indices: !1,
-                }),
+                (this.supports = { uint32Indices: !1 }),
                 (this.handleContextLost = this.handleContextLost.bind(this)),
                 (this.handleContextRestored = this.handleContextRestored.bind(this)),
                 t.view.addEventListener('webglcontextlost', this.handleContextLost, !1),
@@ -22602,15 +19133,11 @@ const bundle = () => {
               }),
               (t.prototype.createContext = function (t, e) {
                 var i;
-                if ((r.X.PREFER_ENV >= n.Vi.WEBGL2 && (i = t.getContext('webgl2', e)), i))
-                  this.webGLVersion = 2;
+                if ((r.X.PREFER_ENV >= n.Vi.WEBGL2 && (i = t.getContext('webgl2', e)), i)) this.webGLVersion = 2;
                 else if (
-                  ((this.webGLVersion = 1),
-                  !(i = t.getContext('webgl', e) || t.getContext('experimental-webgl', e)))
+                  ((this.webGLVersion = 1), !(i = t.getContext('webgl', e) || t.getContext('experimental-webgl', e)))
                 )
-                  throw new Error(
-                    'This browser does not support WebGL. Try using the canvas renderer',
-                  );
+                  throw new Error('This browser does not support WebGL. Try using the canvas renderer');
                 return (this.gl = i), this.getExtensions(), this.gl;
               }),
               (t.prototype.getExtensions = function () {
@@ -22644,9 +19171,7 @@ const bundle = () => {
                       textureHalfFloatLinear: t.getExtension('OES_texture_half_float_linear'),
                     })
                   : 2 === this.webGLVersion &&
-                    Object.assign(this.extensions, e, {
-                      colorBufferFloat: t.getExtension('EXT_color_buffer_float'),
-                    });
+                    Object.assign(this.extensions, e, { colorBufferFloat: t.getExtension('EXT_color_buffer_float') });
               }),
               (t.prototype.handleContextLost = function (t) {
                 t.preventDefault();
@@ -22667,9 +19192,7 @@ const bundle = () => {
               }),
               (t.prototype.validateContext = function (t) {
                 var e = t.getContextAttributes(),
-                  i =
-                    'WebGL2RenderingContext' in globalThis &&
-                    t instanceof globalThis.WebGL2RenderingContext;
+                  i = 'WebGL2RenderingContext' in globalThis && t instanceof globalThis.WebGL2RenderingContext;
                 i && (this.webGLVersion = 2),
                   e.stencil ||
                     console.warn(
@@ -22728,29 +19251,20 @@ const bundle = () => {
                         })
                       : ((this.hasMRT = !1), (t.drawBuffers = function () {})),
                     i || (this.writeDepthTexture = !1);
-                } else
-                  this.msaaSamples = t.getInternalformatParameter(
-                    t.RENDERBUFFER,
-                    t.RGBA8,
-                    t.SAMPLES,
-                  );
+                } else this.msaaSamples = t.getInternalformatParameter(t.RENDERBUFFER, t.RGBA8, t.SAMPLES);
               }),
               (t.prototype.bind = function (t, e, i) {
                 void 0 === i && (i = 0);
                 var r = this.gl;
                 if (t) {
                   var n = t.glFramebuffers[this.CONTEXT_UID] || this.initFramebuffer(t);
-                  this.current !== t &&
-                    ((this.current = t), r.bindFramebuffer(r.FRAMEBUFFER, n.framebuffer)),
+                  this.current !== t && ((this.current = t), r.bindFramebuffer(r.FRAMEBUFFER, n.framebuffer)),
                     n.mipLevel !== i && (t.dirtyId++, t.dirtyFormat++, (n.mipLevel = i)),
                     n.dirtyId !== t.dirtyId &&
                       ((n.dirtyId = t.dirtyId),
                       n.dirtyFormat !== t.dirtyFormat
-                        ? ((n.dirtyFormat = t.dirtyFormat),
-                          (n.dirtySize = t.dirtySize),
-                          this.updateFramebuffer(t, i))
-                        : n.dirtySize !== t.dirtySize &&
-                          ((n.dirtySize = t.dirtySize), this.resizeFramebuffer(t)));
+                        ? ((n.dirtyFormat = t.dirtyFormat), (n.dirtySize = t.dirtySize), this.updateFramebuffer(t, i))
+                        : n.dirtySize !== t.dirtySize && ((n.dirtySize = t.dirtySize), this.resizeFramebuffer(t)));
                   for (var s = 0; s < t.colorTextures.length; s++) {
                     var a = t.colorTextures[s];
                     this.renderer.texture.unbind(a.parentTextureArray || a);
@@ -22777,27 +19291,13 @@ const bundle = () => {
                   (i = Math.round(i)),
                   (r = Math.round(r)),
                   (n.width === i && n.height === r && n.x === t && n.y === e) ||
-                    ((n.x = t),
-                    (n.y = e),
-                    (n.width = i),
-                    (n.height = r),
-                    this.gl.viewport(t, e, i, r));
+                    ((n.x = t), (n.y = e), (n.width = i), (n.height = r), this.gl.viewport(t, e, i, r));
               }),
               Object.defineProperty(t.prototype, 'size', {
                 get: function () {
                   return this.current
-                    ? {
-                        x: 0,
-                        y: 0,
-                        width: this.current.width,
-                        height: this.current.height,
-                      }
-                    : {
-                        x: 0,
-                        y: 0,
-                        width: this.renderer.width,
-                        height: this.renderer.height,
-                      };
+                    ? { x: 0, y: 0, width: this.current.width, height: this.current.height }
+                    : { x: 0, y: 0, width: this.renderer.width, height: this.renderer.height };
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -22823,13 +19323,7 @@ const bundle = () => {
                   i = t.glFramebuffers[this.CONTEXT_UID];
                 i.msaaBuffer &&
                   (e.bindRenderbuffer(e.RENDERBUFFER, i.msaaBuffer),
-                  e.renderbufferStorageMultisample(
-                    e.RENDERBUFFER,
-                    i.multisample,
-                    e.RGBA8,
-                    t.width,
-                    t.height,
-                  )),
+                  e.renderbufferStorageMultisample(e.RENDERBUFFER, i.multisample, e.RGBA8, t.width, t.height)),
                   i.stencil &&
                     (e.bindRenderbuffer(e.RENDERBUFFER, i.stencil),
                     i.msaaBuffer
@@ -22849,9 +19343,7 @@ const bundle = () => {
                     o = a.parentTextureArray || a;
                   this.renderer.texture.bind(o, 0);
                 }
-                t.depthTexture &&
-                  this.writeDepthTexture &&
-                  this.renderer.texture.bind(t.depthTexture, 0);
+                t.depthTexture && this.writeDepthTexture && this.renderer.texture.bind(t.depthTexture, 0);
               }),
               (t.prototype.updateFramebuffer = function (t, e) {
                 var i = this.gl,
@@ -22862,24 +19354,12 @@ const bundle = () => {
                   r.multisample > 1 && this.canMultisampleFramebuffer(t)
                     ? ((r.msaaBuffer = r.msaaBuffer || i.createRenderbuffer()),
                       i.bindRenderbuffer(i.RENDERBUFFER, r.msaaBuffer),
-                      i.renderbufferStorageMultisample(
-                        i.RENDERBUFFER,
-                        r.multisample,
-                        i.RGBA8,
-                        t.width,
-                        t.height,
-                      ),
-                      i.framebufferRenderbuffer(
-                        i.FRAMEBUFFER,
-                        i.COLOR_ATTACHMENT0,
-                        i.RENDERBUFFER,
-                        r.msaaBuffer,
-                      ))
+                      i.renderbufferStorageMultisample(i.RENDERBUFFER, r.multisample, i.RGBA8, t.width, t.height),
+                      i.framebufferRenderbuffer(i.FRAMEBUFFER, i.COLOR_ATTACHMENT0, i.RENDERBUFFER, r.msaaBuffer))
                     : r.msaaBuffer &&
                       (i.deleteRenderbuffer(r.msaaBuffer),
                       (r.msaaBuffer = null),
-                      r.blitFramebuffer &&
-                        (r.blitFramebuffer.dispose(), (r.blitFramebuffer = null)));
+                      r.blitFramebuffer && (r.blitFramebuffer.dispose(), (r.blitFramebuffer = null)));
                 for (var a = [], o = 0; o < s; o++) {
                   var l = n[o],
                     h = l.parentTextureArray || l;
@@ -22918,19 +19398,10 @@ const bundle = () => {
                           t.height,
                         )
                       : i.renderbufferStorage(i.RENDERBUFFER, i.DEPTH_STENCIL, t.width, t.height),
-                    i.framebufferRenderbuffer(
-                      i.FRAMEBUFFER,
-                      i.DEPTH_STENCIL_ATTACHMENT,
-                      i.RENDERBUFFER,
-                      r.stencil,
-                    ));
+                    i.framebufferRenderbuffer(i.FRAMEBUFFER, i.DEPTH_STENCIL_ATTACHMENT, i.RENDERBUFFER, r.stencil));
               }),
               (t.prototype.canMultisampleFramebuffer = function (t) {
-                return (
-                  1 !== this.renderer.context.webGLVersion &&
-                  t.colorTextures.length <= 1 &&
-                  !t.depthTexture
-                );
+                return 1 !== this.renderer.context.webGLVersion && t.colorTextures.length <= 1 && !t.depthTexture;
               }),
               (t.prototype.detectSamples = function (t) {
                 var e = this.msaaSamples,
@@ -22957,8 +19428,7 @@ const bundle = () => {
                       var h = n.colorTextures[0];
                       if (!h) return;
                       l.blitFramebuffer ||
-                        ((l.blitFramebuffer = new O(n.width, n.height)),
-                        l.blitFramebuffer.addColorTexture(0, h)),
+                        ((l.blitFramebuffer = new O(n.width, n.height)), l.blitFramebuffer.addColorTexture(0, h)),
                         (t = l.blitFramebuffer).colorTextures[0] !== h &&
                           ((t.colorTextures[0] = h), t.dirtyId++, t.dirtyFormat++),
                         (t.width === n.width && t.height === n.height) ||
@@ -23015,21 +19485,10 @@ const bundle = () => {
                       s = n.createRenderbuffer();
                     n.bindRenderbuffer(n.RENDERBUFFER, s),
                       e.msaaBuffer
-                        ? n.renderbufferStorageMultisample(
-                            n.RENDERBUFFER,
-                            e.multisample,
-                            n.DEPTH24_STENCIL8,
-                            i,
-                            r,
-                          )
+                        ? n.renderbufferStorageMultisample(n.RENDERBUFFER, e.multisample, n.DEPTH24_STENCIL8, i, r)
                         : n.renderbufferStorage(n.RENDERBUFFER, n.DEPTH_STENCIL, i, r),
                       (e.stencil = s),
-                      n.framebufferRenderbuffer(
-                        n.FRAMEBUFFER,
-                        n.DEPTH_STENCIL_ATTACHMENT,
-                        n.RENDERBUFFER,
-                        s,
-                      );
+                      n.framebufferRenderbuffer(n.FRAMEBUFFER, n.DEPTH_STENCIL_ATTACHMENT, n.RENDERBUFFER, s);
                   }
                 }
               }),
@@ -23042,11 +19501,7 @@ const bundle = () => {
               t
             );
           })(),
-          ht = {
-            5126: 4,
-            5123: 2,
-            5121: 1,
-          },
+          ht = { 5126: 4, 5123: 2, 5121: 1 },
           ut = (function () {
             function t(t) {
               (this.renderer = t),
@@ -23100,8 +19555,7 @@ const bundle = () => {
                       }))
                     : (this.hasInstance = !1);
                 }
-                this.canUseUInt32ElementIndex =
-                  2 === e.webGLVersion || !!e.extensions.uint32ElementIndex;
+                this.canUseUInt32ElementIndex = 2 === e.webGLVersion || !!e.extensions.uint32ElementIndex;
               }),
               (t.prototype.bind = function (t, e) {
                 e = e || this.renderer.shader.shader;
@@ -23116,19 +19570,14 @@ const bundle = () => {
                 var s = r[e.program.id] || this.initGeometryVao(t, e, n);
                 (this._activeGeometry = t),
                   this._activeVao !== s &&
-                    ((this._activeVao = s),
-                    this.hasVao ? i.bindVertexArray(s) : this.activateVao(t, e.program)),
+                    ((this._activeVao = s), this.hasVao ? i.bindVertexArray(s) : this.activateVao(t, e.program)),
                   this.updateBuffers();
               }),
               (t.prototype.reset = function () {
                 this.unbind();
               }),
               (t.prototype.updateBuffers = function () {
-                for (
-                  var t = this._activeGeometry, e = this.renderer.buffer, i = 0;
-                  i < t.buffers.length;
-                  i++
-                ) {
+                for (var t = this._activeGeometry, e = this.renderer.buffer, i = 0; i < t.buffers.length; i++) {
                   var r = t.buffers[i];
                   e.update(r);
                 }
@@ -23138,11 +19587,7 @@ const bundle = () => {
                   r = e.attributeData;
                 for (var n in r)
                   if (!i[n])
-                    throw new Error(
-                      'shader and geometry incompatible, geometry missing the "' +
-                        n +
-                        '" attribute',
-                    );
+                    throw new Error('shader and geometry incompatible, geometry missing the "' + n + '" attribute');
               }),
               (t.prototype.getSignature = function (t, e) {
                 var i = t.attributes,
@@ -23157,8 +19602,7 @@ const bundle = () => {
                   n = this.CONTEXT_UID,
                   s = this.renderer.buffer,
                   a = e.program;
-                a.glPrograms[n] || this.renderer.shader.generateProgram(e),
-                  this.checkCompatibility(t, a);
+                a.glPrograms[n] || this.renderer.shader.generateProgram(e), this.checkCompatibility(t, a);
                 var o = this.getSignature(t, a),
                   l = t.glVertexArrayObjects[this.CONTEXT_UID],
                   h = l[o];
@@ -23181,10 +19625,8 @@ const bundle = () => {
                 for (var f in c) {
                   var g = c[f],
                     _ = g.size;
-                  void 0 === g.stride &&
-                    (p[g.buffer] === _ * ht[g.type] ? (g.stride = 0) : (g.stride = p[g.buffer])),
-                    void 0 === g.start &&
-                      ((g.start = d[g.buffer]), (d[g.buffer] += _ * ht[g.type]));
+                  void 0 === g.stride && (p[g.buffer] === _ * ht[g.type] ? (g.stride = 0) : (g.stride = p[g.buffer])),
+                    void 0 === g.start && ((g.start = d[g.buffer]), (d[g.buffer] += _ * ht[g.type]));
                 }
                 (h = r.createVertexArray()), r.bindVertexArray(h);
                 for (var m = 0; m < u.length; m++) {
@@ -23238,20 +19680,11 @@ const bundle = () => {
                     var p = e.attributeData[l].location;
                     if (
                       (i.enableVertexAttribArray(p),
-                      i.vertexAttribPointer(
-                        p,
-                        h.size,
-                        h.type || i.FLOAT,
-                        h.normalized,
-                        h.stride,
-                        h.start,
-                      ),
+                      i.vertexAttribPointer(p, h.size, h.type || i.FLOAT, h.normalized, h.stride, h.start),
                       h.instance)
                     ) {
                       if (!this.hasInstance)
-                        throw new Error(
-                          'geometry error, GPU Instancing is not supported on this device',
-                        );
+                        throw new Error('geometry error, GPU Instancing is not supported on this device');
                       i.vertexAttribDivisor(p, 1);
                     }
                   }
@@ -23265,13 +19698,7 @@ const bundle = () => {
                     o = 2 === a ? n.UNSIGNED_SHORT : n.UNSIGNED_INT;
                   2 === a || (4 === a && this.canUseUInt32ElementIndex)
                     ? s.instanced
-                      ? n.drawElementsInstanced(
-                          t,
-                          e || s.indexBuffer.data.length,
-                          o,
-                          (i || 0) * a,
-                          r || 1,
-                        )
+                      ? n.drawElementsInstanced(t, e || s.indexBuffer.data.length, o, (i || 0) * a, r || 1)
                       : n.drawElements(t, e || s.indexBuffer.data.length, o, (i || 0) * a)
                     : console.warn('unsupported index buffer type: uint32');
                 } else
@@ -23281,9 +19708,7 @@ const bundle = () => {
                 return this;
               }),
               (t.prototype.unbind = function () {
-                this.gl.bindVertexArray(null),
-                  (this._activeVao = null),
-                  (this._activeGeometry = null);
+                this.gl.bindVertexArray(null), (this._activeVao = null), (this._activeGeometry = null);
               }),
               (t.prototype.destroy = function () {
                 this.renderer = null;
@@ -23315,18 +19740,13 @@ const bundle = () => {
                   return this._filters ? this._filters[0] : null;
                 },
                 set: function (t) {
-                  t
-                    ? this._filters
-                      ? (this._filters[0] = t)
-                      : (this._filters = [t])
-                    : (this._filters = null);
+                  t ? (this._filters ? (this._filters[0] = t) : (this._filters = [t])) : (this._filters = null);
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               (t.prototype.reset = function () {
-                this.pooled &&
-                  ((this.maskObject = null), (this.type = n.A7.NONE), (this.autoDetect = !0)),
+                this.pooled && ((this.maskObject = null), (this.type = n.A7.NONE), (this.autoDetect = !0)),
                   (this._target = null),
                   (this._scissorRectLocal = null);
               }),
@@ -23335,9 +19755,7 @@ const bundle = () => {
                   ? ((this._stencilCounter = t._stencilCounter),
                     (this._scissorCounter = t._scissorCounter),
                     (this._scissorRect = t._scissorRect))
-                  : ((this._stencilCounter = 0),
-                    (this._scissorCounter = 0),
-                    (this._scissorRect = null));
+                  : ((this._stencilCounter = 0), (this._scissorCounter = 0), (this._scissorRect = null));
               }),
               t
             );
@@ -23460,10 +19878,7 @@ const bundle = () => {
         function xt(t, e, i) {
           if ('precision' !== t.substring(0, 9)) {
             var r = e;
-            return (
-              e === n.cB.HIGH && i !== n.cB.HIGH && (r = n.cB.MEDIUM),
-              'precision ' + r + ' float;\n' + t
-            );
+            return e === n.cB.HIGH && i !== n.cB.HIGH && (r = n.cB.MEDIUM), 'precision ' + r + ' float;\n' + t;
           }
           return i !== n.cB.HIGH && 'precision highp' === t.substring(0, 15)
             ? t.replace('precision highp', 'precision mediump')
@@ -23562,9 +19977,7 @@ const bundle = () => {
             {
               test: function (t) {
                 return (
-                  ('sampler2D' === t.type ||
-                    'samplerCube' === t.type ||
-                    'sampler2DArray' === t.type) &&
+                  ('sampler2D' === t.type || 'samplerCube' === t.type || 'sampler2DArray' === t.type) &&
                   1 === t.size &&
                   !t.isArray
                 );
@@ -23704,8 +20117,7 @@ const bundle = () => {
             },
           ],
           Pt = {
-            float:
-              '\n    if (cv !== v)\n    {\n        cu.value = v;\n        gl.uniform1f(location, v);\n    }',
+            float: '\n    if (cv !== v)\n    {\n        cu.value = v;\n        gl.uniform1f(location, v);\n    }',
             vec2: '\n    if (cv[0] !== v[0] || cv[1] !== v[1])\n    {\n        cv[0] = v[0];\n        cv[1] = v[1];\n\n        gl.uniform2f(location, v[0], v[1])\n    }',
             vec3: '\n    if (cv[0] !== v[0] || cv[1] !== v[1] || cv[2] !== v[2])\n    {\n        cv[0] = v[0];\n        cv[1] = v[1];\n        cv[2] = v[2];\n\n        gl.uniform3f(location, v[0], v[1], v[2])\n    }',
             vec4: '\n    if (cv[0] !== v[0] || cv[1] !== v[1] || cv[2] !== v[2] || cv[3] !== v[3])\n    {\n        cv[0] = v[0];\n        cv[1] = v[1];\n        cv[2] = v[2];\n        cv[3] = v[3];\n\n        gl.uniform4f(location, v[0], v[1], v[2], v[3]);\n    }',
@@ -23775,10 +20187,7 @@ const bundle = () => {
                   break;
                 }
               if (!o) {
-                var h = (1 === s.size ? Pt : Ot)[s.type].replace(
-                  'location',
-                  'ud["' + n + '"].location',
-                );
+                var h = (1 === s.size ? Pt : Ot)[s.type].replace('location', 'ud["' + n + '"].location');
                 r.push(
                   '\n            cu = ud["' +
                     n +
@@ -23822,14 +20231,10 @@ const bundle = () => {
           return e;
         }
         function Lt(t, e) {
-          if (0 === t)
-            throw new Error('Invalid value of `0` passed to `checkMaxIfStatementsInShader`');
+          if (0 === t) throw new Error('Invalid value of `0` passed to `checkMaxIfStatementsInShader`');
           for (var i = e.createShader(e.FRAGMENT_SHADER); ; ) {
             var r = Dt.replace(/%forloop%/gi, Nt(t));
-            if (
-              (e.shaderSource(i, r), e.compileShader(i), e.getShaderParameter(i, e.COMPILE_STATUS))
-            )
-              break;
+            if ((e.shaderSource(i, r), e.compileShader(i), e.getShaderParameter(i, e.COMPILE_STATUS))) break;
             t = (t / 2) | 0;
           }
           return t;
@@ -23838,15 +20243,7 @@ const bundle = () => {
           if ('boolean' == typeof Mt) return Mt;
           try {
             var t = new Function('param1', 'param2', 'param3', 'return param1[param2] === param3;');
-            Mt =
-              !0 ===
-              t(
-                {
-                  a: 'b',
-                },
-                'a',
-                'b',
-              );
+            Mt = !0 === t({ a: 'b' }, 'a', 'b');
           } catch (e) {
             Mt = !1;
           }
@@ -24154,14 +20551,7 @@ const bundle = () => {
                 var r = e.orig,
                   n = e.trim;
                 n &&
-                  (ee.set(
-                    r.width / n.width,
-                    0,
-                    0,
-                    r.height / n.height,
-                    -n.x / n.width,
-                    -n.y / n.height,
-                  ),
+                  (ee.set(r.width / n.width, 0, 0, r.height / n.height, -n.x / n.width, -n.y / n.height),
                   this.mapCoord.append(ee));
                 var s = e.baseTexture,
                   a = this.uClampFrame,
@@ -24174,8 +20564,7 @@ const bundle = () => {
                   (a[3] = (e._frame.y + e._frame.height - o + l) / s.height),
                   (this.uClampOffset[0] = l / s.realWidth),
                   (this.uClampOffset[1] = l / s.realHeight),
-                  (this.isSimple =
-                    e._frame.width === s.width && e._frame.height === s.height && 0 === e.rotate),
+                  (this.isSimple = e._frame.width === s.width && e._frame.height === s.height && 0 === e.rotate),
                   !0
                 );
               }),
@@ -24237,9 +20626,7 @@ const bundle = () => {
             }
             return (
               (t.prototype.setMaskStack = function (t) {
-                (this.maskStack = t),
-                  this.renderer.scissor.setMaskStack(t),
-                  this.renderer.stencil.setMaskStack(t);
+                (this.maskStack = t), this.renderer.scissor.setMaskStack(t), this.renderer.stencil.setMaskStack(t);
               }),
               (t.prototype.push = function (t, e) {
                 var i = e;
@@ -24247,8 +20634,7 @@ const bundle = () => {
                   var r = this.maskDataPool.pop() || new ct();
                   (r.pooled = !0), (r.maskObject = e), (i = r);
                 }
-                var s =
-                  0 !== this.maskStack.length ? this.maskStack[this.maskStack.length - 1] : null;
+                var s = 0 !== this.maskStack.length ? this.maskStack[this.maskStack.length - 1] : null;
                 if (
                   (i.copyCountersOrReset(s),
                   i.autoDetect && this.detect(i),
@@ -24282,13 +20668,9 @@ const bundle = () => {
                       case n.A7.SPRITE:
                         this.popSpriteMask(e);
                     }
-                  if (
-                    (e.reset(), e.pooled && this.maskDataPool.push(e), 0 !== this.maskStack.length)
-                  ) {
+                  if ((e.reset(), e.pooled && this.maskDataPool.push(e), 0 !== this.maskStack.length)) {
                     var i = this.maskStack[this.maskStack.length - 1];
-                    i.type === n.A7.SPRITE &&
-                      i._filters &&
-                      (i._filters[0].maskSprite = i.maskObject);
+                    i.type === n.A7.SPRITE && i._filters && (i._filters[0].maskSprite = i.maskObject);
                   }
                 }
               }),
@@ -24330,8 +20712,7 @@ const bundle = () => {
                 this.renderer.filter.pop(),
                   t._filters
                     ? (t._filters[0].maskSprite = null)
-                    : (this.alphaMaskIndex--,
-                      (this.alphaMaskPool[this.alphaMaskIndex][0].maskSprite = null));
+                    : (this.alphaMaskIndex--, (this.alphaMaskPool[this.alphaMaskIndex][0].maskSprite = null));
               }),
               (t.prototype.destroy = function () {
                 this.renderer = null;
@@ -24352,10 +20733,7 @@ const bundle = () => {
                   i = this.getStackLength();
                 this.maskStack = t;
                 var r = this.getStackLength();
-                r !== i &&
-                  (0 === r
-                    ? e.disable(this.glConst)
-                    : (e.enable(this.glConst), this._useCurrent()));
+                r !== i && (0 === r ? e.disable(this.glConst) : (e.enable(this.glConst), this._useCurrent()));
               }),
               (t.prototype._useCurrent = function () {}),
               (t.prototype.destroy = function () {
@@ -24402,10 +20780,7 @@ const bundle = () => {
                   i = t.b,
                   r = t.c,
                   n = t.d;
-                return (
-                  (Math.abs(i) > 1e-4 || Math.abs(r) > 1e-4) &&
-                  (Math.abs(e) > 1e-4 || Math.abs(n) > 1e-4)
-                );
+                return (Math.abs(i) > 1e-4 || Math.abs(r) > 1e-4) && (Math.abs(e) > 1e-4 || Math.abs(n) > 1e-4);
               }),
               (e.prototype.testScissor = function (t) {
                 var i = t.maskObject;
@@ -24444,9 +20819,7 @@ const bundle = () => {
               (e.prototype._useCurrent = function () {
                 var t,
                   e = this.maskStack[this.maskStack.length - 1]._scissorRect;
-                (t = this.renderer.renderTexture.current
-                  ? e.y
-                  : this.renderer.height - e.height - e.y),
+                (t = this.renderer.renderTexture.current ? e.y : this.renderer.height - e.height - e.y),
                   this.renderer.gl.scissor(e.x, t, e.width, e.height);
               }),
               e
@@ -24605,8 +20978,7 @@ const bundle = () => {
                     this.renderer.gl.enable(this.renderer.gl.SCISSOR_TEST),
                     this.renderer.gl.scissor(a, o, l, h);
                 }
-                this.renderer.framebuffer.clear(t[0], t[1], t[2], t[3], e),
-                  n && this.renderer.scissor.pop();
+                this.renderer.framebuffer.clear(t[0], t[1], t[2], t[3], e), n && this.renderer.scissor.pop();
               }),
               (t.prototype.resize = function () {
                 this.bind(null);
@@ -24656,12 +21028,7 @@ const bundle = () => {
         function _e(t) {
           for (
             var e = t.map(function (t) {
-                return {
-                  data: t,
-                  offset: 0,
-                  dataLen: 0,
-                  dirty: 0,
-                };
+                return { data: t, offset: 0, dataLen: 0, dirty: 0 };
               }),
               i = 0,
               r = 0,
@@ -24684,10 +21051,7 @@ const bundle = () => {
               ? ((n = 16 * Math.ceil(n / 16)), (a.offset = n), (n += i), (r = i))
               : ((a.offset = n), (r += i), (n += i));
           }
-          return {
-            uboElements: e,
-            size: (n = 16 * Math.ceil(n / 16)),
-          };
+          return { uboElements: e, size: (n = 16 * Math.ceil(n / 16)) };
         }
         function me(t, e) {
           var i = [];
@@ -24700,11 +21064,7 @@ const bundle = () => {
           );
         }
         function ve(t, e) {
-          if (!t.autoManage)
-            return {
-              size: 0,
-              syncFunc: de,
-            };
+          if (!t.autoManage) return { size: 0, syncFunc: de };
           for (
             var i = _e(me(t.uniforms, e)),
               r = i.uboElements,
@@ -24716,11 +21076,7 @@ const bundle = () => {
             a < r.length;
             a++
           ) {
-            for (
-              var o = r[a], l = t.uniforms[o.data.name], h = o.data.name, u = !1, c = 0;
-              c < Rt.length;
-              c++
-            ) {
+            for (var o = r[a], l = t.uniforms[o.data.name], h = o.data.name, u = !1, c = 0; c < Rt.length; c++) {
               var p = Rt[c];
               if (p.codeUbo && p.test(o.data, l)) {
                 s.push('offset = ' + o.offset / 4 + ';', Rt[c].codeUbo(o.data.name, l)), (u = !0);
@@ -24765,10 +21121,7 @@ const bundle = () => {
           }
           return (
             s.push('\n       renderer.buffer.update(buffer);\n    '),
-            {
-              size: n,
-              syncFunc: new Function('ud', 'uv', 'renderer', 'syncData', 'buffer', s.join('\n')),
-            }
+            { size: n, syncFunc: new Function('ud', 'uv', 'renderer', 'syncData', 'buffer', s.join('\n')) }
           );
         }
         var Ae = (function () {
@@ -24799,12 +21152,7 @@ const bundle = () => {
             var s = e.getActiveAttrib(t, n);
             if (0 !== s.name.indexOf('gl_')) {
               var a = wt(e, s.type),
-                o = {
-                  type: a,
-                  name: s.name,
-                  size: Et(a),
-                  location: e.getAttribLocation(t, s.name),
-                };
+                o = { type: a, name: s.name, size: Et(a), location: e.getAttribLocation(t, s.name) };
               i[s.name] = o;
             }
           }
@@ -24816,14 +21164,7 @@ const bundle = () => {
               a = s.name.replace(/\[.*?\]$/, ''),
               o = !!s.name.match(/\[.*?\]$/),
               l = wt(e, s.type);
-            i[a] = {
-              name: a,
-              index: n,
-              type: l,
-              size: s.size,
-              isArray: o,
-              value: _t(l, s.size),
-            };
+            i[a] = { name: a, index: n, type: l, size: s.size, isArray: o, value: _t(l, s.size) };
           }
           return i;
         }
@@ -24844,26 +21185,19 @@ const bundle = () => {
             s.sort(function (t, e) {
               return t > e ? 1 : -1;
             });
-            for (var a = 0; a < s.length; a++)
-              (e.attributeData[s[a]].location = a), t.bindAttribLocation(n, a, s[a]);
+            for (var a = 0; a < s.length; a++) (e.attributeData[s[a]].location = a), t.bindAttribLocation(n, a, s[a]);
             t.linkProgram(n);
           }
           t.deleteShader(i), t.deleteShader(r);
           var o = {};
           for (var a in e.uniformData) {
             var l = e.uniformData[a];
-            o[a] = {
-              location: t.getUniformLocation(n, a),
-              value: _t(l.type, l.size),
-            };
+            o[a] = { location: t.getUniformLocation(n, a), value: _t(l.type, l.size) };
           }
           return new ye(n, o);
         }
         var Ee = 0,
-          Se = {
-            textureCount: 0,
-            uboCount: 0,
-          },
+          Se = { textureCount: 0, uboCount: 0 },
           Ie = (function () {
             function t(t) {
               (this.destroyed = !1),
@@ -24893,10 +21227,7 @@ const bundle = () => {
                 return (
                   (this.shader = t),
                   this.program !== i && ((this.program = i), this.gl.useProgram(r.program)),
-                  e ||
-                    ((Se.textureCount = 0),
-                    (Se.uboCount = 0),
-                    this.syncUniformGroup(t.uniformGroup, Se)),
+                  e || ((Se.textureCount = 0), (Se.uboCount = 0), this.syncUniformGroup(t.uniformGroup, Se)),
                   r
                 );
               }),
@@ -24944,10 +21275,7 @@ const bundle = () => {
                   this.shader.uniformBindCount++;
                 var s = this.getSignature(t, this.shader.program.uniformData, 'ubo'),
                   a = this._uboCache[s];
-                if (
-                  (a || (a = this._uboCache[s] = ve(t, this.shader.program.uniformData)),
-                  t.autoManage)
-                ) {
+                if ((a || (a = this._uboCache[s] = ve(t, this.shader.program.uniformData)), t.autoManage)) {
                   var o = new Float32Array(a.size / 4);
                   t.buffer.update(o);
                 }
@@ -24960,9 +21288,7 @@ const bundle = () => {
                 return n.join('-');
               }),
               (t.prototype.getGlProgram = function () {
-                return this.shader
-                  ? this.shader.program.glPrograms[this.renderer.CONTEXT_UID]
-                  : null;
+                return this.shader ? this.shader.program.glPrograms[this.renderer.CONTEXT_UID] : null;
               }),
               (t.prototype.generateProgram = function (t) {
                 var e = this.gl,
@@ -25000,19 +21326,9 @@ const bundle = () => {
             (e[n.T$.COLOR] = [t.ONE, t.ONE_MINUS_SRC_ALPHA]),
             (e[n.T$.LUMINOSITY] = [t.ONE, t.ONE_MINUS_SRC_ALPHA]),
             (e[n.T$.NONE] = [0, 0]),
-            (e[n.T$.NORMAL_NPM] = [
-              t.SRC_ALPHA,
-              t.ONE_MINUS_SRC_ALPHA,
-              t.ONE,
-              t.ONE_MINUS_SRC_ALPHA,
-            ]),
+            (e[n.T$.NORMAL_NPM] = [t.SRC_ALPHA, t.ONE_MINUS_SRC_ALPHA, t.ONE, t.ONE_MINUS_SRC_ALPHA]),
             (e[n.T$.ADD_NPM] = [t.SRC_ALPHA, t.ONE, t.ONE, t.ONE]),
-            (e[n.T$.SCREEN_NPM] = [
-              t.SRC_ALPHA,
-              t.ONE_MINUS_SRC_COLOR,
-              t.ONE,
-              t.ONE_MINUS_SRC_ALPHA,
-            ]),
+            (e[n.T$.SCREEN_NPM] = [t.SRC_ALPHA, t.ONE_MINUS_SRC_COLOR, t.ONE, t.ONE_MINUS_SRC_ALPHA]),
             (e[n.T$.SRC_IN] = [t.DST_ALPHA, t.ZERO]),
             (e[n.T$.SRC_OUT] = [t.ONE_MINUS_DST_ALPHA, t.ZERO]),
             (e[n.T$.SRC_ATOP] = [t.DST_ALPHA, t.ONE_MINUS_SRC_ALPHA]),
@@ -25063,14 +21379,12 @@ const bundle = () => {
               }),
               (t.prototype.forceState = function (t) {
                 t = t || this.defaultState;
-                for (var e = 0; e < this.map.length; e++)
-                  this.map[e].call(this, !!(t.data & (1 << e)));
+                for (var e = 0; e < this.map.length; e++) this.map[e].call(this, !!(t.data & (1 << e)));
                 for (e = 0; e < this.checks.length; e++) this.checks[e](this, t);
                 this.stateId = t.data;
               }),
               (t.prototype.setBlend = function (e) {
-                this.updateCheck(t.checkBlendMode, e),
-                  this.gl[e ? 'enable' : 'disable'](this.gl.BLEND);
+                this.updateCheck(t.checkBlendMode, e), this.gl[e ? 'enable' : 'disable'](this.gl.BLEND);
               }),
               (t.prototype.setOffset = function (e) {
                 this.updateCheck(t.checkPolygonOffset, e),
@@ -25093,13 +21407,10 @@ const bundle = () => {
                   this.blendMode = t;
                   var e = this.blendModes[t],
                     i = this.gl;
-                  2 === e.length
-                    ? i.blendFunc(e[0], e[1])
-                    : i.blendFuncSeparate(e[0], e[1], e[2], e[3]),
+                  2 === e.length ? i.blendFunc(e[0], e[1]) : i.blendFuncSeparate(e[0], e[1], e[2], e[3]),
                     6 === e.length
                       ? ((this._blendEq = !0), i.blendEquationSeparate(e[4], e[5]))
-                      : this._blendEq &&
-                        ((this._blendEq = !1), i.blendEquationSeparate(i.FUNC_ADD, i.FUNC_ADD));
+                      : this._blendEq && ((this._blendEq = !1), i.blendEquationSeparate(i.FUNC_ADD, i.FUNC_ADD));
                 }
               }),
               (t.prototype.setPolygonOffset = function (t, e) {
@@ -25142,15 +21453,10 @@ const bundle = () => {
                 this.renderer.renderingToScreen &&
                   (this.count++,
                   this.mode !== n.UN.MANUAL &&
-                    (this.checkCount++,
-                    this.checkCount > this.checkCountMax && ((this.checkCount = 0), this.run())));
+                    (this.checkCount++, this.checkCount > this.checkCountMax && ((this.checkCount = 0), this.run())));
               }),
               (t.prototype.run = function () {
-                for (
-                  var t = this.renderer.texture, e = t.managedTextures, i = !1, r = 0;
-                  r < e.length;
-                  r++
-                ) {
+                for (var t = this.renderer.texture, e = t.managedTextures, i = !1, r = 0; r < e.length; r++) {
                   var n = e[r];
                   !n.framebuffer &&
                     this.count - n.touched > this.maxIdle &&
@@ -25245,13 +21551,10 @@ const bundle = () => {
                 (e[n.vK.UNSIGNED_SHORT_5_5_5_1] = (((d = {})[n.I2.RGBA] = t.RGB5_A1), d)),
                 (e[n.vK.UNSIGNED_INT_2_10_10_10_REV] =
                   (((f = {})[n.I2.RGBA] = t.RGB10_A2), (f[n.I2.RGBA_INTEGER] = t.RGB10_A2UI), f)),
-                (e[n.vK.UNSIGNED_INT_10F_11F_11F_REV] =
-                  (((g = {})[n.I2.RGB] = t.R11F_G11F_B10F), g)),
+                (e[n.vK.UNSIGNED_INT_10F_11F_11F_REV] = (((g = {})[n.I2.RGB] = t.R11F_G11F_B10F), g)),
                 (e[n.vK.UNSIGNED_INT_5_9_9_9_REV] = (((_ = {})[n.I2.RGB] = t.RGB9_E5), _)),
-                (e[n.vK.UNSIGNED_INT_24_8] =
-                  (((m = {})[n.I2.DEPTH_STENCIL] = t.DEPTH24_STENCIL8), m)),
-                (e[n.vK.FLOAT_32_UNSIGNED_INT_24_8_REV] =
-                  (((v = {})[n.I2.DEPTH_STENCIL] = t.DEPTH32F_STENCIL8), v)),
+                (e[n.vK.UNSIGNED_INT_24_8] = (((m = {})[n.I2.DEPTH_STENCIL] = t.DEPTH24_STENCIL8), m)),
+                (e[n.vK.FLOAT_32_UNSIGNED_INT_24_8_REV] = (((v = {})[n.I2.DEPTH_STENCIL] = t.DEPTH32F_STENCIL8), v)),
                 (E = e))
               : (((A = {})[n.vK.UNSIGNED_BYTE] =
                   (((y = {})[n.I2.RGBA] = t.RGBA),
@@ -25304,32 +21607,12 @@ const bundle = () => {
                 this.emptyTextures = {};
                 var r = new ke(t.createTexture());
                 t.bindTexture(t.TEXTURE_2D, r.texture),
-                  t.texImage2D(
-                    t.TEXTURE_2D,
-                    0,
-                    t.RGBA,
-                    1,
-                    1,
-                    0,
-                    t.RGBA,
-                    t.UNSIGNED_BYTE,
-                    new Uint8Array(4),
-                  ),
+                  t.texImage2D(t.TEXTURE_2D, 0, t.RGBA, 1, 1, 0, t.RGBA, t.UNSIGNED_BYTE, new Uint8Array(4)),
                   (this.emptyTextures[t.TEXTURE_2D] = r),
                   (this.emptyTextures[t.TEXTURE_CUBE_MAP] = new ke(t.createTexture())),
                   t.bindTexture(t.TEXTURE_CUBE_MAP, this.emptyTextures[t.TEXTURE_CUBE_MAP].texture);
                 for (i = 0; i < 6; i++)
-                  t.texImage2D(
-                    t.TEXTURE_CUBE_MAP_POSITIVE_X + i,
-                    0,
-                    t.RGBA,
-                    1,
-                    1,
-                    0,
-                    t.RGBA,
-                    t.UNSIGNED_BYTE,
-                    null,
-                  );
+                  t.texImage2D(t.TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, t.RGBA, 1, 1, 0, t.RGBA, t.UNSIGNED_BYTE, null);
                 t.texParameteri(t.TEXTURE_CUBE_MAP, t.TEXTURE_MAG_FILTER, t.LINEAR),
                   t.texParameteri(t.TEXTURE_CUBE_MAP, t.TEXTURE_MIN_FILTER, t.LINEAR);
                 for (i = 0; i < this.boundTextures.length; i++) this.bind(null, i);
@@ -25337,34 +21620,24 @@ const bundle = () => {
               (t.prototype.bind = function (t, e) {
                 void 0 === e && (e = 0);
                 var i = this.gl;
-                if (
-                  (t = null == t ? void 0 : t.castToBaseTexture()) &&
-                  t.valid &&
-                  !t.parentTextureArray
-                ) {
+                if ((t = null == t ? void 0 : t.castToBaseTexture()) && t.valid && !t.parentTextureArray) {
                   t.touched = this.renderer.textureGC.count;
                   var r = t._glTextures[this.CONTEXT_UID] || this.initTexture(t);
                   this.boundTextures[e] !== t &&
-                    (this.currentLocation !== e &&
-                      ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
+                    (this.currentLocation !== e && ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
                     i.bindTexture(t.target, r.texture)),
                     r.dirtyId !== t.dirtyId &&
-                      (this.currentLocation !== e &&
-                        ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
+                      (this.currentLocation !== e && ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
                       this.updateTexture(t)),
                     (this.boundTextures[e] = t);
                 } else
-                  this.currentLocation !== e &&
-                    ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
+                  this.currentLocation !== e && ((this.currentLocation = e), i.activeTexture(i.TEXTURE0 + e)),
                     i.bindTexture(i.TEXTURE_2D, this.emptyTextures[i.TEXTURE_2D].texture),
                     (this.boundTextures[e] = null);
               }),
               (t.prototype.reset = function () {
-                (this._unknownBoundTextures = !0),
-                  (this.hasIntegerTextures = !1),
-                  (this.currentLocation = -1);
-                for (var t = 0; t < this.boundTextures.length; t++)
-                  this.boundTextures[t] = this.unknownTexture;
+                (this._unknownBoundTextures = !0), (this.hasIntegerTextures = !1), (this.currentLocation = -1);
+                for (var t = 0; t < this.boundTextures.length; t++) this.boundTextures[t] = this.unknownTexture;
               }),
               (t.prototype.unbind = function (t) {
                 var e = this,
@@ -25372,13 +21645,11 @@ const bundle = () => {
                   r = e.boundTextures;
                 if (this._unknownBoundTextures) {
                   this._unknownBoundTextures = !1;
-                  for (var n = 0; n < r.length; n++)
-                    r[n] === this.unknownTexture && this.bind(null, n);
+                  for (var n = 0; n < r.length; n++) r[n] === this.unknownTexture && this.bind(null, n);
                 }
                 for (n = 0; n < r.length; n++)
                   r[n] === t &&
-                    (this.currentLocation !== n &&
-                      (i.activeTexture(i.TEXTURE0 + n), (this.currentLocation = n)),
+                    (this.currentLocation !== n && (i.activeTexture(i.TEXTURE0 + n), (this.currentLocation = n)),
                     i.bindTexture(t.target, this.emptyTextures[t.target].texture),
                     (r[n] = null));
               }),
@@ -25390,9 +21661,7 @@ const bundle = () => {
                 if (r)
                   for (var a = t - 1; a >= 0; --a) {
                     var o = i[a];
-                    if (o)
-                      o._glTextures[s].samplerType !== n.oT.FLOAT &&
-                        this.renderer.texture.unbind(o);
+                    if (o) o._glTextures[s].samplerType !== n.oT.FLOAT && this.renderer.texture.unbind(o);
                   }
               }),
               (t.prototype.initTexture = function (t) {
@@ -25408,11 +21677,8 @@ const bundle = () => {
               (t.prototype.initTextureType = function (t, e) {
                 var i, r;
                 (e.internalFormat =
-                  null !==
-                    (r =
-                      null === (i = this.internalFormats[t.type]) || void 0 === i
-                        ? void 0
-                        : i[t.format]) && void 0 !== r
+                  null !== (r = null === (i = this.internalFormats[t.type]) || void 0 === i ? void 0 : i[t.format]) &&
+                  void 0 !== r
                     ? r
                     : t.format),
                   2 === this.webGLVersion && t.type === n.vK.HALF_FLOAT
@@ -25434,8 +21700,7 @@ const bundle = () => {
                       (e.height = s),
                       a.texImage2D(t.target, 0, e.internalFormat, r, s, 0, t.format, e.type, null));
                   }
-                  t.dirtyStyleId !== e.dirtyStyleId && this.updateTextureStyle(t),
-                    (e.dirtyId = t.dirtyId);
+                  t.dirtyStyleId !== e.dirtyStyleId && this.updateTextureStyle(t), (e.dirtyId = t.dirtyId);
                 }
               }),
               (t.prototype.destroyTexture = function (t, e) {
@@ -25458,9 +21723,7 @@ const bundle = () => {
                   ((t.mipmap !== n.WB.POW2 && 2 === this.webGLVersion) || t.isPowerOfTwo
                     ? (e.mipmap = t.mipmap >= 1)
                     : (e.mipmap = !1),
-                  2 === this.webGLVersion || t.isPowerOfTwo
-                    ? (e.wrapMode = t.wrapMode)
-                    : (e.wrapMode = n.Nt.CLAMP),
+                  2 === this.webGLVersion || t.isPowerOfTwo ? (e.wrapMode = t.wrapMode) : (e.wrapMode = n.Nt.CLAMP),
                   (t.resource && t.resource.style(this.renderer, t, e)) || this.setStyle(t, e),
                   (e.dirtyStyleId = t.dirtyStyleId));
               }),
@@ -25479,23 +21742,12 @@ const bundle = () => {
                   );
                   var r = this.renderer.context.extensions.anisotropicFiltering;
                   if (r && t.anisotropicLevel > 0 && t.scaleMode === n.aH.LINEAR) {
-                    var s = Math.min(
-                      t.anisotropicLevel,
-                      i.getParameter(r.MAX_TEXTURE_MAX_ANISOTROPY_EXT),
-                    );
+                    var s = Math.min(t.anisotropicLevel, i.getParameter(r.MAX_TEXTURE_MAX_ANISOTROPY_EXT));
                     i.texParameterf(t.target, r.TEXTURE_MAX_ANISOTROPY_EXT, s);
                   }
                 } else
-                  i.texParameteri(
-                    t.target,
-                    i.TEXTURE_MIN_FILTER,
-                    t.scaleMode === n.aH.LINEAR ? i.LINEAR : i.NEAREST,
-                  );
-                i.texParameteri(
-                  t.target,
-                  i.TEXTURE_MAG_FILTER,
-                  t.scaleMode === n.aH.LINEAR ? i.LINEAR : i.NEAREST,
-                );
+                  i.texParameteri(t.target, i.TEXTURE_MIN_FILTER, t.scaleMode === n.aH.LINEAR ? i.LINEAR : i.NEAREST);
+                i.texParameteri(t.target, i.TEXTURE_MAG_FILTER, t.scaleMode === n.aH.LINEAR ? i.LINEAR : i.NEAREST);
               }),
               (t.prototype.destroy = function () {
                 this.renderer = null;
@@ -25542,10 +21794,7 @@ const bundle = () => {
                 (a.backgroundColor = i.backgroundColor || a._backgroundColor),
                 (a.backgroundAlpha = i.backgroundAlpha),
                 void 0 !== i.transparent &&
-                  ((0, s.deprecation)(
-                    '6.0.0',
-                    'Option transparent is deprecated, please use backgroundAlpha instead.',
-                  ),
+                  ((0, s.deprecation)('6.0.0', 'Option transparent is deprecated, please use backgroundAlpha instead.'),
                   (a.useContextAlpha = i.transparent),
                   (a.backgroundAlpha = i.transparent ? 0 : 1)),
                 (a._lastObjectRendered = null),
@@ -25579,8 +21828,7 @@ const bundle = () => {
                   r = this.view.height / this.resolution;
                 (this.screen.width = i),
                   (this.screen.height = r),
-                  this.autoDensity &&
-                    ((this.view.style.width = i + 'px'), (this.view.style.height = r + 'px')),
+                  this.autoDensity && ((this.view.style.width = i + 'px'), (this.view.style.height = r + 'px')),
                   this.emit('resize', i, r);
               }),
               (e.prototype.generateTexture = function (t, e, i, r) {
@@ -25590,33 +21838,15 @@ const bundle = () => {
                       '6.1.0',
                       'generateTexture options (scaleMode, resolution, region) are now object options.',
                     ),
-                    (e = {
-                      scaleMode: e,
-                      resolution: i,
-                      region: r,
-                    }));
+                    (e = { scaleMode: e, resolution: i, region: r }));
                 var n = e.region,
                   a = f(e, ['region']);
-                0 === (r = n || t.getLocalBounds(null, !0)).width && (r.width = 1),
-                  0 === r.height && (r.height = 1);
-                var o = k.create(
-                  d(
-                    {
-                      width: r.width,
-                      height: r.height,
-                    },
-                    a,
-                  ),
-                );
+                0 === (r = n || t.getLocalBounds(null, !0)).width && (r.width = 1), 0 === r.height && (r.height = 1);
+                var o = k.create(d({ width: r.width, height: r.height }, a));
                 return (
                   (Ge.tx = -r.x),
                   (Ge.ty = -r.y),
-                  this.render(t, {
-                    renderTexture: o,
-                    clear: !1,
-                    transform: Ge,
-                    skipUpdateTransform: !!t.parent,
-                  }),
+                  this.render(t, { renderTexture: o, clear: !1, transform: Ge, skipUpdateTransform: !!t.parent }),
                   o
                 );
               }),
@@ -25661,10 +21891,7 @@ const bundle = () => {
           })(s.EventEmitter),
           He = (function () {
             function t(t) {
-              (this.buffer = t || null),
-                (this.updateID = -1),
-                (this.byteLength = -1),
-                (this.refCount = 0);
+              (this.buffer = t || null), (this.updateID = -1), (this.byteLength = -1), (this.refCount = 0);
             }
             return t;
           })(),
@@ -25677,9 +21904,7 @@ const bundle = () => {
                 this.renderer = null;
               }),
               (t.prototype.contextChange = function () {
-                this.disposeAll(!0),
-                  (this.gl = this.renderer.gl),
-                  (this.CONTEXT_UID = this.renderer.CONTEXT_UID);
+                this.disposeAll(!0), (this.gl = this.renderer.gl), (this.CONTEXT_UID = this.renderer.CONTEXT_UID);
               }),
               (t.prototype.bind = function (t) {
                 var e = this,
@@ -25711,11 +21936,7 @@ const bundle = () => {
                   r = e.CONTEXT_UID,
                   n = t._glBuffers[r];
                 if (t._updateID !== n.updateID)
-                  if (
-                    ((n.updateID = t._updateID),
-                    i.bindBuffer(t.type, n.buffer),
-                    n.byteLength >= t.data.byteLength)
-                  )
+                  if (((n.updateID = t._updateID), i.bindBuffer(t.type, n.buffer), n.byteLength >= t.data.byteLength))
                     i.bufferSubData(t.type, 0, t.data);
                   else {
                     var s = t.static ? i.STATIC_DRAW : i.DYNAMIC_DRAW;
@@ -25766,12 +21987,7 @@ const bundle = () => {
                   resize: new a.R('resize'),
                 }),
                 r.runners.contextChange.add(r),
-                (r.globalUniforms = new K(
-                  {
-                    projectionMatrix: new l.y3(),
-                  },
-                  !0,
-                )),
+                (r.globalUniforms = new K({ projectionMatrix: new l.y3() }, !0)),
                 r
                   .addSystem(ne, 'mask')
                   .addSystem(st, 'context')
@@ -25795,8 +22011,7 @@ const bundle = () => {
                   : r.context.initFromOptions({
                       alpha: !!r.useContextAlpha,
                       antialias: i.antialias,
-                      premultipliedAlpha:
-                        r.useContextAlpha && 'notMultiplied' !== r.useContextAlpha,
+                      premultipliedAlpha: r.useContextAlpha && 'notMultiplied' !== r.useContextAlpha,
                       stencil: !0,
                       preserveDrawingBuffer: i.preserveDrawingBuffer,
                       powerPreference: r.options.powerPreference,
@@ -25848,18 +22063,12 @@ const bundle = () => {
                 if (
                   (e &&
                     (e instanceof k
-                      ? ((0, s.deprecation)(
-                          '6.0.0',
-                          'Renderer#render arguments changed, use options instead.',
-                        ),
+                      ? ((0, s.deprecation)('6.0.0', 'Renderer#render arguments changed, use options instead.'),
                         (i = e),
                         (r = arguments[2]),
                         (n = arguments[3]),
                         (a = arguments[4]))
-                      : ((i = e.renderTexture),
-                        (r = e.clear),
-                        (n = e.transform),
-                        (a = e.skipUpdateTransform))),
+                      : ((i = e.renderTexture), (r = e.clear), (n = e.transform), (a = e.skipUpdateTransform))),
                   (this.renderingToScreen = !i),
                   this.runners.prerender.emit(),
                   this.emit('prerender'),
@@ -25887,8 +22096,7 @@ const bundle = () => {
                 return this.framebuffer.blit(), s;
               }),
               (e.prototype.resize = function (e, i) {
-                t.prototype.resize.call(this, e, i),
-                  this.runners.resize.emit(this.screen.height, this.screen.width);
+                t.prototype.resize.call(this, e, i), this.runners.resize.emit(this.screen.height, this.screen.width);
               }),
               (e.prototype.reset = function () {
                 return this.runners.reset.emit(), this;
@@ -25897,8 +22105,7 @@ const bundle = () => {
                 this.renderTexture.bind(), this.renderTexture.clear();
               }),
               (e.prototype.destroy = function (e) {
-                for (var i in (this.runners.destroy.emit(), this.runners))
-                  this.runners[i].destroy();
+                for (var i in (this.runners.destroy.emit(), this.runners)) this.runners[i].destroy();
                 t.prototype.destroy.call(this, e), (this.gl = null);
               }),
               Object.defineProperty(e.prototype, 'extract', {
@@ -25929,10 +22136,7 @@ const bundle = () => {
             'attribute vec2 aVertexPosition;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nuniform vec4 inputSize;\nuniform vec4 outputFrame;\n\nvec4 filterVertexPosition( void )\n{\n    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n}\n\nvec2 filterTextureCoord( void )\n{\n    return aVertexPosition * (outputFrame.zw * inputSize.zw);\n}\n\nvoid main(void)\n{\n    gl_Position = filterVertexPosition();\n    vTextureCoord = filterTextureCoord();\n}\n',
           ze = (function () {
             function t(t) {
-              (0, s.deprecation)(
-                '6.1.0',
-                'System class is deprecated, implemement ISystem interface instead.',
-              ),
+              (0, s.deprecation)('6.1.0', 'System class is deprecated, implemement ISystem interface instead.'),
                 (this.renderer = t);
             }
             return (
@@ -25978,50 +22182,35 @@ const bundle = () => {
             return (
               Object.defineProperty(t.prototype, 'int8View', {
                 get: function () {
-                  return (
-                    this._int8View || (this._int8View = new Int8Array(this.rawBinaryData)),
-                    this._int8View
-                  );
+                  return this._int8View || (this._int8View = new Int8Array(this.rawBinaryData)), this._int8View;
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               Object.defineProperty(t.prototype, 'uint8View', {
                 get: function () {
-                  return (
-                    this._uint8View || (this._uint8View = new Uint8Array(this.rawBinaryData)),
-                    this._uint8View
-                  );
+                  return this._uint8View || (this._uint8View = new Uint8Array(this.rawBinaryData)), this._uint8View;
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               Object.defineProperty(t.prototype, 'int16View', {
                 get: function () {
-                  return (
-                    this._int16View || (this._int16View = new Int16Array(this.rawBinaryData)),
-                    this._int16View
-                  );
+                  return this._int16View || (this._int16View = new Int16Array(this.rawBinaryData)), this._int16View;
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               Object.defineProperty(t.prototype, 'uint16View', {
                 get: function () {
-                  return (
-                    this._uint16View || (this._uint16View = new Uint16Array(this.rawBinaryData)),
-                    this._uint16View
-                  );
+                  return this._uint16View || (this._uint16View = new Uint16Array(this.rawBinaryData)), this._uint16View;
                 },
                 enumerable: !1,
                 configurable: !0,
               }),
               Object.defineProperty(t.prototype, 'int32View', {
                 get: function () {
-                  return (
-                    this._int32View || (this._int32View = new Int32Array(this.rawBinaryData)),
-                    this._int32View
-                  );
+                  return this._int32View || (this._int32View = new Int32Array(this.rawBinaryData)), this._int32View;
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -26096,10 +22285,7 @@ const bundle = () => {
                 var t = this.renderer.gl;
                 r.X.PREFER_ENV === n.Vi.WEBGL_LEGACY
                   ? (this.MAX_TEXTURES = 1)
-                  : ((this.MAX_TEXTURES = Math.min(
-                      t.getParameter(t.MAX_TEXTURE_IMAGE_UNITS),
-                      r.X.SPRITE_MAX_TEXTURES,
-                    )),
+                  : ((this.MAX_TEXTURES = Math.min(t.getParameter(t.MAX_TEXTURE_IMAGE_UNITS), r.X.SPRITE_MAX_TEXTURES)),
                     (this.MAX_TEXTURES = Lt(this.MAX_TEXTURES, t))),
                   (this._shader = this.shaderGenerator.generateShader(this.MAX_TEXTURES));
                 for (var e = 0; e < this._packedGeometryPoolSize; e++)
@@ -26148,17 +22334,12 @@ const bundle = () => {
                   (i[p] = null),
                     d._batchEnabled !== l &&
                       (u.count >= r &&
-                        (s.boundArray(u, a, l, r),
-                        this.buildDrawCalls(u, c, p),
-                        (c = p),
-                        (u = n[++h]),
-                        ++l),
+                        (s.boundArray(u, a, l, r), this.buildDrawCalls(u, c, p), (c = p), (u = n[++h]), ++l),
                       (d._batchEnabled = l),
                       (d.touched = o),
                       (u.elements[u.count++] = d));
                 }
-                u.count > 0 &&
-                  (s.boundArray(u, a, l, r), this.buildDrawCalls(u, c, this._bufferSize), ++h, ++l);
+                u.count > 0 && (s.boundArray(u, a, l, r), this.buildDrawCalls(u, c, this._bufferSize), ++h, ++l);
                 for (p = 0; p < a.length; p++) a[p] = null;
                 v._globalBatch = l;
               }),
@@ -26187,10 +22368,7 @@ const bundle = () => {
                     (d += _.indices.length),
                     (f.blend = v);
                 }
-                i < r && ((f.size = d - f.start), ++c),
-                  (this._dcIndex = c),
-                  (this._aIndex = p),
-                  (this._iIndex = d);
+                i < r && ((f.size = d - f.start), ++c), (this._dcIndex = c), (this._aIndex = p), (this._iIndex = d);
               }),
               (e.prototype.bindAndClearTexArray = function (t) {
                 for (var e = this.renderer.texture, i = 0; i < t.count; i++)
@@ -26207,8 +22385,7 @@ const bundle = () => {
                     e[this._flushId]._indexBuffer.update(n),
                     this.renderer.geometry.updateBuffers())
                   : (this._packedGeometryPoolSize <= this._flushId &&
-                      (this._packedGeometryPoolSize++,
-                      (e[this._flushId] = new this.geometryClass())),
+                      (this._packedGeometryPoolSize++, (e[this._flushId] = new this.geometryClass())),
                     e[this._flushId]._buffer.update(i.rawBinaryData),
                     e[this._flushId]._indexBuffer.update(n),
                     this.renderer.geometry.bind(e[this._flushId]),
@@ -26217,13 +22394,7 @@ const bundle = () => {
               }),
               (e.prototype.drawBatches = function () {
                 for (
-                  var t = this._dcIndex,
-                    i = this.renderer,
-                    r = i.gl,
-                    n = i.state,
-                    s = e._drawCallPool,
-                    a = null,
-                    o = 0;
+                  var t = this._dcIndex, i = this.renderer, r = i.gl, n = i.state, s = e._drawCallPool, a = null, o = 0;
                   o < t;
                   o++
                 ) {
@@ -26257,8 +22428,7 @@ const bundle = () => {
                 this.renderer.state.set(this.state),
                   this.renderer.texture.ensureSamplerType(this.MAX_TEXTURES),
                   this.renderer.shader.bind(this._shader),
-                  r.X.CAN_UPLOAD_SAME_BUFFER &&
-                    this.renderer.geometry.bind(this._packedGeometries[this._flushId]);
+                  r.X.CAN_UPLOAD_SAME_BUFFER && this.renderer.geometry.bind(this._packedGeometries[this._flushId]);
               }),
               (e.prototype.stop = function () {
                 this.flush();
@@ -26332,24 +22502,15 @@ const bundle = () => {
                 e.indexOf('%count%') < 0)
               )
                 throw new Error('Fragment template must contain "%count%".');
-              if (e.indexOf('%forloop%') < 0)
-                throw new Error('Fragment template must contain "%forloop%".');
+              if (e.indexOf('%forloop%') < 0) throw new Error('Fragment template must contain "%forloop%".');
             }
             return (
               (t.prototype.generateShader = function (t) {
                 if (!this.programCache[t]) {
                   for (var e = new Int32Array(t), i = 0; i < t; i++) e[i] = i;
-                  this.defaultGroupCache[t] = K.from(
-                    {
-                      uSamplers: e,
-                    },
-                    !0,
-                  );
+                  this.defaultGroupCache[t] = K.from({ uSamplers: e }, !0);
                   var r = this.fragTemplate;
-                  (r = (r = r.replace(/%count%/gi, '' + t)).replace(
-                    /%forloop%/gi,
-                    this.generateSampleSrc(t),
-                  )),
+                  (r = (r = r.replace(/%count%/gi, '' + t)).replace(/%forloop%/gi, this.generateSampleSrc(t))),
                     (this.programCache[t] = new Xt(this.vertexSrc, r));
                 }
                 var n = {
@@ -26399,15 +22560,7 @@ const bundle = () => {
             function t() {}
             return (
               (t.create = function (t) {
-                var e = Object.assign(
-                    {
-                      vertex: ei,
-                      fragment: ii,
-                      geometryClass: ti,
-                      vertexSize: 6,
-                    },
-                    t,
-                  ),
+                var e = Object.assign({ vertex: ei, fragment: ii, geometryClass: ti, vertexSize: 6 }, t),
                   i = e.vertex,
                   r = e.fragment,
                   n = e.vertexSize,
@@ -26415,12 +22568,7 @@ const bundle = () => {
                 return (function (t) {
                   function e(e) {
                     var a = t.call(this, e) || this;
-                    return (
-                      (a.shaderGenerator = new $e(i, r)),
-                      (a.geometryClass = s),
-                      (a.vertexSize = n),
-                      a
-                    );
+                    return (a.shaderGenerator = new $e(i, r)), (a.geometryClass = s), (a.vertexSize = n), a;
                   }
                   return p(e, t), e;
                 })(Je);
@@ -26447,9 +22595,7 @@ const bundle = () => {
           ai = function (t) {
             Object.defineProperty(si, t, {
               get: function () {
-                return (
-                  (0, s.deprecation)('6.0.0', 'PIXI.systems.' + t + ' has moved to PIXI.' + t), R[t]
-                );
+                return (0, s.deprecation)('6.0.0', 'PIXI.systems.' + t + ' has moved to PIXI.' + t), R[t];
               },
             });
           };
@@ -26458,10 +22604,7 @@ const bundle = () => {
           hi = function (t) {
             Object.defineProperty(li, t, {
               get: function () {
-                return (
-                  (0, s.deprecation)('6.0.0', 'PIXI.resources.' + t + ' has moved to PIXI.' + t),
-                  Ue[t]
-                );
+                return (0, s.deprecation)('6.0.0', 'PIXI.resources.' + t + ' has moved to PIXI.' + t), Ue[t];
               },
             });
           };
@@ -26469,12 +22612,7 @@ const bundle = () => {
       },
       7909: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Ql: () => P,
-          W2: () => C,
-          YZ: () => a,
-          s$: () => R,
-        });
+        i.d(e, { Ql: () => P, W2: () => C, YZ: () => a, s$: () => R });
         var r = i(875),
           n = i(7442),
           s = i(5579);
@@ -26493,10 +22631,7 @@ const bundle = () => {
                 return this.minX > this.maxX || this.minY > this.maxY;
               }),
               (t.prototype.clear = function () {
-                (this.minX = 1 / 0),
-                  (this.minY = 1 / 0),
-                  (this.maxX = -1 / 0),
-                  (this.maxY = -1 / 0);
+                (this.minX = 1 / 0), (this.minY = 1 / 0), (this.maxX = -1 / 0), (this.maxY = -1 / 0);
               }),
               (t.prototype.getRectangle = function (t) {
                 return this.minX > this.maxX || this.minY > this.maxY
@@ -26593,17 +22728,10 @@ const bundle = () => {
                   (this.maxY = f);
               }),
               (t.prototype.addVertexData = function (t, e, i) {
-                for (
-                  var r = this.minX, n = this.minY, s = this.maxX, a = this.maxY, o = e;
-                  o < i;
-                  o += 2
-                ) {
+                for (var r = this.minX, n = this.minY, s = this.maxX, a = this.maxY, o = e; o < i; o += 2) {
                   var l = t[o],
                     h = t[o + 1];
-                  (r = l < r ? l : r),
-                    (n = h < n ? h : n),
-                    (s = l > s ? l : s),
-                    (a = h > a ? h : a);
+                  (r = l < r ? l : r), (n = h < n ? h : n), (s = l > s ? l : s), (a = h > a ? h : a);
                 }
                 (this.minX = r), (this.minY = n), (this.maxX = s), (this.maxY = a);
               }),
@@ -26686,8 +22814,7 @@ const bundle = () => {
               (t.prototype.pad = function (t, e) {
                 void 0 === t && (t = 0),
                   void 0 === e && (e = t),
-                  this.isEmpty() ||
-                    ((this.minX -= t), (this.maxX += t), (this.minY -= e), (this.maxY += e));
+                  this.isEmpty() || ((this.minX -= t), (this.maxX += t), (this.minY -= e), (this.maxY += e));
               }),
               (t.prototype.addFramePad = function (t, e, i, r, n, s) {
                 (t -= n),
@@ -26706,9 +22833,7 @@ const bundle = () => {
             return (
               (o =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -26722,8 +22847,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          o(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          o(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var h,
           u,
@@ -26792,8 +22916,7 @@ const bundle = () => {
               }),
               (e.prototype._recursivePostUpdateTransform = function () {
                 this.parent
-                  ? (this.parent._recursivePostUpdateTransform(),
-                    this.transform.updateTransform(this.parent.transform))
+                  ? (this.parent._recursivePostUpdateTransform(), this.transform.updateTransform(this.parent.transform))
                   : this.transform.updateTransform(this._tempDisplayObjectParent.transform);
               }),
               (e.prototype.updateTransform = function () {
@@ -26806,20 +22929,15 @@ const bundle = () => {
                   t ||
                     (this.parent
                       ? (this._recursivePostUpdateTransform(), this.updateTransform())
-                      : ((this.parent = this._tempDisplayObjectParent),
-                        this.updateTransform(),
-                        (this.parent = null))),
+                      : ((this.parent = this._tempDisplayObjectParent), this.updateTransform(), (this.parent = null))),
                   this._bounds.updateID !== this._boundsID &&
                     (this.calculateBounds(), (this._bounds.updateID = this._boundsID)),
-                  e ||
-                    (this._boundsRect || (this._boundsRect = new n.Ae()), (e = this._boundsRect)),
+                  e || (this._boundsRect || (this._boundsRect = new n.Ae()), (e = this._boundsRect)),
                   this._bounds.getRectangle(e)
                 );
               }),
               (e.prototype.getLocalBounds = function (t) {
-                t ||
-                  (this._localBoundsRect || (this._localBoundsRect = new n.Ae()),
-                  (t = this._localBoundsRect)),
+                t || (this._localBoundsRect || (this._localBoundsRect = new n.Ae()), (t = this._localBoundsRect)),
                   this._localBounds || (this._localBounds = new a());
                 var e = this.transform,
                   i = this.parent;
@@ -26908,8 +23026,7 @@ const bundle = () => {
               Object.defineProperty(e.prototype, '_tempDisplayObjectParent', {
                 get: function () {
                   return (
-                    null === this.tempDisplayObjectParent &&
-                      (this.tempDisplayObjectParent = new P()),
+                    null === this.tempDisplayObjectParent && (this.tempDisplayObjectParent = new P()),
                     this.tempDisplayObjectParent
                   );
                 },
@@ -27069,25 +23186,17 @@ const bundle = () => {
             return l(e, t), e;
           })(R);
         function O(t, e) {
-          return t.zIndex === e.zIndex
-            ? t._lastSortedIndex - e._lastSortedIndex
-            : t.zIndex - e.zIndex;
+          return t.zIndex === e.zIndex ? t._lastSortedIndex - e._lastSortedIndex : t.zIndex - e.zIndex;
         }
         (R.prototype.displayObjectUpdateTransform = R.prototype.updateTransform),
           (function (t) {
-            (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.WEBGL2 = 2)] = 'WEBGL2');
+            (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.WEBGL2 = 2)] = 'WEBGL2');
           })(h || (h = {})),
           (function (t) {
-            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.CANVAS = 2)] = 'CANVAS');
+            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.CANVAS = 2)] = 'CANVAS');
           })(u || (u = {})),
           (function (t) {
-            (t[(t.COLOR = 16384)] = 'COLOR'),
-              (t[(t.DEPTH = 256)] = 'DEPTH'),
-              (t[(t.STENCIL = 1024)] = 'STENCIL');
+            (t[(t.COLOR = 16384)] = 'COLOR'), (t[(t.DEPTH = 256)] = 'DEPTH'), (t[(t.STENCIL = 1024)] = 'STENCIL');
           })(c || (c = {})),
           (function (t) {
             (t[(t.NORMAL = 0)] = 'NORMAL'),
@@ -27236,9 +23345,7 @@ const bundle = () => {
         var C = (function (t) {
           function e() {
             var e = t.call(this) || this;
-            return (
-              (e.children = []), (e.sortableChildren = r.X.SORTABLE_CHILDREN), (e.sortDirty = !1), e
-            );
+            return (e.children = []), (e.sortableChildren = r.X.SORTABLE_CHILDREN), (e.sortDirty = !1), e;
           }
           return (
             l(e, t),
@@ -27263,11 +23370,7 @@ const bundle = () => {
             (e.prototype.addChildAt = function (t, e) {
               if (e < 0 || e > this.children.length)
                 throw new Error(
-                  t +
-                    'addChildAt: The index ' +
-                    e +
-                    ' supplied is out of bounds ' +
-                    this.children.length,
+                  t + 'addChildAt: The index ' + e + ' supplied is out of bounds ' + this.children.length,
                 );
               return (
                 t.parent && t.parent.removeChild(t),
@@ -27286,30 +23389,22 @@ const bundle = () => {
               if (t !== e) {
                 var i = this.getChildIndex(t),
                   r = this.getChildIndex(e);
-                (this.children[i] = e),
-                  (this.children[r] = t),
-                  this.onChildrenChange(i < r ? i : r);
+                (this.children[i] = e), (this.children[r] = t), this.onChildrenChange(i < r ? i : r);
               }
             }),
             (e.prototype.getChildIndex = function (t) {
               var e = this.children.indexOf(t);
-              if (-1 === e)
-                throw new Error('The supplied DisplayObject must be a child of the caller');
+              if (-1 === e) throw new Error('The supplied DisplayObject must be a child of the caller');
               return e;
             }),
             (e.prototype.setChildIndex = function (t, e) {
               if (e < 0 || e >= this.children.length)
-                throw new Error(
-                  'The index ' + e + ' supplied is out of bounds ' + this.children.length,
-                );
+                throw new Error('The index ' + e + ' supplied is out of bounds ' + this.children.length);
               var i = this.getChildIndex(t);
-              (0, s.removeItems)(this.children, i, 1),
-                this.children.splice(e, 0, t),
-                this.onChildrenChange(e);
+              (0, s.removeItems)(this.children, i, 1), this.children.splice(e, 0, t), this.onChildrenChange(e);
             }),
             (e.prototype.getChildAt = function (t) {
-              if (t < 0 || t >= this.children.length)
-                throw new Error('getChildAt: Index (' + t + ') does not exist.');
+              if (t < 0 || t >= this.children.length) throw new Error('getChildAt: Index (' + t + ') does not exist.');
               return this.children[t];
             }),
             (e.prototype.removeChild = function () {
@@ -27352,14 +23447,11 @@ const bundle = () => {
                 for (var s = 0; s < i.length; ++s)
                   (i[s].parent = null), i[s].transform && (i[s].transform._parentID = -1);
                 this._boundsID++, this.onChildrenChange(t);
-                for (s = 0; s < i.length; ++s)
-                  i[s].emit('removed', this), this.emit('childRemoved', i[s], this, s);
+                for (s = 0; s < i.length; ++s) i[s].emit('removed', this), this.emit('childRemoved', i[s], this, s);
                 return i;
               }
               if (0 === n && 0 === this.children.length) return [];
-              throw new RangeError(
-                'removeChildren: numeric values are outside the acceptable range.',
-              );
+              throw new RangeError('removeChildren: numeric values are outside the acceptable range.');
             }),
             (e.prototype.sortChildren = function () {
               for (var t = !1, e = 0, i = this.children.length; e < i; ++e) {
@@ -27436,8 +23528,7 @@ const bundle = () => {
               var e = this.filters,
                 i = this._mask;
               if (e) {
-                this._enabledFilters || (this._enabledFilters = []),
-                  (this._enabledFilters.length = 0);
+                this._enabledFilters || (this._enabledFilters = []), (this._enabledFilters.length = 0);
                 for (var r = 0; r < e.length; r++) e[r].enabled && this._enabledFilters.push(e[r]);
               }
               var n =
@@ -27445,10 +23536,7 @@ const bundle = () => {
                 (i && (!i.isMaskData || (i.enabled && (i.autoDetect || i.type !== S.NONE))));
               if (
                 (n && t.batch.flush(),
-                e &&
-                  this._enabledFilters &&
-                  this._enabledFilters.length &&
-                  t.filter.push(this, this._enabledFilters),
+                e && this._enabledFilters && this._enabledFilters.length && t.filter.push(this, this._enabledFilters),
                 i && t.mask.push(this, this._mask),
                 this.cullable)
               )
@@ -27531,12 +23619,7 @@ const bundle = () => {
             _segmentsCount: function (t, e) {
               if ((void 0 === e && (e = 20), !this.adaptive || !t || isNaN(t))) return e;
               var i = Math.ceil(t / this.maxLength);
-              return (
-                i < this.minSegments
-                  ? (i = this.minSegments)
-                  : i > this.maxSegments && (i = this.maxSegments),
-                i
-              );
+              return i < this.minSegments ? (i = this.minSegments) : i > this.maxSegments && (i = this.maxSegments), i;
             },
           },
           c = (function () {
@@ -27577,9 +23660,7 @@ const bundle = () => {
             return (
               (p =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -27593,8 +23674,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          p(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          p(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         function f(t, e) {
           var i, r;
@@ -27613,12 +23693,7 @@ const bundle = () => {
                   d = n - a - 1,
                   f = a,
                   g = a + 1;
-                (i = [t[f], t[p]]),
-                  (t[p] = i[0]),
-                  (t[f] = i[1]),
-                  (r = [t[g], t[d]]),
-                  (t[d] = r[0]),
-                  (t[g] = r[1]);
+                (i = [t[f], t[p]]), (t[p] = i[0]), (t[f] = i[1]), (r = [t[g], t[d]]), (t[d] = r[0]), (t[g] = r[1]);
               }
             }
           }
@@ -27641,8 +23716,7 @@ const bundle = () => {
                 var u = (0, o.earcut)(i, a, 2);
                 if (!u) return;
                 var c = n.length / 2;
-                for (l = 0; l < u.length; l += 3)
-                  s.push(u[l] + c), s.push(u[l + 1] + c), s.push(u[l + 2] + c);
+                for (l = 0; l < u.length; l += 3) s.push(u[l] + c), s.push(u[l + 1] + c), s.push(u[l + 2] + c);
                 for (l = 0; l < i.length; l++) n.push(i[l]);
               }
             },
@@ -27695,10 +23769,7 @@ const bundle = () => {
                 }
                 for (var E = 1; E < f; E++) {
                   var S = (Math.PI / 2) * (E / f);
-                  (y = e + (I = r + Math.cos(S) * s)),
-                    (b = e - I),
-                    (x = i + (w = n + Math.sin(S) * o)),
-                    (T = i - w);
+                  (y = e + (I = r + Math.cos(S) * s)), (b = e - I), (x = i + (w = n + Math.sin(S) * o)), (T = i - w);
                   (l[_++] = y),
                     (l[_++] = x),
                     (l[--m] = x),
@@ -27733,10 +23804,7 @@ const bundle = () => {
                 (i = c.x + c.width / 2), (r = c.y + c.height / 2);
               }
               var p = t.matrix;
-              s.push(
-                t.matrix ? p.a * i + p.c * r + p.tx : i,
-                t.matrix ? p.b * i + p.d * r + p.ty : r,
-              ),
+              s.push(t.matrix ? p.a * i + p.c * r + p.tx : i, t.matrix ? p.b * i + p.d * r + p.ty : r),
                 l++,
                 s.push(n[0], n[1]);
               for (var d = 2; d < n.length; d += 2) s.push(n[d], n[d + 1]), o.push(l++, h, l);
@@ -27766,11 +23834,7 @@ const bundle = () => {
         }
         function A(t, e, i, r, n, s, a) {
           void 0 === a && (a = []);
-          for (
-            var o = 20, l = a, h = 0, u = 0, c = 0, p = 0, d = 0, f = 0, g = 0, _ = 0;
-            g <= o;
-            ++g
-          )
+          for (var o = 20, l = a, h = 0, u = 0, c = 0, p = 0, d = 0, f = 0, g = 0, _ = 0; g <= o; ++g)
             (h = v(t, i, (_ = g / o))),
               (u = v(e, r, _)),
               (c = v(i, n, _)),
@@ -27842,13 +23906,11 @@ const bundle = () => {
             m = d / _;
           if (((p += m), o)) {
             a.push(t, e), a.push(i, r);
-            for (var v = 1, A = p; v < _; v++, A += m)
-              a.push(t, e), a.push(t + Math.sin(A) * g, e + Math.cos(A) * g);
+            for (var v = 1, A = p; v < _; v++, A += m) a.push(t, e), a.push(t + Math.sin(A) * g, e + Math.cos(A) * g);
             a.push(t, e), a.push(n, s);
           } else {
             a.push(i, r), a.push(t, e);
-            for (v = 1, A = p; v < _; v++, A += m)
-              a.push(t + Math.sin(A) * g, e + Math.cos(A) * g), a.push(t, e);
+            for (v = 1, A = p; v < _; v++, A += m) a.push(t + Math.sin(A) * g, e + Math.cos(A) * g), a.push(t, e);
             a.push(n, s), a.push(t, e);
           }
           return 2 * _;
@@ -27894,16 +23956,8 @@ const bundle = () => {
             p ||
               (l.cap === n.ROUND
                 ? (v +=
-                    x(
-                      S - C * (k - F) * 0.5,
-                      I - M * (k - F) * 0.5,
-                      S - C * k,
-                      I - M * k,
-                      S + C * F,
-                      I + M * F,
-                      _,
-                      !0,
-                    ) + 2)
+                    x(S - C * (k - F) * 0.5, I - M * (k - F) * 0.5, S - C * k, I - M * k, S + C * F, I + M * F, _, !0) +
+                    2)
                 : l.cap === n.SQUARE && (v += b(S, I, C, M, k, F, !0, _))),
               _.push(S - C * k, I - M * k),
               _.push(S + C * F, I + M * F);
@@ -27947,14 +24001,8 @@ const bundle = () => {
                 Q <= Math.min(G * G + X * X, H * H + j * j) + et * et * T
                   ? l.join === r.BEVEL || Q / T > E
                     ? (Z
-                        ? (_.push(K, J),
-                          _.push(w + C * F, R + M * F),
-                          _.push(K, J),
-                          _.push(w + D * F, R + N * F))
-                        : (_.push(w - C * k, R - M * k),
-                          _.push($, tt),
-                          _.push(w - D * k, R - N * k),
-                          _.push($, tt)),
+                        ? (_.push(K, J), _.push(w + C * F, R + M * F), _.push(K, J), _.push(w + D * F, R + N * F))
+                        : (_.push(w - C * k, R - M * k), _.push($, tt), _.push(w - D * k, R - N * k), _.push($, tt)),
                       (v += 2))
                     : l.join === r.ROUND
                     ? Z
@@ -27977,8 +24025,7 @@ const bundle = () => {
                         ? (v += Z
                             ? x(w, R, w + C * F, R + M * F, w + D * F, R + N * F, _, !0) + 2
                             : x(w, R, w - C * k, R - M * k, w - D * k, R - N * k, _, !1) + 2)
-                        : (Z ? (_.push($, tt), _.push($, tt)) : (_.push(K, J), _.push(K, J)),
-                          (v += 2))),
+                        : (Z ? (_.push($, tt), _.push($, tt)) : (_.push(K, J), _.push(K, J)), (v += 2))),
                     _.push(w - D * k, R - N * k),
                     _.push(w + D * F, R + N * F),
                     (v += 2));
@@ -28032,8 +24079,7 @@ const bundle = () => {
               h = n.length / 2,
               u = o.length / 2,
               c = u;
-            for (o.push(n[0], n[1]), i = 1; i < h; i++)
-              o.push(n[2 * i], n[2 * i + 1]), l.push(c, c + 1), c++;
+            for (o.push(n[0], n[1]), i = 1; i < h; i++) o.push(n[2 * i], n[2 * i + 1]), l.push(c, c + 1), c++;
             s && l.push(c, u);
           }
         }
@@ -28051,8 +24097,7 @@ const bundle = () => {
                   h = r - e,
                   u = i - t,
                   c = Math.abs(o * u - l * h);
-                if (c < 1e-8 || 0 === n)
-                  return (s[s.length - 2] === t && s[s.length - 1] === e) || s.push(t, e), null;
+                if (c < 1e-8 || 0 === n) return (s[s.length - 2] === t && s[s.length - 1] === e) || s.push(t, e), null;
                 var p = o * o + l * l,
                   d = h * h + u * u,
                   f = o * h + l * u,
@@ -28172,12 +24217,7 @@ const bundle = () => {
                   g = 2 * u * f,
                   _ = 2 * Math.sqrt(p),
                   m = c / f;
-                return (
-                  (g * d +
-                    f * c * (d - _) +
-                    (4 * p * u - c * c) * Math.log((2 * f + m + d) / (m + _))) /
-                  (4 * g)
-                );
+                return (g * d + f * c * (d - _) + (4 * p * u - c * c) * Math.log((2 * f + m + d) / (m + _))) / (4 * g);
               }),
               (t.curveTo = function (e, i, r, n, s) {
                 for (
@@ -28211,11 +24251,7 @@ const bundle = () => {
                 (this.attribSize = e - this.attribStart), (this.size = t - this.start);
               }),
               (t.prototype.reset = function () {
-                (this.style = null),
-                  (this.size = 0),
-                  (this.start = 0),
-                  (this.attribStart = 0),
-                  (this.attribSize = 0);
+                (this.style = null), (this.size = 0), (this.start = 0), (this.attribStart = 0), (this.attribSize = 0);
               }),
               t
             );
@@ -28292,8 +24328,7 @@ const bundle = () => {
               Object.defineProperty(e.prototype, 'bounds', {
                 get: function () {
                   return (
-                    this.boundsDirty !== this.dirty &&
-                      ((this.boundsDirty = this.dirty), this.calculateBounds()),
+                    this.boundsDirty !== this.dirty && ((this.boundsDirty = this.dirty), this.calculateBounds()),
                     this._bounds
                   );
                 },
@@ -28364,8 +24399,7 @@ const bundle = () => {
                   if (
                     r.fillStyle.visible &&
                     r.shape &&
-                    (r.matrix ? r.matrix.applyInverse(t, L) : L.copyFrom(t),
-                    r.shape.contains(L.x, L.y))
+                    (r.matrix ? r.matrix.applyInverse(t, L) : L.copyFrom(t), r.shape.contains(L.x, L.y))
                   ) {
                     var n = !1;
                     if (r.holes)
@@ -28388,8 +24422,7 @@ const bundle = () => {
                       i = this.graphicsData,
                       r = null,
                       n = null;
-                    this.batches.length > 0 &&
-                      (n = (r = this.batches[this.batches.length - 1]).style);
+                    this.batches.length > 0 && (n = (r = this.batches[this.batches.length - 1]).style);
                     for (var s = this.shapeIndex; s < i.length; s++) {
                       this.shapeIndex++;
                       var a = i[s],
@@ -28404,15 +24437,11 @@ const bundle = () => {
                           var p = c.texture.baseTexture,
                             d = this.indices.length,
                             f = this.points.length / 2;
-                          (p.wrapMode = l.Nt.REPEAT),
-                            0 === u ? this.processFill(a) : this.processLine(a);
+                          (p.wrapMode = l.Nt.REPEAT), 0 === u ? this.processFill(a) : this.processLine(a);
                           var g = this.points.length / 2 - f;
                           0 !== g &&
                             (r && !this._compareStyles(n, c) && (r.end(d, f), (r = null)),
-                            r ||
-                              ((r = M.pop() || new O()).begin(c, d, f),
-                              this.batches.push(r),
-                              (n = c)),
+                            r || ((r = M.pop() || new O()).begin(c, d, f), this.batches.push(r), (n = c)),
                             this.addUvs(this.points, e, c.texture, f, g, c.matrix));
                         }
                       }
@@ -28424,9 +24453,7 @@ const bundle = () => {
                         this.indicesUint16.set(this.indices);
                       else {
                         var v = m > 65535 && t;
-                        this.indicesUint16 = v
-                          ? new Uint32Array(this.indices)
-                          : new Uint16Array(this.indices);
+                        this.indicesUint16 = v ? new Uint32Array(this.indices) : new Uint16Array(this.indices);
                       }
                       (this.batchable = this.isBatchable()),
                         this.batchable ? this.packBatches() : this.buildDrawCalls();
@@ -28463,8 +24490,7 @@ const bundle = () => {
               }),
               (e.prototype.isBatchable = function () {
                 if (this.points.length > 131070) return !1;
-                for (var t = this.batches, i = 0; i < t.length; i++)
-                  if (t[i].style.native) return !1;
+                for (var t = this.batches, i = 0; i < t.length; i++) if (t[i].style.native) return !1;
                 return this.points.length < 2 * e.BATCHABLE_SIZE;
               }),
               (e.prototype.buildDrawCalls = function () {
@@ -28491,11 +24517,7 @@ const bundle = () => {
                     f = 8,
                     g = d.style,
                     _ = g.texture.baseTexture;
-                  u !== !!g.native &&
-                    ((c = (u = !!g.native) ? l.lg.LINES : l.lg.TRIANGLES),
-                    (o = null),
-                    (a = f),
-                    t++),
+                  u !== !!g.native && ((c = (u = !!g.native) ? l.lg.LINES : l.lg.TRIANGLES), (o = null), (a = f), t++),
                     o !== _ &&
                       ((o = _),
                       _._batchEnabled !== t &&
@@ -28503,8 +24525,7 @@ const bundle = () => {
                           (t++,
                           (a = 0),
                           n.size > 0 &&
-                            ((n = D.pop()) || ((n = new s.a$()).texArray = new s.Ie()),
-                            this.drawCalls.push(n)),
+                            ((n = D.pop()) || ((n = new s.a$()).texArray = new s.Ie()), this.drawCalls.push(n)),
                           (n.start = p),
                           (n.size = 0),
                           (n.texArray.count = 0),
@@ -28588,8 +24609,7 @@ const bundle = () => {
                     t.addVerticesMatrix(i, f.points, 0, f.points.length, u, u);
                   }
                 }
-                e.isEmpty() || t.addBoundsMatrix(e, i),
-                  t.pad(this.boundsPadding, this.boundsPadding);
+                e.isEmpty() || t.addBoundsMatrix(e, i), t.pad(this.boundsPadding, this.boundsPadding);
               }),
               (e.prototype.transformPoints = function (t, e) {
                 for (var i = 0; i < t.length / 2; i++) {
@@ -28639,8 +24659,7 @@ const bundle = () => {
                   f < a;
                   f += 2
                 )
-                  (p = Math.min(p, Math.floor(t[f] + s))),
-                    (d = Math.min(d, Math.floor(t[f + 1] + s)));
+                  (p = Math.min(p, Math.floor(t[f] + s))), (d = Math.min(d, Math.floor(t[f + 1] + s)));
                 (u -= p), (c -= d);
                 for (f = i; f < a; f += 2) (t[f] = (t[f] + u) * l), (t[f + 1] = (t[f + 1] + c) * h);
               }),
@@ -28770,14 +24789,7 @@ const bundle = () => {
                   void 0 === i && (i = 1),
                   void 0 === r && (r = 0.5),
                   void 0 === n && (n = !1),
-                  'number' == typeof t &&
-                    (t = {
-                      width: t,
-                      color: e,
-                      alpha: i,
-                      alignment: r,
-                      native: n,
-                    }),
+                  'number' == typeof t && (t = { width: t, color: e, alpha: i, alignment: r, native: n }),
                   this.lineTextureStyle(t)
                 );
               }),
@@ -28802,13 +24814,7 @@ const bundle = () => {
                 return (
                   e
                     ? (t.matrix && ((t.matrix = t.matrix.clone()), t.matrix.invert()),
-                      Object.assign(
-                        this._lineStyle,
-                        {
-                          visible: e,
-                        },
-                        t,
-                      ))
+                      Object.assign(this._lineStyle, { visible: e }, t))
                     : this._lineStyle.reset(),
                   this
                 );
@@ -28831,12 +24837,7 @@ const bundle = () => {
                     : (this.currentPath.points.length = 0));
               }),
               (e.prototype.moveTo = function (t, e) {
-                return (
-                  this.startPoly(),
-                  (this.currentPath.points[0] = t),
-                  (this.currentPath.points[1] = e),
-                  this
-                );
+                return this.startPoly(), (this.currentPath.points[0] = t), (this.currentPath.points[1] = e), this;
               }),
               (e.prototype.lineTo = function (t, e) {
                 this.currentPath || this.moveTo(0, 0);
@@ -28858,9 +24859,7 @@ const bundle = () => {
                 return 0 === n.length && this.moveTo(0, 0), P.curveTo(t, e, i, r, n), this;
               }),
               (e.prototype.bezierCurveTo = function (t, e, i, r, n, s) {
-                return (
-                  this._initCurve(), R.curveTo(t, e, i, r, n, s, this.currentPath.points), this
-                );
+                return this._initCurve(), R.curveTo(t, e, i, r, n, s, this.currentPath.points), this;
               }),
               (e.prototype.arcTo = function (t, e, i, r, n) {
                 this._initCurve(t, e);
@@ -28879,8 +24878,7 @@ const bundle = () => {
               }),
               (e.prototype.arc = function (t, e, i, r, n, s) {
                 if ((void 0 === s && (s = !1), r === n)) return this;
-                if ((!s && n <= r ? (n += a._b) : s && r <= n && (r += a._b), 0 === n - r))
-                  return this;
+                if ((!s && n <= r ? (n += a._b) : s && r <= n && (r += a._b), 0 === n - r)) return this;
                 var o = t + Math.cos(r) * i,
                   l = e + Math.sin(r) * i,
                   h = this._geometry.closePointEps,
@@ -28896,35 +24894,17 @@ const bundle = () => {
                 return (
                   void 0 === t && (t = 0),
                   void 0 === e && (e = 1),
-                  this.beginTextureFill({
-                    texture: s.xE.WHITE,
-                    color: t,
-                    alpha: e,
-                  })
+                  this.beginTextureFill({ texture: s.xE.WHITE, color: t, alpha: e })
                 );
               }),
               (e.prototype.beginTextureFill = function (t) {
-                (t = Object.assign(
-                  {
-                    texture: s.xE.WHITE,
-                    color: 16777215,
-                    alpha: 1,
-                    matrix: null,
-                  },
-                  t,
-                )),
+                (t = Object.assign({ texture: s.xE.WHITE, color: 16777215, alpha: 1, matrix: null }, t)),
                   this.currentPath && this.startPoly();
                 var e = t.alpha > 0;
                 return (
                   e
                     ? (t.matrix && ((t.matrix = t.matrix.clone()), t.matrix.invert()),
-                      Object.assign(
-                        this._fillStyle,
-                        {
-                          visible: e,
-                        },
-                        t,
-                      ))
+                      Object.assign(this._fillStyle, { visible: e }, t))
                     : this._fillStyle.reset(),
                   this
                 );
@@ -28948,9 +24928,7 @@ const bundle = () => {
                 for (var t, e = arguments, i = [], r = 0; r < arguments.length; r++) i[r] = e[r];
                 var n = !0,
                   s = i[0];
-                s.points
-                  ? ((n = s.closeStroke), (t = s.points))
-                  : (t = Array.isArray(i[0]) ? i[0] : i);
+                s.points ? ((n = s.closeStroke), (t = s.points)) : (t = Array.isArray(i[0]) ? i[0] : i);
                 var o = new a.mg(t);
                 return (o.closeStroke = n), this.drawShape(o), this;
               }),
@@ -28958,12 +24936,7 @@ const bundle = () => {
                 return (
                   this._holeMode
                     ? this._geometry.drawHole(t, this._matrix)
-                    : this._geometry.drawShape(
-                        t,
-                        this._fillStyle.clone(),
-                        this._lineStyle.clone(),
-                        this._matrix,
-                      ),
+                    : this._geometry.drawShape(t, this._fillStyle.clone(), this._lineStyle.clone(), this._matrix),
                   this
                 );
               }),
@@ -28995,8 +24968,7 @@ const bundle = () => {
                   i = t.context.supports.uint32Indices;
                 e.updateBatches(i),
                   e.batchable
-                    ? (this.batchDirty !== e.batchDirty && this._populateBatches(),
-                      this._renderBatched(t))
+                    ? (this.batchDirty !== e.batchDirty && this._populateBatches(), this._renderBatched(t))
                     : (t.batch.flush(), this._renderDirect(t));
               }),
               (e.prototype._populateBatches = function () {
@@ -29011,16 +24983,8 @@ const bundle = () => {
                 for (var r = 0; r < i; r++) {
                   var n = t.batches[r],
                     s = n.style.color,
-                    a = new Float32Array(
-                      this.vertexData.buffer,
-                      4 * n.attribStart * 2,
-                      2 * n.attribSize,
-                    ),
-                    l = new Float32Array(
-                      t.uvsFloat32.buffer,
-                      4 * n.attribStart * 2,
-                      2 * n.attribSize,
-                    ),
+                    a = new Float32Array(this.vertexData.buffer, 4 * n.attribStart * 2, 2 * n.attribSize),
+                    l = new Float32Array(t.uvsFloat32.buffer, 4 * n.attribStart * 2, 2 * n.attribSize),
                     h = {
                       vertexData: a,
                       blendMode: e,
@@ -29042,8 +25006,7 @@ const bundle = () => {
                     this.calculateTints();
                   for (var e = 0, i = this.batches.length; e < i; e++) {
                     var r = this.batches[e];
-                    (r.worldAlpha = this.worldAlpha * r.alpha),
-                      t.plugins[this.pluginName].render(r);
+                    (r.worldAlpha = this.worldAlpha * r.alpha), t.plugins[this.pluginName].render(r);
                   }
                 }
               }),
@@ -29062,15 +25025,10 @@ const bundle = () => {
                   t.shader.bind(e),
                   t.geometry.bind(i, e),
                   t.state.set(this.state);
-                for (var o = 0, l = a.length; o < l; o++)
-                  this._renderDrawCallDirect(t, i.drawCalls[o]);
+                for (var o = 0, l = a.length; o < l; o++) this._renderDrawCallDirect(t, i.drawCalls[o]);
               }),
               (e.prototype._renderDrawCallDirect = function (t, e) {
-                for (
-                  var i = e.texArray, r = e.type, n = e.size, s = e.start, a = i.count, o = 0;
-                  o < a;
-                  o++
-                )
+                for (var i = e.texArray, r = e.type, n = e.size, s = e.start, a = i.count, o = 0; o < a; o++)
                   t.texture.bind(i.elements[o], o);
                 t.geometry.draw(r, n, s);
               }),
@@ -29079,21 +25037,11 @@ const bundle = () => {
                   i = this.pluginName;
                 if (!e) {
                   if (!G[i]) {
-                    for (
-                      var r = t.plugins.batch.MAX_TEXTURES, n = new Int32Array(r), o = 0;
-                      o < r;
-                      o++
-                    )
-                      n[o] = o;
+                    for (var r = t.plugins.batch.MAX_TEXTURES, n = new Int32Array(r), o = 0; o < r; o++) n[o] = o;
                     var l = {
                         tint: new Float32Array([1, 1, 1, 1]),
                         translationMatrix: new a.y3(),
-                        default: s.oo.from(
-                          {
-                            uSamplers: n,
-                          },
-                          !0,
-                        ),
+                        default: s.oo.from({ uSamplers: n }, !0),
                       },
                       h = t.plugins[i]._shader.program;
                     G[i] = new s.ex(h, l);
@@ -29115,10 +25063,7 @@ const bundle = () => {
                 }
               }),
               (e.prototype.containsPoint = function (t) {
-                return (
-                  this.worldTransform.applyInverse(t, e._TEMP_POINT),
-                  this._geometry.containsPoint(e._TEMP_POINT)
-                );
+                return this.worldTransform.applyInverse(t, e._TEMP_POINT), this._geometry.containsPoint(e._TEMP_POINT);
               }),
               (e.prototype.calculateTints = function () {
                 if (this.batchTint !== this.tint) {
@@ -29126,10 +25071,7 @@ const bundle = () => {
                   for (var t = (0, o.hex2rgb)(this.tint, U), e = 0; e < this.batches.length; e++) {
                     var i = this.batches[e],
                       r = i._batchRGB,
-                      n =
-                        ((t[0] * r[0] * 255) << 16) +
-                        ((t[1] * r[1] * 255) << 8) +
-                        (0 | (t[2] * r[2] * 255));
+                      n = ((t[0] * r[0] * 255) << 16) + ((t[1] * r[1] * 255) << 8) + (0 | (t[2] * r[2] * 255));
                     i._tintRGB = (n >> 16) + (65280 & n) + ((255 & n) << 16);
                   }
                 }
@@ -29239,12 +25181,7 @@ const bundle = () => {
         })(r || (r = {}));
         var o = (function () {
             function t(t, e) {
-              void 0 === t && (t = 0),
-                void 0 === e && (e = 0),
-                (this.x = 0),
-                (this.y = 0),
-                (this.x = t),
-                (this.y = e);
+              void 0 === t && (t = 0), void 0 === e && (e = 0), (this.x = 0), (this.y = 0), (this.x = t), (this.y = e);
             }
             return (
               (t.prototype.clone = function () {
@@ -29260,9 +25197,7 @@ const bundle = () => {
                 return t.x === this.x && t.y === this.y;
               }),
               (t.prototype.set = function (t, e) {
-                return (
-                  void 0 === t && (t = 0), void 0 === e && (e = t), (this.x = t), (this.y = e), this
-                );
+                return void 0 === t && (t = 0), void 0 === e && (e = t), (this.x = t), (this.y = e), this;
               }),
               (t.prototype.toString = function () {
                 return '[@pixi/math:Point x=' + this.x + ' y=' + this.y + ']';
@@ -29323,22 +25258,10 @@ const bundle = () => {
                 return new t(this.x, this.y, this.width, this.height);
               }),
               (t.prototype.copyFrom = function (t) {
-                return (
-                  (this.x = t.x),
-                  (this.y = t.y),
-                  (this.width = t.width),
-                  (this.height = t.height),
-                  this
-                );
+                return (this.x = t.x), (this.y = t.y), (this.width = t.width), (this.height = t.height), this;
               }),
               (t.prototype.copyTo = function (t) {
-                return (
-                  (t.x = this.x),
-                  (t.y = this.y),
-                  (t.width = this.width),
-                  (t.height = this.height),
-                  t
-                );
+                return (t.x = this.x), (t.y = this.y), (t.width = this.width), (t.height = this.height), t;
               }),
               (t.prototype.contains = function (t, e) {
                 return (
@@ -29385,21 +25308,14 @@ const bundle = () => {
                   m = f * s + g * a,
                   v = f * n + g * o,
                   A = f * s + g * o;
-                if (
-                  Math.max(_, m, v, A) <= f * h.x + g * h.y ||
-                  Math.min(_, m, v, A) >= f * p.x + g * p.y
-                )
-                  return !1;
+                if (Math.max(_, m, v, A) <= f * h.x + g * h.y || Math.min(_, m, v, A) >= f * p.x + g * p.y) return !1;
                 var y = d * (h.y - c.y),
                   b = d * (c.x - h.x),
                   x = y * n + b * a,
                   T = y * s + b * a,
                   E = y * n + b * o,
                   S = y * s + b * o;
-                return !(
-                  Math.max(x, T, E, S) <= y * h.x + b * h.y ||
-                  Math.min(x, T, E, S) >= y * p.x + b * p.y
-                );
+                return !(Math.max(x, T, E, S) <= y * h.x + b * h.y || Math.min(x, T, E, S) >= y * p.x + b * p.y);
               }),
               (t.prototype.pad = function (t, e) {
                 return (
@@ -29442,9 +25358,7 @@ const bundle = () => {
                   i = Math.max(this.x + this.width, t.x + t.width),
                   r = Math.min(this.y, t.y),
                   n = Math.max(this.y + this.height, t.y + t.height);
-                return (
-                  (this.x = e), (this.width = i - e), (this.y = r), (this.height = n - r), this
-                );
+                return (this.x = e), (this.width = i - e), (this.y = r), (this.height = n - r), this;
               }),
               (t.prototype.toString = function () {
                 return (
@@ -29484,17 +25398,10 @@ const bundle = () => {
                 return (r *= r) + (n *= n) <= i;
               }),
               (t.prototype.getBounds = function () {
-                return new h(
-                  this.x - this.radius,
-                  this.y - this.radius,
-                  2 * this.radius,
-                  2 * this.radius,
-                );
+                return new h(this.x - this.radius, this.y - this.radius, 2 * this.radius, 2 * this.radius);
               }),
               (t.prototype.toString = function () {
-                return (
-                  '[@pixi/math:Circle x=' + this.x + ' y=' + this.y + ' radius=' + this.radius + ']'
-                );
+                return '[@pixi/math:Circle x=' + this.x + ' y=' + this.y + ' radius=' + this.radius + ']';
               }),
               t
             );
@@ -29599,12 +25506,7 @@ const bundle = () => {
               }),
               (t.prototype.contains = function (t, e) {
                 if (this.width <= 0 || this.height <= 0) return !1;
-                if (
-                  t >= this.x &&
-                  t <= this.x + this.width &&
-                  e >= this.y &&
-                  e <= this.y + this.height
-                ) {
+                if (t >= this.x && t <= this.x + this.width && e >= this.y && e <= this.y + this.height) {
                   var i = Math.max(0, Math.min(this.radius, Math.min(this.width, this.height) / 2));
                   if (
                     (e >= this.y + i && e <= this.y + this.height - i) ||
@@ -29650,25 +25552,19 @@ const bundle = () => {
             }
             return (
               (t.prototype.clone = function (e, i) {
-                return (
-                  void 0 === e && (e = this.cb),
-                  void 0 === i && (i = this.scope),
-                  new t(e, i, this._x, this._y)
-                );
+                return void 0 === e && (e = this.cb), void 0 === i && (i = this.scope), new t(e, i, this._x, this._y);
               }),
               (t.prototype.set = function (t, e) {
                 return (
                   void 0 === t && (t = 0),
                   void 0 === e && (e = t),
-                  (this._x === t && this._y === e) ||
-                    ((this._x = t), (this._y = e), this.cb.call(this.scope)),
+                  (this._x === t && this._y === e) || ((this._x = t), (this._y = e), this.cb.call(this.scope)),
                   this
                 );
               }),
               (t.prototype.copyFrom = function (t) {
                 return (
-                  (this._x === t.x && this._y === t.y) ||
-                    ((this._x = t.x), (this._y = t.y), this.cb.call(this.scope)),
+                  (this._x === t.x && this._y === t.y) || ((this._x = t.x), (this._y = t.y), this.cb.call(this.scope)),
                   this
                 );
               }),
@@ -29722,23 +25618,10 @@ const bundle = () => {
             }
             return (
               (t.prototype.fromArray = function (t) {
-                (this.a = t[0]),
-                  (this.b = t[1]),
-                  (this.c = t[3]),
-                  (this.d = t[4]),
-                  (this.tx = t[2]),
-                  (this.ty = t[5]);
+                (this.a = t[0]), (this.b = t[1]), (this.c = t[3]), (this.d = t[4]), (this.tx = t[2]), (this.ty = t[5]);
               }),
               (t.prototype.set = function (t, e, i, r, n, s) {
-                return (
-                  (this.a = t),
-                  (this.b = e),
-                  (this.c = i),
-                  (this.d = r),
-                  (this.tx = n),
-                  (this.ty = s),
-                  this
-                );
+                return (this.a = t), (this.b = e), (this.c = i), (this.d = r), (this.tx = n), (this.ty = s), this;
               }),
               (t.prototype.toArray = function (t, e) {
                 this.array || (this.array = new Float32Array(9));
@@ -29770,11 +25653,7 @@ const bundle = () => {
                 e = e || new o();
                 var i = t.x,
                   r = t.y;
-                return (
-                  (e.x = this.a * i + this.c * r + this.tx),
-                  (e.y = this.b * i + this.d * r + this.ty),
-                  e
-                );
+                return (e.x = this.a * i + this.c * r + this.tx), (e.y = this.b * i + this.d * r + this.ty), e;
               }),
               (t.prototype.applyInverse = function (t, e) {
                 e = e || new o();
@@ -29782,10 +25661,8 @@ const bundle = () => {
                   r = t.x,
                   n = t.y;
                 return (
-                  (e.x =
-                    this.d * i * r + -this.c * i * n + (this.ty * this.c - this.tx * this.d) * i),
-                  (e.y =
-                    this.a * i * n + -this.b * i * r + (-this.ty * this.a + this.tx * this.b) * i),
+                  (e.x = this.d * i * r + -this.c * i * n + (this.ty * this.c - this.tx * this.d) * i),
+                  (e.y = this.a * i * n + -this.b * i * r + (-this.ty * this.a + this.tx * this.b) * i),
                   e
                 );
               }),
@@ -29793,15 +25670,7 @@ const bundle = () => {
                 return (this.tx += t), (this.ty += e), this;
               }),
               (t.prototype.scale = function (t, e) {
-                return (
-                  (this.a *= t),
-                  (this.d *= e),
-                  (this.c *= t),
-                  (this.b *= e),
-                  (this.tx *= t),
-                  (this.ty *= e),
-                  this
-                );
+                return (this.a *= t), (this.d *= e), (this.c *= t), (this.b *= e), (this.tx *= t), (this.ty *= e), this;
               }),
               (t.prototype.rotate = function (t) {
                 var e = Math.cos(t),
@@ -29855,11 +25724,7 @@ const bundle = () => {
                     (this.c = r * t.a + this.d * t.c),
                     (this.d = r * t.b + this.d * t.d);
                 }
-                return (
-                  (this.tx = e * t.a + this.ty * t.c + t.tx),
-                  (this.ty = e * t.b + this.ty * t.d + t.ty),
-                  this
-                );
+                return (this.tx = e * t.a + this.ty * t.c + t.tx), (this.ty = e * t.b + this.ty * t.d + t.ty), this;
               }),
               (t.prototype.decompose = function (t) {
                 var e = this.a,
@@ -29899,37 +25764,17 @@ const bundle = () => {
                 );
               }),
               (t.prototype.identity = function () {
-                return (
-                  (this.a = 1),
-                  (this.b = 0),
-                  (this.c = 0),
-                  (this.d = 1),
-                  (this.tx = 0),
-                  (this.ty = 0),
-                  this
-                );
+                return (this.a = 1), (this.b = 0), (this.c = 0), (this.d = 1), (this.tx = 0), (this.ty = 0), this;
               }),
               (t.prototype.clone = function () {
                 var e = new t();
                 return (
-                  (e.a = this.a),
-                  (e.b = this.b),
-                  (e.c = this.c),
-                  (e.d = this.d),
-                  (e.tx = this.tx),
-                  (e.ty = this.ty),
-                  e
+                  (e.a = this.a), (e.b = this.b), (e.c = this.c), (e.d = this.d), (e.tx = this.tx), (e.ty = this.ty), e
                 );
               }),
               (t.prototype.copyTo = function (t) {
                 return (
-                  (t.a = this.a),
-                  (t.b = this.b),
-                  (t.c = this.c),
-                  (t.d = this.d),
-                  (t.tx = this.tx),
-                  (t.ty = this.ty),
-                  t
+                  (t.a = this.a), (t.b = this.b), (t.c = this.c), (t.d = this.d), (t.tx = this.tx), (t.ty = this.ty), t
                 );
               }),
               (t.prototype.copyFrom = function (t) {
@@ -30178,14 +26023,7 @@ const bundle = () => {
       },
       9838: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          AL: () => p,
-          Au: () => h,
-          IE: () => u,
-          VJ: () => c,
-          ZT: () => f,
-          _1: () => l,
-        });
+        i.d(e, { AL: () => p, Au: () => h, IE: () => u, VJ: () => c, ZT: () => f, _1: () => l });
         var r = i(3880),
           n = i(3736),
           s = i(9839),
@@ -30193,9 +26031,7 @@ const bundle = () => {
             return (
               (a =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -30209,19 +26045,13 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          a(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          a(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var l = (function (t) {
             function e(e, i, r, n) {
-              void 0 === e && (e = 100),
-                void 0 === i && (i = 100),
-                void 0 === r && (r = 10),
-                void 0 === n && (n = 10);
+              void 0 === e && (e = 100), void 0 === i && (i = 100), void 0 === r && (r = 10), void 0 === n && (n = 10);
               var s = t.call(this) || this;
-              return (
-                (s.segWidth = r), (s.segHeight = n), (s.width = e), (s.height = i), s.build(), s
-              );
+              return (s.segWidth = r), (s.segHeight = n), (s.width = e), (s.height = i), s.build(), s;
             }
             return (
               o(e, t),
@@ -30298,11 +26128,7 @@ const bundle = () => {
                     var n = i.data,
                       s = r.data;
                     (n[0] = 0), (n[1] = 0), (n[2] = 0), (n[3] = 1);
-                    for (
-                      var a = 0, o = t[0], l = this._width * this.textureScale, h = t.length, u = 0;
-                      u < h;
-                      u++
-                    ) {
+                    for (var a = 0, o = t[0], l = this._width * this.textureScale, h = t.length, u = 0; u < h; u++) {
                       var c = 4 * u;
                       if (this.textureScale > 0) {
                         var p = o.x - t[u].x,
@@ -30329,19 +26155,12 @@ const bundle = () => {
               (e.prototype.updateVertices = function () {
                 var t = this.points;
                 if (!(t.length < 1)) {
-                  for (
-                    var e, i = t[0], r = 0, n = 0, s = this.buffers[0].data, a = t.length, o = 0;
-                    o < a;
-                    o++
-                  ) {
+                  for (var e, i = t[0], r = 0, n = 0, s = this.buffers[0].data, a = t.length, o = 0; o < a; o++) {
                     var l = t[o],
                       h = 4 * o;
                     (n = -((e = o < t.length - 1 ? t[o + 1] : l).x - i.x)), (r = e.y - i.y);
                     var u = Math.sqrt(r * r + n * n),
-                      c =
-                        this.textureScale > 0
-                          ? (this.textureScale * this._width) / 2
-                          : this._width / 2;
+                      c = this.textureScale > 0 ? (this.textureScale * this._width) / 2 : this._width / 2;
                     (r /= u),
                       (n /= u),
                       (r *= c),
@@ -30368,9 +26187,7 @@ const bundle = () => {
                 o = new h(e.height, i, s),
                 l = new r.rY(e);
               return (
-                s > 0 && (e.baseTexture.wrapMode = n.Nt.REPEAT),
-                ((a = t.call(this, o, l) || this).autoUpdate = !0),
-                a
+                s > 0 && (e.baseTexture.wrapMode = n.Nt.REPEAT), ((a = t.call(this, o, l) || this).autoUpdate = !0), a
               );
             }
             return (
@@ -30401,9 +26218,7 @@ const bundle = () => {
                   r = e.height;
                 !this.autoResize ||
                   (t.width === i && t.height === r) ||
-                  ((t.width = this.shader.texture.width),
-                  (t.height = this.shader.texture.height),
-                  t.build());
+                  ((t.width = this.shader.texture.width), (t.height = this.shader.texture.height), t.build());
               }),
               Object.defineProperty(e.prototype, 'texture', {
                 get: function () {
@@ -30413,9 +26228,7 @@ const bundle = () => {
                   this.shader.texture !== t &&
                     ((this.shader.texture = t),
                     (this._textureID = -1),
-                    t.baseTexture.valid
-                      ? this.textureUpdated()
-                      : t.once('update', this.textureUpdated, this));
+                    t.baseTexture.valid ? this.textureUpdated() : t.once('update', this.textureUpdated, this));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -30425,8 +26238,7 @@ const bundle = () => {
                   t.prototype._render.call(this, e);
               }),
               (e.prototype.destroy = function (e) {
-                this.shader.texture.off('update', this.textureUpdated, this),
-                  t.prototype.destroy.call(this, e);
+                this.shader.texture.off('update', this.textureUpdated, this), t.prototype.destroy.call(this, e);
               }),
               e
             );
@@ -30462,10 +26274,7 @@ const bundle = () => {
           d = 10,
           f = (function (t) {
             function e(e, i, r, n, a) {
-              void 0 === i && (i = d),
-                void 0 === r && (r = d),
-                void 0 === n && (n = d),
-                void 0 === a && (a = d);
+              void 0 === i && (i = d), void 0 === r && (r = d), void 0 === n && (n = d), void 0 === a && (a = d);
               var o = t.call(this, s.xE.WHITE, 4, 4) || this;
               return (
                 (o._origWidth = e.orig.width),
@@ -30601,12 +26410,7 @@ const bundle = () => {
       },
       3880: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Kj: () => f,
-          rY: () => m,
-          wQ: () => c,
-          xc: () => v,
-        });
+        i.d(e, { Kj: () => f, rY: () => m, wQ: () => c, xc: () => v });
         var r = i(9839),
           n = i(7442),
           s = i(3736),
@@ -30617,9 +26421,7 @@ const bundle = () => {
             return (
               (h =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -30633,8 +26435,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          h(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          h(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var c = (function () {
             function t(t, e) {
@@ -30652,11 +26453,9 @@ const bundle = () => {
                   this._bufferUpdateId !== this.uvBuffer._updateID ||
                   this._textureUpdateId !== this.uvMatrix._updateID
                 ) {
-                  (this._bufferUpdateId = this.uvBuffer._updateID),
-                    (this._textureUpdateId = this.uvMatrix._updateID);
+                  (this._bufferUpdateId = this.uvBuffer._updateID), (this._textureUpdateId = this.uvMatrix._updateID);
                   var e = this.uvBuffer.data;
-                  (this.data && this.data.length === e.length) ||
-                    (this.data = new Float32Array(e.length)),
+                  (this.data && this.data.length === e.length) || (this.data = new Float32Array(e.length)),
                     this.uvMatrix.multiplyUvs(e, this.data),
                     this._updateID++;
                 }
@@ -30696,8 +26495,7 @@ const bundle = () => {
                 set: function (t) {
                   this._geometry !== t &&
                     (this._geometry &&
-                      (this._geometry.refCount--,
-                      0 === this._geometry.refCount && this._geometry.dispose()),
+                      (this._geometry.refCount--, 0 === this._geometry.refCount && this._geometry.dispose()),
                     (this._geometry = t),
                     this._geometry && this._geometry.refCount++,
                     (this.vertexDirty = -1));
@@ -30771,9 +26569,7 @@ const bundle = () => {
               }),
               (e.prototype._render = function (t) {
                 var i = this.geometry.buffers[0].data;
-                this.shader.batchable &&
-                this.drawMode === s.lg.TRIANGLES &&
-                i.length < 2 * e.BATCHABLE_SIZE
+                this.shader.batchable && this.drawMode === s.lg.TRIANGLES && i.length < 2 * e.BATCHABLE_SIZE
                   ? this._renderToBatch(t)
                   : this._renderDefault(t);
               }),
@@ -30786,12 +26582,7 @@ const bundle = () => {
                   t.shader.bind(e),
                   t.state.set(this.state),
                   t.geometry.bind(this.geometry, e),
-                  t.geometry.draw(
-                    this.drawMode,
-                    this.size,
-                    this.start,
-                    this.geometry.instanceCount,
-                  );
+                  t.geometry.draw(this.drawMode, this.size, this.start, this.geometry.instanceCount);
               }),
               (e.prototype._renderToBatch = function (t) {
                 var e = this.geometry,
@@ -30810,8 +26601,7 @@ const bundle = () => {
                   i = t._updateID;
                 if (i !== this.vertexDirty || this._transformID !== this.transform._worldID) {
                   (this._transformID = this.transform._worldID),
-                    this.vertexData.length !== e.length &&
-                      (this.vertexData = new Float32Array(e.length));
+                    this.vertexData.length !== e.length && (this.vertexData = new Float32Array(e.length));
                   for (
                     var r = this.transform.worldTransform,
                       n = r.a,
@@ -30846,8 +26636,7 @@ const bundle = () => {
                     (this.uvs = this.batchUvs.data));
               }),
               (e.prototype._calculateBounds = function () {
-                this.calculateVertices(),
-                  this._bounds.addVertexData(this.vertexData, 0, this.vertexData.length);
+                this.calculateVertices(), this._bounds.addVertexData(this.vertexData, 0, this.vertexData.length);
               }),
               (e.prototype.containsPoint = function (t) {
                 if (!this.getBounds().contains(t.x, t.y)) return !1;
@@ -30880,8 +26669,7 @@ const bundle = () => {
               }),
               (e.prototype.destroy = function (e) {
                 t.prototype.destroy.call(this, e),
-                  this._cachedTexture &&
-                    (this._cachedTexture.destroy(), (this._cachedTexture = null)),
+                  this._cachedTexture && (this._cachedTexture.destroy(), (this._cachedTexture = null)),
                   (this.geometry = null),
                   (this.shader = null),
                   (this.state = null),
@@ -30900,21 +26688,10 @@ const bundle = () => {
           m = (function (t) {
             function e(e, i) {
               var s = this,
-                a = {
-                  uSampler: e,
-                  alpha: 1,
-                  uTextureMatrix: n.y3.IDENTITY,
-                  uColor: new Float32Array([1, 1, 1, 1]),
-                };
+                a = { uSampler: e, alpha: 1, uTextureMatrix: n.y3.IDENTITY, uColor: new Float32Array([1, 1, 1, 1]) };
               return (
-                (i = Object.assign(
-                  {
-                    tint: 16777215,
-                    alpha: 1,
-                    pluginName: 'batch',
-                  },
-                  i,
-                )).uniforms && Object.assign(a, i.uniforms),
+                (i = Object.assign({ tint: 16777215, alpha: 1, pluginName: 'batch' }, i)).uniforms &&
+                  Object.assign(a, i.uniforms),
                 ((s = t.call(this, i.program || r.$r.from(_, g), a) || this)._colorDirty = !1),
                 (s.uvMatrix = new r.UX(e)),
                 (s.batchable = void 0 === i.program),
@@ -30931,8 +26708,7 @@ const bundle = () => {
                   return this.uniforms.uSampler;
                 },
                 set: function (t) {
-                  this.uniforms.uSampler !== t &&
-                    ((this.uniforms.uSampler = t), (this.uvMatrix.texture = t));
+                  this.uniforms.uSampler !== t && ((this.uniforms.uSampler = t), (this.uvMatrix.texture = t));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -30964,12 +26740,7 @@ const bundle = () => {
                 if (this._colorDirty) {
                   this._colorDirty = !1;
                   var t = this.texture.baseTexture;
-                  (0, l.premultiplyTintToRgba)(
-                    this._tint,
-                    this._alpha,
-                    this.uniforms.uColor,
-                    t.alphaMode,
-                  );
+                  (0, l.premultiplyTintToRgba)(this._tint, this._alpha, this.uniforms.uColor, t.alphaMode);
                 }
                 this.uvMatrix.update() && (this.uniforms.uTextureMatrix = this.uvMatrix.mapCoord);
               }),
@@ -31006,10 +26777,7 @@ const bundle = () => {
       },
       3685: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          P: () => f,
-          T: () => u,
-        });
+        i.d(e, { P: () => f, T: () => u });
         var r = i(3736),
           n = i(7909),
           s = i(5579),
@@ -31019,9 +26787,7 @@ const bundle = () => {
             return (
               (l =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -31035,8 +26801,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          l(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          l(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var u = (function (t) {
             function e(e, i, n, s) {
@@ -31068,14 +26833,11 @@ const bundle = () => {
               (e.prototype.setProperties = function (t) {
                 t &&
                   ((this._properties[0] =
-                    'vertices' in t || 'scale' in t
-                      ? !!t.vertices || !!t.scale
-                      : this._properties[0]),
+                    'vertices' in t || 'scale' in t ? !!t.vertices || !!t.scale : this._properties[0]),
                   (this._properties[1] = 'position' in t ? !!t.position : this._properties[1]),
                   (this._properties[2] = 'rotation' in t ? !!t.rotation : this._properties[2]),
                   (this._properties[3] = 'uvs' in t ? !!t.uvs : this._properties[3]),
-                  (this._properties[4] =
-                    'tint' in t || 'alpha' in t ? !!t.tint || !!t.alpha : this._properties[4]));
+                  (this._properties[4] = 'tint' in t || 'alpha' in t ? !!t.tint || !!t.alpha : this._properties[4]));
               }),
               (e.prototype.updateTransform = function () {
                 this.displayObjectUpdateTransform();
@@ -31163,9 +26925,7 @@ const bundle = () => {
                   t.addIndex(this.indexBuffer),
                   (this.dynamicStride = 0);
                 for (var i = 0; i < this.dynamicProperties.length; ++i) {
-                  ((h = this.dynamicProperties[i]).offset = e),
-                    (e += h.size),
-                    (this.dynamicStride += h.size);
+                  ((h = this.dynamicProperties[i]).offset = e), (e += h.size), (this.dynamicStride += h.size);
                 }
                 var n = new ArrayBuffer(this.size * this.dynamicStride * 4 * 4);
                 (this.dynamicData = new Float32Array(n)),
@@ -31174,9 +26934,7 @@ const bundle = () => {
                 var o = 0;
                 this.staticStride = 0;
                 for (i = 0; i < this.staticProperties.length; ++i) {
-                  ((h = this.staticProperties[i]).offset = o),
-                    (o += h.size),
-                    (this.staticStride += h.size);
+                  ((h = this.staticProperties[i]).offset = o), (o += h.size), (this.staticStride += h.size);
                 }
                 var l = new ArrayBuffer(this.size * this.staticStride * 4 * 4);
                 (this.staticData = new Float32Array(l)),
@@ -31262,30 +27020,10 @@ const bundle = () => {
                 (i.properties = null),
                 (i.tempMatrix = new o.y3()),
                 (i.properties = [
-                  {
-                    attributeName: 'aVertexPosition',
-                    size: 2,
-                    uploadFunction: i.uploadVertices,
-                    offset: 0,
-                  },
-                  {
-                    attributeName: 'aPositionCoord',
-                    size: 2,
-                    uploadFunction: i.uploadPosition,
-                    offset: 0,
-                  },
-                  {
-                    attributeName: 'aRotation',
-                    size: 1,
-                    uploadFunction: i.uploadRotation,
-                    offset: 0,
-                  },
-                  {
-                    attributeName: 'aTextureCoord',
-                    size: 2,
-                    uploadFunction: i.uploadUvs,
-                    offset: 0,
-                  },
+                  { attributeName: 'aVertexPosition', size: 2, uploadFunction: i.uploadVertices, offset: 0 },
+                  { attributeName: 'aPositionCoord', size: 2, uploadFunction: i.uploadPosition, offset: 0 },
+                  { attributeName: 'aRotation', size: 1, uploadFunction: i.uploadRotation, offset: 0 },
+                  { attributeName: 'aTextureCoord', size: 2, uploadFunction: i.uploadUvs, offset: 0 },
                   {
                     attributeName: 'aColor',
                     size: 1,
@@ -31312,8 +27050,7 @@ const bundle = () => {
                   var o = t._buffers;
                   o || (o = t._buffers = this.generateBuffers(t));
                   var l = e[0]._texture.baseTexture;
-                  (this.state.blendMode = (0, s.correctBlendMode)(t.blendMode, l.alphaMode)),
-                    n.state.set(this.state);
+                  (this.state.blendMode = (0, s.correctBlendMode)(t.blendMode, l.alphaMode)), n.state.set(this.state);
                   var h = n.gl,
                     u = t.worldTransform.copyTo(this.tempMatrix);
                   u.prepend(n.globalUniforms.uniforms.projectionMatrix),
@@ -31332,19 +27069,14 @@ const bundle = () => {
                     var g = o[d];
                     g.uploadDynamic(e, p, f);
                     var _ = t._bufferUpdateIDs[d] || 0;
-                    (c = c || g._updateID < _) &&
-                      ((g._updateID = t._updateID), g.uploadStatic(e, p, f)),
+                    (c = c || g._updateID < _) && ((g._updateID = t._updateID), g.uploadStatic(e, p, f)),
                       n.geometry.bind(g.geometry),
                       h.drawElements(h.TRIANGLES, 6 * f, h.UNSIGNED_SHORT, 0);
                   }
                 }
               }),
               (e.prototype.generateBuffers = function (t) {
-                for (
-                  var e = [], i = t._maxSize, r = t._batchSize, n = t._properties, s = 0;
-                  s < i;
-                  s += r
-                )
+                for (var e = [], i = t._maxSize, r = t._batchSize, n = t._properties, s = 0; s < i; s += r)
                   e.push(new c(this.properties, n, r));
                 return e;
               }),
@@ -31428,10 +27160,7 @@ const bundle = () => {
                   var l = t[e + o],
                     h = l._texture.baseTexture.alphaMode > 0,
                     u = l.alpha,
-                    c =
-                      u < 1 && h
-                        ? (0, s.premultiplyTint)(l._tintRGB, u)
-                        : l._tintRGB + ((255 * u) << 24);
+                    c = u < 1 && h ? (0, s.premultiplyTint)(l._tintRGB, u) : l._tintRGB + ((255 * u) << 24);
                   (r[a] = c), (r[a + n] = c), (r[a + 2 * n] = c), (r[a + 3 * n] = c), (a += 4 * n);
                 }
               }),
@@ -31446,12 +27175,7 @@ const bundle = () => {
       },
       1024: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          B9: () => T,
-          FI: () => E,
-          Zq: () => A,
-          fh: () => c,
-        });
+        i.d(e, { B9: () => T, FI: () => E, Zq: () => A, fh: () => c });
         var r = i(875),
           n = i(9839),
           s = i(8838),
@@ -31463,9 +27187,7 @@ const bundle = () => {
           return (
             (h =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -31479,8 +27201,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          h(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          h(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var c = (function () {
           function t(t) {
@@ -31569,19 +27290,14 @@ const bundle = () => {
                 t && this.add(t),
                 this.queue.length
                   ? (e && this.completes.push(e),
-                    this.ticking ||
-                      ((this.ticking = !0), a.vB.system.addOnce(this.tick, this, a.uF.UTILITY)))
+                    this.ticking || ((this.ticking = !0), a.vB.system.addOnce(this.tick, this, a.uF.UTILITY)))
                   : e && e();
             }),
             (t.prototype.tick = function () {
               setTimeout(this.delayedTick, 0);
             }),
             (t.prototype.prepareItems = function () {
-              for (
-                this.limiter.beginFrame();
-                this.queue.length && this.limiter.allowedToUpload();
-
-              ) {
+              for (this.limiter.beginFrame(); this.queue.length && this.limiter.allowedToUpload(); ) {
                 var t = this.queue[0],
                   e = !1;
                 if (t && !t._destroyed)
@@ -31607,13 +27323,8 @@ const bundle = () => {
               return t && this.uploadHooks.push(t), this;
             }),
             (t.prototype.add = function (t) {
-              for (
-                var e = 0, i = this.addHooks.length;
-                e < i && !this.addHooks[e](t, this.queue);
-                e++
-              );
-              if (t instanceof o.W2)
-                for (e = t.children.length - 1; e >= 0; e--) this.add(t.children[e]);
+              for (var e = 0, i = this.addHooks.length; e < i && !this.addHooks[e](t, this.queue); e++);
+              if (t instanceof o.W2) for (e = t.children.length - 1; e >= 0; e--) this.add(t.children[e]);
               return this;
             }),
             (t.prototype.destroy = function () {
@@ -31676,9 +27387,7 @@ const bundle = () => {
       },
       7584: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          R: () => r,
-        });
+        i.d(e, { R: () => r });
         var r = (function () {
           function t(t) {
             (this.items = []), (this._name = t), (this._aliasCount = 0);
@@ -31699,10 +27408,7 @@ const bundle = () => {
                 ((this._aliasCount = 0), (this.items = this.items.slice(0)));
             }),
             (t.prototype.add = function (t) {
-              return (
-                t[this._name] && (this.ensureNonAliasedItems(), this.remove(t), this.items.push(t)),
-                this
-              );
+              return t[this._name] && (this.ensureNonAliasedItems(), this.remove(t), this.items.push(t)), this;
             }),
             (t.prototype.remove = function (t) {
               var e = this.items.indexOf(t);
@@ -31735,20 +27441,13 @@ const bundle = () => {
           );
         })();
         Object.defineProperties(r.prototype, {
-          dispatch: {
-            value: r.prototype.emit,
-          },
-          run: {
-            value: r.prototype.emit,
-          },
+          dispatch: { value: r.prototype.emit },
+          run: { value: r.prototype.emit },
         });
       },
       875: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          t: () => G,
-          X: () => j,
-        });
+        i.d(e, { t: () => G, X: () => j });
         var r = /iPhone/i,
           n = /iPod/i,
           s = /iPad/i,
@@ -31779,21 +27478,13 @@ const bundle = () => {
           };
         }
         function y(t) {
-          var e = {
-            userAgent: '',
-            platform: '',
-            maxTouchPoints: 0,
-          };
+          var e = { userAgent: '', platform: '', maxTouchPoints: 0 };
           t || 'undefined' == typeof navigator
             ? 'string' == typeof t
               ? (e.userAgent = t)
               : t &&
                 t.userAgent &&
-                (e = {
-                  userAgent: t.userAgent,
-                  platform: t.platform,
-                  maxTouchPoints: t.maxTouchPoints || 0,
-                })
+                (e = { userAgent: t.userAgent, platform: t.platform, maxTouchPoints: t.maxTouchPoints || 0 })
             : (e = {
                 userAgent: navigator.userAgent,
                 platform: navigator.platform,
@@ -31811,21 +27502,13 @@ const bundle = () => {
                 universal: b(a),
                 device: (b(r) || b(n) || b(s) || b(a) || v(e)) && !b(c),
               },
-              amazon: {
-                phone: b(h),
-                tablet: !b(h) && b(u),
-                device: b(h) || b(u),
-              },
+              amazon: { phone: b(h), tablet: !b(h) && b(u), device: b(h) || b(u) },
               android: {
                 phone: (!b(c) && b(h)) || (!b(c) && b(o)),
                 tablet: !b(c) && !b(h) && !b(o) && (b(u) || b(l)),
                 device: (!b(c) && (b(h) || b(u) || b(o) || b(l))) || b(/\bokhttp\b/i),
               },
-              windows: {
-                phone: b(c),
-                tablet: b(p),
-                device: b(c) || b(p),
-              },
+              windows: { phone: b(c), tablet: b(p), device: b(c) || b(p) },
               other: {
                 blackberry: b(d),
                 blackberry10: b(f),
@@ -31870,11 +27553,9 @@ const bundle = () => {
           if (G.tablet || G.phone) {
             var i;
             if (G.apple.device)
-              if ((i = navigator.userAgent.match(/OS (\d+)_(\d+)?/)))
-                parseInt(i[1], 10) < 11 && (e = !1);
+              if ((i = navigator.userAgent.match(/OS (\d+)_(\d+)?/))) parseInt(i[1], 10) < 11 && (e = !1);
             if (G.android.device)
-              if ((i = navigator.userAgent.match(/Android\s([0-9.]*)/)))
-                parseInt(i[1], 10) < 7 && (e = !1);
+              if ((i = navigator.userAgent.match(/Android\s([0-9.]*)/))) parseInt(i[1], 10) < 7 && (e = !1);
           }
           return e ? t : 4;
         }
@@ -31882,19 +27563,13 @@ const bundle = () => {
           return !G.apple.device;
         }
         (function (t) {
-          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'),
-            (t[(t.WEBGL = 1)] = 'WEBGL'),
-            (t[(t.WEBGL2 = 2)] = 'WEBGL2');
+          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.WEBGL2 = 2)] = 'WEBGL2');
         })(b || (b = {})),
           (function (t) {
-            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.CANVAS = 2)] = 'CANVAS');
+            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.CANVAS = 2)] = 'CANVAS');
           })(x || (x = {})),
           (function (t) {
-            (t[(t.COLOR = 16384)] = 'COLOR'),
-              (t[(t.DEPTH = 256)] = 'DEPTH'),
-              (t[(t.STENCIL = 1024)] = 'STENCIL');
+            (t[(t.COLOR = 16384)] = 'COLOR'), (t[(t.DEPTH = 256)] = 'DEPTH'), (t[(t.STENCIL = 1024)] = 'STENCIL');
           })(T || (T = {})),
           (function (t) {
             (t[(t.NORMAL = 0)] = 'NORMAL'),
@@ -32075,10 +27750,7 @@ const bundle = () => {
       },
       9073: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          S: () => v,
-          o: () => c,
-        });
+        i.d(e, { S: () => v, o: () => c });
         var r = i(9839),
           n = i(7442),
           s = i(5510),
@@ -32088,9 +27760,7 @@ const bundle = () => {
             return (
               (l =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -32104,8 +27774,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          l(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          l(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var u = new n.E9(),
           c = (function (t) {
@@ -32155,8 +27824,7 @@ const bundle = () => {
                 configurable: !0,
               }),
               (e.prototype._onTextureUpdate = function () {
-                this.uvMatrix && (this.uvMatrix.texture = this._texture),
-                  (this._cachedTint = 16777215);
+                this.uvMatrix && (this.uvMatrix.texture = this._texture), (this._cachedTint = 16777215);
               }),
               (e.prototype._render = function (t) {
                 var e = this._texture;
@@ -32180,9 +27848,7 @@ const bundle = () => {
                     (this._bounds.minY = this._height * -this._anchor._y),
                     (this._bounds.maxX = this._width * (1 - this._anchor._x)),
                     (this._bounds.maxY = this._height * (1 - this._anchor._y)),
-                    e ||
-                      (this._localBoundsRect || (this._localBoundsRect = new n.Ae()),
-                      (e = this._localBoundsRect)),
+                    e || (this._localBoundsRect || (this._localBoundsRect = new n.Ae()), (e = this._localBoundsRect)),
                     this._bounds.getRectangle(e))
                   : t.prototype.getLocalBounds.call(this, e);
               }),
@@ -32198,9 +27864,7 @@ const bundle = () => {
                 return !1;
               }),
               (e.prototype.destroy = function (e) {
-                t.prototype.destroy.call(this, e),
-                  (this.tileTransform = null),
-                  (this.uvMatrix = null);
+                t.prototype.destroy.call(this, e), (this.tileTransform = null), (this.uvMatrix = null);
               }),
               (e.from = function (t, i) {
                 return new e(t instanceof r.xE ? t : r.xE.from(t, i), i.width, i.height);
@@ -32242,20 +27906,15 @@ const bundle = () => {
           v = (function (t) {
             function e(e) {
               var i = t.call(this, e) || this;
-              return (
-                e.runners.contextChange.add(i), (i.quad = new r.ud()), (i.state = r.ZM.for2d()), i
-              );
+              return e.runners.contextChange.add(i), (i.quad = new r.ud()), (i.state = r.ZM.for2d()), i;
             }
             return (
               h(e, t),
               (e.prototype.contextChange = function () {
                 var t = this.renderer,
-                  e = {
-                    globals: t.globalUniforms,
-                  };
+                  e = { globals: t.globalUniforms };
                 (this.simpleShader = r.ex.from(d, p, e)),
-                  (this.shader =
-                    t.context.webGLVersion > 1 ? r.ex.from(g, _, e) : r.ex.from(d, f, e));
+                  (this.shader = t.context.webGLVersion > 1 ? r.ex.from(g, _, e) : r.ex.from(d, f, e));
               }),
               (e.prototype.render = function (t) {
                 var e = this.renderer,
@@ -32286,14 +27945,7 @@ const bundle = () => {
                   g = l.height,
                   _ = t._width,
                   v = t._height;
-                m.set(
-                  (u.a * f) / _,
-                  (u.b * f) / v,
-                  (u.c * g) / _,
-                  (u.d * g) / v,
-                  u.tx / _,
-                  u.ty / v,
-                ),
+                m.set((u.a * f) / _, (u.b * f) / v, (u.c * g) / _, (u.d * g) / v, u.tx / _, u.ty / v),
                   m.invert(),
                   p
                     ? m.prepend(c.mapCoord)
@@ -32321,9 +27973,7 @@ const bundle = () => {
       },
       5510: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          j: () => d,
-        });
+        i.d(e, { j: () => d });
         var r = i(3736),
           n = i(9839),
           s = i(7909),
@@ -32334,9 +27984,7 @@ const bundle = () => {
             return (
               (h =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -32350,8 +27998,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          h(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          h(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var c = new a.E9(),
           p = new Uint16Array([0, 1, 2, 0, 2, 3]),
@@ -32359,12 +28006,7 @@ const bundle = () => {
             function e(e) {
               var i = t.call(this) || this;
               return (
-                (i._anchor = new a.AB(
-                  i._onAnchorUpdate,
-                  i,
-                  e ? e.defaultAnchor.x : 0,
-                  e ? e.defaultAnchor.y : 0,
-                )),
+                (i._anchor = new a.AB(i._onAnchorUpdate, i, e ? e.defaultAnchor.x : 0, e ? e.defaultAnchor.y : 0)),
                 (i._texture = null),
                 (i._width = 0),
                 (i._height = 0),
@@ -32394,22 +28036,16 @@ const bundle = () => {
                 (this._textureID = -1),
                   (this._textureTrimmedID = -1),
                   (this._cachedTint = 16777215),
-                  this._width &&
-                    (this.scale.x =
-                      ((0, l.sign)(this.scale.x) * this._width) / this._texture.orig.width),
+                  this._width && (this.scale.x = ((0, l.sign)(this.scale.x) * this._width) / this._texture.orig.width),
                   this._height &&
-                    (this.scale.y =
-                      ((0, l.sign)(this.scale.y) * this._height) / this._texture.orig.height);
+                    (this.scale.y = ((0, l.sign)(this.scale.y) * this._height) / this._texture.orig.height);
               }),
               (e.prototype._onAnchorUpdate = function () {
                 (this._transformID = -1), (this._transformTrimmedID = -1);
               }),
               (e.prototype.calculateVertices = function () {
                 var t = this._texture;
-                if (
-                  this._transformID !== this.transform._worldID ||
-                  this._textureID !== t._updateID
-                ) {
+                if (this._transformID !== this.transform._worldID || this._textureID !== t._updateID) {
                   this._textureID !== t._updateID && (this.uvs = this._texture._uvs.uvsFloat32),
                     (this._transformID = this.transform._worldID),
                     (this._textureID = t._updateID);
@@ -32430,10 +28066,8 @@ const bundle = () => {
                     _ = 0;
                   if (
                     (u
-                      ? ((d = (f = u.x - p._x * c.width) + u.width),
-                        (g = (_ = u.y - p._y * c.height) + u.height))
-                      : ((d = (f = -p._x * c.width) + c.width),
-                        (g = (_ = -p._y * c.height) + c.height)),
+                      ? ((d = (f = u.x - p._x * c.width) + u.width), (g = (_ = u.y - p._y * c.height) + u.height))
+                      : ((d = (f = -p._x * c.width) + c.width), (g = (_ = -p._y * c.height) + c.height)),
                     (h[0] = i * f + n * _ + a),
                     (h[1] = s * _ + r * f + l),
                     (h[2] = i * d + n * _ + a),
@@ -32444,8 +28078,7 @@ const bundle = () => {
                     (h[7] = s * g + r * f + l),
                     this._roundPixels)
                   )
-                    for (var m = o.X.RESOLUTION, v = 0; v < h.length; ++v)
-                      h[v] = Math.round(((h[v] * m) | 0) / m);
+                    for (var m = o.X.RESOLUTION, v = 0; v < h.length; ++v) h[v] = Math.round(((h[v] * m) | 0) / m);
                 }
               }),
               (e.prototype.calculateTrimmedVertices = function () {
@@ -32501,9 +28134,7 @@ const bundle = () => {
                     (this._localBounds.minY = this._texture.orig.height * -this._anchor._y),
                     (this._localBounds.maxX = this._texture.orig.width * (1 - this._anchor._x)),
                     (this._localBounds.maxY = this._texture.orig.height * (1 - this._anchor._y)),
-                    e ||
-                      (this._localBoundsRect || (this._localBoundsRect = new a.Ae()),
-                      (e = this._localBoundsRect)),
+                    e || (this._localBoundsRect || (this._localBoundsRect = new a.Ae()), (e = this._localBoundsRect)),
                     this._localBounds.getRectangle(e))
                   : t.prototype.getLocalBounds.call(this, e);
               }),
@@ -32513,9 +28144,7 @@ const bundle = () => {
                   i = this._texture.orig.height,
                   r = -e * this.anchor.x,
                   n = 0;
-                return (
-                  c.x >= r && c.x < r + e && ((n = -i * this.anchor.y), c.y >= n && c.y < n + i)
-                );
+                return c.x >= r && c.x < r + e && ((n = -i * this.anchor.y), c.y >= n && c.y < n + i);
               }),
               (e.prototype.destroy = function (e) {
                 if (
@@ -32596,9 +28225,7 @@ const bundle = () => {
                     (this._textureID = -1),
                     (this._textureTrimmedID = -1),
                     t &&
-                      (t.baseTexture.valid
-                        ? this._onTextureUpdate()
-                        : t.once('update', this._onTextureUpdate, this)));
+                      (t.baseTexture.valid ? this._onTextureUpdate() : t.once('update', this._onTextureUpdate, this)));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -32609,12 +28236,7 @@ const bundle = () => {
       },
       2865: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          M_: () => r,
-          _A: () => v,
-          pn: () => d,
-          xv: () => b,
-        });
+        i.d(e, { M_: () => r, _A: () => v, pn: () => d, xv: () => b });
         var r,
           n = i(5510),
           s = i(9839),
@@ -32625,9 +28247,7 @@ const bundle = () => {
             return (
               (h =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -32641,12 +28261,10 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          h(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          h(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         (function (t) {
-          (t[(t.LINEAR_VERTICAL = 0)] = 'LINEAR_VERTICAL'),
-            (t[(t.LINEAR_HORIZONTAL = 1)] = 'LINEAR_HORIZONTAL');
+          (t[(t.LINEAR_VERTICAL = 0)] = 'LINEAR_VERTICAL'), (t[(t.LINEAR_HORIZONTAL = 1)] = 'LINEAR_HORIZONTAL');
         })(r || (r = {}));
         var c = {
             align: 'left',
@@ -32768,8 +28386,7 @@ const bundle = () => {
                   return this._dropShadowDistance;
                 },
                 set: function (t) {
-                  this._dropShadowDistance !== t &&
-                    ((this._dropShadowDistance = t), this.styleID++);
+                  this._dropShadowDistance !== t && ((this._dropShadowDistance = t), this.styleID++);
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -32992,20 +28609,9 @@ const bundle = () => {
                 Array.isArray(this.fontFamily) || (e = this.fontFamily.split(','));
                 for (var i = e.length - 1; i >= 0; i--) {
                   var r = e[i].trim();
-                  !/([\"\'])[^\'\"]+\1/.test(r) && p.indexOf(r) < 0 && (r = '"' + r + '"'),
-                    (e[i] = r);
+                  !/([\"\'])[^\'\"]+\1/.test(r) && p.indexOf(r) < 0 && (r = '"' + r + '"'), (e[i] = r);
                 }
-                return (
-                  this.fontStyle +
-                  ' ' +
-                  this.fontVariant +
-                  ' ' +
-                  this.fontWeight +
-                  ' ' +
-                  t +
-                  ' ' +
-                  e.join(',')
-                );
+                return this.fontStyle + ' ' + this.fontVariant + ' ' + this.fontWeight + ' ' + t + ' ' + e.join(',');
               }),
               t
             );
@@ -33052,10 +28658,7 @@ const bundle = () => {
                 var o = n.getContext('2d');
                 o.font = s;
                 for (
-                  var l = (r ? t.wordWrap(e, i, n) : e).split(/(?:\r\n|\r|\n)/),
-                    h = new Array(l.length),
-                    u = 0,
-                    c = 0;
+                  var l = (r ? t.wordWrap(e, i, n) : e).split(/(?:\r\n|\r|\n)/), h = new Array(l.length), u = 0, c = 0;
                   c < l.length;
                   c++
                 ) {
@@ -33065,12 +28668,8 @@ const bundle = () => {
                 var d = u + i.strokeThickness;
                 i.dropShadow && (d += i.dropShadowDistance);
                 var f = i.lineHeight || a.fontSize + i.strokeThickness,
-                  g =
-                    Math.max(f, a.fontSize + i.strokeThickness) + (l.length - 1) * (f + i.leading);
-                return (
-                  i.dropShadow && (g += i.dropShadowDistance),
-                  new t(e, i, d, g, l, h, f + i.leading, u, a)
-                );
+                  g = Math.max(f, a.fontSize + i.strokeThickness) + (l.length - 1) * (f + i.leading);
+                return i.dropShadow && (g += i.dropShadowDistance), new t(e, i, d, g, l, h, f + i.leading, u, a);
               }),
               (t.wordWrap = function (e, i, r) {
                 void 0 === r && (r = t._canvas);
@@ -33106,10 +28705,7 @@ const bundle = () => {
                   }
                   var y = t.getFromCache(m, h, l, n);
                   if (y > f)
-                    if (
-                      ('' !== a && ((o += t.addLine(a)), (a = ''), (s = 0)),
-                      t.canBreakWords(m, i.breakWords))
-                    )
+                    if (('' !== a && ((o += t.addLine(a)), (a = ''), (s = 0)), t.canBreakWords(m, i.breakWords)))
                       for (var b = t.wordWrapSplit(m), x = 0; x < b.length; x++) {
                         for (var T = b[x], E = 1; b[x + E]; ) {
                           var S = b[x + E],
@@ -33119,9 +28715,7 @@ const bundle = () => {
                         }
                         x += T.length - 1;
                         var w = t.getFromCache(T, h, l, n);
-                        w + s > f && ((o += t.addLine(a)), (d = !1), (a = ''), (s = 0)),
-                          (a += T),
-                          (s += w);
+                        w + s > f && ((o += t.addLine(a)), (d = !1), (a = ''), (s = 0)), (a += T), (s += w);
                       }
                     else {
                       a.length > 0 && ((o += t.addLine(a)), (a = ''), (s = 0));
@@ -33173,9 +28767,7 @@ const bundle = () => {
                 for (var n = 0; n < e.length; n++) {
                   var s = e[n],
                     a = e[n + 1];
-                  t.isBreakingSpace(s, a) || t.isNewline(s)
-                    ? ('' !== r && (i.push(r), (r = '')), i.push(s))
-                    : (r += s);
+                  t.isBreakingSpace(s, a) || t.isNewline(s) ? ('' !== r && (i.push(r), (r = '')), i.push(s)) : (r += s);
                 }
                 return '' !== r && i.push(r), i;
               }),
@@ -33190,11 +28782,7 @@ const bundle = () => {
               }),
               (t.measureFont = function (e) {
                 if (t._fonts[e]) return t._fonts[e];
-                var i = {
-                    ascent: 0,
-                    descent: 0,
-                    fontSize: 0,
-                  },
+                var i = { ascent: 0, descent: 0, fontSize: 0 },
                   r = t._canvas,
                   n = t._context;
                 n.font = e;
@@ -33235,9 +28823,7 @@ const bundle = () => {
                   if (f) break;
                   d -= c;
                 }
-                return (
-                  (i.descent = p - o), (i.fontSize = i.ascent + i.descent), (t._fonts[e] = i), i
-                );
+                return (i.descent = p - o), (i.fontSize = i.ascent + i.descent), (t._fonts[e] = i), i;
               }),
               (t.clearMetrics = function (e) {
                 void 0 === e && (e = ''), e ? delete t._fonts[e] : (t._fonts = {});
@@ -33263,21 +28849,13 @@ const bundle = () => {
           (v.BASELINE_MULTIPLIER = 1.4),
           (v.HEIGHT_MULTIPLIER = 2),
           (v._newlines = [10, 13]),
-          (v._breakingSpaces = [
-            9, 32, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8200, 8201, 8202, 8287, 12288,
-          ]);
-        var y = {
-            texture: !0,
-            children: !1,
-            baseTexture: !0,
-          },
+          (v._breakingSpaces = [9, 32, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8200, 8201, 8202, 8287, 12288]);
+        var y = { texture: !0, children: !1, baseTexture: !0 },
           b = (function (t) {
             function e(e, i, r) {
               var n = this,
                 l = !1;
-              r || ((r = document.createElement('canvas')), (l = !0)),
-                (r.width = 3),
-                (r.height = 3);
+              r || ((r = document.createElement('canvas')), (l = !0)), (r.width = 3), (r.height = 3);
               var h = s.xE.from(r);
               return (
                 (h.orig = new o.Ae()),
@@ -33302,20 +28880,14 @@ const bundle = () => {
               (e.prototype.updateText = function (t) {
                 var i = this._style;
                 if (
-                  (this.localStyleID !== i.styleID &&
-                    ((this.dirty = !0), (this.localStyleID = i.styleID)),
+                  (this.localStyleID !== i.styleID && ((this.dirty = !0), (this.localStyleID = i.styleID)),
                   this.dirty || !t)
                 ) {
                   this._font = this._style.toFontString();
                   var r,
                     n,
                     s = this.context,
-                    a = v.measureText(
-                      this._text || ' ',
-                      this._style,
-                      this._style.wordWrap,
-                      this.canvas,
-                    ),
+                    a = v.measureText(this._text || ' ', this._style, this._style.wordWrap, this.canvas),
                     o = a.width,
                     h = a.height,
                     u = a.lines,
@@ -33323,12 +28895,8 @@ const bundle = () => {
                     p = a.lineWidths,
                     d = a.maxLineWidth,
                     f = a.fontProperties;
-                  (this.canvas.width = Math.ceil(
-                    Math.ceil(Math.max(1, o) + 2 * i.padding) * this._resolution,
-                  )),
-                    (this.canvas.height = Math.ceil(
-                      Math.ceil(Math.max(1, h) + 2 * i.padding) * this._resolution,
-                    )),
+                  (this.canvas.width = Math.ceil(Math.ceil(Math.max(1, o) + 2 * i.padding) * this._resolution)),
+                    (this.canvas.height = Math.ceil(Math.ceil(Math.max(1, h) + 2 * i.padding) * this._resolution)),
                     s.scale(this._resolution, this._resolution),
                     s.clearRect(0, 0, this.canvas.width, this.canvas.height),
                     (s.font = this._font),
@@ -33347,15 +28915,7 @@ const bundle = () => {
                         T = i.dropShadowBlur * this._resolution,
                         E = i.dropShadowDistance * this._resolution;
                       (s.shadowColor =
-                        'rgba(' +
-                        255 * x[0] +
-                        ',' +
-                        255 * x[1] +
-                        ',' +
-                        255 * x[2] +
-                        ',' +
-                        i.dropShadowAlpha +
-                        ')'),
+                        'rgba(' + 255 * x[0] + ',' + 255 * x[1] + ',' + 255 * x[2] + ',' + i.dropShadowAlpha + ')'),
                         (s.shadowBlur = T),
                         (s.shadowOffsetX = Math.cos(i.dropShadowAngle) * E),
                         (s.shadowOffsetY = Math.sin(i.dropShadowAngle) * E + y);
@@ -33371,9 +28931,7 @@ const bundle = () => {
                     for (var I = 0; I < u.length; I++)
                       (r = i.strokeThickness / 2),
                         (n = i.strokeThickness / 2 + I * c + f.ascent + S),
-                        'right' === i.align
-                          ? (r += d - p[I])
-                          : 'center' === i.align && (r += (d - p[I]) / 2),
+                        'right' === i.align ? (r += d - p[I]) : 'center' === i.align && (r += (d - p[I]) / 2),
                         i.stroke &&
                           i.strokeThickness &&
                           this.drawLetterSpacing(u[I], r + i.padding, n + i.padding - A, !0),
@@ -33413,10 +28971,7 @@ const bundle = () => {
                 var t = this.canvas;
                 if (this._style.trim) {
                   var e = (0, l.trimCanvas)(t);
-                  e.data &&
-                    ((t.width = e.width),
-                    (t.height = e.height),
-                    this.context.putImageData(e.data, 0, 0));
+                  e.data && ((t.width = e.width), (t.height = e.height), this.context.putImageData(e.data, 0, 0));
                 }
                 var i = this._texture,
                   r = this._style,
@@ -33445,9 +29000,7 @@ const bundle = () => {
                 return this.updateText(!0), t.prototype.getLocalBounds.call(this, e);
               }),
               (e.prototype._calculateBounds = function () {
-                this.updateText(!0),
-                  this.calculateVertices(),
-                  this._bounds.addQuad(this.vertexData);
+                this.updateText(!0), this.calculateVertices(), this._bounds.addQuad(this.vertexData);
               }),
               (e.prototype._generateFillStyle = function (t, e, i) {
                 var n,
@@ -33498,10 +29051,7 @@ const bundle = () => {
                 return n;
               }),
               (e.prototype.destroy = function (e) {
-                'boolean' == typeof e &&
-                  (e = {
-                    children: e,
-                  }),
+                'boolean' == typeof e && (e = { children: e }),
                   (e = Object.assign({}, y, e)),
                   t.prototype.destroy.call(this, e),
                   this._ownCanvas && (this.canvas.height = this.canvas.width = 0),
@@ -33551,8 +29101,7 @@ const bundle = () => {
                   return this._text;
                 },
                 set: function (t) {
-                  (t = String(null == t ? '' : t)),
-                    this._text !== t && ((this._text = t), (this.dirty = !0));
+                  (t = String(null == t ? '' : t)), this._text !== t && ((this._text = t), (this.dirty = !0));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -33562,8 +29111,7 @@ const bundle = () => {
                   return this._resolution;
                 },
                 set: function (t) {
-                  (this._autoResolution = !1),
-                    this._resolution !== t && ((this._resolution = t), (this.dirty = !0));
+                  (this._autoResolution = !1), this._resolution !== t && ((this._resolution = t), (this.dirty = !0));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -33576,11 +29124,7 @@ const bundle = () => {
       },
       1298: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Sb: () => o,
-          uF: () => r,
-          vB: () => a,
-        });
+        i.d(e, { Sb: () => o, uF: () => r, vB: () => a });
         var r,
           n = i(875);
         (n.X.TARGET_FPMS = 0.06),
@@ -33614,10 +29158,7 @@ const bundle = () => {
                 return this.once && this.destroy(!0), this._destroyed && (this.next = null), e;
               }),
               (t.prototype.connect = function (t) {
-                (this.previous = t),
-                  t.next && (t.next.previous = this),
-                  (this.next = t.next),
-                  (t.next = this);
+                (this.previous = t), t.next && (t.next.previous = this), (this.next = t.next), (t.next = this);
               }),
               (t.prototype.destroy = function (t) {
                 void 0 === t && (t = !1),
@@ -33667,8 +29208,7 @@ const bundle = () => {
                   (this._requestId = requestAnimationFrame(this._tick)));
               }),
               (t.prototype._cancelIfNeeded = function () {
-                null !== this._requestId &&
-                  (cancelAnimationFrame(this._requestId), (this._requestId = null));
+                null !== this._requestId && (cancelAnimationFrame(this._requestId), (this._requestId = null));
               }),
               (t.prototype._startIfPossible = function () {
                 this.started ? this._requestIfNeeded() : this.autoStart && this.start();
@@ -33724,8 +29264,7 @@ const bundle = () => {
                 var e;
                 if ((void 0 === t && (t = performance.now()), t > this.lastTime)) {
                   if (
-                    ((e = this.elapsedMS = t - this.lastTime) > this._maxElapsedMS &&
-                      (e = this._maxElapsedMS),
+                    ((e = this.elapsedMS = t - this.lastTime) > this._maxElapsedMS && (e = this._maxElapsedMS),
                     (e *= this.speed),
                     this._minElapsedMS)
                   ) {
@@ -33802,13 +29341,7 @@ const bundle = () => {
             return (
               (t.init = function (t) {
                 var e = this;
-                (t = Object.assign(
-                  {
-                    autoStart: !0,
-                    sharedTicker: !1,
-                  },
-                  t,
-                )),
+                (t = Object.assign({ autoStart: !0, sharedTicker: !1 }, t)),
                   Object.defineProperty(this, 'ticker', {
                     set: function (t) {
                       this._ticker && this._ticker.remove(this.render, this),
@@ -33888,11 +29421,7 @@ const bundle = () => {
           o = i.n(a),
           l = i(1096),
           h = i(3736),
-          u = {
-            parse: l.Qc,
-            format: l.WU,
-            resolve: l.DB,
-          };
+          u = { parse: l.Qc, format: l.WU, resolve: l.DB };
         (r.X.RETINA_PREFIX = /@([0-9\.]+)x/), (r.X.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = !1);
         var c,
           p = !1,
@@ -33905,11 +29434,7 @@ const bundle = () => {
           if (!p) {
             if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
               var i = [
-                '\n %c %c %c PixiJS ' +
-                  d +
-                  ' - ✰ ' +
-                  t +
-                  ' ✰  %c  %c  http://www.pixijs.com/  %c %c ♥%c♥%c♥ \n\n',
+                '\n %c %c %c PixiJS ' + d + ' - ✰ ' + t + ' ✰  %c  %c  http://www.pixijs.com/  %c %c ♥%c♥%c♥ \n\n',
                 'background: #ff66a5; padding:5px 0;',
                 'background: #ff66a5; padding:5px 0;',
                 'color: #ff66a5; background: #030307; padding:5px 0;',
@@ -33920,10 +29445,9 @@ const bundle = () => {
                 'color: #ff2424; background: #fff; padding:5px 0;',
                 'color: #ff2424; background: #fff; padding:5px 0;',
               ];
-              // (e = globalThis.console).log.apply(e, i);
+              (e = globalThis.console).log.apply(e, i);
             } else
-              globalThis.console &&
-                globalThis.console.log('PixiJS ' + d + ' - ' + t + ' - http://www.pixijs.com/');
+              globalThis.console && globalThis.console.log('PixiJS ' + d + ' - ' + t + ' - http://www.pixijs.com/');
             p = !0;
           }
         }
@@ -33931,10 +29455,7 @@ const bundle = () => {
           return (
             void 0 === c &&
               (c = (function () {
-                var t = {
-                  stencil: !0,
-                  failIfMajorPerformanceCaveat: r.X.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT,
-                };
+                var t = { stencil: !0, failIfMajorPerformanceCaveat: r.X.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT };
                 try {
                   if (!globalThis.WebGLRenderingContext) return !1;
                   var e = document.createElement('canvas'),
@@ -34116,10 +29637,7 @@ const bundle = () => {
           return '#' + (e = '000000'.substring(0, 6 - e.length) + e);
         }
         function y(t) {
-          return (
-            'string' == typeof t && '#' === (t = m[t.toLowerCase()] || t)[0] && (t = t.slice(1)),
-            parseInt(t, 16)
-          );
+          return 'string' == typeof t && '#' === (t = m[t.toLowerCase()] || t)[0] && (t = t.slice(1)), parseInt(t, 16);
         }
         function b(t) {
           return ((255 * t[0]) << 16) + ((255 * t[1]) << 8) + ((255 * t[2]) | 0);
@@ -34176,9 +29694,7 @@ const bundle = () => {
           void 0 === e && (e = null);
           var i = 6 * t;
           if ((e = e || new Uint16Array(i)).length !== i)
-            throw new Error(
-              'Out buffer length is incorrect, got ' + e.length + ' and expected ' + i,
-            );
+            throw new Error('Out buffer length is incorrect, got ' + e.length + ' and expected ' + i);
           for (var r = 0, n = 0; r < i; r += 6, n += 4)
             (e[r + 0] = n + 0),
               (e[r + 1] = n + 1),
@@ -34190,22 +29706,13 @@ const bundle = () => {
         }
         function P(t) {
           if (4 === t.BYTES_PER_ELEMENT)
-            return t instanceof Float32Array
-              ? 'Float32Array'
-              : t instanceof Uint32Array
-              ? 'Uint32Array'
-              : 'Int32Array';
+            return t instanceof Float32Array ? 'Float32Array' : t instanceof Uint32Array ? 'Uint32Array' : 'Int32Array';
           if (2 === t.BYTES_PER_ELEMENT) {
             if (t instanceof Uint16Array) return 'Uint16Array';
           } else if (1 === t.BYTES_PER_ELEMENT && t instanceof Uint8Array) return 'Uint8Array';
           return null;
         }
-        var O = {
-          Float32Array,
-          Uint32Array,
-          Int32Array,
-          Uint8Array,
-        };
+        var O = { Float32Array, Uint32Array, Int32Array, Uint8Array };
         function C(t, e) {
           for (var i = 0, r = 0, n = {}, s = 0; s < t.length; s++) (r += e[s]), (i += t[s].length);
           var a = new ArrayBuffer(4 * i),
@@ -34278,8 +29785,7 @@ const bundle = () => {
                     ),
                     console.warn(r),
                     console.groupEnd())
-                  : (console.warn('PixiJS Deprecation Warning: ', e + '\nDeprecated since v' + t),
-                    console.warn(r))),
+                  : (console.warn('PixiJS Deprecation Warning: ', e + '\nDeprecated since v' + t), console.warn(r))),
               (U[e] = !0);
           }
         }
@@ -34347,12 +29853,7 @@ const bundle = () => {
             a = t.getContext('2d'),
             o = a.getImageData(0, 0, n, s).data,
             l = o.length,
-            h = {
-              top: null,
-              left: null,
-              right: null,
-              bottom: null,
-            },
+            h = { top: null, left: null, right: null, bottom: null },
             u = null;
           for (e = 0; e < l; e += 4)
             0 !== o[e + 3] &&
@@ -34364,14 +29865,8 @@ const bundle = () => {
               (null === h.bottom || h.bottom < r) && (h.bottom = r));
           return (
             null !== h.top &&
-              ((n = h.right - h.left),
-              (s = h.bottom - h.top + 1),
-              (u = a.getImageData(h.left, h.top, n, s))),
-            {
-              height: s,
-              width: n,
-              data: u,
-            }
+              ((n = h.right - h.left), (s = h.bottom - h.top + 1), (u = a.getImageData(h.left, h.top, n, s))),
+            { height: s, width: n, data: u }
           );
         }
         var z,
@@ -34401,9 +29896,7 @@ const bundle = () => {
       },
       4469: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          R: () => H,
-        });
+        i.d(e, { R: () => H });
         var r = i(135),
           n = i(2390),
           s = i(8684),
@@ -34452,9 +29945,7 @@ const bundle = () => {
         }
         function b(t) {
           -1 === v.indexOf(t.name) &&
-            (t.setupOnce(s.c, _.Gd),
-            v.push(t.name),
-            (0, l.c)() && h.kg.log('Integration installed: ' + t.name));
+            (t.setupOnce(s.c, _.Gd), v.push(t.name), (0, l.c)() && h.kg.log('Integration installed: ' + t.name));
         }
         function x(t) {
           var e = {};
@@ -34532,12 +30023,8 @@ const bundle = () => {
               (t.prototype.captureSession = function (t) {
                 this._isEnabled()
                   ? 'string' != typeof t.release
-                    ? (0, l.c)() &&
-                      h.kg.warn('Discarded session because of missing or non-string release')
-                    : (this._sendSession(t),
-                      t.update({
-                        init: !1,
-                      }))
+                    ? (0, l.c)() && h.kg.warn('Discarded session because of missing or non-string release')
+                    : (this._sendSession(t), t.update({ init: !1 }))
                   : (0, l.c)() && h.kg.warn('SDK not enabled, will not capture session.');
               }),
               (t.prototype.getDsn = function () {
@@ -34567,18 +30054,14 @@ const bundle = () => {
                 });
               }),
               (t.prototype.setupIntegrations = function () {
-                this._isEnabled() &&
-                  !this._integrations.initialized &&
-                  (this._integrations = x(this._options));
+                this._isEnabled() && !this._integrations.initialized && (this._integrations = x(this._options));
               }),
               (t.prototype.getIntegration = function (t) {
                 try {
                   return this._integrations[t.id] || null;
                 } catch (e) {
                   return (
-                    (0, l.c)() &&
-                      h.kg.warn('Cannot retrieve integration ' + t.id + ' from the current Client'),
-                    null
+                    (0, l.c)() && h.kg.warn('Cannot retrieve integration ' + t.id + ' from the current Client'), null
                   );
                 }
               }),
@@ -34599,9 +30082,7 @@ const bundle = () => {
                       }
                     }
                   } catch (p) {
-                    i = {
-                      error: p,
-                    };
+                    i = { error: p };
                   } finally {
                     try {
                       h && !h.done && (r = l.return) && r.call(l);
@@ -34613,17 +30094,7 @@ const bundle = () => {
                 var c = 'ok' === t.status;
                 ((c && 0 === t.errors) || (c && s)) &&
                   (t.update(
-                    (0, n.pi)(
-                      (0, n.pi)(
-                        {},
-                        s && {
-                          status: 'crashed',
-                        },
-                      ),
-                      {
-                        errors: t.errors || Number(a || s),
-                      },
-                    ),
+                    (0, n.pi)((0, n.pi)({}, s && { status: 'crashed' }), { errors: t.errors || Number(a || s) }),
                   ),
                   this.captureSession(t));
               }),
@@ -34668,12 +30139,9 @@ const bundle = () => {
                   m.then(function (t) {
                     return (
                       t &&
-                        (t.sdkProcessingMetadata = (0, n.pi)(
-                          (0, n.pi)({}, t.sdkProcessingMetadata),
-                          {
-                            normalizeDepth: (0, d.Fv)(h),
-                          },
-                        )),
+                        (t.sdkProcessingMetadata = (0, n.pi)((0, n.pi)({}, t.sdkProcessingMetadata), {
+                          normalizeDepth: (0, d.Fv)(h),
+                        })),
                       'number' == typeof h && h > 0 ? r._normalizeEvent(t, h, f) : t
                     );
                   })
@@ -34688,26 +30156,15 @@ const bundle = () => {
                         (0, n.pi)({}, t),
                         t.breadcrumbs && {
                           breadcrumbs: t.breadcrumbs.map(function (t) {
-                            return (0, n.pi)(
-                              (0, n.pi)({}, t),
-                              t.data && {
-                                data: (0, d.Fv)(t.data, e, i),
-                              },
-                            );
+                            return (0, n.pi)((0, n.pi)({}, t), t.data && { data: (0, d.Fv)(t.data, e, i) });
                           }),
                         },
                       ),
-                      t.user && {
-                        user: (0, d.Fv)(t.user, e, i),
-                      },
+                      t.user && { user: (0, d.Fv)(t.user, e, i) },
                     ),
-                    t.contexts && {
-                      contexts: (0, d.Fv)(t.contexts, e, i),
-                    },
+                    t.contexts && { contexts: (0, d.Fv)(t.contexts, e, i) },
                   ),
-                  t.extra && {
-                    extra: (0, d.Fv)(t.extra, e, i),
-                  },
+                  t.extra && { extra: (0, d.Fv)(t.extra, e, i) },
                 );
                 return (
                   t.contexts && t.contexts.trace && (r.contexts.trace = t.contexts.trace),
@@ -34735,9 +30192,7 @@ const bundle = () => {
               }),
               (t.prototype._applyIntegrationsMetadata = function (t) {
                 var e = Object.keys(this._integrations);
-                e.length > 0 &&
-                  ((t.sdk = t.sdk || {}),
-                  (t.sdk.integrations = (0, n.fl)(t.sdk.integrations || [], e)));
+                e.length > 0 && ((t.sdk = t.sdk || {}), (t.sdk.integrations = (0, n.fl)(t.sdk.integrations || [], e)));
               }),
               (t.prototype._sendEvent = function (t) {
                 this._getBackend().sendEvent(t);
@@ -34761,16 +30216,13 @@ const bundle = () => {
                 function l(t, e) {
                   o.recordLostEvent && o.recordLostEvent(t, e);
                 }
-                if (!this._isEnabled())
-                  return (0, c.$2)(new g.b('SDK not enabled, will not capture event.'));
+                if (!this._isEnabled()) return (0, c.$2)(new g.b('SDK not enabled, will not capture event.'));
                 var h = 'transaction' === t.type;
                 return !h && 'number' == typeof a && Math.random() > a
                   ? (l('sample_rate', 'event'),
                     (0, c.$2)(
                       new g.b(
-                        "Discarding event because it's not included in the random sample (sampling rate = " +
-                          a +
-                          ')',
+                        "Discarding event because it's not included in the random sample (sampling rate = " + a + ')',
                       ),
                     ))
                   : this._prepareEvent(t, i, e)
@@ -34780,9 +30232,7 @@ const bundle = () => {
                             (l('event_processor', t.type || 'event'),
                             new g.b('An event processor returned null, will not send event.'))
                           );
-                        return (e && e.data && !0 === e.data.__sentry__) || h || !s
-                          ? i
-                          : S(s(i, e));
+                        return (e && e.data && !0 === e.data.__sentry__) || h || !s ? i : S(s(i, e));
                       })
                       .then(function (e) {
                         if (null === e)
@@ -34796,12 +30246,7 @@ const bundle = () => {
                       .then(null, function (t) {
                         if (t instanceof g.b) throw t;
                         throw (
-                          (r.captureException(t, {
-                            data: {
-                              __sentry__: !0,
-                            },
-                            originalException: t,
-                          }),
+                          (r.captureException(t, { data: { __sentry__: !0 }, originalException: t }),
                           new g.b(
                             'Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: ' +
                               t,
@@ -34861,8 +30306,7 @@ const bundle = () => {
           C = (function () {
             function t(t) {
               (this._options = t),
-                this._options.dsn ||
-                  ((0, l.c)() && h.kg.warn('No DSN provided, backend will not do anything.')),
+                this._options.dsn || ((0, l.c)() && h.kg.warn('No DSN provided, backend will not do anything.')),
                 (this._transport = this._setupTransport());
             }
             return (
@@ -34879,11 +30323,7 @@ const bundle = () => {
                   this._options._experiments &&
                   this._options._experiments.newTransport
                 ) {
-                  var e = (0, R.hd)(
-                      this._options.dsn,
-                      this._options._metadata,
-                      this._options.tunnel,
-                    ),
+                  var e = (0, R.hd)(this._options.dsn, this._options._metadata, this._options.tunnel),
                     i = (0, P.Mq)(t, e);
                   this._newTransport.send(i).then(null, function (t) {
                     (0, l.c)() && h.kg.error('Error while sending event:', t);
@@ -34901,11 +30341,7 @@ const bundle = () => {
                     this._options._experiments &&
                     this._options._experiments.newTransport
                   ) {
-                    var e = (0, R.hd)(
-                        this._options.dsn,
-                        this._options._metadata,
-                        this._options.tunnel,
-                      ),
+                    var e = (0, R.hd)(this._options.dsn, this._options._metadata, this._options.tunnel),
                       i = (0, n.CR)((0, P.Q3)(t, e), 1)[0];
                     this._newTransport.send(i).then(null, function (t) {
                       (0, l.c)() && h.kg.error('Error while sending session:', t);
@@ -34914,11 +30350,7 @@ const bundle = () => {
                     this._transport.sendSession(t).then(null, function (t) {
                       (0, l.c)() && h.kg.error('Error while sending session:', t);
                     });
-                else
-                  (0, l.c)() &&
-                    h.kg.warn(
-                      "Dropping session because custom transport doesn't implement sendSession",
-                    );
+                else (0, l.c)() && h.kg.warn("Dropping session because custom transport doesn't implement sendSession");
               }),
               (t.prototype.getTransport = function () {
                 return this._transport;
@@ -34946,9 +30378,7 @@ const bundle = () => {
                 return (0, N.dr)(t, e, this._options.attachStacktrace);
               }),
               (e.prototype.eventFromMessage = function (t, e, i) {
-                return (
-                  void 0 === e && (e = M.z.Info), (0, N.aB)(t, e, i, this._options.attachStacktrace)
-                );
+                return void 0 === e && (e = M.z.Info), (0, N.aB)(t, e, i, this._options.attachStacktrace);
               }),
               (e.prototype._setupTransport = function () {
                 if (!this._options.dsn) return t.prototype._setupTransport.call(this);
@@ -34963,21 +30393,9 @@ const bundle = () => {
                 if (this._options.transport) return new this._options.transport(e);
                 if ((0, D.Ak)()) {
                   var s = (0, r.pi)({}, e.fetchParameters);
-                  return (
-                    (this._newTransport = (0, L.k)({
-                      requestOptions: s,
-                      url: n,
-                    })),
-                    new B.V(e)
-                  );
+                  return (this._newTransport = (0, L.k)({ requestOptions: s, url: n })), new B.V(e);
                 }
-                return (
-                  (this._newTransport = (0, k.H)({
-                    url: n,
-                    headers: e.headers,
-                  })),
-                  new F.w(e)
-                );
+                return (this._newTransport = (0, k.H)({ url: n, headers: e.headers })), new F.w(e);
               }),
               e
             );
@@ -34991,12 +30409,7 @@ const bundle = () => {
                 (e._metadata = e._metadata || {}),
                 (e._metadata.sdk = e._metadata.sdk || {
                   name: 'sentry.javascript.browser',
-                  packages: [
-                    {
-                      name: 'npm:@sentry/browser',
-                      version: I.J,
-                    },
-                  ],
+                  packages: [{ name: 'npm:@sentry/browser', version: I.J }],
                   version: I.J,
                 }),
                 t.call(this, U, e) || this
@@ -35008,19 +30421,11 @@ const bundle = () => {
                 void 0 === t && (t = {}),
                   (0, w.R)().document &&
                     (this._isEnabled()
-                      ? (0, G.BS)(
-                          (0, r.pi)((0, r.pi)({}, t), {
-                            dsn: t.dsn || this.getDsn(),
-                          }),
-                        )
-                      : (0, l.c)() &&
-                        h.kg.error('Trying to call showReportDialog with Sentry Client disabled'));
+                      ? (0, G.BS)((0, r.pi)((0, r.pi)({}, t), { dsn: t.dsn || this.getDsn() }))
+                      : (0, l.c)() && h.kg.error('Trying to call showReportDialog with Sentry Client disabled'));
               }),
               (e.prototype._prepareEvent = function (e, i, r) {
-                return (
-                  (e.platform = e.platform || 'javascript'),
-                  t.prototype._prepareEvent.call(this, e, i, r)
-                );
+                return (e.platform = e.platform || 'javascript'), t.prototype._prepareEvent.call(this, e, i, r);
               }),
               (e.prototype._sendEvent = function (e) {
                 var i = this.getIntegration(X.O);
@@ -35032,12 +30437,7 @@ const bundle = () => {
       },
       7938: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          dr: () => D,
-          aB: () => N,
-          ME: () => L,
-          GJ: () => I,
-        });
+        i.d(e, { dr: () => D, aB: () => N, ME: () => L, GJ: () => I });
         var r = i(135),
           n = i(3732),
           s = i(9293),
@@ -35048,11 +30448,7 @@ const bundle = () => {
           u = i(7593),
           c = '?';
         function p(t, e, i, r) {
-          var n = {
-            filename: t,
-            function: e,
-            in_app: !0,
-          };
+          var n = { filename: t, function: e, in_app: !0 };
           return void 0 !== i && (n.lineno = i), void 0 !== r && (n.colno = r), n;
         }
         var d =
@@ -35089,8 +30485,7 @@ const bundle = () => {
                 var s = i[3],
                   a = i[1] || c;
                 return (
-                  (a = (e = (0, r.CR)(S(a, s), 2))[0]),
-                  p((s = e[1]), a, i[4] ? +i[4] : void 0, i[5] ? +i[5] : void 0)
+                  (a = (e = (0, r.CR)(S(a, s), 2))[0]), p((s = e[1]), a, i[4] ? +i[4] : void 0, i[5] ? +i[5] : void 0)
                 );
               }
             },
@@ -35112,8 +30507,7 @@ const bundle = () => {
               return e ? p(e[2], e[3] || c, +e[1]) : void 0;
             },
           ],
-          T =
-            / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
+          T = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
           E = [
             20,
             function (t) {
@@ -35125,23 +30519,14 @@ const bundle = () => {
             var i = -1 !== t.indexOf('safari-extension'),
               r = -1 !== t.indexOf('safari-web-extension');
             return i || r
-              ? [
-                  -1 !== t.indexOf('@') ? t.split('@')[0] : c,
-                  i ? 'safari-extension:' + e : 'safari-web-extension:' + e,
-                ]
+              ? [-1 !== t.indexOf('@') ? t.split('@')[0] : c, i ? 'safari-extension:' + e : 'safari-web-extension:' + e]
               : [t, e];
           };
         function I(t) {
           var e = P(t),
-            i = {
-              type: t && t.name,
-              value: M(t),
-            };
+            i = { type: t && t.name, value: M(t) };
           return (
-            e.length &&
-              (i.stacktrace = {
-                frames: e,
-              }),
+            e.length && (i.stacktrace = { frames: e }),
             void 0 === i.type && '' === i.value && (i.value = 'Unrecoverable error caught'),
             i
           );
@@ -35153,32 +30538,20 @@ const bundle = () => {
                 {
                   type: (0, s.cO)(t) ? t.constructor.name : i ? 'UnhandledRejection' : 'Error',
                   value:
-                    'Non-Error ' +
-                    (i ? 'promise rejection' : 'exception') +
-                    ' captured with keys: ' +
-                    (0, a.zf)(t),
+                    'Non-Error ' + (i ? 'promise rejection' : 'exception') + ' captured with keys: ' + (0, a.zf)(t),
                 },
               ],
             },
-            extra: {
-              __serialized__: (0, o.Qy)(t),
-            },
+            extra: { __serialized__: (0, o.Qy)(t) },
           };
           if (e) {
             var n = P(e);
-            n.length &&
-              (r.stacktrace = {
-                frames: n,
-              });
+            n.length && (r.stacktrace = { frames: n });
           }
           return r;
         }
         function R(t) {
-          return {
-            exception: {
-              values: [I(t)],
-            },
-          };
+          return { exception: { values: [I(t)] } };
         }
         function P(t) {
           var e = t.stacktrace || t.stack || '',
@@ -35198,20 +30571,11 @@ const bundle = () => {
         }
         function M(t) {
           var e = t && t.message;
-          return e
-            ? e.error && 'string' == typeof e.error.message
-              ? e.error.message
-              : e
-            : 'No error message';
+          return e ? (e.error && 'string' == typeof e.error.message ? e.error.message : e) : 'No error message';
         }
         function D(t, e, i) {
           var r = L(t, (e && e.syntheticException) || void 0, i);
-          return (
-            (0, h.EG)(r),
-            (r.level = n.z.Error),
-            e && e.event_id && (r.event_id = e.event_id),
-            (0, u.WD)(r)
-          );
+          return (0, h.EG)(r), (r.level = n.z.Error), e && e.event_id && (r.event_id = e.event_id), (0, u.WD)(r);
         }
         function N(t, e, i, r) {
           void 0 === e && (e = n.z.Info);
@@ -35229,50 +30593,26 @@ const bundle = () => {
                 u = o.message ? l + ': ' + o.message : l;
               (a = B(u, e, i)), (0, h.Db)(a, u);
             }
-            return (
-              'code' in o &&
-                (a.tags = (0, r.pi)((0, r.pi)({}, a.tags), {
-                  'DOMException.code': '' + o.code,
-                })),
-              a
-            );
+            return 'code' in o && (a.tags = (0, r.pi)((0, r.pi)({}, a.tags), { 'DOMException.code': '' + o.code })), a;
           }
           return (0, s.VZ)(t)
             ? R(t)
             : (0, s.PO)(t) || (0, s.cO)(t)
-            ? ((a = w(t, e, n)),
-              (0, h.EG)(a, {
-                synthetic: !0,
-              }),
-              a)
-            : ((a = B(t, e, i)),
-              (0, h.Db)(a, '' + t, void 0),
-              (0, h.EG)(a, {
-                synthetic: !0,
-              }),
-              a);
+            ? ((a = w(t, e, n)), (0, h.EG)(a, { synthetic: !0 }), a)
+            : ((a = B(t, e, i)), (0, h.Db)(a, '' + t, void 0), (0, h.EG)(a, { synthetic: !0 }), a);
         }
         function B(t, e, i) {
-          var r = {
-            message: t,
-          };
+          var r = { message: t };
           if (i && e) {
             var n = P(e);
-            n.length &&
-              (r.stacktrace = {
-                frames: n,
-              });
+            n.length && (r.stacktrace = { frames: n });
           }
           return r;
         }
       },
       9e3: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          BS: () => _,
-          Wz: () => d,
-          re: () => g,
-        });
+        i.d(e, { BS: () => _, Wz: () => d, re: () => g });
         var r = i(135),
           n = i(2517),
           s = i(9778),
@@ -35316,9 +30656,7 @@ const bundle = () => {
                   t.addEventProcessor(function (t) {
                     return (
                       e.mechanism && ((0, l.Db)(t, void 0, void 0), (0, l.EG)(t, e.mechanism)),
-                      (t.extra = (0, r.pi)((0, r.pi)({}, t.extra), {
-                        arguments: s,
-                      })),
+                      (t.extra = (0, r.pi)((0, r.pi)({}, t.extra), { arguments: s })),
                       t
                     );
                   }),
@@ -35398,11 +30736,7 @@ const bundle = () => {
             wrap: () => _.re,
           });
         var r = {};
-        i.r(r),
-          i.d(r, {
-            FunctionToString: () => v.c,
-            InboundFilters: () => A.QD,
-          });
+        i.r(r), i.d(r, { FunctionToString: () => v.c, InboundFilters: () => A.QD });
         var n = {};
         i.r(n),
           i.d(n, {
@@ -35455,9 +30789,7 @@ const bundle = () => {
       },
       422: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          O: () => f,
-        });
+        i.d(e, { O: () => f });
         var r = i(135),
           n = i(9276),
           s = i(3732),
@@ -35476,17 +30808,7 @@ const bundle = () => {
           f = (function () {
             function t(e) {
               (this.name = t.id),
-                (this._options = (0, r.pi)(
-                  {
-                    console: !0,
-                    dom: !0,
-                    fetch: !0,
-                    history: !0,
-                    sentry: !0,
-                    xhr: !0,
-                  },
-                  e,
-                ));
+                (this._options = (0, r.pi)({ console: !0, dom: !0, fetch: !0, history: !0, sentry: !0, xhr: !0 }, e));
             }
             return (
               (t.prototype.addSentryBreadcrumb = function (t) {
@@ -35498,9 +30820,7 @@ const bundle = () => {
                       level: t.level,
                       message: (0, h.jH)(t),
                     },
-                    {
-                      event: t,
-                    },
+                    { event: t },
                   );
               }),
               (t.prototype.setupOnce = function () {
@@ -35526,15 +30846,8 @@ const bundle = () => {
             }
             0 !== i.length &&
               (0, n.Gd)().addBreadcrumb(
-                {
-                  category: 'ui.' + e.name,
-                  message: i,
-                },
-                {
-                  event: e.event,
-                  name: e.name,
-                  global: e.global,
-                },
+                { category: 'ui.' + e.name, message: i },
+                { event: e.event, name: e.name, global: e.global },
               );
           }
           return e;
@@ -35542,23 +30855,16 @@ const bundle = () => {
         function _(t) {
           var e = {
             category: 'console',
-            data: {
-              arguments: t.args,
-              logger: 'console',
-            },
+            data: { arguments: t.args, logger: 'console' },
             level: l(t.level),
             message: (0, p.nK)(t.args, ' '),
           };
           if ('assert' === t.level) {
             if (!1 !== t.args[0]) return;
-            (e.message =
-              'Assertion failed: ' + ((0, p.nK)(t.args.slice(1), ' ') || 'console.assert')),
+            (e.message = 'Assertion failed: ' + ((0, p.nK)(t.args.slice(1), ' ') || 'console.assert')),
               (e.data.arguments = t.args.slice(1));
           }
-          (0, n.Gd)().addBreadcrumb(e, {
-            input: t.args,
-            level: t.level,
-          });
+          (0, n.Gd)().addBreadcrumb(e, { input: t.args, level: t.level });
         }
         function m(t) {
           if (t.endTimestamp) {
@@ -35569,19 +30875,8 @@ const bundle = () => {
               s = e.status_code,
               a = e.body;
             (0, n.Gd)().addBreadcrumb(
-              {
-                category: 'xhr',
-                data: {
-                  method: i,
-                  url: r,
-                  status_code: s,
-                },
-                type: 'http',
-              },
-              {
-                xhr: t.xhr,
-                input: a,
-              },
+              { category: 'xhr', data: { method: i, url: r, status_code: s }, type: 'http' },
+              { xhr: t.xhr, input: a },
             );
           } else;
         }
@@ -35590,29 +30885,16 @@ const bundle = () => {
             ((t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method) ||
               (t.error
                 ? (0, n.Gd)().addBreadcrumb(
-                    {
-                      category: 'fetch',
-                      data: t.fetchData,
-                      level: s.z.Error,
-                      type: 'http',
-                    },
-                    {
-                      data: t.error,
-                      input: t.args,
-                    },
+                    { category: 'fetch', data: t.fetchData, level: s.z.Error, type: 'http' },
+                    { data: t.error, input: t.args },
                   )
                 : (0, n.Gd)().addBreadcrumb(
                     {
                       category: 'fetch',
-                      data: (0, r.pi)((0, r.pi)({}, t.fetchData), {
-                        status_code: t.response.status,
-                      }),
+                      data: (0, r.pi)((0, r.pi)({}, t.fetchData), { status_code: t.response.status }),
                       type: 'http',
                     },
-                    {
-                      input: t.args,
-                      response: t.response,
-                    },
+                    { input: t.args, response: t.response },
                   )));
         }
         function A(t) {
@@ -35625,20 +30907,12 @@ const bundle = () => {
           a.path || (a = s),
             s.protocol === o.protocol && s.host === o.host && (r = o.relative),
             s.protocol === a.protocol && s.host === a.host && (i = a.relative),
-            (0, n.Gd)().addBreadcrumb({
-              category: 'navigation',
-              data: {
-                from: i,
-                to: r,
-              },
-            });
+            (0, n.Gd)().addBreadcrumb({ category: 'navigation', data: { from: i, to: r } });
         }
       },
       345: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          I: () => s,
-        });
+        i.d(e, { I: () => s });
         var r = i(5800),
           n = i(8321),
           s = (function () {
@@ -35654,9 +30928,7 @@ const bundle = () => {
                       if (a(e, s._previousEvent))
                         return (
                           (0, r.c)() &&
-                            n.kg.warn(
-                              'Event dropped due to being a duplicate of previously captured event.',
-                            ),
+                            n.kg.warn('Event dropped due to being a duplicate of previously captured event.'),
                           null
                         );
                     } catch (o) {
@@ -35693,12 +30965,7 @@ const bundle = () => {
           for (var n = 0; n < r.length; n++) {
             var s = r[n],
               a = i[n];
-            if (
-              s.filename !== a.filename ||
-              s.lineno !== a.lineno ||
-              s.colno !== a.colno ||
-              s.function !== a.function
-            )
+            if (s.filename !== a.filename || s.lineno !== a.lineno || s.colno !== a.colno || s.function !== a.function)
               return !1;
           }
           return !0;
@@ -35731,9 +30998,7 @@ const bundle = () => {
       },
       2257: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          d: () => f,
-        });
+        i.d(e, { d: () => f });
         var r = i(135),
           n = i(9276),
           s = i(3732),
@@ -35748,17 +31013,8 @@ const bundle = () => {
           f = (function () {
             function t(e) {
               (this.name = t.id),
-                (this._installFunc = {
-                  onerror: g,
-                  onunhandledrejection: _,
-                }),
-                (this._options = (0, r.pi)(
-                  {
-                    onerror: !0,
-                    onunhandledrejection: !0,
-                  },
-                  e,
-                ));
+                (this._installFunc = { onerror: g, onunhandledrejection: _ }),
+                (this._options = (0, r.pi)({ onerror: !0, onunhandledrejection: !0 }, e));
             }
             return (
               (t.prototype.setupOnce = function () {
@@ -35785,10 +31041,7 @@ const bundle = () => {
                 u = t.column,
                 c = t.error;
               if (!((0, d.Wz)() || (c && c.__sentry_own_request__))) {
-                var g =
-                  void 0 === c && (0, o.HD)(a)
-                    ? v(a, l, h, u)
-                    : A((0, p.ME)(c || a, void 0, n, !1), l, h, u);
+                var g = void 0 === c && (0, o.HD)(a) ? v(a, l, h, u) : A((0, p.ME)(c || a, void 0, n, !1), l, h, u);
                 (g.level = s.z.Error), b(i, c, g, 'onerror');
               }
             }
@@ -35802,9 +31055,7 @@ const bundle = () => {
             if (i.getIntegration(f)) {
               var a = t;
               try {
-                'reason' in t
-                  ? (a = t.reason)
-                  : 'detail' in t && 'reason' in t.detail && (a = t.detail.reason);
+                'reason' in t ? (a = t.reason) : 'detail' in t && 'reason' in t.detail && (a = t.detail.reason);
               } catch (h) {}
               if ((0, d.Wz)() || (a && a.__sentry_own_request__)) return !0;
               var l = (0, o.pt)(a) ? m(a) : (0, p.ME)(a, void 0, n, !0);
@@ -35816,10 +31067,7 @@ const bundle = () => {
           return {
             exception: {
               values: [
-                {
-                  type: 'UnhandledRejection',
-                  value: 'Non-Error promise rejection captured with value: ' + String(t),
-                },
+                { type: 'UnhandledRejection', value: 'Non-Error promise rejection captured with value: ' + String(t) },
               ],
             },
           };
@@ -35830,24 +31078,7 @@ const bundle = () => {
             s = (0, o.VW)(t) ? t.message : t,
             a = 'Error',
             l = s.match(n);
-          return (
-            l && ((a = l[1]), (s = l[2])),
-            A(
-              {
-                exception: {
-                  values: [
-                    {
-                      type: a,
-                      value: s,
-                    },
-                  ],
-                },
-              },
-              e,
-              i,
-              r,
-            )
-          );
+          return l && ((a = l[1]), (s = l[2])), A({ exception: { values: [{ type: a, value: s }] } }, e, i, r);
         }
         function A(t, e, i, r) {
           var n = (t.exception = t.exception || {}),
@@ -35858,29 +31089,13 @@ const bundle = () => {
             c = isNaN(parseInt(r, 10)) ? void 0 : r,
             p = isNaN(parseInt(i, 10)) ? void 0 : i,
             d = (0, o.HD)(e) && e.length > 0 ? e : (0, l.l)();
-          return (
-            0 === u.length &&
-              u.push({
-                colno: c,
-                filename: d,
-                function: '?',
-                in_app: !0,
-                lineno: p,
-              }),
-            t
-          );
+          return 0 === u.length && u.push({ colno: c, filename: d, function: '?', in_app: !0, lineno: p }), t;
         }
         function y(t) {
           (0, h.c)() && u.kg.log('Global Handler attached: ' + t);
         }
         function b(t, e, i, r) {
-          (0, c.EG)(i, {
-            handled: !1,
-            type: r,
-          }),
-            t.captureEvent(i, {
-              originalException: e,
-            });
+          (0, c.EG)(i, { handled: !1, type: r }), t.captureEvent(i, { originalException: e });
         }
         function x() {
           var t = (0, n.Gd)(),
@@ -35890,9 +31105,7 @@ const bundle = () => {
       },
       2281: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          iP: () => u,
-        });
+        i.d(e, { iP: () => u });
         var r = i(135),
           n = i(8684),
           s = i(9276),
@@ -35902,10 +31115,7 @@ const bundle = () => {
           h = 5,
           u = (function () {
             function t(e) {
-              void 0 === e && (e = {}),
-                (this.name = t.id),
-                (this._key = e.key || l),
-                (this._limit = e.limit || h);
+              void 0 === e && (e = {}), (this.name = t.id), (this._key = e.key || l), (this._limit = e.limit || h);
             }
             return (
               (t.prototype.setupOnce = function () {
@@ -35919,8 +31129,7 @@ const bundle = () => {
             );
           })();
         function c(t, e, i, n) {
-          if (!(i.exception && i.exception.values && n && (0, a.V9)(n.originalException, Error)))
-            return i;
+          if (!(i.exception && i.exception.values && n && (0, a.V9)(n.originalException, Error))) return i;
           var s = p(e, n.originalException, t);
           return (i.exception.values = (0, r.fl)(s, i.exception.values)), i;
         }
@@ -35932,9 +31141,7 @@ const bundle = () => {
       },
       4648: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          p: () => h,
-        });
+        i.d(e, { p: () => h });
         var r = i(135),
           n = i(3868),
           s = i(3621),
@@ -35975,13 +31182,7 @@ const bundle = () => {
             function t(e) {
               (this.name = t.id),
                 (this._options = (0, r.pi)(
-                  {
-                    XMLHttpRequest: !0,
-                    eventTarget: !0,
-                    requestAnimationFrame: !0,
-                    setInterval: !0,
-                    setTimeout: !0,
-                  },
+                  { XMLHttpRequest: !0, eventTarget: !0, requestAnimationFrame: !0, setInterval: !0, setTimeout: !0 },
                   e,
                 ));
             }
@@ -36007,13 +31208,7 @@ const bundle = () => {
             var r = e[0];
             return (
               (e[0] = (0, o.re)(r, {
-                mechanism: {
-                  data: {
-                    function: (0, a.$P)(t),
-                  },
-                  handled: !0,
-                  type: 'instrument',
-                },
+                mechanism: { data: { function: (0, a.$P)(t) }, handled: !0, type: 'instrument' },
               })),
               t.apply(this, e)
             );
@@ -36024,10 +31219,7 @@ const bundle = () => {
             return t.apply(this, [
               (0, o.re)(e, {
                 mechanism: {
-                  data: {
-                    function: 'requestAnimationFrame',
-                    handler: (0, a.$P)(t),
-                  },
+                  data: { function: 'requestAnimationFrame', handler: (0, a.$P)(t) },
                   handled: !0,
                   type: 'instrument',
                 },
@@ -36045,14 +31237,7 @@ const bundle = () => {
                   'function' == typeof r[t] &&
                   (0, s.hl)(r, t, function (e) {
                     var i = {
-                        mechanism: {
-                          data: {
-                            function: t,
-                            handler: (0, a.$P)(e),
-                          },
-                          handled: !0,
-                          type: 'instrument',
-                        },
+                        mechanism: { data: { function: t, handler: (0, a.$P)(e) }, handled: !0, type: 'instrument' },
                       },
                       r = (0, s.HK)(e);
                     return r && (i.mechanism.data.handler = (0, a.$P)(r)), (0, o.re)(e, i);
@@ -36074,11 +31259,7 @@ const bundle = () => {
                   'function' == typeof r.handleEvent &&
                     (r.handleEvent = (0, o.re)(r.handleEvent.bind(r), {
                       mechanism: {
-                        data: {
-                          function: 'handleEvent',
-                          handler: (0, a.$P)(r),
-                          target: t,
-                        },
+                        data: { function: 'handleEvent', handler: (0, a.$P)(r), target: t },
                         handled: !0,
                         type: 'instrument',
                       },
@@ -36088,11 +31269,7 @@ const bundle = () => {
                   i,
                   (0, o.re)(r, {
                     mechanism: {
-                      data: {
-                        function: 'addEventListener',
-                        handler: (0, a.$P)(r),
-                        target: t,
-                      },
+                      data: { function: 'addEventListener', handler: (0, a.$P)(r), target: t },
                       handled: !0,
                       type: 'instrument',
                     },
@@ -36115,9 +31292,7 @@ const bundle = () => {
       },
       5398: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Z: () => o,
-        });
+        i.d(e, { Z: () => o });
         var r = i(135),
           n = i(8684),
           s = i(9276),
@@ -36135,30 +31310,11 @@ const bundle = () => {
                       n = (a.document || {}).referrer,
                       o = (a.navigator || {}).userAgent,
                       l = (0, r.pi)(
-                        (0, r.pi)(
-                          (0, r.pi)({}, e.request && e.request.headers),
-                          n && {
-                            Referer: n,
-                          },
-                        ),
-                        o && {
-                          'User-Agent': o,
-                        },
+                        (0, r.pi)((0, r.pi)({}, e.request && e.request.headers), n && { Referer: n }),
+                        o && { 'User-Agent': o },
                       ),
-                      h = (0, r.pi)(
-                        (0, r.pi)(
-                          {},
-                          i && {
-                            url: i,
-                          },
-                        ),
-                        {
-                          headers: l,
-                        },
-                      );
-                    return (0, r.pi)((0, r.pi)({}, e), {
-                      request: h,
-                    });
+                      h = (0, r.pi)((0, r.pi)({}, i && { url: i }), { headers: l });
+                    return (0, r.pi)((0, r.pi)({}, e), { request: h });
                   }
                   return e;
                 });
@@ -36189,9 +31345,7 @@ const bundle = () => {
           !0 === e.debug &&
             ((0, s.c)()
               ? a.kg.enable()
-              : console.warn(
-                  '[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.',
-                ));
+              : console.warn('[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.'));
           var i = (0, n.Gd)(),
             r = i.getScope();
           r && r.update(e.initialScope);
@@ -36211,16 +31365,7 @@ const bundle = () => {
           v = i(2281),
           A = i(345),
           y = i(5398),
-          b = [
-            new l.QD(),
-            new h.c(),
-            new g.p(),
-            new _.O(),
-            new m.d(),
-            new v.iP(),
-            new A.I(),
-            new y.Z(),
-          ];
+          b = [new l.QD(), new h.c(), new g.p(), new _.O(), new m.d(), new v.iP(), new A.I(), new y.Z()];
         function x(t) {
           if (
             (void 0 === t && (t = {}),
@@ -36239,8 +31384,7 @@ const bundle = () => {
           void 0 === t && (t = {});
           var e = (0, n.Gd)(),
             i = e.getScope();
-          i && (t.user = (0, r.pi)((0, r.pi)({}, i.getUser()), t.user)),
-            t.eventId || (t.eventId = e.lastEventId());
+          i && (t.user = (0, r.pi)((0, r.pi)({}, i.getUser()), t.user)), t.eventId || (t.eventId = e.lastEventId());
           var s = e.getClient();
           s && s.showReportDialog(t);
         }
@@ -36253,25 +31397,19 @@ const bundle = () => {
         }
         function w(t) {
           var e = (0, n.Gd)().getClient();
-          return e
-            ? e.flush(t)
-            : ((0, s.c)() && a.kg.warn('Cannot flush events. No client defined.'), (0, c.WD)(!1));
+          return e ? e.flush(t) : ((0, s.c)() && a.kg.warn('Cannot flush events. No client defined.'), (0, c.WD)(!1));
         }
         function R(t) {
           var e = (0, n.Gd)().getClient();
           return e
             ? e.close(t)
-            : ((0, s.c)() && a.kg.warn('Cannot flush events and disable SDK. No client defined.'),
-              (0, c.WD)(!1));
+            : ((0, s.c)() && a.kg.warn('Cannot flush events and disable SDK. No client defined.'), (0, c.WD)(!1));
         }
         function P(t) {
           return (0, f.re)(t)();
         }
         function O(t) {
-          t.startSession({
-            ignoreDuration: !0,
-          }),
-            t.captureSession();
+          t.startSession({ ignoreDuration: !0 }), t.captureSession();
         }
         function C() {
           if (void 0 !== (0, u.R)().document) {
@@ -36285,39 +31423,20 @@ const bundle = () => {
               }));
           } else
             (0, s.c)() &&
-              a.kg.warn(
-                'Session tracking in non-browser environment with @sentry/browser is not supported.',
-              );
+              a.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
         }
       },
       1057: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          d: () => A,
-        });
+        i.d(e, { d: () => A });
         var r = i(135),
           n = i(9778),
           s = i(5338),
           a = i(1076),
           o = i(6629);
         function l(t, e, i) {
-          var r = [
-            {
-              type: 'client_report',
-            },
-            {
-              timestamp: i || (0, o.yW)(),
-              discarded_events: t,
-            },
-          ];
-          return (0, a.Jd)(
-            e
-              ? {
-                  dsn: e,
-                }
-              : {},
-            [r],
-          );
+          var r = [{ type: 'client_report' }, { timestamp: i || (0, o.yW)(), discarded_events: t }];
+          return (0, a.Jd)(e ? { dsn: e } : {}, [r]);
         }
         var h = i(3868),
           u = i(9765),
@@ -36374,11 +31493,7 @@ const bundle = () => {
                         Object.keys(t).map(function (e) {
                           var i = (0, r.CR)(e.split(':'), 2),
                             n = i[0];
-                          return {
-                            reason: i[1],
-                            category: n,
-                            quantity: t[e],
-                          };
+                          return { reason: i[1], category: n, quantity: t[e] };
                         }),
                         this._api.tunnel && (0, d.R)(this._api.dsn),
                       );
@@ -36401,14 +31516,8 @@ const bundle = () => {
                   this._isRateLimited(e) &&
                     (0, c.c)() &&
                     (0, c.c)() &&
-                    p.kg.warn(
-                      'Too many ' + e + ' requests, backing off until: ' + this._disabledUntil(e),
-                    ),
-                  'success' !== a
-                    ? s(i)
-                    : n({
-                        status: a,
-                      });
+                    p.kg.warn('Too many ' + e + ' requests, backing off until: ' + this._disabledUntil(e)),
+                  'success' !== a ? s(i) : n({ status: a });
               }),
               (t.prototype._disabledUntil = function (t) {
                 var e = m(t);
@@ -36424,9 +31533,7 @@ const bundle = () => {
       },
       9816: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          V: () => h,
-        });
+        i.d(e, { V: () => h });
         var r = i(135),
           n = i(9018),
           s = i(7593),
@@ -36458,14 +31565,9 @@ const bundle = () => {
                       status: 429,
                     })
                   );
-                var r = {
-                  body: t.body,
-                  method: 'POST',
-                  referrerPolicy: (0, n.hv)() ? 'origin' : '',
-                };
+                var r = { body: t.body, method: 'POST', referrerPolicy: (0, n.hv)() ? 'origin' : '' };
                 return (
-                  void 0 !== this.options.fetchParameters &&
-                    Object.assign(r, this.options.fetchParameters),
+                  void 0 !== this.options.fetchParameters && Object.assign(r, this.options.fetchParameters),
                   void 0 !== this.options.headers && (r.headers = this.options.headers),
                   this._buffer
                     .add(function () {
@@ -36476,13 +31578,7 @@ const bundle = () => {
                               'x-sentry-rate-limits': r.headers.get('X-Sentry-Rate-Limits'),
                               'retry-after': r.headers.get('Retry-After'),
                             };
-                            i._handleResponse({
-                              requestType: t.type,
-                              response: r,
-                              headers: s,
-                              resolve: e,
-                              reject: n,
-                            });
+                            i._handleResponse({ requestType: t.type, response: r, headers: s, resolve: e, reject: n });
                           })
                           .catch(n);
                       });
@@ -36503,22 +31599,13 @@ const bundle = () => {
       },
       9431: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          k: () => a,
-        });
+        i.d(e, { k: () => a });
         var r = i(135),
           n = i(2516),
           s = i(2938);
         function a(t, e) {
           function i(i) {
-            var n = (0, r.pi)(
-              {
-                body: i.body,
-                method: 'POST',
-                referrerPolicy: 'origin',
-              },
-              t.requestOptions,
-            );
+            var n = (0, r.pi)({ body: i.body, method: 'POST', referrerPolicy: 'origin' }, t.requestOptions);
             return e(t.url, n).then(function (t) {
               return t.text().then(function (e) {
                 return {
@@ -36533,22 +31620,12 @@ const bundle = () => {
               });
             });
           }
-          return (
-            void 0 === e && (e = (0, s.x)()),
-            (0, n.qv)(
-              {
-                bufferSize: t.bufferSize,
-              },
-              i,
-            )
-          );
+          return void 0 === e && (e = (0, s.x)()), (0, n.qv)({ bufferSize: t.bufferSize }, i);
         }
       },
       6040: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          H: () => a,
-        });
+        i.d(e, { H: () => a });
         var r = i(2516),
           n = i(7593),
           s = 4;
@@ -36572,17 +31649,11 @@ const bundle = () => {
               }),
               n.open('POST', t.url),
               t.headers))
-                Object.prototype.hasOwnProperty.call(t.headers, a) &&
-                  n.setRequestHeader(a, t.headers[a]);
+                Object.prototype.hasOwnProperty.call(t.headers, a) && n.setRequestHeader(a, t.headers[a]);
               n.send(e.body);
             });
           }
-          return (0, r.qv)(
-            {
-              bufferSize: t.bufferSize,
-            },
-            e,
-          );
+          return (0, r.qv)({ bufferSize: t.bufferSize }, e);
         }
       },
       2938: (t, e, i) => {
@@ -36592,10 +31663,7 @@ const bundle = () => {
             console.error(t);
           });
         }
-        i.d(e, {
-          x: () => u,
-          z: () => c,
-        });
+        i.d(e, { x: () => u, z: () => c });
         var n,
           s = i(3868),
           a = i(9018),
@@ -36615,10 +31683,7 @@ const bundle = () => {
               r && r.fetch && (e = r.fetch), t.head.removeChild(i);
             } catch (s) {
               (0, o.c)() &&
-                l.kg.warn(
-                  'Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ',
-                  s,
-                );
+                l.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', s);
             }
           return (n = e.bind(h));
         }
@@ -36627,22 +31692,13 @@ const bundle = () => {
             'function' == typeof h.navigator.sendBeacon
             ? h.navigator.sendBeacon.bind(h.navigator)(t, e)
             : (0, a.Ak)()
-            ? r(
-                u()(t, {
-                  body: e,
-                  method: 'POST',
-                  credentials: 'omit',
-                  keepalive: !0,
-                }),
-              )
+            ? r(u()(t, { body: e, method: 'POST', credentials: 'omit', keepalive: !0 }))
             : void 0;
         }
       },
       1708: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          w: () => a,
-        });
+        i.d(e, { w: () => a });
         var r = i(135),
           n = i(7593),
           s = i(2190),
@@ -36708,19 +31764,12 @@ const bundle = () => {
       },
       135: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          CR: () => a,
-          ZT: () => n,
-          fl: () => o,
-          pi: () => s,
-        });
+        i.d(e, { CR: () => a, ZT: () => n, fl: () => o, pi: () => s });
         var r = function (t, e) {
           return (
             (r =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -36734,8 +31783,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          r(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          r(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var s = function () {
           return (
@@ -36743,8 +31791,7 @@ const bundle = () => {
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             s.apply(this, arguments)
@@ -36760,9 +31807,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -36779,12 +31824,7 @@ const bundle = () => {
       },
       9778: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Ut: () => d,
-          hR: () => f,
-          hd: () => a,
-          qi: () => c,
-        });
+        i.d(e, { Ut: () => d, hR: () => f, hd: () => a, qi: () => c });
         var r = i(6027),
           n = i(3621),
           s = '7';
@@ -36816,12 +31856,7 @@ const bundle = () => {
             });
         })();
         function a(t, e, i) {
-          return {
-            initDsn: t,
-            metadata: e || {},
-            dsn: (0, r.v)(t),
-            tunnel: i,
-          };
+          return { initDsn: t, metadata: e || {}, dsn: (0, r.v)(t), tunnel: i };
         }
         function o(t) {
           var e = t.protocol ? t.protocol + ':' : '',
@@ -36832,10 +31867,7 @@ const bundle = () => {
           return '' + o(t) + t.projectId + '/' + e + '/';
         }
         function h(t) {
-          return (0, n._j)({
-            sentry_key: t.publicKey,
-            sentry_version: s,
-          });
+          return (0, n._j)({ sentry_key: t.publicKey, sentry_version: s });
         }
         function u(t) {
           return l(t, 'store');
@@ -36865,9 +31897,7 @@ const bundle = () => {
       },
       6212: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          c: () => s,
-        });
+        i.d(e, { c: () => s });
         var r,
           n = i(3621),
           s = (function () {
@@ -36890,9 +31920,7 @@ const bundle = () => {
       },
       3513: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          QD: () => h,
-        });
+        i.d(e, { QD: () => h });
         var r = i(2390),
           n = i(5800),
           s = i(8321),
@@ -36927,18 +31955,8 @@ const bundle = () => {
             void 0 === t && (t = {}),
             void 0 === e && (e = {}),
             {
-              allowUrls: (0, r.fl)(
-                t.whitelistUrls || [],
-                t.allowUrls || [],
-                e.whitelistUrls || [],
-                e.allowUrls || [],
-              ),
-              denyUrls: (0, r.fl)(
-                t.blacklistUrls || [],
-                t.denyUrls || [],
-                e.blacklistUrls || [],
-                e.denyUrls || [],
-              ),
+              allowUrls: (0, r.fl)(t.whitelistUrls || [], t.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
+              denyUrls: (0, r.fl)(t.blacklistUrls || [], t.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
               ignoreErrors: (0, r.fl)(t.ignoreErrors || [], e.ignoreErrors || [], l),
               ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal,
             }
@@ -36946,17 +31964,10 @@ const bundle = () => {
         }
         function c(t, e) {
           return e.ignoreInternal && _(t)
-            ? ((0, n.c)() &&
-                s.kg.warn(
-                  'Event dropped due to being internal Sentry Error.\nEvent: ' + (0, a.jH)(t),
-                ),
-              !0)
+            ? ((0, n.c)() && s.kg.warn('Event dropped due to being internal Sentry Error.\nEvent: ' + (0, a.jH)(t)), !0)
             : p(t, e.ignoreErrors)
             ? ((0, n.c)() &&
-                s.kg.warn(
-                  'Event dropped due to being matched by `ignoreErrors` option.\nEvent: ' +
-                    (0, a.jH)(t),
-                ),
+                s.kg.warn('Event dropped due to being matched by `ignoreErrors` option.\nEvent: ' + (0, a.jH)(t)),
               !0)
             : d(t, e.denyUrls)
             ? ((0, n.c)() &&
@@ -37018,9 +32029,7 @@ const bundle = () => {
                 l = void 0 === o ? '' : o;
               return ['' + l, r + ': ' + l];
             } catch (h) {
-              return (
-                (0, n.c)() && s.kg.error('Cannot extract message for event ' + (0, a.jH)(t)), []
-              );
+              return (0, n.c)() && s.kg.error('Cannot extract message for event ' + (0, a.jH)(t)), [];
             }
           return [];
         }
@@ -37034,8 +32043,7 @@ const bundle = () => {
           void 0 === t && (t = []);
           for (var e = t.length - 1; e >= 0; e--) {
             var i = t[e];
-            if (i && '<anonymous>' !== i.filename && '[native code]' !== i.filename)
-              return i.filename || null;
+            if (i && '<anonymous>' !== i.filename && '[native code]' !== i.filename) return i.filename || null;
           }
           return null;
         }
@@ -37054,12 +32062,7 @@ const bundle = () => {
       },
       5338: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Mq: () => p,
-          Q3: () => u,
-          Qz: () => c,
-          nA: () => d,
-        });
+        i.d(e, { Mq: () => p, Q3: () => u, Qz: () => c, nA: () => d });
         var r = i(2390),
           n = i(6027),
           s = i(1076),
@@ -37068,10 +32071,7 @@ const bundle = () => {
         function l(t) {
           if (t.metadata && t.metadata.sdk) {
             var e = t.metadata.sdk;
-            return {
-              name: e.name,
-              version: e.version,
-            };
+            return { name: e.name, version: e.version };
           }
         }
         function h(t, e) {
@@ -37087,36 +32087,18 @@ const bundle = () => {
         function u(t, e) {
           var i = l(e),
             a = (0, r.pi)(
-              (0, r.pi)(
-                {
-                  sent_at: new Date().toISOString(),
-                },
-                i && {
-                  sdk: i,
-                },
-              ),
-              !!e.tunnel && {
-                dsn: (0, n.R)(e.dsn),
-              },
+              (0, r.pi)({ sent_at: new Date().toISOString() }, i && { sdk: i }),
+              !!e.tunnel && { dsn: (0, n.R)(e.dsn) },
             ),
             o = 'aggregates' in t ? 'sessions' : 'session',
-            h = [
-              {
-                type: o,
-              },
-              t,
-            ];
+            h = [{ type: o }, t];
           return [(0, s.Jd)(a, [h]), o];
         }
         function c(t, e) {
           var i = (0, r.CR)(u(t, e), 2),
             n = i[0],
             a = i[1];
-          return {
-            body: (0, s.V$)(n),
-            type: a,
-            url: (0, o.Ut)(e.dsn, e.tunnel),
-          };
+          return { body: (0, s.V$)(n), type: a, url: (0, o.Ut)(e.dsn, e.tunnel) };
         }
         function p(t, e) {
           var i = l(e),
@@ -37129,36 +32111,13 @@ const bundle = () => {
             (t.extra = t.extra || {}),
             (t.sdkProcessingMetadata && t.sdkProcessingMetadata.baseClientNormalized) ||
               ((t.tags.skippedNormalization = !0),
-              (t.extra.normalizeDepth = t.sdkProcessingMetadata
-                ? t.sdkProcessingMetadata.normalizeDepth
-                : 'unset')),
+              (t.extra.normalizeDepth = t.sdkProcessingMetadata ? t.sdkProcessingMetadata.normalizeDepth : 'unset')),
             delete t.sdkProcessingMetadata;
           var p = (0, r.pi)(
-              (0, r.pi)(
-                {
-                  event_id: t.event_id,
-                  sent_at: new Date().toISOString(),
-                },
-                i && {
-                  sdk: i,
-                },
-              ),
-              !!e.tunnel && {
-                dsn: (0, n.R)(e.dsn),
-              },
+              (0, r.pi)({ event_id: t.event_id, sent_at: new Date().toISOString() }, i && { sdk: i }),
+              !!e.tunnel && { dsn: (0, n.R)(e.dsn) },
             ),
-            d = [
-              {
-                type: a,
-                sample_rates: [
-                  {
-                    id: u,
-                    rate: c,
-                  },
-                ],
-              },
-              t,
-            ];
+            d = [{ type: a, sample_rates: [{ id: u, rate: c }] }, t];
           return (0, s.Jd)(p, [d]);
         }
         function d(t, e) {
@@ -37174,9 +32133,7 @@ const bundle = () => {
             (t.extra = t.extra || {}),
             (t.sdkProcessingMetadata && t.sdkProcessingMetadata.baseClientNormalized) ||
               ((t.tags.skippedNormalization = !0),
-              (t.extra.normalizeDepth = t.sdkProcessingMetadata
-                ? t.sdkProcessingMetadata.normalizeDepth
-                : 'unset')),
+              (t.extra.normalizeDepth = t.sdkProcessingMetadata ? t.sdkProcessingMetadata.normalizeDepth : 'unset')),
             delete t.sdkProcessingMetadata;
           try {
             i = JSON.stringify(t);
@@ -37188,45 +32145,17 @@ const bundle = () => {
               var _ = x;
               i = JSON.stringify({
                 message: 'JSON.stringify error after renormalization',
-                extra: {
-                  message: _.message,
-                  stack: _.stack,
-                },
+                extra: { message: _.message, stack: _.stack },
               });
             }
           }
-          var m = {
-            body: i,
-            type: c,
-            url: p ? (0, o.Ut)(e.dsn, e.tunnel) : (0, o.qi)(e.dsn),
-          };
+          var m = { body: i, type: c, url: p ? (0, o.Ut)(e.dsn, e.tunnel) : (0, o.qi)(e.dsn) };
           if (p) {
             var v = (0, r.pi)(
-                (0, r.pi)(
-                  {
-                    event_id: t.event_id,
-                    sent_at: new Date().toISOString(),
-                  },
-                  u && {
-                    sdk: u,
-                  },
-                ),
-                !!e.tunnel && {
-                  dsn: (0, n.R)(e.dsn),
-                },
+                (0, r.pi)({ event_id: t.event_id, sent_at: new Date().toISOString() }, u && { sdk: u }),
+                !!e.tunnel && { dsn: (0, n.R)(e.dsn) },
               ),
-              A = [
-                {
-                  type: c,
-                  sample_rates: [
-                    {
-                      id: f,
-                      rate: g,
-                    },
-                  ],
-                },
-                m.body,
-              ],
+              A = [{ type: c, sample_rates: [{ id: f, rate: g }] }, m.body],
               y = (0, s.Jd)(v, [A]);
             m.body = (0, s.V$)(y);
           }
@@ -37235,9 +32164,7 @@ const bundle = () => {
       },
       2516: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          qv: () => h,
-        });
+        i.d(e, { qv: () => h });
         var r = i(9765),
           n = i(1076),
           s = i(2105),
@@ -37250,15 +32177,8 @@ const bundle = () => {
           function c(t) {
             var r = (0, n.y7)(t),
               l = 'event' === r ? 'error' : r,
-              c = {
-                category: l,
-                body: (0, n.V$)(t),
-              };
-            if ((0, s.Q)(h, l))
-              return (0, a.$2)({
-                status: 'rate_limit',
-                reason: u(h, l),
-              });
+              c = { category: l, body: (0, n.V$)(t) };
+            if ((0, s.Q)(h, l)) return (0, a.$2)({ status: 'rate_limit', reason: u(h, l) });
             var p = function () {
               return e(c).then(function (t) {
                 var e = t.body,
@@ -37269,14 +32189,10 @@ const bundle = () => {
                 return (
                   i && (h = (0, s.WG)(h, i)),
                   'success' === c
-                    ? (0, a.WD)({
-                        status: c,
-                        reason: r,
-                      })
+                    ? (0, a.WD)({ status: c, reason: r })
                     : (0, a.$2)({
                         status: c,
-                        reason:
-                          r || e || ('rate_limit' === c ? u(h, l) : 'Unknown transport error'),
+                        reason: r || e || ('rate_limit' === c ? u(h, l) : 'Unknown transport error'),
                       })
                 );
               });
@@ -37291,37 +32207,24 @@ const bundle = () => {
           };
         }
         function u(t, e) {
-          return (
-            'Too many ' +
-            e +
-            ' requests, backing off until: ' +
-            new Date((0, s.ns)(t, e)).toISOString()
-          );
+          return 'Too many ' + e + ' requests, backing off until: ' + new Date((0, s.ns)(t, e)).toISOString();
         }
       },
       7735: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          J: () => r,
-        });
+        i.d(e, { J: () => r });
         var r = '6.19.3';
       },
       2390: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          CR: () => s,
-          XA: () => n,
-          fl: () => a,
-          pi: () => r,
-        });
+        i.d(e, { CR: () => s, XA: () => n, fl: () => a, pi: () => r });
         var r = function () {
           return (
             (r =
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             r.apply(this, arguments)
@@ -37335,13 +32238,7 @@ const bundle = () => {
           if (t && 'number' == typeof t.length)
             return {
               next: function () {
-                return (
-                  t && r >= t.length && (t = void 0),
-                  {
-                    value: t && t[r++],
-                    done: !t,
-                  }
-                );
+                return t && r >= t.length && (t = void 0), { value: t && t[r++], done: !t };
               },
             };
           throw new TypeError(e ? 'Object is not iterable.' : 'Symbol.iterator is not defined.');
@@ -37356,9 +32253,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -37375,12 +32270,7 @@ const bundle = () => {
       },
       9276: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Gd: () => m,
-          Xb: () => f,
-          pj: () => _,
-          vi: () => y,
-        });
+        i.d(e, { Gd: () => m, Xb: () => f, pj: () => _, vi: () => y });
         var r = i(1726),
           n = i(4503),
           s = i(6629),
@@ -37410,13 +32300,7 @@ const bundle = () => {
               }),
               (t.prototype.pushScope = function () {
                 var t = u.s.clone(this.getScope());
-                return (
-                  this.getStack().push({
-                    client: this.getClient(),
-                    scope: t,
-                  }),
-                  t
-                );
+                return this.getStack().push({ client: this.getClient(), scope: t }), t;
               }),
               (t.prototype.popScope = function () {
                 return !(this.getStack().length <= 1) && !!this.getStack().pop();
@@ -37451,21 +32335,9 @@ const bundle = () => {
                   } catch (t) {
                     a = t;
                   }
-                  s = {
-                    originalException: t,
-                    syntheticException: a,
-                  };
+                  s = { originalException: t, syntheticException: a };
                 }
-                return (
-                  this._invokeClient(
-                    'captureException',
-                    t,
-                    (0, r.pi)((0, r.pi)({}, s), {
-                      event_id: i,
-                    }),
-                  ),
-                  i
-                );
+                return this._invokeClient('captureException', t, (0, r.pi)((0, r.pi)({}, s), { event_id: i })), i;
               }),
               (t.prototype.captureMessage = function (t, e, i) {
                 var s = (this._lastEventId = i && i.event_id ? i.event_id : (0, n.DM)()),
@@ -37477,34 +32349,15 @@ const bundle = () => {
                   } catch (l) {
                     o = l;
                   }
-                  a = {
-                    originalException: t,
-                    syntheticException: o,
-                  };
+                  a = { originalException: t, syntheticException: o };
                 }
-                return (
-                  this._invokeClient(
-                    'captureMessage',
-                    t,
-                    e,
-                    (0, r.pi)((0, r.pi)({}, a), {
-                      event_id: s,
-                    }),
-                  ),
-                  s
-                );
+                return this._invokeClient('captureMessage', t, e, (0, r.pi)((0, r.pi)({}, a), { event_id: s })), s;
               }),
               (t.prototype.captureEvent = function (t, e) {
                 var i = e && e.event_id ? e.event_id : (0, n.DM)();
                 return (
                   'transaction' !== t.type && (this._lastEventId = i),
-                  this._invokeClient(
-                    'captureEvent',
-                    t,
-                    (0, r.pi)((0, r.pi)({}, e), {
-                      event_id: i,
-                    }),
-                  ),
+                  this._invokeClient('captureEvent', t, (0, r.pi)((0, r.pi)({}, e), { event_id: i })),
                   i
                 );
               }),
@@ -37523,12 +32376,7 @@ const bundle = () => {
                     p = void 0 === c ? d : c;
                   if (!(p <= 0)) {
                     var f = (0, s.yW)(),
-                      g = (0, r.pi)(
-                        {
-                          timestamp: f,
-                        },
-                        t,
-                      ),
+                      g = (0, r.pi)({ timestamp: f }, t),
                       _ = u
                         ? (0, a.Cf)(function () {
                             return u(g, e);
@@ -37582,11 +32430,7 @@ const bundle = () => {
                 try {
                   return e.getIntegration(t);
                 } catch (i) {
-                  return (
-                    (0, o.c)() &&
-                      a.kg.warn('Cannot retrieve integration ' + t.id + ' from the current Hub'),
-                    null
-                  );
+                  return (0, o.c)() && a.kg.warn('Cannot retrieve integration ' + t.id + ' from the current Hub'), null;
                 }
               }),
               (t.prototype.startSpan = function (t) {
@@ -37619,31 +32463,15 @@ const bundle = () => {
                   u = new c.z(
                     (0, r.pi)(
                       (0, r.pi)(
-                        (0, r.pi)(
-                          {
-                            release: a,
-                            environment: o,
-                          },
-                          i && {
-                            user: i.getUser(),
-                          },
-                        ),
-                        h && {
-                          userAgent: h,
-                        },
+                        (0, r.pi)({ release: a, environment: o }, i && { user: i.getUser() }),
+                        h && { userAgent: h },
                       ),
                       t,
                     ),
                   );
                 if (i) {
                   var p = i.getSession && i.getSession();
-                  p &&
-                    'ok' === p.status &&
-                    p.update({
-                      status: 'exited',
-                    }),
-                    this.endSession(),
-                    i.setSession(u);
+                  p && 'ok' === p.status && p.update({ status: 'exited' }), this.endSession(), i.setSession(u);
                 }
                 return u;
               }),
@@ -37666,23 +32494,15 @@ const bundle = () => {
               (t.prototype._callExtensionMethod = function (t) {
                 for (var e = [], i = 1; i < arguments.length; i++) e[i - 1] = arguments[i];
                 var r = g().__SENTRY__;
-                if (r && r.extensions && 'function' == typeof r.extensions[t])
-                  return r.extensions[t].apply(this, e);
-                (0, o.c)() &&
-                  a.kg.warn('Extension method ' + t + " couldn't be found, doing nothing.");
+                if (r && r.extensions && 'function' == typeof r.extensions[t]) return r.extensions[t].apply(this, e);
+                (0, o.c)() && a.kg.warn('Extension method ' + t + " couldn't be found, doing nothing.");
               }),
               t
             );
           })();
         function g() {
           var t = (0, l.R)();
-          return (
-            (t.__SENTRY__ = t.__SENTRY__ || {
-              extensions: {},
-              hub: void 0,
-            }),
-            t
-          );
+          return (t.__SENTRY__ = t.__SENTRY__ || { extensions: {}, hub: void 0 }), t;
         }
         function _(t) {
           var e = g(),
@@ -37723,10 +32543,7 @@ const bundle = () => {
       },
       8684: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          c: () => c,
-          s: () => h,
-        });
+        i.d(e, { c: () => c, s: () => h });
         var r = i(1726),
           n = i(9293),
           s = i(6629),
@@ -37774,10 +32591,7 @@ const bundle = () => {
               (t.prototype.setUser = function (t) {
                 return (
                   (this._user = t || {}),
-                  this._session &&
-                    this._session.update({
-                      user: t,
-                    }),
+                  this._session && this._session.update({ user: t }),
                   this._notifyScopeListeners(),
                   this
                 );
@@ -37792,11 +32606,7 @@ const bundle = () => {
                 return (this._requestSession = t), this;
               }),
               (t.prototype.setTags = function (t) {
-                return (
-                  (this._tags = (0, r.pi)((0, r.pi)({}, this._tags), t)),
-                  this._notifyScopeListeners(),
-                  this
-                );
+                return (this._tags = (0, r.pi)((0, r.pi)({}, this._tags), t)), this._notifyScopeListeners(), this;
               }),
               (t.prototype.setTag = function (t, e) {
                 var i;
@@ -37807,11 +32617,7 @@ const bundle = () => {
                 );
               }),
               (t.prototype.setExtras = function (t) {
-                return (
-                  (this._extra = (0, r.pi)((0, r.pi)({}, this._extra), t)),
-                  this._notifyScopeListeners(),
-                  this
-                );
+                return (this._extra = (0, r.pi)((0, r.pi)({}, this._extra), t)), this._notifyScopeListeners(), this;
               }),
               (t.prototype.setExtra = function (t, e) {
                 var i;
@@ -37838,10 +32644,7 @@ const bundle = () => {
                 return (
                   null === e
                     ? delete this._contexts[t]
-                    : (this._contexts = (0, r.pi)(
-                        (0, r.pi)({}, this._contexts),
-                        (((i = {})[t] = e), i),
-                      )),
+                    : (this._contexts = (0, r.pi)((0, r.pi)({}, this._contexts), (((i = {})[t] = e), i))),
                   this._notifyScopeListeners(),
                   this
                 );
@@ -37857,9 +32660,7 @@ const bundle = () => {
                 return t && t.transaction;
               }),
               (t.prototype.setSession = function (t) {
-                return (
-                  t ? (this._session = t) : delete this._session, this._notifyScopeListeners(), this
-                );
+                return t ? (this._session = t) : delete this._session, this._notifyScopeListeners(), this;
               }),
               (t.prototype.getSession = function () {
                 return this._session;
@@ -37911,16 +32712,9 @@ const bundle = () => {
               (t.prototype.addBreadcrumb = function (t, e) {
                 var i = 'number' == typeof e ? Math.min(e, l) : l;
                 if (i <= 0) return this;
-                var n = (0, r.pi)(
-                  {
-                    timestamp: (0, s.yW)(),
-                  },
-                  t,
-                );
+                var n = (0, r.pi)({ timestamp: (0, s.yW)() }, t);
                 return (
-                  (this._breadcrumbs = (0, r.fl)(this._breadcrumbs, [n]).slice(-i)),
-                  this._notifyScopeListeners(),
-                  this
+                  (this._breadcrumbs = (0, r.fl)(this._breadcrumbs, [n]).slice(-i)), this._notifyScopeListeners(), this
                 );
               }),
               (t.prototype.clearBreadcrumbs = function () {
@@ -37944,20 +32738,9 @@ const bundle = () => {
                   this._transactionName && (t.transaction = this._transactionName),
                   this._span)
                 ) {
-                  t.contexts = (0, r.pi)(
-                    {
-                      trace: this._span.getTraceContext(),
-                    },
-                    t.contexts,
-                  );
+                  t.contexts = (0, r.pi)({ trace: this._span.getTraceContext() }, t.contexts);
                   var i = this._span.transaction && this._span.transaction.name;
-                  i &&
-                    (t.tags = (0, r.pi)(
-                      {
-                        transaction: i,
-                      },
-                      t.tags,
-                    ));
+                  i && (t.tags = (0, r.pi)({ transaction: i }, t.tags));
                 }
                 return (
                   this._applyFingerprint(t),
@@ -37968,13 +32751,7 @@ const bundle = () => {
                 );
               }),
               (t.prototype.setSDKProcessingMetadata = function (t) {
-                return (
-                  (this._sdkProcessingMetadata = (0, r.pi)(
-                    (0, r.pi)({}, this._sdkProcessingMetadata),
-                    t,
-                  )),
-                  this
-                );
+                return (this._sdkProcessingMetadata = (0, r.pi)((0, r.pi)({}, this._sdkProcessingMetadata), t)), this;
               }),
               (t.prototype._notifyEventProcessors = function (t, e, i, s) {
                 var o = this;
@@ -38009,11 +32786,7 @@ const bundle = () => {
                   (this._notifyingListeners = !1));
               }),
               (t.prototype._applyFingerprint = function (t) {
-                (t.fingerprint = t.fingerprint
-                  ? Array.isArray(t.fingerprint)
-                    ? t.fingerprint
-                    : [t.fingerprint]
-                  : []),
+                (t.fingerprint = t.fingerprint ? (Array.isArray(t.fingerprint) ? t.fingerprint : [t.fingerprint]) : []),
                   this._fingerprint && (t.fingerprint = t.fingerprint.concat(this._fingerprint)),
                   t.fingerprint && !t.fingerprint.length && delete t.fingerprint;
               }),
@@ -38034,9 +32807,7 @@ const bundle = () => {
       },
       4218: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          z: () => a,
-        });
+        i.d(e, { z: () => a });
         var r = i(4503),
           n = i(6629),
           s = i(3621),
@@ -38081,13 +32852,9 @@ const bundle = () => {
               }),
               (t.prototype.close = function (t) {
                 t
-                  ? this.update({
-                      status: t,
-                    })
+                  ? this.update({ status: t })
                   : 'ok' === this.status
-                  ? this.update({
-                      status: 'exited',
-                    })
+                  ? this.update({ status: 'exited' })
                   : this.update();
               }),
               (t.prototype.toJSON = function () {
@@ -38098,10 +32865,7 @@ const bundle = () => {
                   timestamp: new Date(1e3 * this.timestamp).toISOString(),
                   status: this.status,
                   errors: this.errors,
-                  did:
-                    'number' == typeof this.did || 'string' == typeof this.did
-                      ? '' + this.did
-                      : void 0,
+                  did: 'number' == typeof this.did || 'string' == typeof this.did ? '' + this.did : void 0,
                   duration: this.duration,
                   attrs: {
                     release: this.release,
@@ -38117,18 +32881,14 @@ const bundle = () => {
       },
       1726: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          fl: () => s,
-          pi: () => r,
-        });
+        i.d(e, { fl: () => s, pi: () => r });
         var r = function () {
           return (
             (r =
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             r.apply(this, arguments)
@@ -38144,9 +32904,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -38184,8 +32942,7 @@ const bundle = () => {
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             r.apply(this, arguments)
@@ -38201,9 +32958,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -38222,9 +32977,7 @@ const bundle = () => {
           for (var e = [], i = 1; i < arguments.length; i++) e[i - 1] = arguments[i];
           var r = (0, a.Gd)();
           if (r && r[t]) return r[t].apply(r, s(e));
-          throw new Error(
-            'No hub defined or ' + t + ' was not found on the hub, please open a bug report.',
-          );
+          throw new Error('No hub defined or ' + t + ' was not found on the hub, please open a bug report.');
         }
         function l(t, e) {
           return o('captureException', t, {
@@ -38239,17 +32992,7 @@ const bundle = () => {
             'captureMessage',
             t,
             'string' == typeof e ? e : void 0,
-            r(
-              {
-                originalException: t,
-                syntheticException: i,
-              },
-              'string' != typeof e
-                ? {
-                    captureContext: e,
-                  }
-                : void 0,
-            ),
+            r({ originalException: t, syntheticException: i }, 'string' != typeof e ? { captureContext: e } : void 0),
           );
         }
         function u(t) {
@@ -38289,9 +33032,7 @@ const bundle = () => {
       3732: (t, e, i) => {
         'use strict';
         var r;
-        i.d(e, {
-          z: () => r,
-        }),
+        i.d(e, { z: () => r }),
           (function (t) {
             (t.Fatal = 'fatal'),
               (t.Error = 'error'),
@@ -38304,19 +33045,14 @@ const bundle = () => {
       },
       6448: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          R: () => s,
-          l: () => o,
-        });
+        i.d(e, { R: () => s, l: () => o });
         var r = i(3868),
           n = i(9293);
         function s(t, e) {
           try {
             for (
               var i = t, r = 5, n = 80, s = [], o = 0, l = 0, h = ' > ', u = h.length, c = void 0;
-              i &&
-              o++ < r &&
-              !('html' === (c = a(i, e)) || (o > 1 && l + s.length * u + c.length >= n));
+              i && o++ < r && !('html' === (c = a(i, e)) || (o > 1 && l + s.length * u + c.length >= n));
 
             )
               s.push(c), (l += c.length), (i = i.parentNode);
@@ -38352,8 +33088,7 @@ const bundle = () => {
           else if ((l.id && h.push('#' + l.id), (i = l.className) && (0, n.HD)(i)))
             for (r = i.split(/\s+/), o = 0; o < r.length; o++) h.push('.' + r[o]);
           var c = ['type', 'name', 'title', 'alt'];
-          for (o = 0; o < c.length; o++)
-            (s = c[o]), (a = l.getAttribute(s)) && h.push('[' + s + '="' + a + '"]');
+          for (o = 0; o < c.length; o++) (s = c[o]), (a = l.getAttribute(s)) && h.push('[' + s + '="' + a + '"]');
           return h.join('');
         }
         function o() {
@@ -38367,10 +33102,7 @@ const bundle = () => {
       },
       6027: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          R: () => l,
-          v: () => p,
-        });
+        i.d(e, { R: () => l, v: () => p });
         var r = i(4175),
           n = i(5800),
           s = i(2190),
@@ -38416,15 +33148,7 @@ const bundle = () => {
             var m = g.match(/^\d+/);
             m && (g = m[0]);
           }
-          return u({
-            host: c,
-            pass: h,
-            path: f,
-            projectId: g,
-            port: d,
-            protocol: n,
-            publicKey: o,
-          });
+          return u({ host: c, pass: h, path: f, projectId: g, port: d, protocol: n, publicKey: o });
         }
         function u(t) {
           return (
@@ -38465,10 +33189,7 @@ const bundle = () => {
       },
       5800: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          c: () => n,
-          n: () => s,
-        });
+        i.d(e, { c: () => n, n: () => s });
         var r = !0;
         function n() {
           return r;
@@ -38479,11 +33200,7 @@ const bundle = () => {
       },
       1076: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Jd: () => s,
-          V$: () => o,
-          y7: () => a,
-        });
+        i.d(e, { Jd: () => s, V$: () => o, y7: () => a });
         var r = i(4175),
           n = i(9293);
         function s(t, e) {
@@ -38510,17 +33227,9 @@ const bundle = () => {
       },
       2190: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          b: () => o,
-        });
+        i.d(e, { b: () => o });
         var r = i(4175),
-          n =
-            Object.setPrototypeOf ||
-            ({
-              __proto__: [],
-            } instanceof Array
-              ? s
-              : a);
+          n = Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? s : a);
         function s(t, e) {
           return (t.__proto__ = e), t;
         }
@@ -38539,26 +33248,16 @@ const bundle = () => {
       },
       3868: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          R: () => s,
-        });
+        i.d(e, { R: () => s });
         var r = i(8790),
           n = {};
         function s() {
-          return (0, r.KV)()
-            ? i.g
-            : 'undefined' != typeof window
-            ? window
-            : 'undefined' != typeof self
-            ? self
-            : n;
+          return (0, r.KV)() ? i.g : 'undefined' != typeof window ? window : 'undefined' != typeof self ? self : n;
         }
       },
       5954: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          o: () => _,
-        });
+        i.d(e, { o: () => _ });
         var r,
           n = i(4175),
           s = i(5800),
@@ -38575,7 +33274,7 @@ const bundle = () => {
           if (!f[t])
             switch (((f[t] = !0), t)) {
               case 'console':
-                // v();
+                v();
                 break;
               case 'dom':
                 O();
@@ -38623,9 +33322,7 @@ const bundle = () => {
                 }
               }
             } catch (p) {
-              i = {
-                error: p,
-              };
+              i = { error: p };
             } finally {
               try {
                 o && !o.done && (r = a.return) && r.call(a);
@@ -38634,61 +33331,32 @@ const bundle = () => {
               }
             }
         }
-        // function v() {
-        //   'console' in p &&
-        //     l.RU.forEach(function (t) {
-        //       t in p.console &&
-        //         (0, h.hl)(p.console, t, function (e) {
-        //           return function () {
-        //             for (var i = [], r = 0; r < arguments.length; r++) i[r] = arguments[r];
-        //             m('console', {
-        //               args: i,
-        //               level: t,
-        //             }),
-        //               e && e.apply(p.console, i);
-        //           };
-        //         });
-        //     });
-        // }
+        function v() {
+          'console' in p &&
+            l.RU.forEach(function (t) {
+              t in p.console &&
+                (0, h.hl)(p.console, t, function (e) {
+                  return function () {
+                    for (var i = [], r = 0; r < arguments.length; r++) i[r] = arguments[r];
+                    m('console', { args: i, level: t }), e && e.apply(p.console, i);
+                  };
+                });
+            });
+        }
         function A() {
           (0, c.t$)() &&
             (0, h.hl)(p, 'fetch', function (t) {
               return function () {
                 for (var e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
-                var r = {
-                  args: e,
-                  fetchData: {
-                    method: y(e),
-                    url: b(e),
-                  },
-                  startTimestamp: Date.now(),
-                };
+                var r = { args: e, fetchData: { method: y(e), url: b(e) }, startTimestamp: Date.now() };
                 return (
                   m('fetch', (0, n.pi)({}, r)),
                   t.apply(p, e).then(
                     function (t) {
-                      return (
-                        m(
-                          'fetch',
-                          (0, n.pi)((0, n.pi)({}, r), {
-                            endTimestamp: Date.now(),
-                            response: t,
-                          }),
-                        ),
-                        t
-                      );
+                      return m('fetch', (0, n.pi)((0, n.pi)({}, r), { endTimestamp: Date.now(), response: t })), t;
                     },
                     function (t) {
-                      throw (
-                        (m(
-                          'fetch',
-                          (0, n.pi)((0, n.pi)({}, r), {
-                            endTimestamp: Date.now(),
-                            error: t,
-                          }),
-                        ),
-                        t)
-                      );
+                      throw (m('fetch', (0, n.pi)((0, n.pi)({}, r), { endTimestamp: Date.now(), error: t })), t);
                     },
                   )
                 );
@@ -38708,11 +33376,7 @@ const bundle = () => {
         function b(t) {
           return (
             void 0 === t && (t = []),
-            'string' == typeof t[0]
-              ? t[0]
-              : 'Request' in p && (0, o.V9)(t[0], Request)
-              ? t[0].url
-              : String(t[0])
+            'string' == typeof t[0] ? t[0] : 'Request' in p && (0, o.V9)(t[0], Request) ? t[0].url : String(t[0])
           );
         }
         function x() {
@@ -38723,25 +33387,14 @@ const bundle = () => {
                 for (var e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
                 var r = this,
                   n = e[1],
-                  s = (r.__sentry_xhr__ = {
-                    method: (0, o.HD)(e[0]) ? e[0].toUpperCase() : e[0],
-                    url: e[1],
-                  });
-                (0, o.HD)(n) &&
-                  'POST' === s.method &&
-                  n.match(/sentry_key/) &&
-                  (r.__sentry_own_request__ = !0);
+                  s = (r.__sentry_xhr__ = { method: (0, o.HD)(e[0]) ? e[0].toUpperCase() : e[0], url: e[1] });
+                (0, o.HD)(n) && 'POST' === s.method && n.match(/sentry_key/) && (r.__sentry_own_request__ = !0);
                 var a = function () {
                   if (4 === r.readyState) {
                     try {
                       s.status_code = r.status;
                     } catch (t) {}
-                    m('xhr', {
-                      args: e,
-                      endTimestamp: Date.now(),
-                      startTimestamp: Date.now(),
-                      xhr: r,
-                    });
+                    m('xhr', { args: e, endTimestamp: Date.now(), startTimestamp: Date.now(), xhr: r });
                   }
                 };
                 return (
@@ -38762,11 +33415,7 @@ const bundle = () => {
                   for (var e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
                   return (
                     this.__sentry_xhr__ && void 0 !== e[0] && (this.__sentry_xhr__.body = e[0]),
-                    m('xhr', {
-                      args: e,
-                      startTimestamp: Date.now(),
-                      xhr: this,
-                    }),
+                    m('xhr', { args: e, startTimestamp: Date.now(), xhr: this }),
                     t.apply(this, e)
                   );
                 };
@@ -38780,14 +33429,7 @@ const bundle = () => {
               for (var e = [], i = 0; i < arguments.length; i++) e[i] = arguments[i];
               var n = p.location.href,
                 s = r;
-              if (
-                ((r = n),
-                m('history', {
-                  from: s,
-                  to: n,
-                }),
-                t)
-              )
+              if (((r = n), m('history', { from: s, to: n }), t))
                 try {
                   return t.apply(this, e);
                 } catch (a) {}
@@ -38802,11 +33444,7 @@ const bundle = () => {
               if (n) {
                 var s = r,
                   a = String(n);
-                (r = a),
-                  m('history', {
-                    from: s,
-                    to: a,
-                  });
+                (r = a), m('history', { from: s, to: a });
               }
               return t.apply(this, e);
             };
@@ -38838,13 +33476,7 @@ const bundle = () => {
             function (i) {
               if (i && S !== i && !R(i)) {
                 var r = 'keypress' === i.type ? 'input' : i.type;
-                (void 0 === E || w(S, i)) &&
-                  (t({
-                    event: i,
-                    name: r,
-                    global: e,
-                  }),
-                  (S = i)),
+                (void 0 === E || w(S, i)) && (t({ event: i, name: r, global: e }), (S = i)),
                   clearTimeout(E),
                   (E = p.setTimeout(function () {
                     E = void 0;
@@ -38869,11 +33501,8 @@ const bundle = () => {
                       if ('click' === i || 'keypress' == i)
                         try {
                           var s = this,
-                            a = (s.__sentry_instrumentation_handlers__ =
-                              s.__sentry_instrumentation_handlers__ || {}),
-                            o = (a[i] = a[i] || {
-                              refCount: 0,
-                            });
+                            a = (s.__sentry_instrumentation_handlers__ = s.__sentry_instrumentation_handlers__ || {}),
+                            o = (a[i] = a[i] || { refCount: 0 });
                           if (!o.handler) {
                             var l = P(t);
                             (o.handler = l), e.call(this, i, l, n);
@@ -38892,10 +33521,8 @@ const bundle = () => {
                             a = s[e];
                           a &&
                             ((a.refCount -= 1),
-                            a.refCount <= 0 &&
-                              (t.call(this, e, a.handler, r), (a.handler = void 0), delete s[e]),
-                            0 === Object.keys(s).length &&
-                              delete n.__sentry_instrumentation_handlers__);
+                            a.refCount <= 0 && (t.call(this, e, a.handler, r), (a.handler = void 0), delete s[e]),
+                            0 === Object.keys(s).length && delete n.__sentry_instrumentation_handlers__);
                         } catch (o) {}
                       return t.call(this, e, i, r);
                     };
@@ -38907,16 +33534,7 @@ const bundle = () => {
         function M() {
           (C = p.onerror),
             (p.onerror = function (t, e, i, r, n) {
-              return (
-                m('error', {
-                  column: r,
-                  error: n,
-                  line: i,
-                  msg: t,
-                  url: e,
-                }),
-                !!C && C.apply(this, arguments)
-              );
+              return m('error', { column: r, error: n, line: i, msg: t, url: e }), !!C && C.apply(this, arguments);
             });
         }
         var D = null;
@@ -39005,11 +33623,7 @@ const bundle = () => {
       },
       8321: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Cf: () => h,
-          RU: () => l,
-          kg: () => p,
-        });
+        i.d(e, { Cf: () => h, RU: () => l, kg: () => p });
         var r = i(4175),
           n = i(5800),
           s = i(3868),
@@ -39022,9 +33636,7 @@ const bundle = () => {
           var i = e.console,
             r = {};
           l.forEach(function (t) {
-            t in e.console &&
-              i[t].__sentry_original__ &&
-              ((r[t] = i[t]), (i[t] = i[t].__sentry_original__));
+            t in e.console && i[t].__sentry_original__ && ((r[t] = i[t]), (i[t] = i[t].__sentry_original__));
           });
           var n = t();
           return (
@@ -39078,14 +33690,7 @@ const bundle = () => {
       },
       4503: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          DM: () => a,
-          Db: () => u,
-          EG: () => c,
-          YO: () => p,
-          en: () => o,
-          jH: () => h,
-        });
+        i.d(e, { DM: () => a, Db: () => u, EG: () => c, YO: () => p, en: () => o, jH: () => h });
         var r = i(4175),
           n = i(3868),
           s = i(3621);
@@ -39112,12 +33717,7 @@ const bundle = () => {
           if (!e) return {};
           var i = e[6] || '',
             r = e[8] || '';
-          return {
-            host: e[4],
-            path: e[5],
-            protocol: e[2],
-            relative: e[5] + i + r,
-          };
+          return { host: e[4], path: e[5], protocol: e[2], relative: e[5] + i + r };
         }
         function l(t) {
           return t.exception && t.exception.values ? t.exception.values[0] : void 0;
@@ -39142,10 +33742,7 @@ const bundle = () => {
         function c(t, e) {
           var i = l(t);
           if (i) {
-            var n = {
-                type: 'generic',
-                handled: !0,
-              },
+            var n = { type: 'generic', handled: !0 },
               s = i.mechanism;
             if (((i.mechanism = (0, r.pi)((0, r.pi)((0, r.pi)({}, n), s), e)), e && 'data' in e)) {
               var a = (0, r.pi)((0, r.pi)({}, s && s.data), e.data);
@@ -39163,16 +33760,12 @@ const bundle = () => {
       },
       8790: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          KV: () => n,
-          l$: () => s,
-        });
+        i.d(e, { KV: () => n, l$: () => s });
         var r = i(5800);
         function n() {
           return (
             !(0, r.n)() &&
-            '[object process]' ===
-              Object.prototype.toString.call('undefined' != typeof process ? process : 0)
+            '[object process]' === Object.prototype.toString.call('undefined' != typeof process ? process : 0)
           );
         }
         function s(t, e) {
@@ -39182,10 +33775,7 @@ const bundle = () => {
       },
       6979: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Fv: () => l,
-          Qy: () => h,
-        });
+        i.d(e, { Fv: () => l, Qy: () => h });
         var r = i(4175),
           n = i(9293);
         function s() {
@@ -39216,9 +33806,7 @@ const bundle = () => {
           try {
             return u('', t, e, i);
           } catch (r) {
-            return {
-              ERROR: '**non-serializable** (' + r + ')',
-            };
+            return { ERROR: '**non-serializable** (' + r + ')' };
           }
         }
         function h(t, e, i) {
@@ -39236,8 +33824,7 @@ const bundle = () => {
             try {
               return f.toJSON();
             } catch (b) {}
-          if (null === e || (['number', 'boolean', 'string'].includes(typeof e) && !(0, n.i2)(e)))
-            return e;
+          if (null === e || (['number', 'boolean', 'string'].includes(typeof e) && !(0, n.i2)(e))) return e;
           var g = c(t, e);
           if (!g.startsWith('[object ')) return g;
           if (0 === i) return g.replace('object ', '');
@@ -39320,11 +33907,7 @@ const bundle = () => {
           }
         }
         function l(t, e, i) {
-          Object.defineProperty(t, e, {
-            value: i,
-            writable: !0,
-            configurable: !0,
-          });
+          Object.defineProperty(t, e, { value: i, writable: !0, configurable: !0 });
         }
         function h(t, e) {
           var i = e.prototype || {};
@@ -39342,28 +33925,11 @@ const bundle = () => {
         }
         function p(t) {
           var e = t;
-          if ((0, s.VZ)(t))
-            e = (0, r.pi)(
-              {
-                message: t.message,
-                name: t.name,
-                stack: t.stack,
-              },
-              f(t),
-            );
+          if ((0, s.VZ)(t)) e = (0, r.pi)({ message: t.message, name: t.name, stack: t.stack }, f(t));
           else if ((0, s.cO)(t)) {
             var i = t;
-            (e = (0, r.pi)(
-              {
-                type: i.type,
-                target: d(i.target),
-                currentTarget: d(i.currentTarget),
-              },
-              f(i),
-            )),
-              'undefined' != typeof CustomEvent &&
-                (0, s.V9)(t, CustomEvent) &&
-                (e.detail = i.detail);
+            (e = (0, r.pi)({ type: i.type, target: d(i.target), currentTarget: d(i.currentTarget) }, f(i))),
+              'undefined' != typeof CustomEvent && (0, s.V9)(t, CustomEvent) && (e.detail = i.detail);
           }
           return e;
         }
@@ -39400,9 +33966,7 @@ const bundle = () => {
                 void 0 !== t[l] && (n[l] = _(t[l]));
               }
             } catch (h) {
-              e = {
-                error: h,
-              };
+              e = { error: h };
             } finally {
               try {
                 o && !o.done && (i = a.return) && i.call(a);
@@ -39417,9 +33981,7 @@ const bundle = () => {
       },
       9765: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          x: () => s,
-        });
+        i.d(e, { x: () => s });
         var r = i(2190),
           n = i(7593);
         function s(t) {
@@ -39459,20 +34021,12 @@ const bundle = () => {
               });
             });
           }
-          return {
-            $: e,
-            add: a,
-            drain: o,
-          };
+          return { $: e, add: a, drain: o };
         }
       },
       2105: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Q: () => o,
-          WG: () => l,
-          ns: () => a,
-        });
+        i.d(e, { Q: () => o, WG: () => l, ns: () => a });
         var r = i(4175),
           n = 6e4;
         function s(t, e) {
@@ -39502,17 +34056,11 @@ const bundle = () => {
                   _ = 1e3 * (isNaN(g) ? 60 : g);
                 if (f[1])
                   try {
-                    for (
-                      var m = ((o = void 0), (0, r.XA)(f[1].split(';'))), v = m.next();
-                      !v.done;
-                      v = m.next()
-                    ) {
+                    for (var m = ((o = void 0), (0, r.XA)(f[1].split(';'))), v = m.next(); !v.done; v = m.next()) {
                       h[v.value] = i + _;
                     }
                   } catch (A) {
-                    o = {
-                      error: A,
-                    };
+                    o = { error: A };
                   } finally {
                     try {
                       v && !v.done && (l = m.return) && l.call(m);
@@ -39523,9 +34071,7 @@ const bundle = () => {
                 else h.all = i + _;
               }
             } catch (y) {
-              n = {
-                error: y,
-              };
+              n = { error: y };
             } finally {
               try {
                 d && !d.done && (a = p.return) && a.call(p);
@@ -39539,10 +34085,7 @@ const bundle = () => {
       },
       313: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          $P: () => l,
-          pE: () => s,
-        });
+        i.d(e, { $P: () => l, pE: () => s });
         var r = i(4175),
           n = 50;
         function s() {
@@ -39570,9 +34113,7 @@ const bundle = () => {
                     }
                   }
                 } catch (_) {
-                  o = {
-                    error: _,
-                  };
+                  o = { error: _ };
                 } finally {
                   try {
                     f && !f.done && (l = d.return) && l.call(d);
@@ -39582,9 +34123,7 @@ const bundle = () => {
                 }
               }
             } catch (m) {
-              n = {
-                error: m,
-              };
+              n = { error: m };
             } finally {
               try {
                 c && !c.done && (s = u.return) && s.call(u);
@@ -39601,16 +34140,13 @@ const bundle = () => {
             i = e[0].function || '',
             s = e[e.length - 1].function || '';
           return (
-            (-1 === i.indexOf('captureMessage') && -1 === i.indexOf('captureException')) ||
-              (e = e.slice(1)),
+            (-1 === i.indexOf('captureMessage') && -1 === i.indexOf('captureException')) || (e = e.slice(1)),
             -1 !== s.indexOf('sentryWrapped') && (e = e.slice(0, -1)),
             e
               .slice(0, n)
               .map(function (t) {
-                return (0, r.pi)((0, r.pi)({}, t), {
-                  filename: t.filename || e[0].filename,
-                  function: t.function || '?',
-                });
+                return (0,
+                r.pi)((0, r.pi)({}, t), { filename: t.filename || e[0].filename, function: t.function || '?' });
               })
               .reverse()
           );
@@ -39637,23 +34173,14 @@ const bundle = () => {
             ? 'failed'
             : 'unknown';
         }
-        i.d(e, {
-          F: () => r,
-        });
+        i.d(e, { F: () => r });
       },
       3553: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          $G: () => n,
-          nK: () => s,
-          zC: () => a,
-        });
+        i.d(e, { $G: () => n, nK: () => s, zC: () => a });
         var r = i(9293);
         function n(t, e) {
-          return (
-            void 0 === e && (e = 0),
-            'string' != typeof t || 0 === e || t.length <= e ? t : t.substr(0, e) + '...'
-          );
+          return void 0 === e && (e = 0), 'string' != typeof t || 0 === e || t.length <= e ? t : t.substr(0, e) + '...';
         }
         function s(t, e) {
           if (!Array.isArray(t)) return '';
@@ -39668,21 +34195,12 @@ const bundle = () => {
           return i.join(e);
         }
         function a(t, e) {
-          return (
-            !!(0, r.HD)(t) &&
-            ((0, r.Kj)(e) ? e.test(t) : 'string' == typeof e && -1 !== t.indexOf(e))
-          );
+          return !!(0, r.HD)(t) && ((0, r.Kj)(e) ? e.test(t) : 'string' == typeof e && -1 !== t.indexOf(e));
         }
       },
       9018: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          Ak: () => a,
-          Bf: () => u,
-          Du: () => o,
-          hv: () => h,
-          t$: () => l,
-        });
+        i.d(e, { Ak: () => a, Bf: () => u, Du: () => o, hv: () => h, t$: () => l });
         var r = i(5800),
           n = i(3868),
           s = i(8321);
@@ -39712,22 +34230,14 @@ const bundle = () => {
                 i.head.removeChild(l);
             } catch (h) {
               (0, r.c)() &&
-                s.kg.warn(
-                  'Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ',
-                  h,
-                );
+                s.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', h);
             }
           return e;
         }
         function h() {
           if (!a()) return !1;
           try {
-            return (
-              new Request('_', {
-                referrerPolicy: 'origin',
-              }),
-              !0
-            );
+            return new Request('_', { referrerPolicy: 'origin' }), !0;
           } catch (t) {
             return !1;
           }
@@ -39742,11 +34252,7 @@ const bundle = () => {
       },
       7593: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          $2: () => s,
-          WD: () => n,
-          cW: () => a,
-        });
+        i.d(e, { $2: () => s, WD: () => n, cW: () => a });
         var r = i(9293);
         function n(t) {
           return new a(function (e) {
@@ -39780,10 +34286,7 @@ const bundle = () => {
                   var t = e._handlers.slice();
                   (e._handlers = []),
                     t.forEach(function (t) {
-                      t[0] ||
-                        (1 === e._state && t[1](e._value),
-                        2 === e._state && t[2](e._value),
-                        (t[0] = !0));
+                      t[0] || (1 === e._state && t[1](e._value), 2 === e._state && t[2](e._value), (t[0] = !0));
                     });
                 }
               });
@@ -39850,10 +34353,7 @@ const bundle = () => {
       },
       6629: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          ph: () => c,
-          yW: () => u,
-        });
+        i.d(e, { ph: () => c, yW: () => u });
         var r = i(3868),
           n = i(8790);
         t = i.hmd(t);
@@ -39900,31 +34400,19 @@ const bundle = () => {
               a = s < e,
               o = t.timing && t.timing.navigationStart,
               l = 'number' == typeof o ? Math.abs(o + i - n) : e;
-            return a || l < e
-              ? s <= l
-                ? ('timeOrigin', t.timeOrigin)
-                : ('navigationStart', o)
-              : ('dateNow', n);
+            return a || l < e ? (s <= l ? ('timeOrigin', t.timeOrigin) : ('navigationStart', o)) : ('dateNow', n);
           }
           ('none');
         })();
       },
       4175: (t, e, i) => {
         'use strict';
-        i.d(e, {
-          CR: () => o,
-          XA: () => a,
-          ZT: () => n,
-          fl: () => l,
-          pi: () => s,
-        });
+        i.d(e, { CR: () => o, XA: () => a, ZT: () => n, fl: () => l, pi: () => s });
         var r = function (t, e) {
           return (
             (r =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -39938,8 +34426,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          r(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          r(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var s = function () {
           return (
@@ -39947,8 +34434,7 @@ const bundle = () => {
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             s.apply(this, arguments)
@@ -39962,13 +34448,7 @@ const bundle = () => {
           if (t && 'number' == typeof t.length)
             return {
               next: function () {
-                return (
-                  t && r >= t.length && (t = void 0),
-                  {
-                    value: t && t[r++],
-                    done: !t,
-                  }
-                );
+                return t && r >= t.length && (t = void 0), { value: t && t[r++], done: !t };
               },
             };
           throw new TypeError(e ? 'Object is not iterable.' : 'Symbol.iterator is not defined.');
@@ -39983,9 +34463,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -40001,21 +34479,10 @@ const bundle = () => {
         }
       },
       3410: (t, e, i) => {
-        var r =
-          'undefined' != typeof window
-            ? window
-            : void 0 !== i.g
-            ? i.g
-            : 'undefined' != typeof self
-            ? self
-            : {};
-        (r.SENTRY_RELEASE = {
-          id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)',
-        }),
+        var r = 'undefined' != typeof window ? window : void 0 !== i.g ? i.g : 'undefined' != typeof self ? self : {};
+        (r.SENTRY_RELEASE = { id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)' }),
           (r.SENTRY_RELEASES = r.SENTRY_RELEASES || {}),
-          (r.SENTRY_RELEASES['games-front-end@sentry'] = {
-            id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)',
-          });
+          (r.SENTRY_RELEASES['games-front-end@sentry'] = { id: 'Plinko (game: v0.0.27_v14.6.4, utils: v14.6.4)' });
       },
       6957: (t) => {
         'use strict';
@@ -40036,10 +34503,7 @@ const bundle = () => {
           if ((d && (g = h(t, e, g, r)), t.length > 80 * r)) {
             (s = o = t[0]), (a = l = t[1]);
             for (var m = r; m < f; m += r)
-              (u = t[m]) < s && (s = u),
-                (c = t[m + 1]) < a && (a = c),
-                u > o && (o = u),
-                c > l && (l = c);
+              (u = t[m]) < s && (s = u), (c = t[m + 1]) < a && (a = c), u > o && (o = u), c > l && (l = c);
             p = 0 !== (p = Math.max(o - s, l - a)) ? 1 / p : 0;
           }
           return n(g, _, r, s, a, p), _;
@@ -40108,40 +34572,22 @@ const bundle = () => {
             d && d.z >= c && f && f.z <= p;
 
           ) {
-            if (
-              d !== t.prev &&
-              d !== t.next &&
-              v(n.x, n.y, s.x, s.y, a.x, a.y, d.x, d.y) &&
-              y(d.prev, d, d.next) >= 0
-            )
+            if (d !== t.prev && d !== t.next && v(n.x, n.y, s.x, s.y, a.x, a.y, d.x, d.y) && y(d.prev, d, d.next) >= 0)
               return !1;
             if (
               ((d = d.prevZ),
-              f !== t.prev &&
-                f !== t.next &&
-                v(n.x, n.y, s.x, s.y, a.x, a.y, f.x, f.y) &&
-                y(f.prev, f, f.next) >= 0)
+              f !== t.prev && f !== t.next && v(n.x, n.y, s.x, s.y, a.x, a.y, f.x, f.y) && y(f.prev, f, f.next) >= 0)
             )
               return !1;
             f = f.nextZ;
           }
           for (; d && d.z >= c; ) {
-            if (
-              d !== t.prev &&
-              d !== t.next &&
-              v(n.x, n.y, s.x, s.y, a.x, a.y, d.x, d.y) &&
-              y(d.prev, d, d.next) >= 0
-            )
+            if (d !== t.prev && d !== t.next && v(n.x, n.y, s.x, s.y, a.x, a.y, d.x, d.y) && y(d.prev, d, d.next) >= 0)
               return !1;
             d = d.prevZ;
           }
           for (; f && f.z <= p; ) {
-            if (
-              f !== t.prev &&
-              f !== t.next &&
-              v(n.x, n.y, s.x, s.y, a.x, a.y, f.x, f.y) &&
-              y(f.prev, f, f.next) >= 0
-            )
+            if (f !== t.prev && f !== t.next && v(n.x, n.y, s.x, s.y, a.x, a.y, f.x, f.y) && y(f.prev, f, f.next) >= 0)
               return !1;
             f = f.nextZ;
           }
@@ -40167,12 +34613,7 @@ const bundle = () => {
             for (var h = l.next.next; h !== l.prev; ) {
               if (l.i !== h.i && A(l, h)) {
                 var u = R(l, h);
-                return (
-                  (l = r(l, l.next)),
-                  (u = r(u, u.next)),
-                  n(l, e, i, s, a, o),
-                  void n(u, e, i, s, a, o)
-                );
+                return (l = r(l, l.next)), (u = r(u, u.next)), n(l, e, i, s, a, o), void n(u, e, i, s, a, o);
               }
               h = h.next;
             }
@@ -40185,8 +34626,7 @@ const bundle = () => {
             l,
             h = [];
           for (a = 0, o = e.length; a < o; a++)
-            (l = i(t, e[a] * s, a < o - 1 ? e[a + 1] * s : t.length, s, !1)) === l.next &&
-              (l.steiner = !0),
+            (l = i(t, e[a] * s, a < o - 1 ? e[a + 1] * s : t.length, s, !1)) === l.next && (l.steiner = !0),
               h.push(m(l));
           for (h.sort(u), a = 0; a < h.length; a++) n = r((n = c(h[a], n)), n.next);
           return n;
@@ -40234,9 +34674,7 @@ const bundle = () => {
               n !== r.x &&
               v(s < c ? n : a, s, u, c, s < c ? a : n, s, r.x, r.y) &&
               ((l = Math.abs(s - r.y) / (n - r.x)),
-              I(r, t) &&
-                (l < p || (l === p && (r.x > i.x || (r.x === i.x && d(i, r))))) &&
-                ((i = r), (p = l))),
+              I(r, t) && (l < p || (l === p && (r.x > i.x || (r.x === i.x && d(i, r))))) && ((i = r), (p = l))),
               (r = r.next);
           } while (r !== h);
           return i;
@@ -40247,10 +34685,7 @@ const bundle = () => {
         function f(t, e, i, r) {
           var n = t;
           do {
-            null === n.z && (n.z = _(n.x, n.y, e, i, r)),
-              (n.prevZ = n.prev),
-              (n.nextZ = n.next),
-              (n = n.next);
+            null === n.z && (n.z = _(n.x, n.y, e, i, r)), (n.prevZ = n.prev), (n.nextZ = n.next), (n = n.next);
           } while (n !== t);
           (n.prevZ.nextZ = null), (n.prevZ = null), g(n);
         }
@@ -40286,19 +34721,13 @@ const bundle = () => {
               1431655765 &
               ((t =
                 858993459 &
-                ((t =
-                  252645135 &
-                  ((t = 16711935 & ((t = 32767 * (t - i) * n) | (t << 8))) | (t << 4))) |
-                  (t << 2))) |
+                ((t = 252645135 & ((t = 16711935 & ((t = 32767 * (t - i) * n) | (t << 8))) | (t << 4))) | (t << 2))) |
                 (t << 1))) |
             ((e =
               1431655765 &
               ((e =
                 858993459 &
-                ((e =
-                  252645135 &
-                  ((e = 16711935 & ((e = 32767 * (e - r) * n) | (e << 8))) | (e << 4))) |
-                  (e << 2))) |
+                ((e = 252645135 & ((e = 16711935 & ((e = 32767 * (e - r) * n) | (e << 8))) | (e << 4))) | (e << 2))) |
                 (e << 1))) <<
               1)
           );
@@ -40360,14 +34789,7 @@ const bundle = () => {
         function S(t, e) {
           var i = t;
           do {
-            if (
-              i.i !== t.i &&
-              i.next.i !== t.i &&
-              i.i !== e.i &&
-              i.next.i !== e.i &&
-              x(i, i.next, t, e)
-            )
-              return !0;
+            if (i.i !== t.i && i.next.i !== t.i && i.i !== e.i && i.next.i !== e.i && x(i, i.next, t, e)) return !0;
             i = i.next;
           } while (i !== t);
           return !1;
@@ -40411,10 +34833,7 @@ const bundle = () => {
         function P(t, e, i, r) {
           var n = new C(t, e, i);
           return (
-            r
-              ? ((n.next = r.next), (n.prev = r), (r.next.prev = n), (r.next = n))
-              : ((n.prev = n), (n.next = n)),
-            n
+            r ? ((n.next = r.next), (n.prev = r), (r.next.prev = n), (r.next = n)) : ((n.prev = n), (n.next = n)), n
           );
         }
         function O(t) {
@@ -40435,8 +34854,7 @@ const bundle = () => {
             (this.steiner = !1);
         }
         function M(t, e, i, r) {
-          for (var n = 0, s = e, a = i - r; s < i; s += r)
-            (n += (t[a] - t[s]) * (t[s + 1] + t[a + 1])), (a = s);
+          for (var n = 0, s = e, a = i - r; s < i; s += r) (n += (t[a] - t[s]) * (t[s + 1] + t[a + 1])), (a = s);
           return n;
         }
         (t.exports = e),
@@ -40456,27 +34874,17 @@ const bundle = () => {
               var p = r[o] * i,
                 d = r[o + 1] * i,
                 f = r[o + 2] * i;
-              c += Math.abs(
-                (t[p] - t[f]) * (t[d + 1] - t[p + 1]) - (t[p] - t[d]) * (t[f + 1] - t[p + 1]),
-              );
+              c += Math.abs((t[p] - t[f]) * (t[d + 1] - t[p + 1]) - (t[p] - t[d]) * (t[f + 1] - t[p + 1]));
             }
             return 0 === a && 0 === c ? 0 : Math.abs((c - a) / a);
           }),
           (e.flatten = function (t) {
             for (
-              var e = t[0][0].length,
-                i = {
-                  vertices: [],
-                  holes: [],
-                  dimensions: e,
-                },
-                r = 0,
-                n = 0;
+              var e = t[0][0].length, i = { vertices: [], holes: [], dimensions: e }, r = 0, n = 0;
               n < t.length;
               n++
             ) {
-              for (var s = 0; s < t[n].length; s++)
-                for (var a = 0; a < e; a++) i.vertices.push(t[n][s][a]);
+              for (var s = 0; s < t[n].length; s++) for (var a = 0; a < e; a++) i.vertices.push(t[n][s][a]);
               n > 0 && ((r += t[n - 1].length), i.holes.push(r));
             }
             return i;
@@ -40617,10 +35025,7 @@ const bundle = () => {
         function e(t, e) {
           var i = e && e.cache ? e.cache : c,
             r = e && e.serializer ? e.serializer : h;
-          return (e && e.strategy ? e.strategy : a)(t, {
-            cache: i,
-            serializer: r,
-          });
+          return (e && e.strategy ? e.strategy : a)(t, { cache: i, serializer: r });
         }
         function i(t) {
           return null == t || 'number' == typeof t || 'boolean' == typeof t;
@@ -40668,11 +35073,7 @@ const bundle = () => {
             return new u();
           },
         };
-        (t.exports = e),
-          (t.exports.strategies = {
-            variadic: o,
-            monadic: l,
-          });
+        (t.exports = e), (t.exports.strategies = { variadic: o, monadic: l });
       },
       7287: (t, e, i) => {
         var { webm: r, mp4: n } = i(9812),
@@ -40681,9 +35082,10 @@ const bundle = () => {
             parseFloat(
               (
                 '' +
-                (/CPU.*OS ([0-9_]{3,4})[0-9_]{0,1}|(CPU like).*AppleWebKit.*Mobile/i.exec(
-                  navigator.userAgent,
-                ) || [0, ''])[1]
+                (/CPU.*OS ([0-9_]{3,4})[0-9_]{0,1}|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [
+                  0,
+                  '',
+                ])[1]
               )
                 .replace('undefined', '3_2')
                 .replace('_', '.')
@@ -40698,8 +35100,7 @@ const bundle = () => {
               var t = () => {
                 null !== this._wakeLock && 'visible' === document.visibilityState && this.enable();
               };
-              document.addEventListener('visibilitychange', t),
-                document.addEventListener('fullscreenchange', t);
+              document.addEventListener('visibilitychange', t), document.addEventListener('fullscreenchange', t);
             } else
               s()
                 ? (this.noSleepTimer = null)
@@ -40712,8 +35113,7 @@ const bundle = () => {
                     this.noSleepVideo.duration <= 1
                       ? this.noSleepVideo.setAttribute('loop', '')
                       : this.noSleepVideo.addEventListener('timeupdate', () => {
-                          this.noSleepVideo.currentTime > 0.5 &&
-                            (this.noSleepVideo.currentTime = Math.random());
+                          this.noSleepVideo.currentTime > 0.5 && (this.noSleepVideo.currentTime = Math.random());
                         });
                   }));
           }
@@ -40746,8 +35146,7 @@ const bundle = () => {
                 ),
                 (this.noSleepTimer = window.setInterval(() => {
                   document.hidden ||
-                    ((window.location.href = window.location.href.split('#')[0]),
-                    window.setTimeout(window.stop, 0));
+                    ((window.location.href = window.location.href.split('#')[0]), window.setTimeout(window.stop, 0));
                 }, 15e3)),
                 (this.enabled = !0),
                 Promise.resolve())
@@ -40784,8 +35183,7 @@ const bundle = () => {
           i = Object.prototype.hasOwnProperty,
           r = Object.prototype.propertyIsEnumerable;
         function n(t) {
-          if (null == t)
-            throw new TypeError('Object.assign cannot be called with null or undefined');
+          if (null == t) throw new TypeError('Object.assign cannot be called with null or undefined');
           return Object(t);
         }
         function s() {
@@ -41036,12 +35434,7 @@ const bundle = () => {
           return new this(function (e, i) {
             if (!t || void 0 === t.length)
               return i(
-                new TypeError(
-                  typeof t +
-                    ' ' +
-                    t +
-                    ' is not iterable(cannot read property Symbol(Symbol.iterator))',
-                ),
+                new TypeError(typeof t + ' ' + t + ' is not iterable(cannot read property Symbol(Symbol.iterator))'),
               );
             var r = Array.prototype.slice.call(t);
             if (0 === r.length) return e([]);
@@ -41056,19 +35449,11 @@ const bundle = () => {
                       s(t, e);
                     },
                     function (i) {
-                      (r[t] = {
-                        status: 'rejected',
-                        reason: i,
-                      }),
-                        0 == --n && e(r);
+                      (r[t] = { status: 'rejected', reason: i }), 0 == --n && e(r);
                     },
                   );
               }
-              (r[t] = {
-                status: 'fulfilled',
-                value: i,
-              }),
-                0 == --n && e(r);
+              (r[t] = { status: 'fulfilled', value: i }), 0 == --n && e(r);
             }
             for (var a = 0; a < r.length; a++) s(a, r[a]);
           });
@@ -41087,11 +35472,7 @@ const bundle = () => {
         function c(t) {
           if (!(this instanceof c)) throw new TypeError('Promises must be constructed via new');
           if ('function' != typeof t) throw new TypeError('not a function');
-          (this._state = 0),
-            (this._handled = !1),
-            (this._value = void 0),
-            (this._deferreds = []),
-            m(t, this);
+          (this._state = 0), (this._handled = !1), (this._value = void 0), (this._deferreds = []), m(t, this);
         }
         function p(t, e) {
           for (; 3 === t._state; ) t = t._value;
@@ -41220,17 +35601,13 @@ const bundle = () => {
               o(t, 0);
             }),
           (c._unhandledRejectionFn = function (t) {
-            'undefined' != typeof console &&
-              console &&
-              console.warn('Possible Unhandled Promise Rejection:', t);
+            'undefined' != typeof console && console && console.warn('Possible Unhandled Promise Rejection:', t);
           });
         const v = c;
         var A = i(7842),
           y = i.n(A);
         'undefined' == typeof globalThis &&
-          ('undefined' != typeof self
-            ? (self.globalThis = self)
-            : void 0 !== i.g && (i.g.globalThis = i.g)),
+          ('undefined' != typeof self ? (self.globalThis = self) : void 0 !== i.g && (i.g.globalThis = i.g)),
           globalThis.Promise || (globalThis.Promise = v),
           Object.assign || (Object.assign = y());
         var b = 16;
@@ -41255,8 +35632,7 @@ const bundle = () => {
           var I = E[S];
           (globalThis.requestAnimationFrame = globalThis[I + 'RequestAnimationFrame']),
             (globalThis.cancelAnimationFrame =
-              globalThis[I + 'CancelAnimationFrame'] ||
-              globalThis[I + 'CancelRequestAnimationFrame']);
+              globalThis[I + 'CancelAnimationFrame'] || globalThis[I + 'CancelRequestAnimationFrame']);
         }
         globalThis.requestAnimationFrame ||
           (globalThis.requestAnimationFrame = function (t) {
@@ -41380,9 +35756,7 @@ const bundle = () => {
                   globalThis.document.addEventListener('mousemove', this._onMouseMove, !0),
                   globalThis.removeEventListener('keydown', this._onKeyDown, !1),
                   this.renderer.on('postrender', this.update, this),
-                  null === (t = this.renderer.view.parentNode) ||
-                    void 0 === t ||
-                    t.appendChild(this.div));
+                  null === (t = this.renderer.view.parentNode) || void 0 === t || t.appendChild(this.div));
               }),
               (t.prototype.deactivate = function () {
                 var t;
@@ -41407,11 +35781,9 @@ const bundle = () => {
                 var t = performance.now();
                 if (
                   !(w.isMobile.android.device && t < this.androidUpdateCount) &&
-                  ((this.androidUpdateCount = t + this.androidUpdateFrequency),
-                  this.renderer.renderingToScreen)
+                  ((this.androidUpdateCount = t + this.androidUpdateFrequency), this.renderer.renderingToScreen)
                 ) {
-                  this.renderer._lastObjectRendered &&
-                    this.updateAccessibleObjects(this.renderer._lastObjectRendered);
+                  this.renderer._lastObjectRendered && this.updateAccessibleObjects(this.renderer._lastObjectRendered);
                   var e = this.renderer.view.getBoundingClientRect(),
                     i = e.left,
                     r = e.top,
@@ -41452,9 +35824,7 @@ const bundle = () => {
                           (p.style.top = g.y * c + 'px'),
                           (p.style.width = g.width * u + 'px'),
                           (p.style.height = g.height * c + 'px'),
-                          p.title !== f.accessibleTitle &&
-                            null !== f.accessibleTitle &&
-                            (p.title = f.accessibleTitle),
+                          p.title !== f.accessibleTitle && null !== f.accessibleTitle && (p.title = f.accessibleTitle),
                           p.getAttribute('aria-label') !== f.accessibleHint &&
                             null !== f.accessibleHint &&
                             p.setAttribute('aria-label', f.accessibleHint)),
@@ -41468,16 +35838,14 @@ const bundle = () => {
                 }
               }),
               (t.prototype.updateDebugHTML = function (t) {
-                t.innerHTML =
-                  'type: ' + t.type + '</br> title : ' + t.title + '</br> tabIndex: ' + t.tabIndex;
+                t.innerHTML = 'type: ' + t.type + '</br> title : ' + t.title + '</br> tabIndex: ' + t.tabIndex;
               }),
               (t.prototype.capHitArea = function (t) {
                 t.x < 0 && ((t.width += t.x), (t.x = 0)), t.y < 0 && ((t.height += t.y), (t.y = 0));
                 var e = this.renderer,
                   i = e.width,
                   r = e.height;
-                t.x + t.width > i && (t.width = i - t.x),
-                  t.y + t.height > r && (t.height = r - t.y);
+                t.x + t.width > i && (t.width = i - t.x), t.y + t.height > r && (t.height = r - t.y);
               }),
               (t.prototype.addChild = function (t) {
                 var e = this.pool.pop();
@@ -41501,11 +35869,8 @@ const bundle = () => {
                   (e.type = t.accessibleType),
                   t.accessibleTitle && null !== t.accessibleTitle
                     ? (e.title = t.accessibleTitle)
-                    : (t.accessibleHint && null !== t.accessibleHint) ||
-                      (e.title = 'displayObject ' + t.tabIndex),
-                  t.accessibleHint &&
-                    null !== t.accessibleHint &&
-                    e.setAttribute('aria-label', t.accessibleHint),
+                    : (t.accessibleHint && null !== t.accessibleHint) || (e.title = 'displayObject ' + t.tabIndex),
+                  t.accessibleHint && null !== t.accessibleHint && e.setAttribute('aria-label', t.accessibleHint),
                   this.debug && this.updateDebugHTML(e),
                   (t._accessibleActive = !0),
                   (t._accessibleDiv = e),
@@ -41518,13 +35883,10 @@ const bundle = () => {
                 var e = this.renderer.plugins.interaction,
                   i = t.target.displayObject,
                   r = e.eventData;
-                e.dispatchEvent(i, 'click', r),
-                  e.dispatchEvent(i, 'pointertap', r),
-                  e.dispatchEvent(i, 'tap', r);
+                e.dispatchEvent(i, 'click', r), e.dispatchEvent(i, 'pointertap', r), e.dispatchEvent(i, 'tap', r);
               }),
               (t.prototype._onFocus = function (t) {
-                t.target.getAttribute('aria-live') ||
-                  t.target.setAttribute('aria-live', 'assertive');
+                t.target.getAttribute('aria-live') || t.target.setAttribute('aria-live', 'assertive');
                 var e = this.renderer.plugins.interaction,
                   i = t.target.displayObject,
                   r = e.eventData;
@@ -41592,8 +35954,7 @@ const bundle = () => {
                 return t.worldTransform.applyInverse(i || this.global, e);
               }),
               (t.prototype.copyEvent = function (t) {
-                'isPrimary' in t && t.isPrimary && (this.isPrimary = !0),
-                  (this.button = 'button' in t && t.button);
+                'isPrimary' in t && t.isPrimary && (this.isPrimary = !0), (this.button = 'button' in t && t.button);
                 var e = 'buttons' in t && t.buttons;
                 (this.buttons = Number.isInteger(e) ? e : 'which' in t && t.which),
                   (this.width = 'width' in t && t.width),
@@ -41604,8 +35965,7 @@ const bundle = () => {
                   (this.pressure = 'pressure' in t && t.pressure),
                   (this.rotationAngle = 'rotationAngle' in t && t.rotationAngle),
                   (this.twist = ('twist' in t && t.twist) || 0),
-                  (this.tangentialPressure =
-                    ('tangentialPressure' in t && t.tangentialPressure) || 0);
+                  (this.tangentialPressure = ('tangentialPressure' in t && t.tangentialPressure) || 0);
               }),
               (t.prototype.reset = function () {
                 this.isPrimary = !1;
@@ -41617,9 +35977,7 @@ const bundle = () => {
             return (
               (j =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -41633,8 +35991,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          j(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          j(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Z = (function () {
             function t() {
@@ -41648,9 +36005,7 @@ const bundle = () => {
             }
             return (
               (t.prototype.stopPropagation = function () {
-                (this.stopped = !0),
-                  (this.stopPropagationHint = !0),
-                  (this.stopsPropagatingAt = this.currentTarget);
+                (this.stopped = !0), (this.stopPropagationHint = !0), (this.stopsPropagatingAt = this.currentTarget);
               }),
               (t.prototype.reset = function () {
                 (this.stopped = !1),
@@ -41724,12 +36079,7 @@ const bundle = () => {
                 enumerable: !1,
                 configurable: !0,
               }),
-              (t.FLAGS = Object.freeze({
-                NONE: 0,
-                OVER: 1,
-                LEFT_DOWN: 2,
-                RIGHT_DOWN: 4,
-              })),
+              (t.FLAGS = Object.freeze({ NONE: 0, OVER: 1, LEFT_DOWN: 2, RIGHT_DOWN: 4 })),
               t
             );
           })(),
@@ -41748,13 +36098,9 @@ const bundle = () => {
                   (e.hitArea
                     ? (r &&
                         (e.worldTransform.applyInverse(s, this._tempPoint),
-                        e.hitArea.contains(this._tempPoint.x, this._tempPoint.y)
-                          ? (a = !0)
-                          : ((r = !1), (l = !1))),
+                        e.hitArea.contains(this._tempPoint.x, this._tempPoint.y) ? (a = !0) : ((r = !1), (l = !1))),
                       (o = !1))
-                    : e._mask &&
-                      r &&
-                      ((e._mask.containsPoint && e._mask.containsPoint(s)) || (r = !1)),
+                    : e._mask && r && ((e._mask.containsPoint && e._mask.containsPoint(s)) || (r = !1)),
                   l && e.interactiveChildren && e.children)
                 )
                   for (var h = e.children, u = h.length - 1; u >= 0; u--) {
@@ -41767,12 +36113,7 @@ const bundle = () => {
                   }
                 return (
                   n &&
-                    (r &&
-                      !t.target &&
-                      !e.hitArea &&
-                      e.containsPoint &&
-                      e.containsPoint(s) &&
-                      (a = !0),
+                    (r && !t.target && !e.hitArea && e.containsPoint && e.containsPoint(s) && (a = !0),
                     e.interactive && (a && !t.target && (t.target = e), i && i(t, e, !!a))),
                   a
                 );
@@ -41795,21 +36136,13 @@ const bundle = () => {
             },
             cursor: null,
             get trackedPointers() {
-              return (
-                void 0 === this._trackedPointers && (this._trackedPointers = {}),
-                this._trackedPointers
-              );
+              return void 0 === this._trackedPointers && (this._trackedPointers = {}), this._trackedPointers;
             },
             _trackedPointers: void 0,
           };
         R.s$.mixin(z);
         var q = 1,
-          Q = {
-            target: null,
-            data: {
-              global: null,
-            },
-          },
+          Q = { target: null, data: { global: null } },
           K = (function (t) {
             function e(e, i) {
               var r = t.call(this) || this;
@@ -41843,20 +36176,14 @@ const bundle = () => {
                 (r.onPointerOut = r.onPointerOut.bind(r)),
                 (r.processPointerOverOut = r.processPointerOverOut.bind(r)),
                 (r.onPointerOver = r.onPointerOver.bind(r)),
-                (r.cursorStyles = {
-                  default: 'inherit',
-                  pointer: 'pointer',
-                }),
+                (r.cursorStyles = { default: 'inherit', pointer: 'pointer' }),
                 (r.currentCursorMode = null),
                 (r.cursor = null),
                 (r.resolution = 1),
                 (r.delayedEvents = []),
                 (r.search = new Y()),
                 (r._tempDisplayObject = new R.Ql()),
-                (r._eventListenerOptions = {
-                  capture: !0,
-                  passive: !1,
-                }),
+                (r._eventListenerOptions = { capture: !0, passive: !1 }),
                 (r._useSystemTicker = void 0 === i.useSystemTicker || i.useSystemTicker),
                 r.setTargetElement(r.renderer.view, r.renderer.resolution),
                 r
@@ -41869,8 +36196,7 @@ const bundle = () => {
                   return this._useSystemTicker;
                 },
                 set: function (t) {
-                  (this._useSystemTicker = t),
-                    t ? this.addTickerListener() : this.removeTickerListener();
+                  (this._useSystemTicker = t), t ? this.addTickerListener() : this.removeTickerListener();
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -41904,12 +36230,10 @@ const bundle = () => {
                 !this.tickerAdded &&
                   this.interactionDOMElement &&
                   this._useSystemTicker &&
-                  (X.vB.system.add(this.tickerUpdate, this, X.uF.INTERACTION),
-                  (this.tickerAdded = !0));
+                  (X.vB.system.add(this.tickerUpdate, this, X.uF.INTERACTION), (this.tickerAdded = !0));
               }),
               (e.prototype.removeTickerListener = function () {
-                this.tickerAdded &&
-                  (X.vB.system.remove(this.tickerUpdate, this), (this.tickerAdded = !1));
+                this.tickerAdded && (X.vB.system.remove(this.tickerUpdate, this), (this.tickerAdded = !1));
               }),
               (e.prototype.addEvents = function () {
                 if (!this.eventsAdded && this.interactionDOMElement) {
@@ -41938,16 +36262,8 @@ const bundle = () => {
                           this.onPointerOver,
                           this._eventListenerOptions,
                         ),
-                        globalThis.addEventListener(
-                          'pointercancel',
-                          this.onPointerCancel,
-                          this._eventListenerOptions,
-                        ),
-                        globalThis.addEventListener(
-                          'pointerup',
-                          this.onPointerUp,
-                          this._eventListenerOptions,
-                        ))
+                        globalThis.addEventListener('pointercancel', this.onPointerCancel, this._eventListenerOptions),
+                        globalThis.addEventListener('pointerup', this.onPointerUp, this._eventListenerOptions))
                       : (globalThis.document.addEventListener(
                           'mousemove',
                           this.onPointerMove,
@@ -41968,11 +36284,7 @@ const bundle = () => {
                           this.onPointerOver,
                           this._eventListenerOptions,
                         ),
-                        globalThis.addEventListener(
-                          'mouseup',
-                          this.onPointerUp,
-                          this._eventListenerOptions,
-                        )),
+                        globalThis.addEventListener('mouseup', this.onPointerUp, this._eventListenerOptions)),
                     this.supportsTouchEvents &&
                       (this.interactionDOMElement.addEventListener(
                         'touchstart',
@@ -42029,11 +36341,7 @@ const bundle = () => {
                           this.onPointerCancel,
                           this._eventListenerOptions,
                         ),
-                        globalThis.removeEventListener(
-                          'pointerup',
-                          this.onPointerUp,
-                          this._eventListenerOptions,
-                        ))
+                        globalThis.removeEventListener('pointerup', this.onPointerUp, this._eventListenerOptions))
                       : (globalThis.document.removeEventListener(
                           'mousemove',
                           this.onPointerMove,
@@ -42054,11 +36362,7 @@ const bundle = () => {
                           this.onPointerOver,
                           this._eventListenerOptions,
                         ),
-                        globalThis.removeEventListener(
-                          'mouseup',
-                          this.onPointerUp,
-                          this._eventListenerOptions,
-                        )),
+                        globalThis.removeEventListener('mouseup', this.onPointerUp, this._eventListenerOptions)),
                     this.supportsTouchEvents &&
                       (this.interactionDOMElement.removeEventListener(
                         'touchstart',
@@ -42086,8 +36390,7 @@ const bundle = () => {
               }),
               (e.prototype.tickerUpdate = function (t) {
                 (this._deltaTime += t),
-                  this._deltaTime < this.interactionFrequency ||
-                    ((this._deltaTime = 0), this.update());
+                  this._deltaTime < this.interactionFrequency || ((this._deltaTime = 0), this.update());
               }),
               (e.prototype.update = function () {
                 if (this.interactionDOMElement)
@@ -42097,17 +36400,8 @@ const bundle = () => {
                       if (this.activeInteractionData.hasOwnProperty(t)) {
                         var e = this.activeInteractionData[t];
                         if (e.originalEvent && 'touch' !== e.pointerType) {
-                          var i = this.configureInteractionEventForDOMEvent(
-                            this.eventData,
-                            e.originalEvent,
-                            e,
-                          );
-                          this.processInteractive(
-                            i,
-                            this.lastObjectRendered,
-                            this.processPointerOverOut,
-                            !0,
-                          );
+                          var i = this.configureInteractionEventForDOMEvent(this.eventData, e.originalEvent, e);
+                          this.processInteractive(i, this.lastObjectRendered, this.processPointerOverOut, !0);
                         }
                       }
                     this.setCursorMode(this.cursor);
@@ -42117,9 +36411,7 @@ const bundle = () => {
                 t = t || 'default';
                 var e = !0;
                 if (
-                  (globalThis.OffscreenCanvas &&
-                    this.interactionDOMElement instanceof OffscreenCanvas &&
-                    (e = !1),
+                  (globalThis.OffscreenCanvas && this.interactionDOMElement instanceof OffscreenCanvas && (e = !1),
                   this.currentCursorMode !== t)
                 ) {
                   this.currentCursorMode = t;
@@ -42147,11 +36439,7 @@ const bundle = () => {
                   ((i.currentTarget = t), (i.type = e), t.emit(e, i), t[e] && t[e](i));
               }),
               (e.prototype.delayDispatchEvent = function (t, e, i) {
-                this.delayedEvents.push({
-                  displayObject: t,
-                  eventString: e,
-                  eventData: i,
-                });
+                this.delayedEvents.push({ displayObject: t, eventString: e, eventData: i });
               }),
               (e.prototype.mapPositionToPoint = function (t, e, i) {
                 var r;
@@ -42181,8 +36469,7 @@ const bundle = () => {
                     h = l.displayObject,
                     u = l.eventString,
                     c = l.eventData;
-                  c.stopsPropagatingAt === h && (c.stopPropagationHint = !0),
-                    this.dispatchEvent(h, u, c);
+                  c.stopsPropagatingAt === h && (c.stopPropagationHint = !0), this.dispatchEvent(h, u, c);
                 }
                 return n;
               }),
@@ -42197,12 +36484,7 @@ const bundle = () => {
                       a = this.configureInteractionEventForDOMEvent(this.eventData, n, s);
                     if (
                       ((a.data.originalEvent = t),
-                      this.processInteractive(
-                        a,
-                        this.lastObjectRendered,
-                        this.processPointerDown,
-                        !0,
-                      ),
+                      this.processInteractive(a, this.lastObjectRendered, this.processPointerDown, !0),
                       this.emit('pointerdown', a),
                       'touch' === n.pointerType)
                     )
@@ -42226,9 +36508,7 @@ const bundle = () => {
                     this.dispatchEvent(e, 'touchstart', t);
                   else if ('mouse' === r.pointerType || 'pen' === r.pointerType) {
                     var s = 2 === r.button;
-                    s
-                      ? (e.trackedPointers[n].rightDown = !0)
-                      : (e.trackedPointers[n].leftDown = !0),
+                    s ? (e.trackedPointers[n].rightDown = !0) : (e.trackedPointers[n].leftDown = !0),
                       this.dispatchEvent(e, s ? 'rightdown' : 'mousedown', t);
                   }
               }),
@@ -42299,8 +36579,7 @@ const bundle = () => {
                       ((o && !l) || this.dispatchEvent(e, 'pointertap', t),
                       a && (this.dispatchEvent(e, 'tap', t), (s.over = !1))))
                   : s &&
-                    (this.dispatchEvent(e, 'pointerupoutside', t),
-                    a && this.dispatchEvent(e, 'touchendoutside', t)),
+                    (this.dispatchEvent(e, 'pointerupoutside', t), a && this.dispatchEvent(e, 'touchendoutside', t)),
                   s && s.none && delete e.trackedPointers[n];
               }),
               (e.prototype.onPointerMove = function (t) {
@@ -42313,16 +36592,10 @@ const bundle = () => {
                       s = this.getInteractionDataForPointerId(n),
                       a = this.configureInteractionEventForDOMEvent(this.eventData, n, s);
                     (a.data.originalEvent = t),
-                      this.processInteractive(
-                        a,
-                        this.lastObjectRendered,
-                        this.processPointerMove,
-                        !0,
-                      ),
+                      this.processInteractive(a, this.lastObjectRendered, this.processPointerMove, !0),
                       this.emit('pointermove', a),
                       'touch' === n.pointerType && this.emit('touchmove', a),
-                      ('mouse' !== n.pointerType && 'pen' !== n.pointerType) ||
-                        this.emit('mousemove', a);
+                      ('mouse' !== n.pointerType && 'pen' !== n.pointerType) || this.emit('mousemove', a);
                   }
                   'mouse' === e[0].pointerType && this.setCursorMode(this.cursor);
                 }
@@ -42340,17 +36613,11 @@ const bundle = () => {
               (e.prototype.onPointerOut = function (t) {
                 if (!this.supportsTouchEvents || 'touch' !== t.pointerType) {
                   var e = this.normalizeToPointerData(t)[0];
-                  'mouse' === e.pointerType &&
-                    ((this.mouseOverRenderer = !1), this.setCursorMode(null));
+                  'mouse' === e.pointerType && ((this.mouseOverRenderer = !1), this.setCursorMode(null));
                   var i = this.getInteractionDataForPointerId(e),
                     r = this.configureInteractionEventForDOMEvent(this.eventData, e, i);
                   (r.data.originalEvent = e),
-                    this.processInteractive(
-                      r,
-                      this.lastObjectRendered,
-                      this.processPointerOverOut,
-                      !1,
-                    ),
+                    this.processInteractive(r, this.lastObjectRendered, this.processPointerOverOut, !1),
                     this.emit('pointerout', r),
                     'mouse' === e.pointerType || 'pen' === e.pointerType
                       ? this.emit('mouseout', r)
@@ -42383,8 +36650,7 @@ const bundle = () => {
                 (r.data.originalEvent = e),
                   'mouse' === e.pointerType && (this.mouseOverRenderer = !0),
                   this.emit('pointerover', r),
-                  ('mouse' !== e.pointerType && 'pen' !== e.pointerType) ||
-                    this.emit('mouseover', r);
+                  ('mouse' !== e.pointerType && 'pen' !== e.pointerType) || this.emit('mouseover', r);
               }),
               (e.prototype.getInteractionDataForPointerId = function (t) {
                 var e,
@@ -42402,10 +36668,7 @@ const bundle = () => {
               }),
               (e.prototype.releaseInteractionDataForPointerId = function (t) {
                 var e = this.activeInteractionData[t];
-                e &&
-                  (delete this.activeInteractionData[t],
-                  e.reset(),
-                  this.interactionDataPool.push(e));
+                e && (delete this.activeInteractionData[t], e.reset(), this.interactionDataPool.push(e));
               }),
               (e.prototype.configureInteractionEventForDOMEvent = function (t, e, i) {
                 return (
@@ -42424,8 +36687,7 @@ const bundle = () => {
                     var n = t.changedTouches[i];
                     void 0 === n.button && (n.button = t.touches.length ? 1 : 0),
                       void 0 === n.buttons && (n.buttons = t.touches.length ? 1 : 0),
-                      void 0 === n.isPrimary &&
-                        (n.isPrimary = 1 === t.touches.length && 'touchstart' === t.type),
+                      void 0 === n.isPrimary && (n.isPrimary = 1 === t.touches.length && 'touchstart' === t.type),
                       void 0 === n.width && (n.width = n.radiusX || 1),
                       void 0 === n.height && (n.height = n.radiusY || 1),
                       void 0 === n.tiltX && (n.tiltX = 0),
@@ -42442,8 +36704,7 @@ const bundle = () => {
                   }
                 else if (
                   globalThis.MouseEvent &&
-                  (!(t instanceof MouseEvent) ||
-                    (this.supportsPointerEvents && t instanceof globalThis.PointerEvent))
+                  (!(t instanceof MouseEvent) || (this.supportsPointerEvents && t instanceof globalThis.PointerEvent))
                 )
                   e.push(t);
                 else {
@@ -42492,12 +36753,7 @@ const bundle = () => {
             function t(e) {
               var i = this;
               (this.stage = new R.W2()),
-                (e = Object.assign(
-                  {
-                    forceCanvas: !1,
-                  },
-                  e,
-                )),
+                (e = Object.assign({ forceCanvas: !1 }, e)),
                 (this.renderer = (0, J.e6)(e)),
                 t._plugins.forEach(function (t) {
                   t.init.call(i, e);
@@ -42614,15 +36870,9 @@ const bundle = () => {
                   s = this.renderer,
                   a = !1,
                   o = !1;
-                e &&
-                  (e instanceof J.TI
-                    ? (n = e)
-                    : ((n = this.renderer.generateTexture(e)), (o = !0))),
+                e && (e instanceof J.TI ? (n = e) : ((n = this.renderer.generateTexture(e)), (o = !0))),
                   n
-                    ? ((i = n.baseTexture.resolution),
-                      (r = n.frame),
-                      (a = !1),
-                      s.renderTexture.bind(n))
+                    ? ((i = n.baseTexture.resolution), (r = n.frame), (a = !1), s.renderTexture.bind(n))
                     : ((i = this.renderer.resolution),
                       (a = !0),
                       ((r = et).width = this.renderer.width),
@@ -42637,10 +36887,7 @@ const bundle = () => {
                 var d = u.context.getImageData(0, 0, l, h);
                 if ((t.arrayPostDivide(c, d.data), u.context.putImageData(d, 0, 0), a)) {
                   var f = new w.CanvasRenderTarget(u.width, u.height, 1);
-                  f.context.scale(1, -1),
-                    f.context.drawImage(u.canvas, 0, -h),
-                    u.destroy(),
-                    (u = f);
+                  f.context.scale(1, -1), f.context.drawImage(u.canvas, 0, -h), u.destroy(), (u = f);
                 }
                 return o && n.destroy(!0), u.canvas;
               }),
@@ -42650,10 +36897,7 @@ const bundle = () => {
                   n,
                   s = this.renderer,
                   a = !1;
-                e &&
-                  (e instanceof J.TI
-                    ? (n = e)
-                    : ((n = this.renderer.generateTexture(e)), (a = !0))),
+                e && (e instanceof J.TI ? (n = e) : ((n = this.renderer.generateTexture(e)), (a = !0))),
                   n
                     ? ((i = n.baseTexture.resolution), (r = n.frame), s.renderTexture.bind(n))
                     : ((i = s.resolution),
@@ -42704,9 +36948,7 @@ const bundle = () => {
           })();
         function st(t, e) {
           return (
-            t._head
-              ? ((t._tail._next = e), (e._prev = t._tail), (t._tail = e))
-              : ((t._head = e), (t._tail = e)),
+            t._head ? ((t._tail._next = e), (e._prev = t._tail), (t._tail = e)) : ((t._head = e), (t._tail = e)),
             (e._owner = t),
             e
           );
@@ -42724,8 +36966,7 @@ const bundle = () => {
               return i;
             }),
             (t.prototype.has = function (t) {
-              if (!(t instanceof nt))
-                throw new Error('MiniSignal#has(): First arg must be a SignalBinding object.');
+              if (!(t instanceof nt)) throw new Error('MiniSignal#has(): First arg must be a SignalBinding object.');
               return t._owner === this;
             }),
             (t.prototype.dispatch = function () {
@@ -42746,8 +36987,7 @@ const bundle = () => {
               return st(this, new nt(t, !0, e));
             }),
             (t.prototype.detach = function (t) {
-              if (!(t instanceof nt))
-                throw new Error('MiniSignal#detach(): First arg must be a SignalBinding object.');
+              if (!(t instanceof nt)) throw new Error('MiniSignal#detach(): First arg must be a SignalBinding object.');
               return (
                 t._owner !== this ||
                   (t._prev && (t._prev._next = t._next),
@@ -42788,10 +37028,7 @@ const bundle = () => {
                   'query',
                   'anchor',
                 ],
-                q: {
-                  name: 'queryKey',
-                  parser: /(?:^|&)([^&=]*)=?([^&]*)/g,
-                },
+                q: { name: 'queryKey', parser: /(?:^|&)([^&=]*)=?([^&]*)/g },
                 parser: {
                   strict:
                     /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
@@ -42977,8 +37214,7 @@ const bundle = () => {
                       (this.xhr.onload = null)));
             }),
             (t.prototype._finish = function () {
-              if (this.isComplete)
-                throw new Error('Complete called again for an already completed resource.');
+              if (this.isComplete) throw new Error('Complete called again for an already completed resource.');
               this._setFlag(t.STATUS_FLAGS.COMPLETE, !0),
                 this._setFlag(t.STATUS_FLAGS.LOADING, !1),
                 this.onComplete.dispatch(this);
@@ -42994,8 +37230,7 @@ const bundle = () => {
                 this.data.addEventListener('error', this._boundOnError, !1),
                 this.data.addEventListener('load', this._boundComplete, !1),
                 this.data.addEventListener('progress', this._boundOnProgress, !1),
-                this.timeout &&
-                  (this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout));
+                this.timeout && (this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout));
             }),
             (t.prototype._loadSourceElement = function (t) {
               if (
@@ -43006,30 +37241,21 @@ const bundle = () => {
                   : (this.data = document.createElement(t)),
                 null !== this.data)
               ) {
-                if (
-                  (this.crossOrigin && (this.data.crossOrigin = this.crossOrigin),
-                  !this.metadata.skipSource)
-                )
-                  if (navigator.isCocoonJS)
-                    this.data.src = Array.isArray(this.url) ? this.url[0] : this.url;
+                if ((this.crossOrigin && (this.data.crossOrigin = this.crossOrigin), !this.metadata.skipSource))
+                  if (navigator.isCocoonJS) this.data.src = Array.isArray(this.url) ? this.url[0] : this.url;
                   else if (Array.isArray(this.url))
                     for (var e = this.metadata.mimeType, i = 0; i < this.url.length; ++i)
-                      this.data.appendChild(
-                        this._createSource(t, this.url[i], Array.isArray(e) ? e[i] : e),
-                      );
+                      this.data.appendChild(this._createSource(t, this.url[i], Array.isArray(e) ? e[i] : e));
                   else {
                     e = this.metadata.mimeType;
-                    this.data.appendChild(
-                      this._createSource(t, this.url, Array.isArray(e) ? e[0] : e),
-                    );
+                    this.data.appendChild(this._createSource(t, this.url, Array.isArray(e) ? e[0] : e));
                   }
                 this.data.addEventListener('error', this._boundOnError, !1),
                   this.data.addEventListener('load', this._boundComplete, !1),
                   this.data.addEventListener('progress', this._boundOnProgress, !1),
                   this.data.addEventListener('canplaythrough', this._boundComplete, !1),
                   this.data.load(),
-                  this.timeout &&
-                    (this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout));
+                  this.timeout && (this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout));
               } else this.abort('Unsupported element: ' + t);
             }),
             (t.prototype._loadXhr = function () {
@@ -43038,8 +37264,7 @@ const bundle = () => {
               'use-credentials' === this.crossOrigin && (e.withCredentials = !0),
                 e.open('GET', this.url, !0),
                 (e.timeout = this.timeout),
-                this.xhrType === t.XHR_RESPONSE_TYPE.JSON ||
-                this.xhrType === t.XHR_RESPONSE_TYPE.DOCUMENT
+                this.xhrType === t.XHR_RESPONSE_TYPE.JSON || this.xhrType === t.XHR_RESPONSE_TYPE.DOCUMENT
                   ? (e.responseType = t.XHR_RESPONSE_TYPE.TEXT)
                   : (e.responseType = this.xhrType),
                 e.addEventListener('error', this._boundXhrOnError, !1),
@@ -43078,9 +37303,7 @@ const bundle = () => {
             }),
             (t.prototype._xhrOnError = function () {
               var t = this.xhr;
-              this.abort(
-                mt(t) + ' Request failed. Status: ' + t.status + ', text: "' + t.statusText + '"',
-              );
+              this.abort(mt(t) + ' Request failed. Status: ' + t.status + ', text: "' + t.statusText + '"');
             }),
             (t.prototype._xhrOnTimeout = function () {
               var t = this.xhr;
@@ -43095,17 +37318,14 @@ const bundle = () => {
                 i = '',
                 r = void 0 === e.status ? ct : e.status;
               if (
-                (('' !== e.responseType &&
-                  'text' !== e.responseType &&
-                  void 0 !== e.responseType) ||
+                (('' !== e.responseType && 'text' !== e.responseType && void 0 !== e.responseType) ||
                   (i = e.responseText),
                 r === ut && (i.length > 0 || e.responseType === t.XHR_RESPONSE_TYPE.BUFFER)
                   ? (r = ct)
                   : r === dt && (r = pt),
                 ((r / 100) | 0) === ft)
               ) {
-                if (this.xhrType === t.XHR_RESPONSE_TYPE.TEXT)
-                  (this.data = i), (this.type = t.TYPE.TEXT);
+                if (this.xhrType === t.XHR_RESPONSE_TYPE.TEXT) (this.data = i), (this.type = t.TYPE.TEXT);
                 else if (this.xhrType === t.XHR_RESPONSE_TYPE.JSON)
                   try {
                     (this.data = JSON.parse(i)), (this.type = t.TYPE.JSON);
@@ -43132,12 +37352,8 @@ const bundle = () => {
             (t.prototype._determineCrossOrigin = function (t, e) {
               if (0 === t.indexOf('data:')) return '';
               if (globalThis.origin !== globalThis.location.origin) return 'anonymous';
-              (e = e || globalThis.location),
-                ht || (ht = document.createElement('a')),
-                (ht.href = t);
-              var i = ot(ht.href, {
-                  strictMode: !0,
-                }),
+              (e = e || globalThis.location), ht || (ht = document.createElement('a')), (ht.href = t);
+              var i = ot(ht.href, { strictMode: !0 }),
                 r = (!i.port && '' === e.port) || i.port === e.port,
                 n = i.protocol ? i.protocol + ':' : '';
               return i.host === e.hostname && r && n === e.protocol ? '' : 'anonymous';
@@ -43261,8 +37477,7 @@ const bundle = () => {
               ttf: t.XHR_RESPONSE_TYPE.BUFFER,
               otf: t.XHR_RESPONSE_TYPE.BUFFER,
             }),
-            (t.EMPTY_GIF =
-              'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+            (t.EMPTY_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
         })(vt || (vt = {}));
         var bt = (function () {
             function t(t, e) {
@@ -43285,8 +37500,7 @@ const bundle = () => {
                 (this.paused = !1),
                 (this._tasks = []),
                 (this._insert = function (t, e, r) {
-                  if (r && 'function' != typeof r)
-                    throw new Error('task callback must be a function');
+                  if (r && 'function' != typeof r) throw new Error('task callback must be a function');
                   if (((i.started = !0), null == t && i.idle()))
                     setTimeout(function () {
                       return i.drain();
@@ -43415,8 +37629,7 @@ const bundle = () => {
               (t.prototype._add = function (t, e, i, r) {
                 if (this.loading && (!i || !i.parentResource))
                   throw new Error('Cannot add resources while the loader is running.');
-                if (this.resources[t])
-                  throw new Error('Resource named "' + t + '" already exists.');
+                if (this.resources[t]) throw new Error('Resource named "' + t + '" already exists.');
                 if (
                   ((e = this._prepareUrl(e)),
                   (this.resources[t] = new vt(t, e, i)),
@@ -43445,8 +37658,7 @@ const bundle = () => {
                 this._queue.pause(),
                 this.resources)) {
                   var e = this.resources[t];
-                  e._onLoadBinding && e._onLoadBinding.detach(),
-                    e.isLoading && e.abort('loader reset');
+                  e._onLoadBinding && e._onLoadBinding.detach(), e.isLoading && e.abort('loader reset');
                 }
                 return (this.resources = {}), this;
               }),
@@ -43454,11 +37666,7 @@ const bundle = () => {
                 if (('function' == typeof t && this.onComplete.once(t), this.loading)) return this;
                 if (this._queue.idle()) this._onStart(), this._onComplete();
                 else {
-                  for (
-                    var e = this._queue._tasks.length, i = Tt / e, r = 0;
-                    r < this._queue._tasks.length;
-                    ++r
-                  )
+                  for (var e = this._queue._tasks.length, i = Tt / e, r = 0; r < this._queue._tasks.length; ++r)
                     this._queue._tasks[r].data.progressChunk = i;
                   this._onStart(), this._queue.resume();
                 }
@@ -43476,9 +37684,7 @@ const bundle = () => {
               }),
               (t.prototype._prepareUrl = function (t) {
                 var e,
-                  i = ot(t, {
-                    strictMode: !0,
-                  });
+                  i = ot(t, { strictMode: !0 });
                 if (
                   ((e =
                     i.protocol || !i.path || 0 === t.indexOf('//')
@@ -43509,9 +37715,7 @@ const bundle = () => {
                       });
                     },
                     function () {
-                      t.isComplete
-                        ? i._onLoad(t)
-                        : ((t._onLoadBinding = t.onComplete.once(i._onLoad, i)), t.load());
+                      t.isComplete ? i._onLoad(t) : ((t._onLoadBinding = t.onComplete.once(i._onLoad, i)), t.load());
                     },
                     !0,
                   );
@@ -43520,9 +37724,7 @@ const bundle = () => {
                 (this.progress = 0), (this.loading = !0), this.onStart.dispatch(this);
               }),
               (t.prototype._onComplete = function () {
-                (this.progress = Tt),
-                  (this.loading = !1),
-                  this.onComplete.dispatch(this, this.resources);
+                (this.progress = Tt), (this.loading = !1), this.onComplete.dispatch(this, this.resources);
               }),
               (t.prototype._onLoad = function (t) {
                 var e = this;
@@ -43570,10 +37772,7 @@ const bundle = () => {
           }
           if (
             ('object' == typeof t &&
-              ((i = t),
-              (r = e || i.callback || i.onComplete),
-              (e = i.url),
-              (t = i.name || i.key || i.url)),
+              ((i = t), (r = e || i.callback || i.onComplete), (e = i.url), (t = i.name || i.key || i.url)),
             'string' != typeof e && ((r = i), (i = e), (e = t)),
             'string' != typeof e)
           )
@@ -43584,13 +37783,7 @@ const bundle = () => {
             function t() {}
             return (
               (t.init = function (t) {
-                (t = Object.assign(
-                  {
-                    sharedLoader: !1,
-                  },
-                  t,
-                )),
-                  (this.loader = t.sharedLoader ? St.shared : new St());
+                (t = Object.assign({ sharedLoader: !1 }, t)), (this.loader = t.sharedLoader ? St.shared : new St());
               }),
               (t.destroy = function () {
                 this.loader && (this.loader.destroy(), (this.loader = null));
@@ -43677,10 +37870,7 @@ const bundle = () => {
             e();
           } else e();
         }
-        St.registerPlugin({
-          use: Ct,
-        }),
-          St.registerPlugin(wt);
+        St.registerPlugin({ use: Ct }), St.registerPlugin(wt);
         var Mt,
           Dt,
           Nt = i(3736);
@@ -43689,12 +37879,9 @@ const bundle = () => {
             (t[(t.COMPRESSED_RGBA_S3TC_DXT1_EXT = 33777)] = 'COMPRESSED_RGBA_S3TC_DXT1_EXT'),
             (t[(t.COMPRESSED_RGBA_S3TC_DXT3_EXT = 33778)] = 'COMPRESSED_RGBA_S3TC_DXT3_EXT'),
             (t[(t.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779)] = 'COMPRESSED_RGBA_S3TC_DXT5_EXT'),
-            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917)] =
-              'COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT'),
-            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918)] =
-              'COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT'),
-            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919)] =
-              'COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT'),
+            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917)] = 'COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT'),
+            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918)] = 'COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT'),
+            (t[(t.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919)] = 'COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT'),
             (t[(t.COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916)] = 'COMPRESSED_SRGB_S3TC_DXT1_EXT'),
             (t[(t.COMPRESSED_R11_EAC = 37488)] = 'COMPRESSED_R11_EAC'),
             (t[(t.COMPRESSED_SIGNED_R11_EAC = 37489)] = 'COMPRESSED_SIGNED_R11_EAC'),
@@ -43704,18 +37891,15 @@ const bundle = () => {
             (t[(t.COMPRESSED_RGBA8_ETC2_EAC = 37496)] = 'COMPRESSED_RGBA8_ETC2_EAC'),
             (t[(t.COMPRESSED_SRGB8_ETC2 = 37493)] = 'COMPRESSED_SRGB8_ETC2'),
             (t[(t.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497)] = 'COMPRESSED_SRGB8_ALPHA8_ETC2_EAC'),
-            (t[(t.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494)] =
-              'COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2'),
-            (t[(t.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495)] =
-              'COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2'),
+            (t[(t.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494)] = 'COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2'),
+            (t[(t.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495)] = 'COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2'),
             (t[(t.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840)] = 'COMPRESSED_RGB_PVRTC_4BPPV1_IMG'),
             (t[(t.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842)] = 'COMPRESSED_RGBA_PVRTC_4BPPV1_IMG'),
             (t[(t.COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 35841)] = 'COMPRESSED_RGB_PVRTC_2BPPV1_IMG'),
             (t[(t.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 35843)] = 'COMPRESSED_RGBA_PVRTC_2BPPV1_IMG'),
             (t[(t.COMPRESSED_RGB_ETC1_WEBGL = 36196)] = 'COMPRESSED_RGB_ETC1_WEBGL'),
             (t[(t.COMPRESSED_RGB_ATC_WEBGL = 35986)] = 'COMPRESSED_RGB_ATC_WEBGL'),
-            (t[(t.COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL = 35986)] =
-              'COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL'),
+            (t[(t.COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL = 35986)] = 'COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL'),
             (t[(t.COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL = 34798)] =
               'COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL');
         })(Dt || (Dt = {}));
@@ -43751,9 +37935,7 @@ const bundle = () => {
             return (
               (Bt =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -43767,8 +37949,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          Bt(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          Bt(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         function Ft(t, e, i, r) {
           return new (i || (i = Promise))(function (n, s) {
@@ -43811,11 +37992,7 @@ const bundle = () => {
               ops: [],
             };
           return (
-            (s = {
-              next: o(0),
-              throw: o(1),
-              return: o(2),
-            }),
+            (s = { next: o(0), throw: o(1), return: o(2) }),
             'function' == typeof Symbol &&
               (s[Symbol.iterator] = function () {
                 return this;
@@ -43834,12 +38011,7 @@ const bundle = () => {
                 if (
                   ((i = 1),
                   r &&
-                    (n =
-                      2 & s[0]
-                        ? r.return
-                        : s[0]
-                        ? r.throw || ((n = r.return) && n.call(r), 0)
-                        : r.next) &&
+                    (n = 2 & s[0] ? r.return : s[0] ? r.throw || ((n = r.return) && n.call(r), 0) : r.next) &&
                     !(n = n.call(r, s[1])).done)
                 )
                   return n;
@@ -43849,13 +38021,7 @@ const bundle = () => {
                     n = s;
                     break;
                   case 4:
-                    return (
-                      a.label++,
-                      {
-                        value: s[1],
-                        done: !1,
-                      }
-                    );
+                    return a.label++, { value: s[1], done: !1 };
                   case 5:
                     a.label++, (r = s[1]), (s = [0]);
                     continue;
@@ -43863,10 +38029,7 @@ const bundle = () => {
                     (s = a.ops.pop()), a.trys.pop();
                     continue;
                   default:
-                    if (
-                      !((n = a.trys),
-                      (n = n.length > 0 && n[n.length - 1]) || (6 !== s[0] && 2 !== s[0]))
-                    ) {
+                    if (!((n = a.trys), (n = n.length > 0 && n[n.length - 1]) || (6 !== s[0] && 2 !== s[0]))) {
                       a = 0;
                       continue;
                     }
@@ -43892,22 +38055,14 @@ const bundle = () => {
                 i = n = 0;
               }
             if (5 & s[0]) throw s[1];
-            return {
-              value: s[0] ? s[1] : void 0,
-              done: !0,
-            };
+            return { value: s[0] ? s[1] : void 0, done: !0 };
           }
         }
         var Gt,
           Xt,
           Ht = (function (t) {
             function e(e, i) {
-              void 0 === i &&
-                (i = {
-                  width: 1,
-                  height: 1,
-                  autoLoad: !0,
-                });
+              void 0 === i && (i = { width: 1, height: 1, autoLoad: !0 });
               var r,
                 n,
                 s = this;
@@ -43980,9 +38135,7 @@ const bundle = () => {
               (e.prototype.upload = function (t, e, i) {
                 var r = t.gl;
                 if (!t.context.extensions[this._extension])
-                  throw new Error(
-                    this._extension + ' textures are not supported on the current machine',
-                  );
+                  throw new Error(this._extension + ' textures are not supported on the current machine');
                 if (!this._levelBuffers) return !1;
                 for (var n = 0, s = this.levels; n < s; n++) {
                   var a = this._levelBuffers[n],
@@ -44049,11 +38202,7 @@ const bundle = () => {
                 var r = e.data,
                   n = this;
                 if (e.type === vt.TYPE.JSON && r && r.cacheID && r.textures) {
-                  for (
-                    var s = r.textures, a = void 0, o = void 0, l = 0, h = s.length;
-                    l < h;
-                    l++
-                  ) {
+                  for (var s = r.textures, a = void 0, o = void 0, l = 0, h = s.length; l < h; l++) {
                     var u = s[l],
                       c = u.src,
                       p = u.format;
@@ -44064,23 +38213,11 @@ const bundle = () => {
                   }
                   if (!(a = a || o))
                     return void i(
-                      new Error(
-                        'Cannot load compressed-textures in ' +
-                          e.url +
-                          ', make sure you provide a fallback',
-                      ),
+                      new Error('Cannot load compressed-textures in ' + e.url + ', make sure you provide a fallback'),
                     );
                   if (a === e.url)
-                    return void i(
-                      new Error(
-                        "URL of compressed texture cannot be the same as the manifest's URL",
-                      ),
-                    );
-                  var d = {
-                      crossOrigin: e.crossOrigin,
-                      metadata: e.metadata.imageMetadata,
-                      parentResource: e,
-                    },
+                    return void i(new Error("URL of compressed texture cannot be the same as the manifest's URL"));
+                  var d = { crossOrigin: e.crossOrigin, metadata: e.metadata.imageMetadata, parentResource: e },
                     f = w.url.resolve(e.url.replace(n.baseUrl, ''), a),
                     g = r.cacheID;
                   n.add(g, f, d, function (t) {
@@ -44090,11 +38227,7 @@ const bundle = () => {
                         n = void 0 === r ? null : r,
                         s = t.textures,
                         a = void 0 === s ? {} : s;
-                      Object.assign(e, {
-                        texture: n,
-                        textures: a,
-                      }),
-                        i();
+                      Object.assign(e, { texture: n, textures: a }), i();
                     }
                   });
                 } else i();
@@ -44117,31 +38250,18 @@ const bundle = () => {
                     var n = i[r];
                     n && Object.assign(t.textureFormats, Object.getPrototypeOf(n));
                   }
-                } else
-                  console.warn('WebGL not available for compressed textures. Silently failing.');
+                } else console.warn('WebGL not available for compressed textures. Silently failing.');
               }),
               t
             );
           })();
         function Zt(t, e, i) {
-          var r = {
-            textures: {},
-            texture: null,
-          };
+          var r = { textures: {}, texture: null };
           return e
             ? (e
                 .map(function (t) {
                   return new J.xE(
-                    new J.VL(
-                      t,
-                      Object.assign(
-                        {
-                          mipmap: Nt.WB.OFF,
-                          alphaMode: Nt.iw.NO_PREMULTIPLIED_ALPHA,
-                        },
-                        i,
-                      ),
-                    ),
+                    new J.VL(t, Object.assign({ mipmap: Nt.WB.OFF, alphaMode: Nt.iw.NO_PREMULTIPLIED_ALPHA }, i)),
                   );
                 })
                 .forEach(function (e, i) {
@@ -44163,14 +38283,7 @@ const bundle = () => {
           Qt = 32,
           Kt = 20,
           Jt = 542327876,
-          $t = {
-            SIZE: 1,
-            FLAGS: 2,
-            HEIGHT: 3,
-            WIDTH: 4,
-            MIPMAP_COUNT: 7,
-            PIXEL_FORMAT: 19,
-          },
+          $t = { SIZE: 1, FLAGS: 2, HEIGHT: 3, WIDTH: 4, MIPMAP_COUNT: 7, PIXEL_FORMAT: 19 },
           te = {
             SIZE: 0,
             FLAGS: 1,
@@ -44181,13 +38294,7 @@ const bundle = () => {
             B_BIT_MASK: 6,
             A_BIT_MASK: 7,
           },
-          ee = {
-            DXGI_FORMAT: 0,
-            RESOURCE_DIMENSION: 1,
-            MISC_FLAG: 2,
-            ARRAY_SIZE: 3,
-            MISC_FLAGS2: 4,
-          };
+          ee = { DXGI_FORMAT: 0, RESOURCE_DIMENSION: 1, MISC_FLAG: 2, ARRAY_SIZE: 3, MISC_FLAGS2: 4 };
         (function (t) {
           (t[(t.DXGI_FORMAT_UNKNOWN = 0)] = 'DXGI_FORMAT_UNKNOWN'),
             (t[(t.DXGI_FORMAT_R32G32B32A32_TYPELESS = 1)] = 'DXGI_FORMAT_R32G32B32A32_TYPELESS'),
@@ -44210,10 +38317,8 @@ const bundle = () => {
             (t[(t.DXGI_FORMAT_R32G32_SINT = 18)] = 'DXGI_FORMAT_R32G32_SINT'),
             (t[(t.DXGI_FORMAT_R32G8X24_TYPELESS = 19)] = 'DXGI_FORMAT_R32G8X24_TYPELESS'),
             (t[(t.DXGI_FORMAT_D32_FLOAT_S8X24_UINT = 20)] = 'DXGI_FORMAT_D32_FLOAT_S8X24_UINT'),
-            (t[(t.DXGI_FORMAT_R32_FLOAT_X8X24_TYPELESS = 21)] =
-              'DXGI_FORMAT_R32_FLOAT_X8X24_TYPELESS'),
-            (t[(t.DXGI_FORMAT_X32_TYPELESS_G8X24_UINT = 22)] =
-              'DXGI_FORMAT_X32_TYPELESS_G8X24_UINT'),
+            (t[(t.DXGI_FORMAT_R32_FLOAT_X8X24_TYPELESS = 21)] = 'DXGI_FORMAT_R32_FLOAT_X8X24_TYPELESS'),
+            (t[(t.DXGI_FORMAT_X32_TYPELESS_G8X24_UINT = 22)] = 'DXGI_FORMAT_X32_TYPELESS_G8X24_UINT'),
             (t[(t.DXGI_FORMAT_R10G10B10A2_TYPELESS = 23)] = 'DXGI_FORMAT_R10G10B10A2_TYPELESS'),
             (t[(t.DXGI_FORMAT_R10G10B10A2_UNORM = 24)] = 'DXGI_FORMAT_R10G10B10A2_UNORM'),
             (t[(t.DXGI_FORMAT_R10G10B10A2_UINT = 25)] = 'DXGI_FORMAT_R10G10B10A2_UINT'),
@@ -44280,8 +38385,7 @@ const bundle = () => {
             (t[(t.DXGI_FORMAT_B5G5R5A1_UNORM = 86)] = 'DXGI_FORMAT_B5G5R5A1_UNORM'),
             (t[(t.DXGI_FORMAT_B8G8R8A8_UNORM = 87)] = 'DXGI_FORMAT_B8G8R8A8_UNORM'),
             (t[(t.DXGI_FORMAT_B8G8R8X8_UNORM = 88)] = 'DXGI_FORMAT_B8G8R8X8_UNORM'),
-            (t[(t.DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM = 89)] =
-              'DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM'),
+            (t[(t.DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM = 89)] = 'DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM'),
             (t[(t.DXGI_FORMAT_B8G8R8A8_TYPELESS = 90)] = 'DXGI_FORMAT_B8G8R8A8_TYPELESS'),
             (t[(t.DXGI_FORMAT_B8G8R8A8_UNORM_SRGB = 91)] = 'DXGI_FORMAT_B8G8R8A8_UNORM_SRGB'),
             (t[(t.DXGI_FORMAT_B8G8R8X8_TYPELESS = 92)] = 'DXGI_FORMAT_B8G8R8X8_TYPELESS'),
@@ -44311,8 +38415,7 @@ const bundle = () => {
             (t[(t.DXGI_FORMAT_P208 = 116)] = 'DXGI_FORMAT_P208'),
             (t[(t.DXGI_FORMAT_V208 = 117)] = 'DXGI_FORMAT_V208'),
             (t[(t.DXGI_FORMAT_V408 = 118)] = 'DXGI_FORMAT_V408'),
-            (t[(t.DXGI_FORMAT_SAMPLER_FEEDBACK_MIN_MIP_OPAQUE = 119)] =
-              'DXGI_FORMAT_SAMPLER_FEEDBACK_MIN_MIP_OPAQUE'),
+            (t[(t.DXGI_FORMAT_SAMPLER_FEEDBACK_MIN_MIP_OPAQUE = 119)] = 'DXGI_FORMAT_SAMPLER_FEEDBACK_MIN_MIP_OPAQUE'),
             (t[(t.DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE = 120)] =
               'DXGI_FORMAT_SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE'),
             (t[(t.DXGI_FORMAT_FORCE_UINT = 121)] = 'DXGI_FORMAT_FORCE_UINT');
@@ -44381,14 +38484,7 @@ const bundle = () => {
                   if (l !== de) {
                     var h = ge[l],
                       u = new Uint8Array(t, zt + qt);
-                    return [
-                      new jt(u, {
-                        format: h,
-                        width: n,
-                        height: r,
-                        levels: s,
-                      }),
-                    ];
+                    return [new jt(u, { format: h, width: n, height: r, levels: s })];
                   }
                   var c = zt + qt,
                     p = new Uint32Array(e.buffer, c, Kt / Uint32Array.BYTES_PER_ELEMENT),
@@ -44397,47 +38493,28 @@ const bundle = () => {
                     g = p[ee.MISC_FLAG],
                     _ = p[ee.ARRAY_SIZE],
                     m = _e[d];
-                  if (void 0 === m)
-                    throw new Error('DDSLoader cannot parse texture data with DXGI format ' + d);
+                  if (void 0 === m) throw new Error('DDSLoader cannot parse texture data with DXGI format ' + d);
                   if (g === fe) throw new Error('DDSLoader does not support cubemap textures');
-                  if (f === Yt.DDS_DIMENSION_TEXTURE3D)
-                    throw new Error('DDSLoader does not supported 3D texture data');
+                  if (f === Yt.DDS_DIMENSION_TEXTURE3D) throw new Error('DDSLoader does not supported 3D texture data');
                   var v = new Array(),
                     A = zt + qt + Kt;
                   if (1 === _) v.push(new Uint8Array(t, A));
                   else {
                     for (var y = Lt[m], b = 0, x = n, T = r, E = 0; E < s; E++) {
-                      (b += Math.max(1, (x + 3) & -4) * Math.max(1, (T + 3) & -4) * y),
-                        (x >>>= 1),
-                        (T >>>= 1);
+                      (b += Math.max(1, (x + 3) & -4) * Math.max(1, (T + 3) & -4) * y), (x >>>= 1), (T >>>= 1);
                     }
                     var S = A;
                     for (E = 0; E < _; E++) v.push(new Uint8Array(t, S, b)), (S += b);
                   }
                   return v.map(function (t) {
-                    return new jt(t, {
-                      format: m,
-                      width: n,
-                      height: r,
-                      levels: s,
-                    });
+                    return new jt(t, { format: m, width: n, height: r, levels: s });
                   });
                 }
-                if (o & le)
-                  throw new Error('DDSLoader does not support uncompressed texture data.');
-                if (o & he)
-                  throw new Error('DDSLoader does not supported YUV uncompressed texture data.');
-                if (o & ue)
-                  throw new Error(
-                    'DDSLoader does not support single-channel (lumninance) texture data!',
-                  );
-                if (o & ae)
-                  throw new Error(
-                    'DDSLoader does not support single-channel (alpha) texture data!',
-                  );
-                throw new Error(
-                  'DDSLoader failed to load a texture file due to an unknown reason!',
-                );
+                if (o & le) throw new Error('DDSLoader does not support uncompressed texture data.');
+                if (o & he) throw new Error('DDSLoader does not supported YUV uncompressed texture data.');
+                if (o & ue) throw new Error('DDSLoader does not support single-channel (lumninance) texture data!');
+                if (o & ae) throw new Error('DDSLoader does not support single-channel (alpha) texture data!');
+                throw new Error('DDSLoader failed to load a texture file due to an unknown reason!');
               }),
               t
             );
@@ -44509,13 +38586,10 @@ const bundle = () => {
                           n = r + '-' + (e + 1);
                         J.VL.addToCache(i.baseTexture, n),
                           J.xE.addToCache(i, n),
-                          0 === e &&
-                            ((o[r] = i), J.VL.addToCache(i.baseTexture, r), J.xE.addToCache(i, r)),
+                          0 === e && ((o[r] = i), J.VL.addToCache(i.baseTexture, r), J.xE.addToCache(i, r)),
                           (o[n] = i);
                       }),
-                        Object.assign(e, {
-                          textures: o,
-                        });
+                        Object.assign(e, { textures: o });
                     }
                   } catch (l) {
                     return void i(l);
@@ -44546,10 +38620,7 @@ const bundle = () => {
                   A = (h + 3) & -4,
                   y = new Array(c),
                   b = l * h;
-                if (
-                  (0 === s && (b = v * A),
-                  void 0 === (g = 0 !== s ? (xe[s] ? xe[s] * Te[a] : Ee[s]) : Lt[o]))
-                )
+                if ((0 === s && (b = v * A), void 0 === (g = 0 !== s ? (xe[s] ? xe[s] * Te[a] : Ee[s]) : Lt[o])))
                   throw new Error('Unable to resolve the pixel format stored in the *.ktx file!');
                 for (var x = b * g, T = l, E = h, S = v, I = A, w = be + f, R = 0; R < d; R++) {
                   for (var P = r.getUint32(w, n), O = w + 4, C = 0; C < c; C++) {
@@ -44565,9 +38636,7 @@ const bundle = () => {
                   }
                   (w = (w += P + 4) % 4 != 0 ? w + 4 - (w % 4) : w),
                     (x =
-                      (S = ((T = T >> 1 || 1) + _ - 1) & ~(_ - 1)) *
-                      (I = ((E = E >> 1 || 1) + m - 1) & ~(m - 1)) *
-                      g);
+                      (S = ((T = T >> 1 || 1) + _ - 1) & ~(_ - 1)) * (I = ((E = E >> 1 || 1) + m - 1) & ~(m - 1)) * g);
                 }
                 return 0 !== s
                   ? {
@@ -44596,10 +38665,7 @@ const bundle = () => {
                                 e[0].levelBuffer.byteLength / 4,
                               ))),
                           {
-                            resource: new J.qm(i, {
-                              width: e[0].levelWidth,
-                              height: e[0].levelHeight,
-                            }),
+                            resource: new J.qm(i, { width: e[0].levelWidth, height: e[0].levelHeight }),
                             type: s,
                             format: r ? t.convertFormatToInteger(a) : a,
                           }
@@ -44608,20 +38674,13 @@ const bundle = () => {
                     }
                   : {
                       compressed: y.map(function (t) {
-                        return new jt(null, {
-                          format: o,
-                          width: l,
-                          height: h,
-                          levels: d,
-                          levelBuffers: t,
-                        });
+                        return new jt(null, { format: o, width: l, height: h, levels: d, levelBuffers: t });
                       }),
                     };
               }),
               (t.validate = function (t, e) {
                 for (var i = 0; i < ve.length; i++)
-                  if (e.getUint8(i) !== ve[i])
-                    return console.error(t + ' is not a valid *.ktx file!'), !1;
+                  if (e.getUint8(i) !== ve[i]) return console.error(t + ' is not a valid *.ktx file!'), !1;
                 return !0;
               }),
               (t.convertFormatToInteger = function (t) {
@@ -44664,9 +38723,7 @@ const bundle = () => {
                 var e = this.data.meta.scale,
                   i = (0, w.getResolutionOfUrl)(t, null);
                 return (
-                  null === i && (i = void 0 !== e ? parseFloat(e) : 1),
-                  1 !== i && this.baseTexture.setResolution(i),
-                  i
+                  null === i && (i = void 0 !== e ? parseFloat(e) : 1), 1 !== i && this.baseTexture.setResolution(i), i
                 );
               }),
               (t.prototype.parse = function (e) {
@@ -44685,12 +38742,7 @@ const bundle = () => {
                     var o = null,
                       l = null,
                       h = !1 !== s.trimmed && s.sourceSize ? s.sourceSize : s.frame,
-                      u = new G.Ae(
-                        0,
-                        0,
-                        Math.floor(h.w) / this.resolution,
-                        Math.floor(h.h) / this.resolution,
-                      );
+                      u = new G.Ae(0, 0, Math.floor(h.w) / this.resolution, Math.floor(h.h) / this.resolution);
                     (o = s.rotated
                       ? new G.Ae(
                           Math.floor(a.x) / this.resolution,
@@ -44712,14 +38764,7 @@ const bundle = () => {
                           Math.floor(a.w) / this.resolution,
                           Math.floor(a.h) / this.resolution,
                         )),
-                      (this.textures[n] = new J.xE(
-                        this.baseTexture,
-                        o,
-                        u,
-                        l,
-                        s.rotated ? 2 : 0,
-                        s.anchor,
-                      )),
+                      (this.textures[n] = new J.xE(this.baseTexture, o, u, l, s.rotated ? 2 : 0, s.anchor)),
                       J.xE.addToCache(this.textures[n], n);
                   }
                   i++;
@@ -44756,9 +38801,7 @@ const bundle = () => {
                   (this._frameKeys = null),
                   (this.data = null),
                   (this.textures = null),
-                  t &&
-                    (null === (e = this._texture) || void 0 === e || e.destroy(),
-                    this.baseTexture.destroy()),
+                  t && (null === (e = this._texture) || void 0 === e || e.destroy(), this.baseTexture.destroy()),
                   (this._texture = null),
                   (this.baseTexture = null);
               }),
@@ -44776,8 +38819,7 @@ const bundle = () => {
                   a = e.name + '_image';
                 if (e.data && e.type === vt.TYPE.JSON && e.data.frames && !s.resources[a]) {
                   var o =
-                    null === (n = null === (r = e.data) || void 0 === r ? void 0 : r.meta) ||
-                    void 0 === n
+                    null === (n = null === (r = e.data) || void 0 === r ? void 0 : r.meta) || void 0 === n
                       ? void 0
                       : n.related_multi_packs;
                   if (Array.isArray(o))
@@ -44809,11 +38851,7 @@ const bundle = () => {
                     ) {
                       l(u[h]);
                     }
-                  var c = {
-                      crossOrigin: e.crossOrigin,
-                      metadata: e.metadata.imageMetadata,
-                      parentResource: e,
-                    },
+                  var c = { crossOrigin: e.crossOrigin, metadata: e.metadata.imageMetadata, parentResource: e },
                     p = t.getResourcePath(e, s.baseUrl);
                   s.add(a, p, c, function (t) {
                     if (t.error) i(t.error);
@@ -44827,9 +38865,7 @@ const bundle = () => {
                 } else i();
               }),
               (t.getResourcePath = function (t, e) {
-                return t.isDataUrl
-                  ? t.data.meta.image
-                  : w.url.resolve(t.url.replace(e, ''), t.data.meta.image);
+                return t.isDataUrl ? t.data.meta.image : w.url.resolve(t.url.replace(e, ''), t.data.meta.image);
               }),
               t
             );
@@ -44842,9 +38878,7 @@ const bundle = () => {
             return (
               (Ne =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -44858,8 +38892,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          Ne(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          Ne(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Be = (function () {
             function t() {
@@ -44907,21 +38940,13 @@ const bundle = () => {
                 var d = new Be();
                 return (
                   i.info.forEach(function (t) {
-                    return d.info.push({
-                      face: t.face,
-                      size: parseInt(t.size, 10),
-                    });
+                    return d.info.push({ face: t.face, size: parseInt(t.size, 10) });
                   }),
                   i.common.forEach(function (t) {
-                    return d.common.push({
-                      lineHeight: parseInt(t.lineHeight, 10),
-                    });
+                    return d.common.push({ lineHeight: parseInt(t.lineHeight, 10) });
                   }),
                   i.page.forEach(function (t) {
-                    return d.page.push({
-                      id: parseInt(t.id, 10),
-                      file: t.file,
-                    });
+                    return d.page.push({ id: parseInt(t.id, 10), file: t.file });
                   }),
                   i.char.forEach(function (t) {
                     return d.char.push({
@@ -44978,19 +39003,11 @@ const bundle = () => {
                   l < i.length;
                   l++
                 )
-                  e.info.push({
-                    face: i[l].getAttribute('face'),
-                    size: parseInt(i[l].getAttribute('size'), 10),
-                  });
+                  e.info.push({ face: i[l].getAttribute('face'), size: parseInt(i[l].getAttribute('size'), 10) });
                 for (l = 0; l < r.length; l++)
-                  e.common.push({
-                    lineHeight: parseInt(r[l].getAttribute('lineHeight'), 10),
-                  });
+                  e.common.push({ lineHeight: parseInt(r[l].getAttribute('lineHeight'), 10) });
                 for (l = 0; l < n.length; l++)
-                  e.page.push({
-                    id: parseInt(n[l].getAttribute('id'), 10) || 0,
-                    file: n[l].getAttribute('file'),
-                  });
+                  e.page.push({ id: parseInt(n[l].getAttribute('id'), 10) || 0, file: n[l].getAttribute('file') });
                 for (l = 0; l < s.length; l++) {
                   var h = s[l];
                   e.char.push({
@@ -45103,23 +39120,11 @@ const bundle = () => {
               d = a.dropShadowBlur * s,
               f = a.dropShadowDistance * s;
             (e.shadowColor =
-              'rgba(' +
-              255 * p[0] +
-              ',' +
-              255 * p[1] +
-              ',' +
-              255 * p[2] +
-              ',' +
-              a.dropShadowAlpha +
-              ')'),
+              'rgba(' + 255 * p[0] + ',' + 255 * p[1] + ',' + 255 * p[2] + ',' + a.dropShadowAlpha + ')'),
               (e.shadowBlur = d),
               (e.shadowOffsetX = Math.cos(a.dropShadowAngle) * f),
               (e.shadowOffsetY = Math.sin(a.dropShadowAngle) * f);
-          } else
-            (e.shadowColor = 'black'),
-              (e.shadowBlur = 0),
-              (e.shadowOffsetX = 0),
-              (e.shadowOffsetY = 0);
+          } else (e.shadowColor = 'black'), (e.shadowBlur = 0), (e.shadowOffsetX = 0), (e.shadowOffsetY = 0);
           a.stroke && a.strokeThickness && e.strokeText(o, h, u + i.lineHeight - l.descent),
             a.fill && e.fillText(o, h, u + i.lineHeight - l.descent),
             e.setTransform(1, 0, 0, 1, 0, 0),
@@ -45134,9 +39139,7 @@ const bundle = () => {
             var n = t[i];
             if (Array.isArray(n)) {
               if (2 !== n.length)
-                throw new Error(
-                  '[BitmapFont]: Invalid character range length, expecting 2 got ' + n.length + '.',
-                );
+                throw new Error('[BitmapFont]: Invalid character range length, expecting 2 got ' + n.length + '.');
               var s = n[0].charCodeAt(0),
                 a = n[1].charCodeAt(0);
               if (a < s) throw new Error('[BitmapFont]: Invalid character range.');
@@ -45206,20 +39209,16 @@ const bundle = () => {
               (this.distanceFieldRange = null == l ? void 0 : l.distanceRange),
                 (this.distanceFieldType =
                   null !==
-                    (n =
-                      null === (r = null == l ? void 0 : l.fieldType) || void 0 === r
-                        ? void 0
-                        : r.toLowerCase()) && void 0 !== n
+                    (n = null === (r = null == l ? void 0 : l.fieldType) || void 0 === r ? void 0 : r.toLowerCase()) &&
+                  void 0 !== n
                     ? n
                     : 'none');
             }
             return (
               (t.prototype.destroy = function () {
-                for (var t in this.chars)
-                  this.chars[t].texture.destroy(), (this.chars[t].texture = null);
+                for (var t in this.chars) this.chars[t].texture.destroy(), (this.chars[t].texture = null);
                 for (var t in this.pageTextures)
-                  this._ownsTextures && this.pageTextures[t].destroy(!0),
-                    (this.pageTextures[t] = null);
+                  this._ownsTextures && this.pageTextures[t].destroy(!0), (this.pageTextures[t] = null);
                 (this.chars = null), (this.pageTextures = null);
               }),
               (t.install = function (e, i, r) {
@@ -45251,26 +39250,15 @@ const bundle = () => {
                   c = i instanceof De.pn ? i : new De.pn(i),
                   p = l,
                   d = new Be();
-                (d.info[0] = {
-                  face: c.fontFamily,
-                  size: c.fontSize,
-                }),
-                  (d.common[0] = {
-                    lineHeight: c.fontSize,
-                  });
+                (d.info[0] = { face: c.fontFamily, size: c.fontSize }), (d.common[0] = { lineHeight: c.fontSize });
                 for (var f, g, _, m = 0, v = 0, A = 0, y = [], b = 0; b < u.length; b++) {
                   f ||
                     (((f = document.createElement('canvas')).width = l),
                     (f.height = h),
                     (g = f.getContext('2d')),
-                    (_ = new J.VL(f, {
-                      resolution: o,
-                    })),
+                    (_ = new J.VL(f, { resolution: o })),
                     y.push(new J.xE(_)),
-                    d.page.push({
-                      id: y.length - 1,
-                      file: '',
-                    }));
+                    d.page.push({ id: y.length - 1, file: '' }));
                   var x = De._A.measureText(u[b], c, !1, f),
                     T = x.width,
                     E = Math.ceil(x.height),
@@ -45278,11 +39266,7 @@ const bundle = () => {
                   if (v >= h - E * o) {
                     if (0 === v)
                       throw new Error(
-                        '[BitmapFont] textureHeight ' +
-                          h +
-                          'px is too small for ' +
-                          c.fontSize +
-                          'px fonts',
+                        '[BitmapFont] textureHeight ' + h + 'px is too small for ' + c.fontSize + 'px fonts',
                       );
                     --b, (f = null), (g = null), (_ = null), (v = 0), (m = 0), (A = 0);
                   } else if (((A = Math.max(E + x.fontProperties.descent, A)), S * o + m >= p))
@@ -45300,9 +39284,7 @@ const bundle = () => {
                       xoffset: 0,
                       yoffset: 0,
                       xadvance: Math.ceil(
-                        T -
-                          (c.dropShadow ? c.dropShadowDistance : 0) -
-                          (c.stroke ? c.strokeThickness : 0),
+                        T - (c.dropShadow ? c.dropShadowDistance : 0) - (c.stroke ? c.strokeThickness : 0),
                       ),
                     }),
                       (m += (S + 2 * a) * o),
@@ -45316,12 +39298,7 @@ const bundle = () => {
                       C = g.measureText(R).width,
                       M = g.measureText(O).width,
                       D = g.measureText(R + O).width - (C + M);
-                    D &&
-                      d.kerning.push({
-                        first: Ve(R),
-                        second: Ve(O),
-                        amount: D,
-                      });
+                    D && d.kerning.push({ first: Ve(R), second: Ve(O), amount: D });
                   }
                 var N = new t(d, y, !0);
                 return void 0 !== t.available[e] && t.uninstall(e), (t.available[e] = N), N;
@@ -45465,9 +39442,7 @@ const bundle = () => {
                       (v = 0);
                 }
                 var T = o[o.length - 1];
-                '\r' !== T &&
-                  '\n' !== T &&
-                  (/(?:\s)/.test(T) && (c = g), s.push(c), (p = Math.max(p, c)), a.push(-1));
+                '\r' !== T && '\n' !== T && (/(?:\s)/.test(T) && (c = g), s.push(c), (p = Math.max(p, c)), a.push(-1));
                 var E = [];
                 for (A = 0; A <= d; A++) {
                   var S = 0;
@@ -45492,12 +39467,7 @@ const bundle = () => {
                         N = void 0;
                       'none' === e.distanceFieldType
                         ? ((D = new Me.rY(J.xE.EMPTY)), (N = Nt.T$.NORMAL))
-                        : ((D = new Me.rY(J.xE.EMPTY, {
-                            program: J.$r.from(qe, ze),
-                            uniforms: {
-                              uFWidth: 0,
-                            },
-                          })),
+                        : ((D = new Me.rY(J.xE.EMPTY, { program: J.$r.from(qe, ze), uniforms: { uFWidth: 0 } })),
                           (N = Nt.T$.NORMAL_NPM));
                       var L = new Me.Kj(M, D);
                       (L.blendMode = N),
@@ -45513,11 +39483,7 @@ const bundle = () => {
                           indices: null,
                         });
                     }
-                    (K.index = 0),
-                      (K.indexCount = 0),
-                      (K.vertexCount = 0),
-                      (K.uvsCount = 0),
-                      (K.total = 0);
+                    (K.index = 0), (K.indexCount = 0), (K.vertexCount = 0), (K.uvsCount = 0), (K.total = 0);
                     var B = this._textureCache;
                     (B[C] = B[C] || new J.xE(W.baseTexture)),
                       (K.mesh.texture = B[C]),
@@ -45527,10 +39493,8 @@ const bundle = () => {
                   }
                   R[C].total++;
                 }
-                for (A = 0; A < O.length; A++)
-                  -1 === P.indexOf(O[A]) && this.removeChild(O[A].mesh);
-                for (A = 0; A < P.length; A++)
-                  P[A].mesh.parent !== this && this.addChild(P[A].mesh);
+                for (A = 0; A < O.length; A++) -1 === P.indexOf(O[A]) && this.removeChild(O[A].mesh);
+                for (A = 0; A < P.length; A++) P[A].mesh.parent !== this && this.addChild(P[A].mesh);
                 for (var A in ((this._activePagesMeshData = P), R)) {
                   var k = (K = R[A]).total;
                   if (
@@ -45540,16 +39504,12 @@ const bundle = () => {
                     (K.vertices = new Float32Array(8 * k)),
                       (K.uvs = new Float32Array(8 * k)),
                       (K.indices = new Uint16Array(6 * k));
-                  else
-                    for (var F = K.total, U = K.vertices, X = 4 * F * 2; X < U.length; X++)
-                      U[X] = 0;
+                  else for (var F = K.total, U = K.vertices, X = 4 * F * 2; X < U.length; X++) U[X] = 0;
                   K.mesh.size = 6 * k;
                 }
                 for (A = 0; A < I; A++) {
                   var H,
-                    j =
-                      (H = n[A]).position.x +
-                      E[H.line] * ('justify' === this._align ? H.prevSpaces : 1);
+                    j = (H = n[A]).position.x + E[H.line] * ('justify' === this._align ? H.prevSpaces : 1);
                   this._roundPixels && (j = Math.round(j));
                   var W,
                     Z = j * i,
@@ -45581,16 +39541,11 @@ const bundle = () => {
                     (Y.uvs[8 * Q + 6] = q.x3),
                     (Y.uvs[8 * Q + 7] = q.y3);
                 }
-                for (var A in ((this._textWidth = p * i),
-                (this._textHeight = (r.y + e.lineHeight) * i),
-                R)) {
+                for (var A in ((this._textWidth = p * i), (this._textHeight = (r.y + e.lineHeight) * i), R)) {
                   var K = R[A];
                   if (0 !== this.anchor.x || 0 !== this.anchor.y)
                     for (
-                      var $ = 0,
-                        tt = this._textWidth * this.anchor.x,
-                        et = this._textHeight * this.anchor.y,
-                        it = 0;
+                      var $ = 0, tt = this._textWidth * this.anchor.x, et = this._textHeight * this.anchor.y, it = 0;
                       it < K.total;
                       it++
                     )
@@ -45709,8 +39664,7 @@ const bundle = () => {
                   return this._text;
                 },
                 set: function (t) {
-                  (t = String(null == t ? '' : t)),
-                    this._text !== t && ((this._text = t), (this.dirty = !0));
+                  (t = String(null == t ? '' : t)), this._text !== t && ((this._text = t), (this.dirty = !0));
                 },
                 enumerable: !1,
                 configurable: !0,
@@ -45773,12 +39727,7 @@ const bundle = () => {
                 }
                 (this._textureCache = null), t.prototype.destroy.call(this, e);
               }),
-              (e.styleDefaults = {
-                align: 'left',
-                tint: 16777215,
-                maxWidth: 0,
-                letterSpacing: 0,
-              }),
+              (e.styleDefaults = { align: 'left', tint: 16777215, maxWidth: 0, letterSpacing: 0 }),
               e
             );
           })(R.W2),
@@ -45797,8 +39746,7 @@ const bundle = () => {
                       a = {},
                       o = function (t) {
                         (a[t.metadata.pageFile] = t.texture),
-                          Object.keys(a).length === s.page.length &&
-                            ((e.bitmapFont = Ye.install(s, a, !0)), i());
+                          Object.keys(a).length === s.page.length && ((e.bitmapFont = Ye.install(s, a, !0)), i());
                       },
                       l = 0;
                     l < s.page.length;
@@ -45810,9 +39758,7 @@ const bundle = () => {
                     for (var p in this.resources) {
                       var d = this.resources[p];
                       if (d.url === u) {
-                        (d.metadata.pageFile = h),
-                          d.texture ? o(d) : d.onAfterMiddleware.add(o),
-                          (c = !0);
+                        (d.metadata.pageFile = h), d.texture ? o(d) : d.onAfterMiddleware.add(o), (c = !0);
                         break;
                       }
                     }
@@ -45820,12 +39766,7 @@ const bundle = () => {
                       var f = {
                         crossOrigin: e.crossOrigin,
                         loadType: vt.LOAD_TYPE.IMAGE,
-                        metadata: Object.assign(
-                          {
-                            pageFile: h,
-                          },
-                          e.metadata.imageMetadata,
-                        ),
+                        metadata: Object.assign({ pageFile: h }, e.metadata.imageMetadata),
                         parentResource: e,
                       };
                       this.add(u, f, o);
@@ -45857,9 +39798,7 @@ const bundle = () => {
             return (
               (ei =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -45873,18 +39812,14 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          ei(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          ei(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var ri =
             'varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float uAlpha;\n\nvoid main(void)\n{\n   gl_FragColor = texture2D(uSampler, vTextureCoord) * uAlpha;\n}\n',
           ni = (function (t) {
             function e(e) {
               void 0 === e && (e = 1);
-              var i =
-                t.call(this, J.kP, ri, {
-                  uAlpha: 1,
-                }) || this;
+              var i = t.call(this, J.kP, ri, { uAlpha: 1 }) || this;
               return (i.alpha = e), i;
             }
             return (
@@ -45906,9 +39841,7 @@ const bundle = () => {
             return (
               (si =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -45922,8 +39855,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          si(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          si(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var oi =
           '\n    attribute vec2 aVertexPosition;\n\n    uniform mat3 projectionMatrix;\n\n    uniform float strength;\n\n    varying vec2 vBlurTexCoords[%size%];\n\n    uniform vec4 inputSize;\n    uniform vec4 outputFrame;\n\n    vec4 filterVertexPosition( void )\n    {\n        vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n        return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n    }\n\n    vec2 filterTextureCoord( void )\n    {\n        return aVertexPosition * (outputFrame.zw * inputSize.zw);\n    }\n\n    void main(void)\n    {\n        gl_Position = filterVertexPosition();\n\n        vec2 textureCoord = filterTextureCoord();\n        %blur%\n    }';
@@ -45990,27 +39922,18 @@ const bundle = () => {
             o++
           ) {
             var l = a.replace('%index%', o.toString());
-            (e = o),
-              o >= r && (e = t - o - 1),
-              (s += l = l.replace('%value%', i[e].toString())),
-              (s += '\n');
+            (e = o), o >= r && (e = t - o - 1), (s += l = l.replace('%value%', i[e].toString())), (s += '\n');
           }
           return (n = (n = n.replace('%blur%', s)).replace('%size%', t.toString()));
         }
         (function (t) {
-          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'),
-            (t[(t.WEBGL = 1)] = 'WEBGL'),
-            (t[(t.WEBGL2 = 2)] = 'WEBGL2');
+          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.WEBGL2 = 2)] = 'WEBGL2');
         })(hi || (hi = {})),
           (function (t) {
-            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.CANVAS = 2)] = 'CANVAS');
+            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.CANVAS = 2)] = 'CANVAS');
           })(ui || (ui = {})),
           (function (t) {
-            (t[(t.COLOR = 16384)] = 'COLOR'),
-              (t[(t.DEPTH = 256)] = 'DEPTH'),
-              (t[(t.STENCIL = 1024)] = 'STENCIL');
+            (t[(t.COLOR = 16384)] = 'COLOR'), (t[(t.DEPTH = 256)] = 'DEPTH'), (t[(t.STENCIL = 1024)] = 'STENCIL');
           })(ci || (ci = {})),
           (function (t) {
             (t[(t.NORMAL = 0)] = 'NORMAL'),
@@ -46183,10 +40106,8 @@ const bundle = () => {
                       ? (this.uniforms.strength = (1 / i.width) * (i.width / e.width))
                       : (this.uniforms.strength = (1 / i.height) * (i.height / e.height))
                     : this.horizontal
-                    ? (this.uniforms.strength =
-                        (1 / t.renderer.width) * (t.renderer.width / e.width))
-                    : (this.uniforms.strength =
-                        (1 / t.renderer.height) * (t.renderer.height / e.height)),
+                    ? (this.uniforms.strength = (1 / t.renderer.width) * (t.renderer.width / e.width))
+                    : (this.uniforms.strength = (1 / t.renderer.height) * (t.renderer.height / e.height)),
                   (this.uniforms.strength *= this.strength),
                   (this.uniforms.strength /= this.passes),
                   1 === this.passes)
@@ -46262,11 +40183,7 @@ const bundle = () => {
                 this._repeatEdgePixels
                   ? (this.padding = 0)
                   : (this.padding =
-                      2 *
-                      Math.max(
-                        Math.abs(this.blurXFilter.strength),
-                        Math.abs(this.blurYFilter.strength),
-                      ));
+                      2 * Math.max(Math.abs(this.blurXFilter.strength), Math.abs(this.blurYFilter.strength)));
               }),
               Object.defineProperty(e.prototype, 'blur', {
                 get: function () {
@@ -46335,9 +40252,7 @@ const bundle = () => {
             return (
               (Di =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -46351,18 +40266,14 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          Di(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          Di(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Li =
             'varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float m[20];\nuniform float uAlpha;\n\nvoid main(void)\n{\n    vec4 c = texture2D(uSampler, vTextureCoord);\n\n    if (uAlpha == 0.0) {\n        gl_FragColor = c;\n        return;\n    }\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (c.a > 0.0) {\n      c.rgb /= c.a;\n    }\n\n    vec4 result;\n\n    result.r = (m[0] * c.r);\n        result.r += (m[1] * c.g);\n        result.r += (m[2] * c.b);\n        result.r += (m[3] * c.a);\n        result.r += m[4];\n\n    result.g = (m[5] * c.r);\n        result.g += (m[6] * c.g);\n        result.g += (m[7] * c.b);\n        result.g += (m[8] * c.a);\n        result.g += m[9];\n\n    result.b = (m[10] * c.r);\n       result.b += (m[11] * c.g);\n       result.b += (m[12] * c.b);\n       result.b += (m[13] * c.a);\n       result.b += m[14];\n\n    result.a = (m[15] * c.r);\n       result.a += (m[16] * c.g);\n       result.a += (m[17] * c.b);\n       result.a += (m[18] * c.a);\n       result.a += m[19];\n\n    vec3 rgb = mix(c.rgb, result.rgb, uAlpha);\n\n    // Premultiply alpha again.\n    rgb *= result.a;\n\n    gl_FragColor = vec4(rgb, result.a);\n}\n',
           Bi = (function (t) {
             function e() {
               var e = this,
-                i = {
-                  m: new Float32Array([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]),
-                  uAlpha: 1,
-                };
+                i = { m: new Float32Array([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]), uAlpha: 1 };
               return ((e = t.call(this, J.Y9, Li, i) || this).alpha = 1), e;
             }
             return (
@@ -46370,8 +40281,7 @@ const bundle = () => {
               (e.prototype._loadMatrix = function (t, e) {
                 void 0 === e && (e = !1);
                 var i = t;
-                e && (this._multiply(i, this.uniforms.m, t), (i = this._colorMatrix(i))),
-                  (this.uniforms.m = i);
+                e && (this._multiply(i, this.uniforms.m, t), (i = this._colorMatrix(i))), (this.uniforms.m = i);
               }),
               (e.prototype._multiply = function (t, e, i) {
                 return (
@@ -46436,9 +40346,7 @@ const bundle = () => {
                 this._loadMatrix(i, e);
               }),
               (e.prototype.blackAndWhite = function (t) {
-                var e = [
-                  0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0, 0, 0, 0, 1, 0,
-                ];
+                var e = [0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0, 0, 0, 0, 1, 0];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.hue = function (t, e) {
@@ -46493,24 +40401,22 @@ const bundle = () => {
               }),
               (e.prototype.sepia = function (t) {
                 var e = [
-                  0.393, 0.7689999, 0.18899999, 0, 0, 0.349, 0.6859999, 0.16799999, 0, 0, 0.272,
-                  0.5339999, 0.13099999, 0, 0, 0, 0, 0, 1, 0,
+                  0.393, 0.7689999, 0.18899999, 0, 0, 0.349, 0.6859999, 0.16799999, 0, 0, 0.272, 0.5339999, 0.13099999,
+                  0, 0, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.technicolor = function (t) {
                 var e = [
-                  1.9125277891456083, -0.8545344976951645, -0.09155508482755585, 0,
-                  11.793603434377337, -0.3087833385928097, 1.7658908555458428, -0.10601743074722245,
-                  0, -70.35205161461398, -0.231103377548616, -0.7501899197440212, 1.847597816108189,
-                  0, 30.950940869491138, 0, 0, 0, 1, 0,
+                  1.9125277891456083, -0.8545344976951645, -0.09155508482755585, 0, 11.793603434377337,
+                  -0.3087833385928097, 1.7658908555458428, -0.10601743074722245, 0, -70.35205161461398,
+                  -0.231103377548616, -0.7501899197440212, 1.847597816108189, 0, 30.950940869491138, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.polaroid = function (t) {
                 var e = [
-                  1.438, -0.062, -0.062, 0, 0, -0.122, 1.378, -0.122, 0, 0, -0.016, -0.016, 1.483,
-                  0, 0, 0, 0, 0, 1, 0,
+                  1.438, -0.062, -0.062, 0, 0, -0.122, 1.378, -0.122, 0, 0, -0.016, -0.016, 1.483, 0, 0, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
@@ -46520,28 +40426,25 @@ const bundle = () => {
               }),
               (e.prototype.kodachrome = function (t) {
                 var e = [
-                  1.1285582396593525, -0.3967382283601348, -0.03992559172921793, 0,
-                  63.72958762196502, -0.16404339962244616, 1.0835251566291304, -0.05498805115633132,
-                  0, 24.732407896706203, -0.16786010706155763, -0.5603416277695248,
-                  1.6014850761964943, 0, 35.62982807460946, 0, 0, 0, 1, 0,
+                  1.1285582396593525, -0.3967382283601348, -0.03992559172921793, 0, 63.72958762196502,
+                  -0.16404339962244616, 1.0835251566291304, -0.05498805115633132, 0, 24.732407896706203,
+                  -0.16786010706155763, -0.5603416277695248, 1.6014850761964943, 0, 35.62982807460946, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.browni = function (t) {
                 var e = [
-                  0.5997023498159715, 0.34553243048391263, -0.2708298674538042, 0,
-                  47.43192855600873, -0.037703249837783157, 0.8609577587992641, 0.15059552388459913,
-                  0, -36.96841498319127, 0.24113635128153335, -0.07441037908422492,
-                  0.44972182064877153, 0, -7.562075277591283, 0, 0, 0, 1, 0,
+                  0.5997023498159715, 0.34553243048391263, -0.2708298674538042, 0, 47.43192855600873,
+                  -0.037703249837783157, 0.8609577587992641, 0.15059552388459913, 0, -36.96841498319127,
+                  0.24113635128153335, -0.07441037908422492, 0.44972182064877153, 0, -7.562075277591283, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.vintage = function (t) {
                 var e = [
-                  0.6279345635605994, 0.3202183420819367, -0.03965408211312453, 0,
-                  9.651285835294123, 0.02578397704808868, 0.6441188644374771, 0.03259127616149294,
-                  0, 7.462829176470591, 0.0466055556782719, -0.0851232987247891, 0.5241648018700465,
-                  0, 5.159190588235296, 0, 0, 0, 1, 0,
+                  0.6279345635605994, 0.3202183420819367, -0.03965408211312453, 0, 9.651285835294123,
+                  0.02578397704808868, 0.6441188644374771, 0.03259127616149294, 0, 7.462829176470591,
+                  0.0466055556782719, -0.0851232987247891, 0.5241648018700465, 0, 5.159190588235296, 0, 0, 0, 1, 0,
                 ];
                 this._loadMatrix(e, t);
               }),
@@ -46577,28 +40480,7 @@ const bundle = () => {
                 this._loadMatrix(c, n);
               }),
               (e.prototype.night = function (t, e) {
-                var i = [
-                  -2 * (t = t || 0.1),
-                  -t,
-                  0,
-                  0,
-                  0,
-                  -t,
-                  0,
-                  t,
-                  0,
-                  0,
-                  0,
-                  t,
-                  2 * t,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  1,
-                  0,
-                ];
+                var i = [-2 * (t = t || 0.1), -t, 0, 0, 0, -t, 0, t, 0, 0, 0, t, 2 * t, 0, 0, 0, 0, 0, 1, 0];
                 this._loadMatrix(i, e);
               }),
               (e.prototype.predator = function (t, e) {
@@ -46627,9 +40509,7 @@ const bundle = () => {
                 this._loadMatrix(i, e);
               }),
               (e.prototype.lsd = function (t) {
-                var e = [
-                  2, -0.4, 0.5, 0, 0, -0.5, 2, -0.4, 0, 0, -0.4, -0.5, 3, 0, 0, 0, 0, 0, 1, 0,
-                ];
+                var e = [2, -0.4, 0.5, 0, 0, -0.5, 2, -0.4, 0, 0, -0.4, -0.5, 3, 0, 0, 0, 0, 0, 1, 0];
                 this._loadMatrix(e, t);
               }),
               (e.prototype.reset = function () {
@@ -46664,9 +40544,7 @@ const bundle = () => {
           return (
             (ki =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -46680,8 +40558,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          ki(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          ki(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Ui =
             'varying vec2 vFilterCoord;\nvarying vec2 vTextureCoord;\n\nuniform vec2 scale;\nuniform mat2 rotation;\nuniform sampler2D uSampler;\nuniform sampler2D mapSampler;\n\nuniform highp vec4 inputSize;\nuniform vec4 inputClamp;\n\nvoid main(void)\n{\n  vec4 map =  texture2D(mapSampler, vFilterCoord);\n\n  map -= 0.5;\n  map.xy = scale * inputSize.zw * (rotation * map.xy);\n\n  gl_FragColor = texture2D(uSampler, clamp(vec2(vTextureCoord.x + map.x, vTextureCoord.y + map.y), inputClamp.xy, inputClamp.zw));\n}\n',
@@ -46697,10 +40574,7 @@ const bundle = () => {
                   t.call(this, Gi, Ui, {
                     mapSampler: e._texture,
                     filterMatrix: n,
-                    scale: {
-                      x: 1,
-                      y: 1,
-                    },
+                    scale: { x: 1, y: 1 },
                     rotation: new Float32Array([1, 0, 0, 1]),
                   }) || this).maskSprite = e),
                 (r.maskMatrix = n),
@@ -46712,10 +40586,7 @@ const bundle = () => {
             return (
               Fi(e, t),
               (e.prototype.apply = function (t, e, i, r) {
-                (this.uniforms.filterMatrix = t.calculateSpriteMatrix(
-                  this.maskMatrix,
-                  this.maskSprite,
-                )),
+                (this.uniforms.filterMatrix = t.calculateSpriteMatrix(this.maskMatrix, this.maskSprite)),
                   (this.uniforms.scale.x = this.scale.x),
                   (this.uniforms.scale.y = this.scale.y);
                 var n = this.maskSprite.worldTransform,
@@ -46746,9 +40617,7 @@ const bundle = () => {
             return (
               (Hi =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -46762,8 +40631,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          Hi(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          Hi(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Wi =
             '\nattribute vec2 aVertexPosition;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 v_rgbNW;\nvarying vec2 v_rgbNE;\nvarying vec2 v_rgbSW;\nvarying vec2 v_rgbSE;\nvarying vec2 v_rgbM;\n\nvarying vec2 vFragCoord;\n\nuniform vec4 inputSize;\nuniform vec4 outputFrame;\n\nvec4 filterVertexPosition( void )\n{\n    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n}\n\nvoid texcoords(vec2 fragCoord, vec2 inverseVP,\n               out vec2 v_rgbNW, out vec2 v_rgbNE,\n               out vec2 v_rgbSW, out vec2 v_rgbSE,\n               out vec2 v_rgbM) {\n    v_rgbNW = (fragCoord + vec2(-1.0, -1.0)) * inverseVP;\n    v_rgbNE = (fragCoord + vec2(1.0, -1.0)) * inverseVP;\n    v_rgbSW = (fragCoord + vec2(-1.0, 1.0)) * inverseVP;\n    v_rgbSE = (fragCoord + vec2(1.0, 1.0)) * inverseVP;\n    v_rgbM = vec2(fragCoord * inverseVP);\n}\n\nvoid main(void) {\n\n   gl_Position = filterVertexPosition();\n\n   vFragCoord = aVertexPosition * outputFrame.zw;\n\n   texcoords(vFragCoord, inputSize.zw, v_rgbNW, v_rgbNE, v_rgbSW, v_rgbSE, v_rgbM);\n}\n',
@@ -46779,9 +40647,7 @@ const bundle = () => {
             return (
               (Yi =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -46795,8 +40661,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          Yi(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          Yi(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var qi,
           Qi,
@@ -46822,11 +40687,7 @@ const bundle = () => {
           gr = (function (t) {
             function e(e, i) {
               void 0 === e && (e = 0.5), void 0 === i && (i = Math.random());
-              var r =
-                t.call(this, J.Y9, fr, {
-                  uNoise: 0,
-                  uSeed: 0,
-                }) || this;
+              var r = t.call(this, J.Y9, fr, { uNoise: 0, uSeed: 0 }) || this;
               return (r.noise = e), (r.seed = i), r;
             }
             return (
@@ -46856,19 +40717,13 @@ const bundle = () => {
           })(J.wn),
           _r = i(5510);
         (function (t) {
-          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'),
-            (t[(t.WEBGL = 1)] = 'WEBGL'),
-            (t[(t.WEBGL2 = 2)] = 'WEBGL2');
+          (t[(t.WEBGL_LEGACY = 0)] = 'WEBGL_LEGACY'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.WEBGL2 = 2)] = 'WEBGL2');
         })(qi || (qi = {})),
           (function (t) {
-            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'),
-              (t[(t.WEBGL = 1)] = 'WEBGL'),
-              (t[(t.CANVAS = 2)] = 'CANVAS');
+            (t[(t.UNKNOWN = 0)] = 'UNKNOWN'), (t[(t.WEBGL = 1)] = 'WEBGL'), (t[(t.CANVAS = 2)] = 'CANVAS');
           })(Qi || (Qi = {})),
           (function (t) {
-            (t[(t.COLOR = 16384)] = 'COLOR'),
-              (t[(t.DEPTH = 256)] = 'DEPTH'),
-              (t[(t.STENCIL = 1024)] = 'STENCIL');
+            (t[(t.COLOR = 16384)] = 'COLOR'), (t[(t.DEPTH = 256)] = 'DEPTH'), (t[(t.STENCIL = 1024)] = 'STENCIL');
           })(Ki || (Ki = {})),
           (function (t) {
             (t[(t.NORMAL = 0)] = 'NORMAL'),
@@ -47119,23 +40974,13 @@ const bundle = () => {
                   width: r.width,
                   height: r.height,
                   resolution: this.cacheAsBitmapResolution || t.resolution,
-                  multisample:
-                    null !== (e = this.cacheAsBitmapMultisample) && void 0 !== e
-                      ? e
-                      : t.multisample,
+                  multisample: null !== (e = this.cacheAsBitmapMultisample) && void 0 !== e ? e : t.multisample,
                 }),
                 u = 'cacheAsBitmap_' + (0, w.uid)();
-              (this._cacheData.textureCacheId = u),
-                J.VL.addToCache(h.baseTexture, u),
-                J.xE.addToCache(h, u);
+              (this._cacheData.textureCacheId = u), J.VL.addToCache(h.baseTexture, u), J.xE.addToCache(h, u);
               var c = this.transform.localTransform.copyTo(mr).invert().translate(-r.x, -r.y);
               (this.render = this._cacheData.originalRender),
-                t.render(this, {
-                  renderTexture: h,
-                  clear: !0,
-                  transform: c,
-                  skipUpdateTransform: !1,
-                }),
+                t.render(this, { renderTexture: h, clear: !0, transform: c, skipUpdateTransform: !1 }),
                 t.framebuffer.blit(),
                 (t.projection.transform = l),
                 t.renderTexture.bind(s, a, o),
@@ -47176,26 +41021,16 @@ const bundle = () => {
               var r = t.context,
                 n = t._projTransform;
               e.ceil(Ce.X.RESOLUTION);
-              var s = J.TI.create({
-                  width: e.width,
-                  height: e.height,
-                }),
+              var s = J.TI.create({ width: e.width, height: e.height }),
                 a = 'cacheAsBitmap_' + (0, w.uid)();
-              (this._cacheData.textureCacheId = a),
-                J.VL.addToCache(s.baseTexture, a),
-                J.xE.addToCache(s, a);
+              (this._cacheData.textureCacheId = a), J.VL.addToCache(s.baseTexture, a), J.xE.addToCache(s, a);
               var o = mr;
               this.transform.localTransform.copyTo(o),
                 o.invert(),
                 (o.tx -= e.x),
                 (o.ty -= e.y),
                 (this.renderCanvas = this._cacheData.originalRenderCanvas),
-                t.render(this, {
-                  renderTexture: s,
-                  clear: !0,
-                  transform: o,
-                  skipUpdateTransform: !1,
-                }),
+                t.render(this, { renderTexture: s, clear: !0, transform: o, skipUpdateTransform: !1 }),
                 (t.context = r),
                 (t._projTransform = n),
                 (this.renderCanvas = this._renderCachedCanvas),
@@ -47215,9 +41050,7 @@ const bundle = () => {
                 (this.transform._parentID = -1),
                 this.parent
                   ? this.updateTransform()
-                  : ((this.parent = t._tempDisplayObjectParent),
-                    this.updateTransform(),
-                    (this.parent = null)),
+                  : ((this.parent = t._tempDisplayObjectParent), this.updateTransform(), (this.parent = null)),
                 (this.containsPoint = l.containsPoint.bind(l));
             }
           }),
@@ -47270,9 +41103,7 @@ const bundle = () => {
             return (
               (xr =
                 Object.setPrototypeOf ||
-                ({
-                  __proto__: [],
-                } instanceof Array &&
+                ({ __proto__: [] } instanceof Array &&
                   function (t, e) {
                     t.__proto__ = e;
                   }) ||
@@ -47286,8 +41117,7 @@ const bundle = () => {
           function i() {
             this.constructor = t;
           }
-          xr(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          xr(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var Er = (function (t) {
           function e(e, i) {
@@ -47325,8 +41155,7 @@ const bundle = () => {
                 ((this._playing = !0),
                 this._autoUpdate &&
                   !this._isConnectedToTicker &&
-                  (X.vB.shared.add(this.update, this, X.uF.HIGH),
-                  (this._isConnectedToTicker = !0)));
+                  (X.vB.shared.add(this.update, this, X.uF.HIGH), (this._isConnectedToTicker = !0)));
             }),
             (e.prototype.gotoAndStop = function (t) {
               this.stop();
@@ -47343,22 +41172,16 @@ const bundle = () => {
                   i = this.currentFrame;
                 if (null !== this._durations) {
                   var r = (this._currentTime % 1) * this._durations[this.currentFrame];
-                  for (r += (e / 60) * 1e3; r < 0; )
-                    this._currentTime--, (r += this._durations[this.currentFrame]);
+                  for (r += (e / 60) * 1e3; r < 0; ) this._currentTime--, (r += this._durations[this.currentFrame]);
                   var n = Math.sign(this.animationSpeed * t);
-                  for (
-                    this._currentTime = Math.floor(this._currentTime);
-                    r >= this._durations[this.currentFrame];
-
-                  )
+                  for (this._currentTime = Math.floor(this._currentTime); r >= this._durations[this.currentFrame]; )
                     (r -= this._durations[this.currentFrame] * n), (this._currentTime += n);
                   this._currentTime += r / this._durations[this.currentFrame];
                 } else this._currentTime += e;
                 this._currentTime < 0 && !this.loop
                   ? (this.gotoAndStop(0), this.onComplete && this.onComplete())
                   : this._currentTime >= this._textures.length && !this.loop
-                  ? (this.gotoAndStop(this._textures.length - 1),
-                    this.onComplete && this.onComplete())
+                  ? (this.gotoAndStop(this._textures.length - 1), this.onComplete && this.onComplete())
                   : i !== this.currentFrame &&
                     (this.loop &&
                       this.onLoop &&
@@ -47410,8 +41233,7 @@ const bundle = () => {
                 if (t[0] instanceof J.xE) (this._textures = t), (this._durations = null);
                 else {
                   (this._textures = []), (this._durations = []);
-                  for (var e = 0; e < t.length; e++)
-                    this._textures.push(t[e].texture), this._durations.push(t[e].time);
+                  for (var e = 0; e < t.length; e++) this._textures.push(t[e].texture), this._durations.push(t[e].time);
                 }
                 (this._previousFrame = null), this.gotoAndStop(0), this.updateTexture();
               },
@@ -47584,9 +41406,7 @@ const bundle = () => {
           return (
             (r =
               Object.setPrototypeOf ||
-              ({
-                __proto__: [],
-              } instanceof Array &&
+              ({ __proto__: [] } instanceof Array &&
                 function (t, e) {
                   t.__proto__ = e;
                 }) ||
@@ -47598,14 +41418,11 @@ const bundle = () => {
         };
         function n(t, e) {
           if ('function' != typeof e && null !== e)
-            throw new TypeError(
-              'Class extends value ' + String(e) + ' is not a constructor or null',
-            );
+            throw new TypeError('Class extends value ' + String(e) + ' is not a constructor or null');
           function i() {
             this.constructor = t;
           }
-          r(t, e),
-            (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
+          r(t, e), (t.prototype = null === e ? Object.create(e) : ((i.prototype = e.prototype), new i()));
         }
         var s = function () {
           return (
@@ -47613,8 +41430,7 @@ const bundle = () => {
               Object.assign ||
               function (t) {
                 for (var e, i = 1, r = arguments.length; i < r; i++)
-                  for (var n in (e = arguments[i]))
-                    Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                  for (var n in (e = arguments[i])) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t;
               }),
             s.apply(this, arguments)
@@ -47622,14 +41438,11 @@ const bundle = () => {
         };
         function a(t, e) {
           var i = {};
-          for (var r in t)
-            Object.prototype.hasOwnProperty.call(t, r) && e.indexOf(r) < 0 && (i[r] = t[r]);
+          for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && e.indexOf(r) < 0 && (i[r] = t[r]);
           if (null != t && 'function' == typeof Object.getOwnPropertySymbols) {
             var n = 0;
             for (r = Object.getOwnPropertySymbols(t); n < r.length; n++)
-              e.indexOf(r[n]) < 0 &&
-                Object.prototype.propertyIsEnumerable.call(t, r[n]) &&
-                (i[r[n]] = t[r[n]]);
+              e.indexOf(r[n]) < 0 && Object.prototype.propertyIsEnumerable.call(t, r[n]) && (i[r[n]] = t[r[n]]);
           }
           return i;
         }
@@ -47637,8 +41450,7 @@ const bundle = () => {
           var n,
             s = arguments.length,
             a = s < 3 ? e : null === r ? (r = Object.getOwnPropertyDescriptor(e, i)) : r;
-          if ('object' == typeof Reflect && 'function' == typeof Reflect.decorate)
-            a = Reflect.decorate(t, e, i, r);
+          if ('object' == typeof Reflect && 'function' == typeof Reflect.decorate) a = Reflect.decorate(t, e, i, r);
           else
             for (var o = t.length - 1; o >= 0; o--)
               (n = t[o]) && (a = (s < 3 ? n(a) : s > 3 ? n(e, i, a) : n(e, i)) || a);
@@ -47650,8 +41462,7 @@ const bundle = () => {
           };
         }
         function h(t, e) {
-          if ('object' == typeof Reflect && 'function' == typeof Reflect.metadata)
-            return Reflect.metadata(t, e);
+          if ('object' == typeof Reflect && 'function' == typeof Reflect.metadata) return Reflect.metadata(t, e);
         }
         function u(t, e, i, r) {
           function n(t) {
@@ -47697,11 +41508,7 @@ const bundle = () => {
               ops: [],
             };
           return (
-            (s = {
-              next: o(0),
-              throw: o(1),
-              return: o(2),
-            }),
+            (s = { next: o(0), throw: o(1), return: o(2) }),
             'function' == typeof Symbol &&
               (s[Symbol.iterator] = function () {
                 return this;
@@ -47720,12 +41527,7 @@ const bundle = () => {
                 if (
                   ((i = 1),
                   r &&
-                    (n =
-                      2 & o[0]
-                        ? r.return
-                        : o[0]
-                        ? r.throw || ((n = r.return) && n.call(r), 0)
-                        : r.next) &&
+                    (n = 2 & o[0] ? r.return : o[0] ? r.throw || ((n = r.return) && n.call(r), 0) : r.next) &&
                     !(n = n.call(r, o[1])).done)
                 )
                   return n;
@@ -47735,13 +41537,7 @@ const bundle = () => {
                     n = o;
                     break;
                   case 4:
-                    return (
-                      a.label++,
-                      {
-                        value: o[1],
-                        done: !1,
-                      }
-                    );
+                    return a.label++, { value: o[1], done: !1 };
                   case 5:
                     a.label++, (r = o[1]), (o = [0]);
                     continue;
@@ -47749,10 +41545,7 @@ const bundle = () => {
                     (o = a.ops.pop()), a.trys.pop();
                     continue;
                   default:
-                    if (
-                      !((n = a.trys),
-                      (n = n.length > 0 && n[n.length - 1]) || (6 !== o[0] && 2 !== o[0]))
-                    ) {
+                    if (!((n = a.trys), (n = n.length > 0 && n[n.length - 1]) || (6 !== o[0] && 2 !== o[0]))) {
                       a = 0;
                       continue;
                     }
@@ -47778,10 +41571,7 @@ const bundle = () => {
                 i = n = 0;
               }
             if (5 & o[0]) throw o[1];
-            return {
-              value: o[0] ? o[1] : void 0,
-              done: !0,
-            };
+            return { value: o[0] ? o[1] : void 0, done: !0 };
           }
         }
         var p = Object.create
@@ -47801,8 +41591,7 @@ const bundle = () => {
               void 0 === r && (r = i), (t[r] = e[i]);
             };
         function d(t, e) {
-          for (var i in t)
-            'default' === i || Object.prototype.hasOwnProperty.call(e, i) || p(e, t, i);
+          for (var i in t) 'default' === i || Object.prototype.hasOwnProperty.call(e, i) || p(e, t, i);
         }
         function f(t) {
           var e = 'function' == typeof Symbol && Symbol.iterator,
@@ -47812,13 +41601,7 @@ const bundle = () => {
           if (t && 'number' == typeof t.length)
             return {
               next: function () {
-                return (
-                  t && r >= t.length && (t = void 0),
-                  {
-                    value: t && t[r++],
-                    done: !t,
-                  }
-                );
+                return t && r >= t.length && (t = void 0), { value: t && t[r++], done: !t };
               },
             };
           throw new TypeError(e ? 'Object is not iterable.' : 'Symbol.iterator is not defined.');
@@ -47833,9 +41616,7 @@ const bundle = () => {
           try {
             for (; (void 0 === e || e-- > 0) && !(r = s.next()).done; ) a.push(r.value);
           } catch (o) {
-            n = {
-              error: o,
-            };
+            n = { error: o };
           } finally {
             try {
               r && !r.done && (i = s.return) && i.call(s);
@@ -47853,8 +41634,7 @@ const bundle = () => {
           for (var t = 0, e = 0, i = arguments.length; e < i; e++) t += arguments[e].length;
           var r = Array(t),
             n = 0;
-          for (e = 0; e < i; e++)
-            for (var s = arguments[e], a = 0, o = s.length; a < o; a++, n++) r[n] = s[a];
+          for (e = 0; e < i; e++) for (var s = arguments[e], a = 0, o = s.length; a < o; a++, n++) r[n] = s[a];
           return r;
         }
         function v(t, e, i) {
@@ -47926,14 +41706,7 @@ const bundle = () => {
           function r(r, n) {
             e[r] = t[r]
               ? function (e) {
-                  return (i = !i)
-                    ? {
-                        value: A(t[r](e)),
-                        done: 'return' === r,
-                      }
-                    : n
-                    ? n(e)
-                    : e;
+                  return (i = !i) ? { value: A(t[r](e)), done: 'return' === r } : n ? n(e) : e;
                 }
               : n;
           }
@@ -47964,29 +41737,16 @@ const bundle = () => {
           }
           function n(t, e, i, r) {
             Promise.resolve(r).then(function (e) {
-              t({
-                value: e,
-                done: i,
-              });
+              t({ value: e, done: i });
             }, e);
           }
         }
         function T(t, e) {
-          return (
-            Object.defineProperty
-              ? Object.defineProperty(t, 'raw', {
-                  value: e,
-                })
-              : (t.raw = e),
-            t
-          );
+          return Object.defineProperty ? Object.defineProperty(t, 'raw', { value: e }) : (t.raw = e), t;
         }
         var E = Object.create
           ? function (t, e) {
-              Object.defineProperty(t, 'default', {
-                enumerable: !0,
-                value: e,
-              });
+              Object.defineProperty(t, 'default', { enumerable: !0, value: e });
             }
           : function (t, e) {
               t.default = e;
@@ -47994,33 +41754,23 @@ const bundle = () => {
         function S(t) {
           if (t && t.__esModule) return t;
           var e = {};
-          if (null != t)
-            for (var i in t)
-              'default' !== i && Object.prototype.hasOwnProperty.call(t, i) && p(e, t, i);
+          if (null != t) for (var i in t) 'default' !== i && Object.prototype.hasOwnProperty.call(t, i) && p(e, t, i);
           return E(e, t), e;
         }
         function I(t) {
-          return t && t.__esModule
-            ? t
-            : {
-                default: t,
-              };
+          return t && t.__esModule ? t : { default: t };
         }
         function w(t, e, i, r) {
           if ('a' === i && !r) throw new TypeError('Private accessor was defined without a getter');
           if ('function' == typeof e ? t !== e || !r : !e.has(t))
-            throw new TypeError(
-              'Cannot read private member from an object whose class did not declare it',
-            );
+            throw new TypeError('Cannot read private member from an object whose class did not declare it');
           return 'm' === i ? r : 'a' === i ? r.call(t) : r ? r.value : e.get(t);
         }
         function R(t, e, i, r, n) {
           if ('m' === r) throw new TypeError('Private method is not writable');
           if ('a' === r && !n) throw new TypeError('Private accessor was defined without a setter');
           if ('function' == typeof e ? t !== e || !n : !e.has(t))
-            throw new TypeError(
-              'Cannot write private member to an object whose class did not declare it',
-            );
+            throw new TypeError('Cannot write private member to an object whose class did not declare it');
           return 'a' === r ? n.call(t, i) : n ? (n.value = i) : e.set(t, i), i;
         }
         function P(t, e) {
@@ -48068,8 +41818,7 @@ const bundle = () => {
               var i = t.split('@'),
                 r = '';
               return (
-                i.length > 1 && ((r = i[0] + '@'), (t = i[1])),
-                r + E((t = t.replace(v, '.')).split('.'), e).join('.')
+                i.length > 1 && ((r = i[0] + '@'), (t = i[1])), r + E((t = t.replace(v, '.')).split('.'), e).join('.')
               );
             }
             function I(t) {
@@ -48085,9 +41834,7 @@ const bundle = () => {
               return E(t, function (t) {
                 var e = '';
                 return (
-                  t > 65535 &&
-                    ((e += x((((t -= 65536) >>> 10) & 1023) | 55296)), (t = 56320 | (1023 & t))),
-                  (e += x(t))
+                  t > 65535 && ((e += x((((t -= 65536) >>> 10) & 1023) | 55296)), (t = 56320 | (1023 & t))), (e += x(t))
                 );
               }).join('');
             }
@@ -48155,15 +41902,10 @@ const bundle = () => {
                 E,
                 S,
                 w = [];
-              for (A = (t = I(t)).length, e = f, i = 0, s = d, a = 0; a < A; ++a)
-                (v = t[a]) < 128 && w.push(x(v));
+              for (A = (t = I(t)).length, e = f, i = 0, s = d, a = 0; a < A; ++a) (v = t[a]) < 128 && w.push(x(v));
               for (r = n = w.length, n && w.push(g); r < A; ) {
                 for (c = o, a = 0; a < A; ++a) (v = t[a]) >= e && v < c && (c = v);
-                for (
-                  c - e > b((o - i) / (y = r + 1)) && T('overflow'), i += (c - e) * y, e = c, a = 0;
-                  a < A;
-                  ++a
-                )
+                for (c - e > b((o - i) / (y = r + 1)) && T('overflow'), i += (c - e) * y, e = c, a = 0; a < A; ++a)
                   if (((v = t[a]) < e && ++i > o && T('overflow'), v == e)) {
                     for (p = i, _ = l; !(p < (m = _ <= s ? h : _ >= s + u ? u : _ - s)); _ += l)
                       (S = p - m), (E = l - m), w.push(x(P(m + (S % E), 0))), (p = b(S / E));
@@ -48183,17 +41925,7 @@ const bundle = () => {
                 return m.test(t) ? 'xn--' + M(t) : t;
               });
             }
-            (a = {
-              version: '1.3.2',
-              ucs2: {
-                decode: I,
-                encode: w,
-              },
-              decode: C,
-              encode: M,
-              toASCII: N,
-              toUnicode: D,
-            }),
+            (a = { version: '1.3.2', ucs2: { decode: I, encode: w }, decode: C, encode: M, toASCII: N, toUnicode: D }),
               void 0 ===
                 (r = function () {
                   return a;
@@ -48229,14 +41961,8 @@ const bundle = () => {
           d = 255,
           f = /^[+a-z0-9A-Z_-]{0,63}$/,
           g = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
-          _ = {
-            javascript: !0,
-            'javascript:': !0,
-          },
-          m = {
-            javascript: !0,
-            'javascript:': !0,
-          },
+          _ = { javascript: !0, 'javascript:': !0 },
+          m = { javascript: !0, 'javascript:': !0 },
           v = {
             http: !0,
             https: !0,
@@ -48256,9 +41982,7 @@ const bundle = () => {
           return r.parse(t, e, i), r;
         }
         function b(t) {
-          return (
-            n.isString(t) && (t = y(t)), t instanceof s ? t.format() : s.prototype.format.call(t)
-          );
+          return n.isString(t) && (t = y(t)), t instanceof s ? t.format() : s.prototype.format.call(t);
         }
         function x(t, e) {
           return y(t, !1, !0).resolve(e);
@@ -48267,8 +41991,7 @@ const bundle = () => {
           return t ? y(t, !1, !0).resolveObject(e) : e;
         }
         (s.prototype.parse = function (t, e, i) {
-          if (!n.isString(t))
-            throw new TypeError("Parameter 'url' must be a string, not " + typeof t);
+          if (!n.isString(t)) throw new TypeError("Parameter 'url' must be a string, not " + typeof t);
           var s = t.indexOf('?'),
             o = -1 !== s && s < t.indexOf('#') ? '?' : '#',
             h = t.split(o),
@@ -48283,8 +42006,7 @@ const bundle = () => {
                 (this.href = b),
                 (this.pathname = x[1]),
                 x[2]
-                  ? ((this.search = x[2]),
-                    (this.query = e ? A.parse(this.search.substr(1)) : this.search.substr(1)))
+                  ? ((this.search = x[2]), (this.query = e ? A.parse(this.search.substr(1)) : this.search.substr(1)))
                   : e && ((this.search = ''), (this.query = {})),
                 this
               );
@@ -48319,8 +42041,7 @@ const bundle = () => {
               for (var M = this.hostname.split(/\./), D = ((P = 0), M.length); P < D; P++) {
                 var N = M[P];
                 if (N && !N.match(f)) {
-                  for (var L = '', B = 0, k = N.length; B < k; B++)
-                    N.charCodeAt(B) > 127 ? (L += 'x') : (L += N[B]);
+                  for (var L = '', B = 0, k = N.length; B < k; B++) N.charCodeAt(B) > 127 ? (L += 'x') : (L += N[B]);
                   if (!L.match(f)) {
                     var F = M.slice(0, P),
                       U = M.slice(P + 1),
@@ -48332,17 +42053,13 @@ const bundle = () => {
                   }
                 }
               }
-            this.hostname.length > d
-              ? (this.hostname = '')
-              : (this.hostname = this.hostname.toLowerCase()),
+            this.hostname.length > d ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()),
               C || (this.hostname = r.toASCII(this.hostname));
             var X = this.port ? ':' + this.port : '',
               H = this.hostname || '';
             (this.host = H + X),
               (this.href += this.host),
-              C &&
-                ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)),
-                '/' !== b[0] && (b = '/' + b));
+              C && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== b[0] && (b = '/' + b));
           }
           if (!_[E])
             for (P = 0, D = u.length; P < D; P++) {
@@ -48383,14 +42100,9 @@ const bundle = () => {
             this.host
               ? (s = t + this.host)
               : this.hostname &&
-                ((s =
-                  t +
-                  (-1 === this.hostname.indexOf(':') ? this.hostname : '[' + this.hostname + ']')),
+                ((s = t + (-1 === this.hostname.indexOf(':') ? this.hostname : '[' + this.hostname + ']')),
                 this.port && (s += ':' + this.port)),
-              this.query &&
-                n.isObject(this.query) &&
-                Object.keys(this.query).length &&
-                (a = A.stringify(this.query));
+              this.query && n.isObject(this.query) && Object.keys(this.query).length && (a = A.stringify(this.query));
             var o = this.search || (a && '?' + a) || '';
             return (
               e && ':' !== e.substr(-1) && (e += ':'),
@@ -48427,9 +42139,7 @@ const bundle = () => {
                 'protocol' !== u && (i[u] = t[u]);
               }
               return (
-                v[i.protocol] && i.hostname && !i.pathname && (i.path = i.pathname = '/'),
-                (i.href = i.format()),
-                i
+                v[i.protocol] && i.hostname && !i.pathname && (i.path = i.pathname = '/'), (i.href = i.format()), i
               );
             }
             if (t.protocol && t.protocol !== i.protocol) {
@@ -48489,8 +42199,7 @@ const bundle = () => {
                 (i.search = t.search),
                 (i.query = t.query),
                 (T = f);
-            else if (f.length)
-              T || (T = []), T.pop(), (T = T.concat(f)), (i.search = t.search), (i.query = t.query);
+            else if (f.length) T || (T = []), T.pop(), (T = T.concat(f)), (i.search = t.search), (i.query = t.query);
             else if (!n.isNullOrUndefined(t.search)) {
               if (E)
                 (i.hostname = i.host = T.shift()),
@@ -48507,10 +42216,7 @@ const bundle = () => {
             }
             if (!T.length)
               return (
-                (i.pathname = null),
-                i.search ? (i.path = '/' + i.search) : (i.path = null),
-                (i.href = i.format()),
-                i
+                (i.pathname = null), i.search ? (i.path = '/' + i.search) : (i.path = null), (i.href = i.format()), i
               );
             for (
               var S = T.slice(-1)[0],
@@ -48520,11 +42226,7 @@ const bundle = () => {
               R >= 0;
               R--
             )
-              '.' === (S = T[R])
-                ? T.splice(R, 1)
-                : '..' === S
-                ? (T.splice(R, 1), w++)
-                : w && (T.splice(R, 1), w--);
+              '.' === (S = T[R]) ? T.splice(R, 1) : '..' === S ? (T.splice(R, 1), w++) : w && (T.splice(R, 1), w--);
             if (!b && !x) for (; w--; w) T.unshift('..');
             !b || '' === T[0] || (T[0] && '/' === T[0].charAt(0)) || T.unshift(''),
               I && '/' !== T.join('/').substr(-1) && T.push('');
@@ -48548,9 +42250,7 @@ const bundle = () => {
           (s.prototype.parseHost = function () {
             var t = this.host,
               e = o.exec(t);
-            e &&
-              (':' !== (e = e[0]) && (this.port = e.substr(1)),
-              (t = t.substr(0, t.length - e.length))),
+            e && (':' !== (e = e[0]) && (this.port = e.substr(1)), (t = t.substr(0, t.length - e.length))),
               t && (this.hostname = t);
           });
       },
@@ -48591,10 +42291,10 @@ const bundle = () => {
           }
           function r(t, n, s) {
             return (r =
-              Function.prototype.bind &&
-              -1 != Function.prototype.bind.toString().indexOf('native code')
-                ? e
-                : i).apply(null, arguments);
+              Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf('native code') ? e : i).apply(
+              null,
+              arguments,
+            );
           }
           var n =
             Date.now ||
@@ -48608,13 +42308,11 @@ const bundle = () => {
           function o(t, e, i, r) {
             if (((e = t.c.createElement(e)), i))
               for (var n in i)
-                i.hasOwnProperty(n) &&
-                  ('style' == n ? (e.style.cssText = i[n]) : e.setAttribute(n, i[n]));
+                i.hasOwnProperty(n) && ('style' == n ? (e.style.cssText = i[n]) : e.setAttribute(n, i[n]));
             return r && e.appendChild(t.c.createTextNode(r)), e;
           }
           function l(t, e, i) {
-            (t = t.c.getElementsByTagName(e)[0]) || (t = document.documentElement),
-              t.insertBefore(i, t.lastChild);
+            (t = t.c.getElementsByTagName(e)[0]) || (t = document.documentElement), t.insertBefore(i, t.lastChild);
           }
           function h(t) {
             t.parentNode && t.parentNode.removeChild(t);
@@ -48643,8 +42341,7 @@ const bundle = () => {
               .replace(/^\s+|\s+$/, '');
           }
           function c(t, e) {
-            for (var i = t.className.split(/\s+/), r = 0, n = i.length; r < n; r++)
-              if (i[r] == e) return !0;
+            for (var i = t.className.split(/\s+/), r = 0, n = i.length; r < n; r++) if (i[r] == e) return !0;
             return !1;
           }
           function p(t) {
@@ -48654,11 +42351,7 @@ const bundle = () => {
             function r() {
               u && n && s && (u(h), (u = null));
             }
-            e = o(t, 'link', {
-              rel: 'stylesheet',
-              href: e,
-              media: 'all',
-            });
+            e = o(t, 'link', { rel: 'stylesheet', href: e, media: 'all' });
             var n = !1,
               s = !0,
               h = null,
@@ -48678,17 +42371,13 @@ const bundle = () => {
           function f(t, e, i, r) {
             var n = t.c.getElementsByTagName('head')[0];
             if (n) {
-              var s = o(t, 'script', {
-                  src: e,
-                }),
+              var s = o(t, 'script', { src: e }),
                 a = !1;
               return (
                 (s.onload = s.onreadystatechange =
                   function () {
                     a ||
-                      (this.readyState &&
-                        'loaded' != this.readyState &&
-                        'complete' != this.readyState) ||
+                      (this.readyState && 'loaded' != this.readyState && 'complete' != this.readyState) ||
                       ((a = !0),
                       i && i(null),
                       (s.onload = s.onreadystatechange = null),
@@ -48753,14 +42442,10 @@ const bundle = () => {
               r = null;
             return (
               t &&
-                ((r = t.match(/(normal|oblique|italic)/i)) &&
-                  r[1] &&
-                  (i = r[1].substr(0, 1).toLowerCase()),
+                ((r = t.match(/(normal|oblique|italic)/i)) && r[1] && (i = r[1].substr(0, 1).toLowerCase()),
                 (r = t.match(/([1-9]00|normal|bold)/i)) &&
                   r[1] &&
-                  (/bold/i.test(r[1])
-                    ? (e = 7)
-                    : /[1-9]00/.test(r[1]) && (e = parseInt(r[1].substr(0, 1), 10)))),
+                  (/bold/i.test(r[1]) ? (e = 7) : /[1-9]00/.test(r[1]) && (e = parseInt(r[1].substr(0, 1), 10)))),
               i + e
             );
           }
@@ -48801,16 +42486,7 @@ const bundle = () => {
             return n;
           }
           function M(t, e) {
-            (this.c = t),
-              (this.f = e),
-              (this.a = o(
-                this.c,
-                'span',
-                {
-                  'aria-hidden': 'true',
-                },
-                this.f,
-              ));
+            (this.c = t), (this.f = e), (this.a = o(this.c, 'span', { 'aria-hidden': 'true' }, this.f));
           }
           function D(t) {
             l(t.c, 'body', t.a);
@@ -48827,12 +42503,7 @@ const bundle = () => {
             );
           }
           function L(t, e, i, r, n, s) {
-            (this.g = t),
-              (this.j = e),
-              (this.a = r),
-              (this.c = i),
-              (this.f = n || 3e3),
-              (this.h = s || void 0);
+            (this.g = t), (this.j = e), (this.a = r), (this.c = i), (this.f = n || 3e3), (this.h = s || void 0);
           }
           function B(t, e, i, r, n, s, a) {
             (this.v = t),
@@ -48898,24 +42569,17 @@ const bundle = () => {
                 },
               );
             });
-          var k = {
-              D: 'serif',
-              C: 'sans-serif',
-            },
+          var k = { D: 'serif', C: 'sans-serif' },
             F = null;
           function U() {
             if (null === F) {
               var t = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent);
-              F =
-                !!t &&
-                (536 > parseInt(t[1], 10) ||
-                  (536 === parseInt(t[1], 10) && 11 >= parseInt(t[2], 10)));
+              F = !!t && (536 > parseInt(t[1], 10) || (536 === parseInt(t[1], 10) && 11 >= parseInt(t[2], 10)));
             }
             return F;
           }
           function G(t, e, i) {
-            for (var r in k)
-              if (k.hasOwnProperty(r) && e === t.f[k[r]] && i === t.f[k[r]]) return !0;
+            for (var r in k) if (k.hasOwnProperty(r) && e === t.f[k[r]] && i === t.f[k[r]]) return !0;
             return !1;
           }
           function X(t) {
@@ -48961,12 +42625,7 @@ const bundle = () => {
             0 == --t.f &&
               t.j &&
               (t.m
-                ? ((t = t.a).g &&
-                    u(
-                      t.f,
-                      [t.a.c('wf', 'active')],
-                      [t.a.c('wf', 'loading'), t.a.c('wf', 'inactive')],
-                    ),
+                ? ((t = t.a).g && u(t.f, [t.a.c('wf', 'active')], [t.a.c('wf', 'loading'), t.a.c('wf', 'inactive')]),
                   P(t, 'active'))
                 : R(t.a));
           }
@@ -49037,10 +42696,7 @@ const bundle = () => {
               u(
                 e.f,
                 [e.a.c('wf', t.c, T(t).toString(), 'active')],
-                [
-                  e.a.c('wf', t.c, T(t).toString(), 'loading'),
-                  e.a.c('wf', t.c, T(t).toString(), 'inactive'),
-                ],
+                [e.a.c('wf', t.c, T(t).toString(), 'loading'), e.a.c('wf', t.c, T(t).toString(), 'inactive')],
               ),
               P(e, 'fontactive', t),
               (this.m = !0),
@@ -49088,11 +42744,7 @@ const bundle = () => {
                 var s = i.c.o;
                 f(
                   this.c,
-                  (i.a.api || 'https://fast.fonts.net/jsapi') +
-                    '/' +
-                    r +
-                    '.js' +
-                    (n ? '?v=' + n : ''),
+                  (i.a.api || 'https://fast.fonts.net/jsapi') + '/' + r + '.js' + (n ? '?v=' + n : ''),
                   function (n) {
                     n
                       ? t([])
@@ -49115,8 +42767,7 @@ const bundle = () => {
               var o = [];
               for (e = 0, i = n.length; e < i; e++)
                 if ((r = n[e].split(':'))[1])
-                  for (var l = r[1].split(','), h = 0; h < l.length; h += 1)
-                    o.push(new y(r[0], l[h]));
+                  for (var l = r[1].split(','), h = 0; h < l.length; h += 1) o.push(new y(r[0], l[h]));
                 else o.push(new y(r[0]));
               m(a, function () {
                 t(o, s);
@@ -49178,12 +42829,7 @@ const bundle = () => {
               r: '4',
               b: '7',
             },
-            st = {
-              i: 'i',
-              italic: 'i',
-              n: 'n',
-              normal: 'n',
-            },
+            st = { i: 'i', italic: 'i', n: 'n', normal: 'n' },
             at =
               /^(thin|(?:(?:extra|ultra)-?)?light|regular|book|medium|(?:(?:semi|demi|extra|ultra)-?)?bold|black|heavy|l|r|b|[1-9]00)?(n|i|normal|italic)?$/;
           function ot(t) {
@@ -49199,11 +42845,7 @@ const bundle = () => {
                     if ((u = o[h]).match(/^[\w-]+$/))
                       if (null == (p = at.exec(u.toLowerCase()))) u = '';
                       else {
-                        if (
-                          ((u = null == (u = p[2]) || '' == u ? 'n' : st[u]),
-                          null == (p = p[1]) || '' == p)
-                        )
-                          p = '4';
+                        if (((u = null == (u = p[2]) || '' == u ? 'n' : st[u]), null == (p = p[1]) || '' == p)) p = '4';
                         else
                           var c = nt[p],
                             p = c || (isNaN(p) ? '4' : p.substr(0, 1));
@@ -49214,23 +42856,15 @@ const bundle = () => {
                   }
                 0 < a.length && (s = a),
                   3 == r.length &&
-                    ((a = []),
-                    0 < (r = (r = r[2]) ? r.split(',') : a).length &&
-                      (r = rt[r[0]]) &&
-                      (t.c[n] = r));
+                    ((a = []), 0 < (r = (r = r[2]) ? r.split(',') : a).length && (r = rt[r[0]]) && (t.c[n] = r));
               }
-              for (t.c[n] || ((r = rt[n]) && (t.c[n] = r)), r = 0; r < s.length; r += 1)
-                t.a.push(new y(n, s[r]));
+              for (t.c[n] || ((r = rt[n]) && (t.c[n] = r)), r = 0; r < s.length; r += 1) t.a.push(new y(n, s[r]));
             }
           }
           function lt(t, e) {
             (this.c = t), (this.a = e);
           }
-          var ht = {
-            Arimo: !0,
-            Cousine: !0,
-            Tinos: !0,
-          };
+          var ht = { Arimo: !0, Cousine: !0, Tinos: !0 };
           function ut(t, e) {
             (this.c = t), (this.a = e);
           }
@@ -49262,14 +42896,9 @@ const bundle = () => {
                       else if (i.Typekit && i.Typekit.config && i.Typekit.config.fn) {
                         e = i.Typekit.config.fn;
                         for (var r = [], n = 0; n < e.length; n += 2)
-                          for (var s = e[n], a = e[n + 1], o = 0; o < a.length; o++)
-                            r.push(new y(s, a[o]));
+                          for (var s = e[n], a = e[n + 1], o = 0; o < a.length; o++) r.push(new y(s, a[o]));
                         try {
-                          i.Typekit.load({
-                            events: !1,
-                            classes: !1,
-                            async: !0,
-                          });
+                          i.Typekit.load({ events: !1, classes: !1, async: !0 });
                         } catch (l) {}
                         t(r);
                       }
@@ -49287,19 +42916,13 @@ const bundle = () => {
                   (i.__webfontfontdeckmodule__[e] = function (e, i) {
                     for (var n = 0, s = i.fonts.length; n < s; ++n) {
                       var a = i.fonts[n];
-                      r.a.push(
-                        new y(a.name, S('font-weight:' + a.weight + ';font-style:' + a.style)),
-                      );
+                      r.a.push(new y(a.name, S('font-weight:' + a.weight + ';font-style:' + a.style)));
                     }
                     t(r.a);
                   }),
                   f(
                     this.c,
-                    (this.f.api || 'https://f.fontdeck.com/s/css/js/') +
-                      p(this.c) +
-                      '/' +
-                      e +
-                      '.js',
+                    (this.f.api || 'https://f.fontdeck.com/s/css/js/') + p(this.c) + '/' + e + '.js',
                     function (e) {
                       e && t([]);
                     },
@@ -49322,9 +42945,7 @@ const bundle = () => {
             (pt.a.c.google = function (t, e) {
               return new lt(e, t);
             });
-          var dt = {
-            load: r(pt.load, pt),
-          };
+          var dt = { load: r(pt.load, pt) };
           'function' == typeof define && define.amd
             ? define(function () {
                 return dt;
@@ -49377,10 +42998,7 @@ const bundle = () => {
                 return t && a.indexOf(Object.prototype.toString.call(t)) > -1;
               };
         function l(t) {
-          if (
-            ('string' != typeof t && (t = String(t)),
-            /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(t) || '' === t)
-          )
+          if (('string' != typeof t && (t = String(t)), /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(t) || '' === t))
             throw new TypeError('Invalid character in header field name: "' + t + '"');
           return t.toLowerCase();
         }
@@ -49391,10 +43009,7 @@ const bundle = () => {
           var e = {
             next: function () {
               var e = t.shift();
-              return {
-                done: void 0 === e,
-                value: e,
-              };
+              return { done: void 0 === e, value: e };
             },
           };
           return (
@@ -49470,8 +43085,7 @@ const bundle = () => {
                     : n.searchParams && URLSearchParams.prototype.isPrototypeOf(t)
                     ? (this._bodyText = t.toString())
                     : n.arrayBuffer && n.blob && s(t)
-                    ? ((this._bodyArrayBuffer = m(t.buffer)),
-                      (this._bodyInit = new Blob([this._bodyArrayBuffer])))
+                    ? ((this._bodyArrayBuffer = m(t.buffer)), (this._bodyInit = new Blob([this._bodyArrayBuffer])))
                     : n.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(t) || o(t))
                     ? (this._bodyArrayBuffer = m(t))
                     : (this._bodyText = t = Object.prototype.toString.call(t))
@@ -49483,18 +43097,14 @@ const bundle = () => {
                     ? this.headers.set('content-type', this._bodyBlob.type)
                     : n.searchParams &&
                       URLSearchParams.prototype.isPrototypeOf(t) &&
-                      this.headers.set(
-                        'content-type',
-                        'application/x-www-form-urlencoded;charset=UTF-8',
-                      ));
+                      this.headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8'));
             }),
             n.blob &&
               ((this.blob = function () {
                 var t = p(this);
                 if (t) return t;
                 if (this._bodyBlob) return Promise.resolve(this._bodyBlob);
-                if (this._bodyArrayBuffer)
-                  return Promise.resolve(new Blob([this._bodyArrayBuffer]));
+                if (this._bodyArrayBuffer) return Promise.resolve(new Blob([this._bodyArrayBuffer]));
                 if (this._bodyFormData) throw new Error('could not read FormData body as blob');
                 return Promise.resolve(new Blob([this._bodyText]));
               }),
@@ -49614,10 +43224,7 @@ const bundle = () => {
             throw new TypeError('Body not allowed for GET or HEAD requests');
           if (
             (this._initBody(i),
-            !(
-              ('GET' !== this.method && 'HEAD' !== this.method) ||
-              ('no-store' !== e.cache && 'no-cache' !== e.cache)
-            ))
+            !(('GET' !== this.method && 'HEAD' !== this.method) || ('no-store' !== e.cache && 'no-cache' !== e.cache)))
           ) {
             var r = /([?&])_=[^&]*/;
             if (r.test(this.url)) this.url = this.url.replace(r, '$1_=' + new Date().getTime());
@@ -49679,9 +43286,7 @@ const bundle = () => {
             this._initBody(t);
         }
         (b.prototype.clone = function () {
-          return new b(this, {
-            body: this._bodyInit,
-          });
+          return new b(this, { body: this._bodyInit });
         }),
           v.call(b.prototype),
           v.call(E.prototype),
@@ -49694,21 +43299,13 @@ const bundle = () => {
             });
           }),
           (E.error = function () {
-            var t = new E(null, {
-              status: 0,
-              statusText: '',
-            });
+            var t = new E(null, { status: 0, statusText: '' });
             return (t.type = 'error'), t;
           });
         var S = [301, 302, 303, 307, 308];
         E.redirect = function (t, e) {
           if (-1 === S.indexOf(e)) throw new RangeError('Invalid status code');
-          return new E(null, {
-            status: e,
-            headers: {
-              location: t,
-            },
-          });
+          return new E(null, { status: e, headers: { location: t } });
         };
         var I = r.DOMException;
         try {
@@ -49737,11 +43334,7 @@ const bundle = () => {
               }
             }
             (o.onload = function () {
-              var t = {
-                status: o.status,
-                statusText: o.statusText,
-                headers: T(o.getAllResponseHeaders() || ''),
-              };
+              var t = { status: o.status, statusText: o.statusText, headers: T(o.getAllResponseHeaders() || '') };
               t.url = 'responseURL' in o ? o.responseURL : t.headers.get('X-Request-URL');
               var e = 'response' in o ? o.response : o.responseText;
               setTimeout(function () {
@@ -49789,8 +43382,7 @@ const bundle = () => {
               o.send(void 0 === a._bodyInit ? null : a._bodyInit);
           });
         }
-        (w.polyfill = !0),
-          r.fetch || ((r.fetch = w), (r.Headers = c), (r.Request = b), (r.Response = E));
+        (w.polyfill = !0), r.fetch || ((r.fetch = w), (r.Headers = c), (r.Request = b), (r.Response = E));
       },
       2895: (t, e, i) => {
         var r;
@@ -49811,8 +43403,7 @@ const bundle = () => {
                 (t._muted = !1),
                 (t._volume = 1),
                 (t._canPlayEvent = 'canplaythrough'),
-                (t._navigator =
-                  'undefined' != typeof window && window.navigator ? window.navigator : null),
+                (t._navigator = 'undefined' != typeof window && window.navigator ? window.navigator : null),
                 (t.masterGain = null),
                 (t.noAudio = !1),
                 (t.usingWebAudio = !0),
@@ -49842,8 +43433,7 @@ const bundle = () => {
               var e = this || s;
               e.ctx || d(),
                 (e._muted = t),
-                e.usingWebAudio &&
-                  e.masterGain.gain.setValueAtTime(t ? 0 : e._volume, s.ctx.currentTime);
+                e.usingWebAudio && e.masterGain.gain.setValueAtTime(t ? 0 : e._volume, s.ctx.currentTime);
               for (var i = 0; i < e._howls.length; i++)
                 if (!e._howls[i]._webAudio)
                   for (var r = e._howls[i]._getSoundIds(), n = 0; n < r.length; n++) {
@@ -49858,24 +43448,14 @@ const bundle = () => {
             },
             unload: function () {
               for (var t = this || s, e = t._howls.length - 1; e >= 0; e--) t._howls[e].unload();
-              return (
-                t.usingWebAudio &&
-                  t.ctx &&
-                  void 0 !== t.ctx.close &&
-                  (t.ctx.close(), (t.ctx = null), d()),
-                t
-              );
+              return t.usingWebAudio && t.ctx && void 0 !== t.ctx.close && (t.ctx.close(), (t.ctx = null), d()), t;
             },
             codecs: function (t) {
               return (this || s)._codecs[t.replace(/^x-/, '')];
             },
             _setup: function () {
               var t = this || s;
-              if (
-                ((t.state = (t.ctx && t.ctx.state) || 'suspended'),
-                t._autoSuspend(),
-                !t.usingWebAudio)
-              )
+              if (((t.state = (t.ctx && t.ctx.state) || 'suspended'), t._autoSuspend(), !t.usingWebAudio))
                 if ('undefined' != typeof Audio)
                   try {
                     void 0 === new Audio().oncanplaythrough && (t._canPlayEvent = 'canplay');
@@ -49911,9 +43491,7 @@ const bundle = () => {
                   opus: !!e.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ''),
                   ogg: !!e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
                   oga: !!e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ''),
-                  wav: !!(
-                    e.canPlayType('audio/wav; codecs="1"') || e.canPlayType('audio/wav')
-                  ).replace(/^no$/, ''),
+                  wav: !!(e.canPlayType('audio/wav; codecs="1"') || e.canPlayType('audio/wav')).replace(/^no$/, ''),
                   aac: !!e.canPlayType('audio/aac;').replace(/^no$/, ''),
                   caf: !!e.canPlayType('audio/x-caf;').replace(/^no$/, ''),
                   m4a: !!(
@@ -49934,10 +43512,7 @@ const bundle = () => {
                   weba: !(h || !e.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, '')),
                   webm: !(h || !e.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, '')),
                   dolby: !!e.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ''),
-                  flac: !!(e.canPlayType('audio/x-flac;') || e.canPlayType('audio/flac;')).replace(
-                    /^no$/,
-                    '',
-                  ),
+                  flac: !!(e.canPlayType('audio/x-flac;') || e.canPlayType('audio/flac;')).replace(/^no$/, ''),
                 }),
                 t
               );
@@ -49947,9 +43522,7 @@ const bundle = () => {
               if (!t._audioUnlocked && t.ctx) {
                 (t._audioUnlocked = !1),
                   (t.autoUnlock = !1),
-                  t._mobileUnloaded ||
-                    44100 === t.ctx.sampleRate ||
-                    ((t._mobileUnloaded = !0), t.unload()),
+                  t._mobileUnloaded || 44100 === t.ctx.sampleRate || ((t._mobileUnloaded = !0), t.unload()),
                   (t._scratchBuffer = t.ctx.createBuffer(1, 1, 22050));
                 var e = function (i) {
                   for (; t._html5AudioPool.length < t.html5PoolSize; )
@@ -49964,10 +43537,7 @@ const bundle = () => {
                     if (!t._howls[n]._webAudio)
                       for (var s = t._howls[n]._getSoundIds(), a = 0; a < s.length; a++) {
                         var o = t._howls[n]._soundById(s[a]);
-                        o &&
-                          o._node &&
-                          !o._node._unlocked &&
-                          ((o._node._unlocked = !0), o._node.load());
+                        o && o._node && !o._node._unlocked && ((o._node._unlocked = !0), o._node.load());
                       }
                   t._autoResume();
                   var l = t.ctx.createBufferSource();
@@ -50003,9 +43573,7 @@ const bundle = () => {
                   'undefined' != typeof Promise &&
                   (e instanceof Promise || 'function' == typeof e.then) &&
                   e.catch(function () {
-                    console.warn(
-                      'HTML5 Audio pool exhausted, returning potentially locked audio object.',
-                    );
+                    console.warn('HTML5 Audio pool exhausted, returning potentially locked audio object.');
                   }),
                 new Audio()
               );
@@ -50019,8 +43587,7 @@ const bundle = () => {
               if (t.autoSuspend && t.ctx && void 0 !== t.ctx.suspend && s.usingWebAudio) {
                 for (var e = 0; e < t._howls.length; e++)
                   if (t._howls[e]._webAudio)
-                    for (var i = 0; i < t._howls[e]._sounds.length; i++)
-                      if (!t._howls[e]._sounds[i]._paused) return t;
+                    for (var i = 0; i < t._howls[e]._sounds.length; i++) if (!t._howls[e]._sounds[i]._paused) return t;
                 return (
                   t._suspendTimer && clearTimeout(t._suspendTimer),
                   (t._suspendTimer = setTimeout(function () {
@@ -50043,8 +43610,7 @@ const bundle = () => {
                 return (
                   'running' === t.state && 'interrupted' !== t.ctx.state && t._suspendTimer
                     ? (clearTimeout(t._suspendTimer), (t._suspendTimer = null))
-                    : 'suspended' === t.state ||
-                      ('running' === t.state && 'interrupted' === t.ctx.state)
+                    : 'suspended' === t.state || ('running' === t.state && 'interrupted' === t.ctx.state)
                     ? (t.ctx.resume().then(function () {
                         t.state = 'running';
                         for (var e = 0; e < t._howls.length; e++) t._howls[e]._emit('resume');
@@ -50073,8 +43639,7 @@ const bundle = () => {
                 (e._muted = t.mute || !1),
                 (e._loop = t.loop || !1),
                 (e._pool = t.pool || 5),
-                (e._preload =
-                  ('boolean' != typeof t.preload && 'metadata' !== t.preload) || t.preload),
+                (e._preload = ('boolean' != typeof t.preload && 'metadata' !== t.preload) || t.preload),
                 (e._rate = t.rate || 1),
                 (e._sprite = t.sprite || {}),
                 (e._src = 'string' != typeof t.src ? t.src : [t.src]),
@@ -50090,97 +43655,19 @@ const bundle = () => {
                 (e._endTimers = {}),
                 (e._queue = []),
                 (e._playLock = !1),
-                (e._onend = t.onend
-                  ? [
-                      {
-                        fn: t.onend,
-                      },
-                    ]
-                  : []),
-                (e._onfade = t.onfade
-                  ? [
-                      {
-                        fn: t.onfade,
-                      },
-                    ]
-                  : []),
-                (e._onload = t.onload
-                  ? [
-                      {
-                        fn: t.onload,
-                      },
-                    ]
-                  : []),
-                (e._onloaderror = t.onloaderror
-                  ? [
-                      {
-                        fn: t.onloaderror,
-                      },
-                    ]
-                  : []),
-                (e._onplayerror = t.onplayerror
-                  ? [
-                      {
-                        fn: t.onplayerror,
-                      },
-                    ]
-                  : []),
-                (e._onpause = t.onpause
-                  ? [
-                      {
-                        fn: t.onpause,
-                      },
-                    ]
-                  : []),
-                (e._onplay = t.onplay
-                  ? [
-                      {
-                        fn: t.onplay,
-                      },
-                    ]
-                  : []),
-                (e._onstop = t.onstop
-                  ? [
-                      {
-                        fn: t.onstop,
-                      },
-                    ]
-                  : []),
-                (e._onmute = t.onmute
-                  ? [
-                      {
-                        fn: t.onmute,
-                      },
-                    ]
-                  : []),
-                (e._onvolume = t.onvolume
-                  ? [
-                      {
-                        fn: t.onvolume,
-                      },
-                    ]
-                  : []),
-                (e._onrate = t.onrate
-                  ? [
-                      {
-                        fn: t.onrate,
-                      },
-                    ]
-                  : []),
-                (e._onseek = t.onseek
-                  ? [
-                      {
-                        fn: t.onseek,
-                      },
-                    ]
-                  : []),
-                (e._onunlock = t.onunlock
-                  ? [
-                      {
-                        fn: t.onunlock,
-                      },
-                    ]
-                  : []),
+                (e._onend = t.onend ? [{ fn: t.onend }] : []),
+                (e._onfade = t.onfade ? [{ fn: t.onfade }] : []),
+                (e._onload = t.onload ? [{ fn: t.onload }] : []),
+                (e._onloaderror = t.onloaderror ? [{ fn: t.onloaderror }] : []),
+                (e._onplayerror = t.onplayerror ? [{ fn: t.onplayerror }] : []),
+                (e._onpause = t.onpause ? [{ fn: t.onpause }] : []),
+                (e._onplay = t.onplay ? [{ fn: t.onplay }] : []),
+                (e._onstop = t.onstop ? [{ fn: t.onstop }] : []),
+                (e._onmute = t.onmute ? [{ fn: t.onmute }] : []),
+                (e._onvolume = t.onvolume ? [{ fn: t.onvolume }] : []),
+                (e._onrate = t.onrate ? [{ fn: t.onrate }] : []),
+                (e._onseek = t.onseek ? [{ fn: t.onseek }] : []),
+                (e._onunlock = t.onunlock ? [{ fn: t.onunlock }] : []),
                 (e._onresume = []),
                 (e._webAudio = s.usingWebAudio && !e._html5),
                 void 0 !== s.ctx && s.ctx && s.autoUnlock && s._unlockAudio(),
@@ -50206,15 +43693,10 @@ const bundle = () => {
                   if (t._format && t._format[i]) r = t._format[i];
                   else {
                     if ('string' != typeof (n = t._src[i])) {
-                      t._emit(
-                        'loaderror',
-                        null,
-                        'Non-string found in selected audio sources - ignoring.',
-                      );
+                      t._emit('loaderror', null, 'Non-string found in selected audio sources - ignoring.');
                       continue;
                     }
-                    (r = /^data:audio\/([^;,]+);/i.exec(n)) ||
-                      (r = /\.([^.]+)$/.exec(n.split('?', 1)[0])),
+                    (r = /^data:audio\/([^;,]+);/i.exec(n)) || (r = /\.([^.]+)$/.exec(n.split('?', 1)[0])),
                       r && (r = r[1].toLowerCase());
                   }
                   if (
@@ -50316,16 +43798,12 @@ const bundle = () => {
                     try {
                       var r = g.play();
                       if (
-                        (r &&
-                        'undefined' != typeof Promise &&
-                        (r instanceof Promise || 'function' == typeof r.then)
+                        (r && 'undefined' != typeof Promise && (r instanceof Promise || 'function' == typeof r.then)
                           ? ((i._playLock = !0),
                             f(),
                             r
                               .then(function () {
-                                (i._playLock = !1),
-                                  (g._unlocked = !0),
-                                  e ? i._loadQueue() : i._emit('play', o._id);
+                                (i._playLock = !1), (g._unlocked = !0), e ? i._loadQueue() : i._emit('play', o._id);
                               })
                               .catch(function () {
                                 (i._playLock = !1),
@@ -50356,8 +43834,8 @@ const bundle = () => {
                       i._emit('playerror', o._id, t);
                     }
                   };
-                  'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA' ===
-                    g.src && ((g.src = i._src), g.load());
+                  'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA' === g.src &&
+                    ((g.src = i._src), g.load());
                   var v = (window && window.ejecta) || (!g.readyState && s._navigator.isCocoonJS);
                   if (g.readyState >= 3 || v) m();
                   else {
@@ -50390,11 +43868,7 @@ const bundle = () => {
                 if (
                   n &&
                   !n._paused &&
-                  ((n._seek = e.seek(i[r])),
-                  (n._rateSeek = 0),
-                  (n._paused = !0),
-                  e._stopFade(i[r]),
-                  n._node)
+                  ((n._seek = e.seek(i[r])), (n._rateSeek = 0), (n._paused = !0), e._stopFade(i[r]), n._node)
                 )
                   if (e._webAudio) {
                     if (!n._node.bufferSource) continue;
@@ -50530,9 +44004,7 @@ const bundle = () => {
                   if ((r || n._stopFade(a[o]), n._webAudio && !l._muted)) {
                     var h = s.ctx.currentTime,
                       u = h + i / 1e3;
-                    (l._volume = t),
-                      l._node.gain.setValueAtTime(t, h),
-                      l._node.gain.linearRampToValueAtTime(e, u);
+                    (l._volume = t), l._node.gain.setValueAtTime(t, h), l._node.gain.linearRampToValueAtTime(e, u);
                   }
                   n._startFadeInterval(l, t, e, i, a[o], void 0 === r);
                 }
@@ -50586,8 +44058,7 @@ const bundle = () => {
                 n = arguments;
               if (0 === n.length) return r._loop;
               if (1 === n.length) {
-                if ('boolean' != typeof n[0])
-                  return !!(i = r._soundById(parseInt(n[0], 10))) && i._loop;
+                if ('boolean' != typeof n[0]) return !!(i = r._soundById(parseInt(n[0], 10))) && i._loop;
                 (t = n[0]), (r._loop = t);
               } else 2 === n.length && ((t = n[0]), (e = parseInt(n[1], 10)));
               for (var s = r._getSoundIds(e), a = 0; a < s.length; a++)
@@ -50611,9 +44082,7 @@ const bundle = () => {
                 n = arguments;
               if (0 === n.length) e = r._sounds[0]._id;
               else if (1 === n.length) {
-                r._getSoundIds().indexOf(n[0]) >= 0
-                  ? (e = parseInt(n[0], 10))
-                  : (t = parseFloat(n[0]));
+                r._getSoundIds().indexOf(n[0]) >= 0 ? (e = parseInt(n[0], 10)) : (t = parseFloat(n[0]));
               } else 2 === n.length && ((t = parseFloat(n[0])), (e = parseInt(n[1], 10)));
               if ('number' != typeof t) return (i = r._soundById(e)) ? i._rate : r._rate;
               if ('loaded' !== r._state || r._playLock)
@@ -50630,19 +44099,15 @@ const bundle = () => {
               for (var a = 0; a < e.length; a++)
                 if ((i = r._soundById(e[a]))) {
                   r.playing(e[a]) &&
-                    ((i._rateSeek = r.seek(e[a])),
-                    (i._playStart = r._webAudio ? s.ctx.currentTime : i._playStart)),
+                    ((i._rateSeek = r.seek(e[a])), (i._playStart = r._webAudio ? s.ctx.currentTime : i._playStart)),
                     (i._rate = t),
                     r._webAudio && i._node && i._node.bufferSource
                       ? i._node.bufferSource.playbackRate.setValueAtTime(t, s.ctx.currentTime)
                       : i._node && (i._node.playbackRate = t);
                   var o = r.seek(e[a]),
-                    l =
-                      (1e3 * ((r._sprite[i._sprite][0] + r._sprite[i._sprite][1]) / 1e3 - o)) /
-                      Math.abs(i._rate);
+                    l = (1e3 * ((r._sprite[i._sprite][0] + r._sprite[i._sprite][1]) / 1e3 - o)) / Math.abs(i._rate);
                   (!r._endTimers[e[a]] && i._paused) ||
-                    (r._clearTimer(e[a]),
-                    (r._endTimers[e[a]] = setTimeout(r._ended.bind(r, i), l))),
+                    (r._clearTimer(e[a]), (r._endTimers[e[a]] = setTimeout(r._ended.bind(r, i), l))),
                     r._emit('rate', i._id);
                 }
               return r;
@@ -50746,22 +44211,7 @@ const bundle = () => {
             on: function (t, e, i, r) {
               var n = this,
                 s = n['_on' + t];
-              return (
-                'function' == typeof e &&
-                  s.push(
-                    r
-                      ? {
-                          id: i,
-                          fn: e,
-                          once: r,
-                        }
-                      : {
-                          id: i,
-                          fn: e,
-                        },
-                  ),
-                n
-              );
+              return 'function' == typeof e && s.push(r ? { id: i, fn: e, once: r } : { id: i, fn: e }), n;
             },
             off: function (t, e, i) {
               var r = this,
@@ -50778,8 +44228,7 @@ const bundle = () => {
               else if (t) r['_on' + t] = [];
               else {
                 var o = Object.keys(r);
-                for (s = 0; s < o.length; s++)
-                  0 === o[s].indexOf('_on') && Array.isArray(r[o[s]]) && (r[o[s]] = []);
+                for (s = 0; s < o.length; s++) 0 === o[s].indexOf('_on') && Array.isArray(r[o[s]]) && (r[o[s]] = []);
               }
               return r;
             },
@@ -50810,20 +44259,10 @@ const bundle = () => {
             _ended: function (t) {
               var e = this,
                 i = t._sprite;
-              if (
-                !e._webAudio &&
-                t._node &&
-                !t._node.paused &&
-                !t._node.ended &&
-                t._node.currentTime < t._stop
-              )
+              if (!e._webAudio && t._node && !t._node.paused && !t._node.ended && t._node.currentTime < t._stop)
                 return setTimeout(e._ended.bind(e, t), 100), e;
               var r = !(!t._loop && !e._sprite[i][2]);
-              if (
-                (e._emit('end', t._id),
-                !e._webAudio && r && e.stop(t._id, !0).play(t._id),
-                e._webAudio && r)
-              ) {
+              if ((e._emit('end', t._id), !e._webAudio && r && e.stop(t._id, !0).play(t._id), e._webAudio && r)) {
                 e._emit('play', t._id),
                   (t._seek = t._start || 0),
                   (t._rateSeek = 0),
@@ -50858,15 +44297,13 @@ const bundle = () => {
               return e;
             },
             _soundById: function (t) {
-              for (var e = this, i = 0; i < e._sounds.length; i++)
-                if (t === e._sounds[i]._id) return e._sounds[i];
+              for (var e = this, i = 0; i < e._sounds.length; i++) if (t === e._sounds[i]._id) return e._sounds[i];
               return null;
             },
             _inactiveSound: function () {
               var t = this;
               t._drain();
-              for (var e = 0; e < t._sounds.length; e++)
-                if (t._sounds[e]._ended) return t._sounds[e].reset();
+              for (var e = 0; e < t._sounds.length; e++) if (t._sounds[e]._ended) return t._sounds[e].reset();
               return new o(t);
             },
             _drain: function () {
@@ -50898,13 +44335,10 @@ const bundle = () => {
               return (
                 (t._node.bufferSource = s.ctx.createBufferSource()),
                 (t._node.bufferSource.buffer = l[e._src]),
-                t._panner
-                  ? t._node.bufferSource.connect(t._panner)
-                  : t._node.bufferSource.connect(t._node),
+                t._panner ? t._node.bufferSource.connect(t._panner) : t._node.bufferSource.connect(t._node),
                 (t._node.bufferSource.loop = t._loop),
                 t._loop &&
-                  ((t._node.bufferSource.loopStart = t._start || 0),
-                  (t._node.bufferSource.loopEnd = t._stop || 0)),
+                  ((t._node.bufferSource.loopStart = t._start || 0), (t._node.bufferSource.loopEnd = t._stop || 0)),
                 t._node.bufferSource.playbackRate.setValueAtTime(t._rate, s.ctx.currentTime),
                 e
               );
@@ -50924,8 +44358,7 @@ const bundle = () => {
             },
             _clearSound: function (t) {
               /MSIE |Trident\//.test(s._navigator && s._navigator.userAgent) ||
-                (t.src =
-                  'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA');
+                (t.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA');
             },
           };
           var o = function (t) {
@@ -50956,8 +44389,7 @@ const bundle = () => {
                 i = s._muted || t._muted || t._parent._muted ? 0 : t._volume;
               return (
                 e._webAudio
-                  ? ((t._node =
-                      void 0 === s.ctx.createGain ? s.ctx.createGainNode() : s.ctx.createGain()),
+                  ? ((t._node = void 0 === s.ctx.createGain ? s.ctx.createGainNode() : s.ctx.createGain()),
                     t._node.gain.setValueAtTime(i, s.ctx.currentTime),
                     (t._node.paused = !0),
                     t._node.connect(s.masterGain))
@@ -51002,10 +44434,7 @@ const bundle = () => {
               var t = this,
                 e = t._parent;
               (e._duration = Math.ceil(10 * t._node.duration) / 10),
-                0 === Object.keys(e._sprite).length &&
-                  (e._sprite = {
-                    __default: [0, 1e3 * e._duration],
-                  }),
+                0 === Object.keys(e._sprite).length && (e._sprite = { __default: [0, 1e3 * e._duration] }),
                 'loaded' !== e._state && ((e._state = 'loaded'), e._emit('load'), e._loadQueue()),
                 t._node.removeEventListener(s._canPlayEvent, t._loadFn, !1);
             },
@@ -51024,11 +44453,7 @@ const bundle = () => {
               var e = t._src;
               if (l[e]) return (t._duration = l[e].duration), void p(t);
               if (/^data:[^;]+;base64,/.test(e)) {
-                for (
-                  var i = atob(e.split(',')[1]), r = new Uint8Array(i.length), n = 0;
-                  n < i.length;
-                  ++n
-                )
+                for (var i = atob(e.split(',')[1]), r = new Uint8Array(i.length), n = 0; n < i.length; ++n)
                   r[n] = i.charCodeAt(n);
                 c(r.buffer, t);
               } else {
@@ -51044,19 +44469,10 @@ const bundle = () => {
                     var e = (s.status + '')[0];
                     '0' === e || '2' === e || '3' === e
                       ? c(s.response, t)
-                      : t._emit(
-                          'loaderror',
-                          null,
-                          'Failed loading audio file with status: ' + s.status + '.',
-                        );
+                      : t._emit('loaderror', null, 'Failed loading audio file with status: ' + s.status + '.');
                   }),
                   (s.onerror = function () {
-                    t._webAudio &&
-                      ((t._html5 = !0),
-                      (t._webAudio = !1),
-                      (t._sounds = []),
-                      delete l[e],
-                      t.load());
+                    t._webAudio && ((t._html5 = !0), (t._webAudio = !1), (t._sounds = []), delete l[e], t.load());
                   }),
                   u(s);
               }
@@ -51081,10 +44497,7 @@ const bundle = () => {
             },
             p = function (t, e) {
               e && !t._duration && (t._duration = e.duration),
-                0 === Object.keys(t._sprite).length &&
-                  (t._sprite = {
-                    __default: [0, 1e3 * t._duration],
-                  }),
+                0 === Object.keys(t._sprite).length && (t._sprite = { __default: [0, 1e3 * t._duration] }),
                 'loaded' !== t._state && ((t._state = 'loaded'), t._emit('load'), t._loadQueue());
             },
             d = function () {
@@ -51107,8 +44520,7 @@ const bundle = () => {
                   s._navigator && !r && (s.usingWebAudio = !1);
                 }
                 s.usingWebAudio &&
-                  ((s.masterGain =
-                    void 0 === s.ctx.createGain ? s.ctx.createGainNode() : s.ctx.createGain()),
+                  ((s.masterGain = void 0 === s.ctx.createGain ? s.ctx.createGainNode() : s.ctx.createGain()),
                   s.masterGain.gain.setValueAtTime(s._muted ? 0 : s._volume, s.ctx.currentTime),
                   s.masterGain.connect(s.ctx.destination)),
                   s._setup();
@@ -51116,20 +44528,14 @@ const bundle = () => {
             };
           void 0 !==
             (r = function () {
-              return {
-                Howler: s,
-                Howl: a,
-              };
+              return { Howler: s, Howl: a };
             }.apply(e, [])) && (t.exports = r),
             s,
             a,
             void 0 !== i.g
               ? ((i.g.HowlerGlobal = n), (i.g.Howler = s), (i.g.Howl = a), (i.g.Sound = o))
               : 'undefined' != typeof window &&
-                ((window.HowlerGlobal = n),
-                (window.Howler = s),
-                (window.Howl = a),
-                (window.Sound = o));
+                ((window.HowlerGlobal = n), (window.Howler = s), (window.Howl = a), (window.Sound = o));
         })();
       },
     },
@@ -51137,22 +44543,13 @@ const bundle = () => {
   function s(t) {
     var e = n[t];
     if (void 0 !== e) return e.exports;
-    var i = (n[t] = {
-      id: t,
-      loaded: !1,
-      exports: {},
-    });
+    var i = (n[t] = { id: t, loaded: !1, exports: {} });
     return r[t].call(i.exports, i, i.exports, s), (i.loaded = !0), i.exports;
   }
   (s.m = r),
     (s.n = (t) => {
       var e = t && t.__esModule ? () => t.default : () => t;
-      return (
-        s.d(e, {
-          a: e,
-        }),
-        e
-      );
+      return s.d(e, { a: e }), e;
     }),
     (e = Object.getPrototypeOf ? (t) => Object.getPrototypeOf(t) : (t) => t.__proto__),
     (s.t = function (i, r) {
@@ -51170,13 +44567,7 @@ const bundle = () => {
       return (a.default = () => i), s.d(n, a), n;
     }),
     (s.d = (t, e) => {
-      for (var i in e)
-        s.o(e, i) &&
-          !s.o(t, i) &&
-          Object.defineProperty(t, i, {
-            enumerable: !0,
-            get: e[i],
-          });
+      for (var i in e) s.o(e, i) && !s.o(t, i) && Object.defineProperty(t, i, { enumerable: !0, get: e[i] });
     }),
     (s.f = {}),
     (s.e = (t) => Promise.all(Object.keys(s.f).reduce((e, i) => (s.f[i](t, e), e), []))),
@@ -51195,8 +44586,7 @@ const bundle = () => {
         enumerable: !0,
         set: () => {
           throw new Error(
-            'ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' +
-              t.id,
+            'ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + t.id,
           );
         },
       }),
@@ -51226,35 +44616,17 @@ const bundle = () => {
         var c = (e, r) => {
             (a.onerror = a.onload = null), clearTimeout(p);
             var n = i[t];
-            if (
-              (delete i[t],
-              a.parentNode && a.parentNode.removeChild(a),
-              n && n.forEach((t) => t(r)),
-              e)
-            )
-              return e(r);
+            if ((delete i[t], a.parentNode && a.parentNode.removeChild(a), n && n.forEach((t) => t(r)), e)) return e(r);
           },
-          p = setTimeout(
-            c.bind(null, void 0, {
-              type: 'timeout',
-              target: a,
-            }),
-            12e4,
-          );
-        (a.onerror = c.bind(null, a.onerror)),
-          (a.onload = c.bind(null, a.onload)),
-          o && document.head.appendChild(a);
+          p = setTimeout(c.bind(null, void 0, { type: 'timeout', target: a }), 12e4);
+        (a.onerror = c.bind(null, a.onerror)), (a.onload = c.bind(null, a.onload)), o && document.head.appendChild(a);
       }
     }),
     (s.r = (t) => {
       'undefined' != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(t, Symbol.toStringTag, {
-          value: 'Module',
-        }),
-        Object.defineProperty(t, '__esModule', {
-          value: !0,
-        });
+        Object.defineProperty(t, Symbol.toStringTag, { value: 'Module' }),
+        Object.defineProperty(t, '__esModule', { value: !0 });
     }),
     (s.nmd = (t) => ((t.paths = []), t.children || (t.children = []), t)),
     (() => {
@@ -51273,9 +44645,7 @@ const bundle = () => {
         (s.p = t);
     })(),
     (() => {
-      var t = {
-        296: 0,
-      };
+      var t = { 296: 0 };
       s.f.j = (e, i) => {
         var r = s.o(t, e) ? t[e] : void 0;
         if (0 !== r)
@@ -51319,6 +44689,5 @@ const bundle = () => {
     s(2895),
     s(5410);
   s(5067);
-};
-
-export default bundle;
+})();
+//# sourceMappingURL=./bundle.js.map

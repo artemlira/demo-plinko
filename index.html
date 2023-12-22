@@ -19,15 +19,11 @@
         identifier: 'PlinkoXY',
         title: 'Plinko',
         currency: 'FUN',
-        cache_id: '283ae74592917f3ece60921f83e1ebdc06671bf4647cff3a68d05ab7630107ee',
-        cache_player_id: '8044d9b12eb9435f251d4f52616b74a4f90717662b27f2b53ea8c6d598cc9b1d',
         locale: 'en',
         api: 'https://demo.bgaming-network.com/api/PlinkoXY/755312/031f9fa2-ba27-4177-ba80-51e350daa262',
-        rules_url: './rules.json',
+        rules_url: '/rules.json',
         deposit_url: null,
         history_url: null,
-        lobby_launch_url:
-          'https://demo.bgaming-network.com/lobby/FUN/031f9fa2-ba27-4177-ba80-51e350daa262/launch',
         ui: {
           home_button: true,
           full_screen_prompt: true,
@@ -52,121 +48,6 @@
         rules: { min_bet: 100, max_bet: 10000 },
       };
     </script>
-    <script type="text/javascript">
-      window.onbeforeunload = function (event) {
-        fetch(window.__OPTIONS__.api, {
-          method: 'post',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ command: 'close_session' }),
-        });
-      };
-    </script>
-    <style>
-      body {
-        background-color: #665959;
-      }
-    </style>
-    <style>
-      .preloader,
-      .preloader_figure {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      .preloader {
-        overflow: visible;
-        padding-top: 2em;
-        height: 0;
-        width: 2em;
-      }
-      .preloader_figure {
-        height: 0;
-        width: 0;
-        box-sizing: border-box;
-        border: 0 solid #ff2c2c;
-        border-radius: 50%;
-        -webkit-animation: loader-figure 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation: loader-figure 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
-      .preloader_label {
-        font-family: 'Consolas', 'Courier', monospace;
-        float: left;
-        margin-left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        margin: 0.5em 0 0 50%;
-        font-size: 0.875em;
-        letter-spacing: 0.1em;
-        line-height: 1.5em;
-        color: #ff2c2c;
-        white-space: nowrap;
-        -webkit-animation: loader-label 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation: loader-label 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
-      .preloader_link {
-        opacity: 0;
-      }
-      @-webkit-keyframes loader-figure {
-        0% {
-          height: 0;
-          width: 0;
-        }
-        30% {
-          height: 2em;
-          width: 2em;
-          border-width: 1em;
-          opacity: 1;
-        }
-        100% {
-          height: 2em;
-          width: 2em;
-          border-width: 0;
-          opacity: 0;
-        }
-      }
-      @keyframes loader-figure {
-        0% {
-          height: 0;
-          width: 0;
-        }
-        30% {
-          height: 2em;
-          width: 2em;
-          border-width: 1em;
-          opacity: 1;
-        }
-        100% {
-          height: 2em;
-          width: 2em;
-          border-width: 0;
-          opacity: 0;
-        }
-      }
-      @-webkit-keyframes loader-label {
-        0% {
-          opacity: 0.35;
-        }
-        30% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0.35;
-        }
-      }
-      @keyframes loader-label {
-        0% {
-          opacity: 0.35;
-        }
-        30% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0.35;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="preloader">
@@ -174,7 +55,8 @@
       <p class="preloader_label">Loading</p>
       <a class="preloader_link" href="https://casinoyyy-online.com/" rel="dofollow">Casino YYY</a>
     </div>
-    <canvas></canvas>
+    <script src="/loader.js" crossorigin="anonymous"></script>
+    <script src="/v0.0.27_v14.6.4/bundle.js" crossorigin="anonymous"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
