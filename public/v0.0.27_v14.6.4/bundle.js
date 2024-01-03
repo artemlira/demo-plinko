@@ -6115,7 +6115,7 @@
             soundDefaultBitrate: 64,
             soundBitrates: {},
             defaultLanguage: 'en',
-            fontHolderText: 'plinko xy',
+            fontHolderText: 'yyyslot',
             mipmap: !1,
             defaultMusVol: 1,
             defaultSoundsVol: 1,
